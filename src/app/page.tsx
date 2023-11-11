@@ -15,7 +15,7 @@ export default function Home() {
             target="_blank"
             rel="noopener noreferrer"
           > 
-            By a daasdasd dsadasdasd{' '}
+            By a dasda daasdasd dsadasdasd{' '}
             <Image
               src="/vercel.svg"
               alt="Vercel Logo"

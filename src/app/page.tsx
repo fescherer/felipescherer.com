@@ -1,15 +1,10 @@
-import { useEffect } from 'react'
+import Link from 'next/link'
 
 export default function Home() {
-  let a = 1
-
-  useEffect(() => {
-    console.log(a)
-  }, [a])
-
   return (
     <main className="m-1 flex">
       <span>dsadasdas</span>
+      <Link href="/test"> Ir ao teste</Link>
     </main>
   )
 }

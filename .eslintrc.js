@@ -30,5 +30,6 @@ module.exports = {
       },
     ],
     'react/button-has-type': ['error'],
+    '@stylistic/jsx-self-closing-comp': ['error'],
   },
 }

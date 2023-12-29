@@ -1,9 +1,10 @@
-import { Meet } from './components'
+import { AboutMe, Meet } from './components'
 
 export function Homepage() {
   return (
     <main className="flex flex-col">
       <Meet />
+      <AboutMe />
 
       <div className="block">
         <div className="text-3xs">3xs</div>
@@ -21,9 +22,7 @@ export function Homepage() {
         <div className="text-7xl">7xl</div>
       </div>
 
-      <div className="min-h-screen min-w-full bg-layer-1">
-
-      </div>
+      <div className="min-h-screen min-w-full bg-layer-1" />
     </main>
   )
 }

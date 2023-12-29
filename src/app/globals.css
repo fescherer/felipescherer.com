@@ -26,6 +26,10 @@
 
 
 @layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
   input:not([type=button]):not([type=reset]):not([type=submit]):not([type=image]):focus,textarea:focus, button:focus-visible {
     outline: 0;
     @apply ring-2 ring-brand-hover-primary border-transparent
@@ -43,4 +47,14 @@
     outline: none;
     @apply ring-2 ring-brand-hover-primary border-transparent
   }
+}
+
+@layer components {
+.vertical-ellipsis {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
 }

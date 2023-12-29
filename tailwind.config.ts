@@ -60,7 +60,8 @@ const config: Config = {
         '7xl': ['4.5rem', '1.5'],
       },
       backgroundImage: {
-        'hero-pattern': 'url(\'https://github.com/fescherer.png\')',
+        'profile': 'url(https://github.com/fescherer.png)',
+        'hero-pattern': 'url(https://github.com/fescherer/blog/assets/62115215/93b825a6-e656-4a00-b17f-25cfd8f4e7f9)',
       },
     },
   },

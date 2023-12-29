@@ -1,10 +1,21 @@
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import { Lora, Poppins } from 'next/font/google'
 import './globals.css'
 import React from 'react'
 import { ProgressBarProvider } from '@/providers/progress-bar.provider'
 
-const inter = Inter({ subsets: ['latin'] })
+const lora = Lora({
+  subsets: ['latin'],
+  variable: '--font-title',
+  display: 'swap',
+})
+
+const poppins = Poppins({
+  subsets: ['latin'],
+  weight: ['400', '500', '600'],
+  variable: '--font-text',
+  display: 'swap',
+})
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -18,7 +29,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={`${lora.variable} ${poppins.variable} bg-layer-0 font-text text-on-layer-0-l2`}>
         <ProgressBarProvider>
           {children}
         </ProgressBarProvider>

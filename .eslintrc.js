@@ -23,5 +23,12 @@ module.exports = {
         allowSingleLine: false,
       },
     ],
+    '@stylistic/jsx-newline': [
+      'error', {
+        prevent: true,
+        allowMultilines: true,
+      },
+    ],
+    'react/button-has-type': ['error'],
   },
 }

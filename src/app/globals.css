@@ -3,6 +3,44 @@
 @tailwind utilities;
 
 :root {
- --ads: #100000
+ --layer-0: #131313;
+ --layer-1: #373737;
+ --layer-2: #656565;
+
+ --on-layer-0-l1: #FFFFFF;
+ --on-layer-0-l2: #CCCCCC;
+
+ --on-layer-1-l1: #FFFFFF;
+ --on-layer-1-l2: #E8E8E8;
+
+ --on-layer-2-l1: #FFFFFF;
+ --on-layer-2-l2: #E8E8E8;
+
+  --brand-primary: #2E7A85;
+  --brand-secondary: #BB6ABD;
+  --brand-on-primary: #E1E1E1;
+  --brand-on-secondary: #FEFEEB;
+  --brand-hover-primary: #19444b;
+  --brand-hover-secondary: #4f2c50;
 }
 
+
+@layer base {
+  input:not([type=button]):not([type=reset]):not([type=submit]):not([type=image]):focus,textarea:focus, button:focus-visible {
+    outline: 0;
+    @apply ring-2 ring-brand-hover-primary border-transparent
+  }
+
+  input:focus, textarea:focus {
+    @apply border-transparent
+  }
+
+  input[type=button]:active:not(:disabled),
+  input[type=reset]:active:not(:disabled),
+  input[type=submit]:active:not(:disabled),
+  input[type=image]:active:not(:disabled),
+  button:active:not(:disabled) {
+    outline: none;
+    @apply ring-2 ring-brand-hover-primary border-transparent
+  }
+}

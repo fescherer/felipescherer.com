@@ -12,7 +12,8 @@ export function Meet() {
           <div className="flex flex-col text-center font-title md:text-left">
             <h2 className="text-2xl font-medium leading-none">Meet</h2>
             <h1 className="text-4xl font-medium text-on-layer-0-l1 md:text-6xl">Felipe Scherer</h1>
-            <span className="italic">Developer / Designer / Content Creator / Game Developer</span>
+            {/* TODO Make a typing effect for what I am. Developer, Designer, Content Creator, Game Developer */}
+            <span className="font-mono">Developer</span>
 
             <Link href="#aboutme" className="mt-6 self-center rounded-sm bg-brand-primary px-2 py-4 text-xl text-brand-on-primary ring-4 ring-transparent transition-all hover:bg-brand-hover-primary md:self-start">
               Explore my Portifolio

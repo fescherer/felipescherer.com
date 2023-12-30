@@ -7,7 +7,7 @@ type IStar = {
 }
 
 export function generateConstellation(starsQuantity: number): IStar[][] {
-  const starsColors = ['#BDD9F3', '#F4F4F8', '#FFFDDC', '#FFEFC7', '#FFDCDC']
+  const starsColors = ['#BFE0FF', '#F4F4F8', '#FFFDDC', '#FFEFC7', '#FFD2D2']
   let constellation: IStar[][] = []
   for (let i = 0; i < starsQuantity; i++) {
     let stars: IStar[] = []

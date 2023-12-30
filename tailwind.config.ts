@@ -1,4 +1,5 @@
 import type { Config } from 'tailwindcss'
+const plugin = require('tailwindcss/plugin')
 
 const config: Config = {
   content: [
@@ -60,11 +61,47 @@ const config: Config = {
         '7xl': ['4.5rem', '1.5'],
       },
       backgroundImage: {
-        'profile': 'url(https://github.com/fescherer.png)',
-        'hero-pattern': 'url(https://github.com/fescherer/blog/assets/62115215/93b825a6-e656-4a00-b17f-25cfd8f4e7f9)',
+        profile: 'url(https://github.com/fescherer.png)',
+      },
+      keyframes: {
+        twinkleKeyFrame: {
+          '25%': { opacity: '0' },
+        },
+        cometKeyframe: {
+          '0%, 40%': {
+            transform: 'translateX(0)',
+            opacity: '0',
+          },
+          '50%': {
+            opacity: '1',
+          },
+          '60%, 100%': {
+            transform: 'translateX(-100vmax)',
+            opacity: '0',
+          },
+        },
+      },
+      animation: {
+        comet: 'cometKeyframe 10s linear infinite',
+        star: 'twinkleKeyFrame 4s ease-in-out infinite',
       },
     },
   },
-  plugins: [],
+  plugins: [
+    plugin(({ matchUtilities, theme }: any) => {
+      matchUtilities(
+        {
+          'animation-delay': (value: any) => {
+            return {
+              'animation-delay': value,
+            }
+          },
+        },
+        {
+          values: theme('transitionDelay'),
+        }
+      )
+    }),
+  ],
 }
 export default config

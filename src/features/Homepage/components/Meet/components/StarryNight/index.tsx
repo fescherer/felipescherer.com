@@ -14,7 +14,7 @@ export function StarryNight() {
           <svg key={index} className="absolute inset-0 animate-star [&:nth-child(2)]:animation-delay-[calc(4s_*_-0.33)] [&:nth-child(3)]:animation-delay-[calc(4s_*_-0.66)]" width="100%" height="100%" preserveAspectRatio="none">
             {
               stars.map(star => (
-                <circle key={star.id} className="fill-[#ffffff] [&:nth-child(13n)]:opacity-40 [&:nth-child(19n)]:opacity-20 [&:nth-child(3n)]:opacity-80 [&:nth-child(7n)]:opacity-60" cx={star.cx} cy={star.cy} r={star.r} />
+                <circle key={star.id} style={{ fill: star.color }} className="[&:nth-child(13n)]:opacity-40 [&:nth-child(19n)]:opacity-20 [&:nth-child(3n)]:opacity-80 [&:nth-child(7n)]:opacity-60" cx={star.cx} cy={star.cy} r={star.r} />
               ))
             }
           </svg>

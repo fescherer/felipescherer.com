@@ -2,7 +2,7 @@ import { AboutMe, Meet } from './components'
 
 export function Homepage() {
   return (
-    <main className="flex flex-col">
+    <main className="flex flex-col ">
       <Meet />
       <AboutMe />
 

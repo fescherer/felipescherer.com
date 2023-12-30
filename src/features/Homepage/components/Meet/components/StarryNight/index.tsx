@@ -8,7 +8,7 @@ export function StarryNight() {
   const comets = generateComets()
 
   return (
-    <div className="pointer-events-none absolute -z-10 h-full w-full overflow-hidden bg-gradient-to-b from-[#17121b] via-[#0d0d1d] to-[#160d20]">
+    <div className="pointer-events-none absolute -z-10 h-full w-full overflow-hidden bg-gradient-to-b from-[#17121b] via-[#0d0d1d] via-99%">
       {
         constellation.map((stars, index) => (
           <svg key={index} className="absolute inset-0 animate-star [&:nth-child(2)]:animation-delay-[calc(4s_*_-0.33)] [&:nth-child(3)]:animation-delay-[calc(4s_*_-0.66)]" width="100%" height="100%" preserveAspectRatio="none">

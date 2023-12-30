@@ -85,6 +85,9 @@ const config: Config = {
         comet: 'cometKeyframe 10s linear infinite',
         star: 'twinkleKeyFrame 4s ease-in-out infinite',
       },
+      gradientColorStopPositions: {
+        '99%': '99%',
+      },
     },
   },
   plugins: [

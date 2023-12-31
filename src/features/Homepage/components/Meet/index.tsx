@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import { StarryNight } from './components'
+import { AnchorButton } from '@/components'
 
 export function Meet() {
   return (
@@ -28,6 +29,8 @@ export function Meet() {
 
         </section>
       </div>
+
+      <AnchorButton anchor="#aboutme" />
 
     </div>
 

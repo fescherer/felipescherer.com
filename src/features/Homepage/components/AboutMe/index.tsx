@@ -1,10 +1,11 @@
+import { AnchorButton } from '@/components'
 import { OWNER_CONFIGS } from '@/utils/owner.config'
 import Image from 'next/image'
 
 export function AboutMe() {
   return (
-    <div className="flex min-h-screen w-full items-center justify-center">
-      <section id="aboutme" className="m-auto flex h-full w-full max-w-5xl flex-col gap-6 md:flex-row md:justify-between">
+    <div id="aboutme" className="relative flex min-h-screen w-full items-center justify-center">
+      <section className="m-auto flex h-full w-full max-w-5xl flex-col gap-6 md:flex-row md:justify-between">
         <div className="h-[410px] bg-layer-1">
           <Image width={315} height={410} src={OWNER_CONFIGS.img} alt="" />
         </div>
@@ -25,6 +26,8 @@ export function AboutMe() {
           </div>
         </div>
       </section>
+
+      <AnchorButton anchor="#blog" />
     </div>
   )
 }

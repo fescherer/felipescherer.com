@@ -9,7 +9,7 @@ export function Meet() {
       <div className="flex min-h-screen w-full items-center justify-center">
         <section id="meet" className="flex max-w-5xl flex-col-reverse items-center p-4 md:flex-row md:justify-between">
 
-          <div className="flex flex-col text-center font-title md:text-left">
+          <div className="flex flex-col text-center font-title tracking-wide md:text-left">
             <h2 className="text-2xl font-medium leading-none">Meet</h2>
             <h1 className="text-4xl font-medium text-on-layer-0-l1 md:text-6xl">Felipe Scherer</h1>
             {/* TODO Make a typing effect for what I am. Developer, Designer, Content Creator, Game Developer */}

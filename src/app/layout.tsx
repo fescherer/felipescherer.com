@@ -3,6 +3,7 @@ import { Lora, Poppins } from 'next/font/google'
 import './globals.css'
 import React from 'react'
 import { ProgressBarProvider } from '@/providers/progress-bar.provider'
+import { Footer } from '@/components/Footer'
 
 const lora = Lora({
   subsets: ['latin'],
@@ -32,6 +33,7 @@ export default function RootLayout({
       <body className={`${lora.variable} ${poppins.variable} bg-layer-0 font-text text-on-layer-0-l2`}>
         <ProgressBarProvider>
           {children}
+          <Footer />
         </ProgressBarProvider>
       </body>
     </html>

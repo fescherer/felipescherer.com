@@ -10,10 +10,13 @@
   },
   "dependencies": {
     "@radix-ui/react-separator": "^1.0.3",
+    "@radix-ui/react-toggle-group": "^1.0.4",
+    "lucide-react": "^0.303.0",
     "next": "14.0.2",
     "next-nprogress-bar": "^2.1.2",
     "react": "^18",
-    "react-dom": "^18"
+    "react-dom": "^18",
+    "tailwind-merge": "^2.2.0"
   },
   "devDependencies": {
     "@stylistic/eslint-plugin": "^1.5.1",

@@ -8,7 +8,7 @@
  --layer-2: #656565;
 
  --on-layer-0-l1: #FFFFFF;
- --on-layer-0-l2: #CCCCCC;
+ --on-layer-0-l2: #c0c0c0;
 
  --on-layer-1-l1: #FFFFFF;
  --on-layer-1-l2: #E8E8E8;
@@ -56,5 +56,13 @@
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
+  }
+
+  .design-link {
+    @apply text-brand-primary hover:text-brand-hover-primary transition-all hover:underline
+  }
+
+  .design-btn {
+    @apply rounded-sm bg-brand-primary px-2 py-4 text-brand-on-primary ring-4 ring-transparent transition-all hover:bg-brand-hover-primary
   }
 }

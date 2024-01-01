@@ -15,7 +15,7 @@ export function Meet() {
           {/* TODO Make a typing effect for what I am. Developer, Designer, Content Creator, Game Developer */}
           <span className="font-mono">Developer</span>
 
-          <Link href="#aboutme" className="mt-6 self-center rounded-sm bg-brand-primary px-2 py-4 text-xl text-brand-on-primary ring-4 ring-transparent transition-all hover:bg-brand-hover-primary md:self-start">
+          <Link href="#aboutme" className="design-btn mt-6 self-center text-xl md:self-start ">
             Explore my Portifolio
           </Link>
         </div>

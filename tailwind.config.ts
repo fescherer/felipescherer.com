@@ -6,6 +6,7 @@ const config: Config = {
     './src/components/**/*.{js,ts,jsx,tsx,mdx}',
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
     './src/features/**/*.{js,ts,jsx,tsx,mdx}',
+    './src/icons/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
     colors: {
@@ -91,7 +92,7 @@ const config: Config = {
     },
   },
   plugins: [
-    plugin(({ matchUtilities, theme }: any) => {
+    plugin(({ matchUtilities, theme, addUtilities }: any) => {
       matchUtilities(
         {
           'animation-delay': (value: any) => {
@@ -103,7 +104,12 @@ const config: Config = {
         {
           values: theme('transitionDelay'),
         }
-      )
+      ),
+      addUtilities({
+        '.animation-paused': {
+          'animation-play-state': 'paused',
+        },
+      })
     }),
   ],
 }

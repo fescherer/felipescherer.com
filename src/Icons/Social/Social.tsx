@@ -6,7 +6,7 @@ interface SocialIconProps {
 }
 
 export function SocialIcon({ color = 'currentColor', type }: SocialIconProps) {
-  const className = 'transition-all hover:scale-125'
+  const className = 'transition-all hover:scale-125 hover:bg-on-layer-0-l1 hover:border-on-layer-0-l2 border-transparent border rounded p-1 box-content'
 
   switch (type) {
     case 'github':

@@ -1,4 +1,4 @@
-import { LogoIcon } from '@/Icons'
+import { LogoIcon } from '@/icons'
 import { OWNER_CONFIGS } from '@/utils/owner.config'
 
 export function PersonalSkills() {

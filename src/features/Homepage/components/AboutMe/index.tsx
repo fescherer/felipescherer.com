@@ -3,22 +3,14 @@ import { ContentWrapper } from '..'
 import { OWNER_CONFIGS } from '@/utils/owner.config'
 import Link from 'next/link'
 import { SocialIcon } from '@/icons/Social/Social'
-import { Resume } from './components'
-
-const photos = [
-  'bg-[url(/felipe-scherer/big-shoes.webp)]',
-  'bg-[url(/felipe-scherer/black-white.webp)]',
-  'bg-[url(/felipe-scherer/coconout.webp)]',
-  'bg-[url(/felipe-scherer/dark-side.webp)]',
-  'bg-[url(/felipe-scherer/photo-flower.webp)]',
-]
+import { Carrousel, Resume } from './components'
 
 export function AboutMe() {
   const yearsOld = getYearsOld()
 
   return (
     <ContentWrapper anchor="#blog" id="aboutme">
-      <div className={`${photos[4]} h-[410px] min-w-[316px] bg-layer-1 bg-cover`} />
+      <Carrousel />
 
       <div className="flex h-full max-w-[600px] flex-col gap-4 md:flex-row">
         <div className="flex h-full flex-col">

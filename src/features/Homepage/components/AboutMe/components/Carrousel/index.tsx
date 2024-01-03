@@ -2,6 +2,9 @@
 
 import { useState } from 'react'
 
+/* TODO
+Add carrousel animation, this probably will need a 3th party lib
+*/
 const photos = [
   'bg-[url(/felipe-scherer/photo-flower.webp)]',
   'bg-[url(/felipe-scherer/big-shoes.webp)]',

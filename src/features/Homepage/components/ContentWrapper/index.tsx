@@ -5,16 +5,17 @@ type ContentWrapperProps = {
   id: string
   anchor: string
   isFlexReverse?: boolean
+  isLastItem?: boolean
 }
 
-export function ContentWrapper({ children, id, anchor, isFlexReverse }: PropsWithChildren<ContentWrapperProps>) {
+export function ContentWrapper({ children, id, anchor, isFlexReverse, isLastItem }: PropsWithChildren<ContentWrapperProps>) {
   return (
-    <div id={id} className="relative flex min-h-screen w-full items-center justify-center  overflow-hidden">
+    <div id={id} className="relative flex min-h-screen w-full flex-col items-center  justify-center overflow-hidden">
       <section className={`m-auto flex h-full w-full max-w-5xl items-center gap-6 p-4 md:flex-row md:justify-between ${isFlexReverse ? 'flex-col-reverse' : 'flex-col'}`}>
         {children}
       </section>
 
-      <AnchorButton anchor={anchor} />
+      <AnchorButton isLastItem={isLastItem} anchor={anchor} />
     </div>
   )
 }

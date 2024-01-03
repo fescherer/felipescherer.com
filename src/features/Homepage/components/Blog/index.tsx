@@ -9,7 +9,7 @@ export function Blog() {
     <ContentWrapper anchor="#projects" id="blog">
 
       <div className="flex flex-col">
-        <h2 className="mb-4 font-title text-4xl font-semibold tracking-wide">Blog</h2>
+        <h2 className="mb-4 font-title text-4xl font-semibold tracking-wide text-on-layer-0-l1">Blog</h2>
 
         <p className="min-w-[300px]">
           Sometimes I like to create articles about what I learned or just to share what I am thinking. Feel free to check it out. And of course, you can leave suggestions for next blogs in

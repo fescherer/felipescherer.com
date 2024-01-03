@@ -36,7 +36,7 @@ export const original_projects = [
     ],
   },
   {
-    id: 'portifolio',
+    id: 'portifolio-v2',
     type: 'original',
     tags: ['react', 'figma', 'javascript', 'next', 'css', 'html'],
     date: '2023-02-25T10:00:00.000Z',
@@ -59,7 +59,7 @@ export const original_projects = [
     ],
   },
   {
-    id: 'rpg-v1',
+    id: 'rpg',
     type: 'original',
     tags: ['javascript', 'css', 'html', 'angular'],
     date: '2021-07-25T10:00:00.000Z',

@@ -9,7 +9,7 @@ export function AboutMe() {
   const yearsOld = getYearsOld()
 
   return (
-    <ContentWrapper anchor="#blog" id="aboutme">
+    <ContentWrapper anchor="#blog" id="aboutme" index={1}>
       <Carrousel />
 
       <div className="flex h-full max-w-[600px] flex-col gap-4 md:flex-row">

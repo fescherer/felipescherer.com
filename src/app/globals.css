@@ -4,6 +4,7 @@
 
 :root {
  --layer-0: #131313;
+ --layer-0-5: #101010;
  --layer-1: #373737;
  --layer-2: #656565;
 
@@ -30,7 +31,7 @@
     scroll-behavior: smooth;
   }
 
-  input:not([type=button]):not([type=reset]):not([type=submit]):not([type=image]):focus,textarea:focus, button:focus-visible {
+  input:not([type=button]):not([type=reset]):not([type=submit]):not([type=image]):focus,textarea:focus, button:focus-visible, a:focus-visible {
     outline: 0;
     @apply ring-2 ring-brand-hover-primary border-transparent
   }

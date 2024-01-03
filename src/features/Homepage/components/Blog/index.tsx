@@ -6,7 +6,7 @@ import { twMerge } from 'tailwind-merge'
 
 export function Blog() {
   return (
-    <ContentWrapper anchor="#projects" id="blog">
+    <ContentWrapper anchor="#projects" id="blog" index={2}>
 
       <div className="flex flex-col">
         <h2 className="mb-4 font-title text-4xl font-semibold tracking-wide text-on-layer-0-l1">Blog</h2>

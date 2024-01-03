@@ -11,9 +11,10 @@ const config: Config = {
   theme: {
     colors: {
       'layer': {
-        0: 'var(--layer-0)',
-        1: 'var(--layer-1)',
-        2: 'var(--layer-2)',
+        '0': 'var(--layer-0)',
+        '0-5': 'var(--layer-0-5)',
+        '1': 'var(--layer-1)',
+        '2': 'var(--layer-2)',
       },
       'on-layer-0': {
         l1: 'var(--on-layer-0-l1)',

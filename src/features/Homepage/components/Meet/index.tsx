@@ -7,7 +7,7 @@ export function Meet() {
     <div className="relative overflow-hidden">
       <StarryNight />
 
-      <ContentWrapper anchor="#aboutme" id="meet" isFlexReverse>
+      <ContentWrapper anchor="#aboutme" id="meet" isFlexReverse index={0}>
 
         <div className="flex flex-col text-center font-title tracking-wide md:text-left">
           <h2 className="text-2xl font-medium leading-none">Meet</h2>

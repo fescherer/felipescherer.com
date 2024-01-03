@@ -7,7 +7,7 @@ import { Separator } from '@/components'
 
 export function Projects() {
   return (
-    <ContentWrapper anchor="#home" id="projects" isLastItem>
+    <ContentWrapper anchor="#home" id="projects" isLastItem index={3}>
 
       <div className="flex w-full flex-col">
         <h2 className="mb-4 font-title text-4xl font-semibold tracking-wide text-on-layer-0-l1">Projects</h2>

@@ -37,7 +37,7 @@ export function AboutMe() {
           <Resume />
         </div>
 
-        <div className="flex flex-row justify-center gap-2 md:flex-col">
+        <div className="flex flex-row justify-center gap-2 self-start md:flex-col">
           <Link href={OWNER_CONFIGS.github_link} type="button" className="rounded">
             <SocialIcon type="github" />
           </Link>

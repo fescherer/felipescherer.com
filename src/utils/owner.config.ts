@@ -10,4 +10,5 @@ export const OWNER_CONFIGS = {
   github_link: 'https://github.com/fescherer',
   linkedin_link: 'https://www.linkedin.com/in/fescherer',
   blog_link: 'https://blog.felipescherer.com',
+  email: 'felipescherer25@gmail.com',
 }

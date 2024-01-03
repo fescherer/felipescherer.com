@@ -9,7 +9,7 @@ type ContentWrapperProps = {
 
 export function ContentWrapper({ children, id, anchor, isFlexReverse }: PropsWithChildren<ContentWrapperProps>) {
   return (
-    <div id={id} className="relative flex min-h-screen w-full items-center justify-center">
+    <div id={id} className="relative flex min-h-screen w-full items-center justify-center  overflow-hidden">
       <section className={`m-auto flex h-full w-full max-w-5xl items-center gap-6 p-4 md:flex-row md:justify-between ${isFlexReverse ? 'flex-col-reverse' : 'flex-col'}`}>
         {children}
       </section>

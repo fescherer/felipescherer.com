@@ -19,7 +19,6 @@ export function Carrousel() {
   return (
     <div className="relative overflow-hidden rounded ">
       <div className={`${photos[photoSelected]} h-[410px] min-w-[316px] bg-layer-1 bg-cover`} />
-      <div className="absolute aspect-square w-[192px] bg-gradient-to-br from-brand-primary to-brand-secondary blur-3xl " />
 
       <div className="absolute bottom-5 left-1/2 flex -translate-x-1/2 gap-2">
         {

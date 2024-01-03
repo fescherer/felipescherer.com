@@ -9,4 +9,5 @@ export const OWNER_CONFIGS = {
   rss: 'https://blog.felipescherer.com/feed.xml',
   github_link: 'https://github.com/fescherer',
   linkedin_link: 'https://www.linkedin.com/in/fescherer',
+  blog_link: 'https://blog.felipescherer.com',
 }

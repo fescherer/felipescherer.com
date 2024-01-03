@@ -16,7 +16,8 @@ export function Resume() {
         className="flex text-on-layer-0-l2"
         type="single"
         defaultValue={language}
-        onValueChange={e => setLanguage(e)}
+        value={language}
+        onValueChange={e => e ? setLanguage(e) : ''}
         aria-label="Language Selector"
       >
         <ToggleGroup.Item className={`${classToggleGroup} rounded-tl`} value="pt-br" aria-label="Portuguese">

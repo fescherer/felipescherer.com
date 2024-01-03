@@ -1,14 +1,31 @@
-import { AnchorButton } from '@/components'
+import Image from 'next/image'
+import { ContentWrapper } from '..'
+import Link from 'next/link'
+import { OWNER_CONFIGS } from '@/utils/owner.config'
+import { twMerge } from 'tailwind-merge'
 
 export function Blog() {
   return (
-    <div id="blog" className="relative flex min-h-screen w-full items-center justify-center bg-layer-1">
-      <section id="aboutme" className="m-auto flex h-full w-full max-w-5xl flex-col gap-6 md:flex-row md:justify-between">
+    <ContentWrapper anchor="#projects" id="blog">
 
+      <div className="flex flex-col">
         <h2 className="mb-4 font-title text-4xl font-semibold tracking-wide">Blog</h2>
-      </section>
 
-      <AnchorButton anchor="#projects" />
-    </div>
+        <p>
+          Sometimes I like to create articles about what I learned or just to share what I am thinking. Feel free to check it out. And of course, you can leave suggestions for next blogs in
+          {' '}
+
+          <Link className="design-link" href="mailto:felipescherer25@gmail.com">
+            my email
+          </Link>
+          .
+        </p>
+
+        <Link href={OWNER_CONFIGS.blog_link} target="_blank" className={twMerge('design-btn', 'mt-4 self-start px-4')}>Check my blog</Link>
+      </div>
+
+      <Image className="rounded" alt="blog preview" src="/misc/blog.png" width={1029 * 0.6} height={886 * 0.6} />
+
+    </ContentWrapper>
   )
 }

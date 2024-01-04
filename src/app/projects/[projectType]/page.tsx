@@ -1,7 +1,11 @@
-export default function ProjectTypePage() {
+import { Projects } from '@/features'
+
+type ProjectTypePageProps = {
+  params: { projectType: string }
+}
+
+export default function ProjectTypePage({ params: { projectType } }: ProjectTypePageProps) {
   return (
-    <div>
-      <span>dasdasd</span>
-    </div>
+    <Projects projectType={projectType} />
   )
 }

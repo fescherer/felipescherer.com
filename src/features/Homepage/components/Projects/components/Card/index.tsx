@@ -8,7 +8,7 @@ type CardProps = {
 export function Card({ project }: CardProps) {
   return (
     <Link href={`/projects/${project.id}`} className="group max-w-[400px]">
-      <div className="h-32 w-32 overflow-hidden rounded bg-cover bg-center transition-all group-hover:scale-110" style={{ backgroundImage: `url(${project.thumb})` }} />
+      <div className="h-32 w-32 overflow-hidden rounded bg-cover bg-center transition-all group-hover:scale-110" style={{ backgroundImage: `url(${project.type}/${project.id}/thumb.png)` }} />
 
       <h3 className="mt-4 font-title text-2xl font-semibold text-on-layer-0-l1 transition-all group-hover:text-brand-primary">
         {project.title.pt}

@@ -14,7 +14,6 @@ export interface IProject {
   github: string
   figma: string
   site: string
-  thumb: string
   images: string[]
   text: ITextLanguage
 }

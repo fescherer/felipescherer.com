@@ -20,7 +20,7 @@ export function SelectInput({ projectType }: SelectInputProps) {
 
   return (
     <Select.Root defaultValue={projectType || ''} onValueChange={value => navigateTo(value)}>
-      <Select.Trigger className={`flex w-full items-center justify-between overflow-hidden rounded border px-2 py-1 text-sm transition-all hover:border-on-layer-0-l1 hover:text-on-layer-0-l1 sm:w-52 ${projectType ? 'text-brand-primary' : 'text-on-layer-0-l2'} ${projectType ? 'border-brand-primary' : 'border-layer-1'}`}>
+      <Select.Trigger className={`flex w-full items-center justify-between overflow-hidden rounded border px-2 py-1 text-sm transition-all sm:w-52 ${projectType ? 'border-brand-primary text-brand-primary hover:border-brand-hover-primary hover:text-brand-hover-primary' : 'border-layer-1 text-on-layer-0-l2 hover:border-on-layer-0-l1 hover:text-on-layer-0-l1'}`}>
         <Select.Value placeholder="Select a type filter..." />
         <ChevronDown />
       </Select.Trigger>

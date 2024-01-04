@@ -1,6 +1,7 @@
 import { IProject, TProjectType } from '@/types'
 import { ProjectList, TypeFilter } from './components'
 import { AVAILABLE_TYPE_PROJECTS, PROJECTS } from '@/utils/projects'
+import { SearchProvider } from './contexts/search.context'
 
 type ProjectsProps = {
   projectType?: string
@@ -31,9 +32,11 @@ export function Projects({ projectType = '' }: ProjectsProps) {
     : getAllProjects(AVAILABLE_TYPE_PROJECTS)
 
   return (
-    <main className="m-auto flex min-h-screen w-full max-w-5xl flex-col items-center">
-      <TypeFilter projectType={isValidProjectType ? projectType as TProjectType : null} />
-      <ProjectList projects={projects} />
-    </main>
+    <SearchProvider>
+      <main className="m-auto flex min-h-screen w-full max-w-5xl flex-col items-center">
+        <TypeFilter projectType={isValidProjectType ? projectType as TProjectType : null} />
+        <ProjectList projects={projects} />
+      </main>
+    </SearchProvider>
   )
 }

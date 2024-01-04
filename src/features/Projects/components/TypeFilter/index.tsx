@@ -1,16 +1,32 @@
 import { TProjectType } from '@/types'
+import { SearchInput, SelectInput } from './components'
 import Link from 'next/link'
+import { AVAILABLE_TYPE_PROJECTS } from '@/utils/projects'
 
-export function TypeFilter() {
-  const availableTypes: TProjectType[] = ['original', 'coding-lesson', 'coding-week', 'college-lesson']
+type TypeFilterProps = {
+  projectType: TProjectType | null
+}
 
+export function TypeFilter({ projectType }: TypeFilterProps) {
   return (
-    <div className="flex gap-6">
-      <Link href="/projects">all</Link>
+    <>
+      <nav className="flex w-full flex-col p-4 sm:flex-row sm:justify-between">
+        <SelectInput projectType={projectType} />
+        <SearchInput />
 
-      {
-        availableTypes.map(type => <Link href={`/projects/${type}`} key={type}>{type}</Link>)
-      }
-    </div>
+      </nav>
+
+      <div className="flex gap-6">
+        <Link href="/projects">all</Link>
+
+        {
+          AVAILABLE_TYPE_PROJECTS.map(type => <Link href={`/projects/${type}`} key={type}>{type}</Link>)
+        }
+      </div>
+    </>
   )
 }
+
+/*
+
+*/

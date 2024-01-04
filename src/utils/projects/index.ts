@@ -1,3 +1,4 @@
+import { TProjectType } from '@/types'
 import { CODING_LESSON_PROJECTS } from './coding-lesson'
 import { CODING_WEEK_PROJECTS } from './coding-week'
 import { COLLEGE_LESSON_PROJECTS } from './college-lesson'
@@ -9,3 +10,5 @@ export const PROJECTS = {
   'coding-week': CODING_WEEK_PROJECTS,
   'coding-lesson': CODING_LESSON_PROJECTS,
 }
+
+export const AVAILABLE_TYPE_PROJECTS: TProjectType[] = Object.keys(PROJECTS) as TProjectType[]

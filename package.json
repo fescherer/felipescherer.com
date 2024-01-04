@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@radix-ui/react-select": "^2.0.0",
     "@radix-ui/react-separator": "^1.0.3",
     "@radix-ui/react-toggle-group": "^1.0.4",
     "lucide-react": "^0.303.0",

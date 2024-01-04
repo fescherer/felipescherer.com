@@ -1,6 +1,6 @@
 import { IProject, TProjectType } from '@/types'
 import { ProjectList, TypeFilter } from './components'
-import { PROJECTS } from '@/utils/projects'
+import { AVAILABLE_TYPE_PROJECTS, PROJECTS } from '@/utils/projects'
 
 type ProjectsProps = {
   projectType?: string
@@ -22,18 +22,17 @@ export function Projects({ projectType = '' }: ProjectsProps) {
     cite - italic
   */
 
-  const availableProjectType = Object.keys(PROJECTS)
-  const isValidProjectType = availableProjectType.includes(projectType)
+  const isValidProjectType = AVAILABLE_TYPE_PROJECTS.some(type => projectType === type)
 
   const projects = projectType
     ? isValidProjectType
       ? PROJECTS[projectType as keyof typeof PROJECTS]
-      : getAllProjects(availableProjectType as TProjectType[])
-    : getAllProjects(availableProjectType as TProjectType[])
+      : getAllProjects(AVAILABLE_TYPE_PROJECTS)
+    : getAllProjects(AVAILABLE_TYPE_PROJECTS)
 
   return (
     <main className="m-auto flex min-h-screen w-full max-w-5xl flex-col items-center">
-      <TypeFilter />
+      <TypeFilter projectType={isValidProjectType ? projectType as TProjectType : null} />
       <ProjectList projects={projects} />
     </main>
   )

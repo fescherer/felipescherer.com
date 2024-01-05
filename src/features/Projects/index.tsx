@@ -14,15 +14,6 @@ function getAllProjects(availableProjects: TProjectType[]): IProject[] {
 }
 
 export function Projects({ projectType = '' }: ProjectsProps) {
-  /*
-    tags to style:
-    h2, p, li, ul, ol, a, img
-    em - italic ,
-    i - italic,
-    strong - bold,
-    cite - italic
-  */
-
   const isValidProjectType = AVAILABLE_TYPE_PROJECTS.some(type => projectType === type)
 
   const projects = projectType

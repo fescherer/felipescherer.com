@@ -5,14 +5,14 @@
 :root {
  --layer-0: #131313;
  --layer-0-5: #101010;
- --layer-1: #373737;
+ --layer-1: #242424;
  --layer-2: #656565;
 
  --on-layer-0-l1: #FFFFFF;
  --on-layer-0-l2: #c0c0c0;
 
- --on-layer-1-l1: #FFFFFF;
- --on-layer-1-l2: #E8E8E8;
+ --on-layer-1-l1: #EAEAEA;
+ --on-layer-1-l2: #DDDDDD;
 
  --on-layer-2-l1: #FFFFFF;
  --on-layer-2-l2: #E8E8E8;
@@ -53,7 +53,7 @@
 @layer components {
   .vertical-ellipsis {
     display: -webkit-box;
-    -webkit-line-clamp: 3;
+    -webkit-line-clamp: 4;
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;

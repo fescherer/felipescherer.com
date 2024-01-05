@@ -10,7 +10,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
   const iconClassName = 'absolute inset-1/2 -translate-x-1/2 -translate-y-1/2 text-brand-on-primary'
 
   return (
-    <div className="relative flex h-80 w-60 flex-col rounded bg-layer-1 text-on-layer-1-l2 transition-all hover:scale-105">
+    <div title={project.title.pt} className="relative flex h-80 w-60 flex-col rounded bg-layer-1 text-on-layer-1-l2 transition-all hover:scale-105">
       <Link href={`/projects/${project.type}/${project.id}`} className="absolute left-0 top-0 h-full w-full" />
 
       <Link href={`/projects/${project.type}/${project.id}`} className="relative min-h-[40%] overflow-hidden">

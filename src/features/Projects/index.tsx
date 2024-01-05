@@ -2,6 +2,7 @@ import { IProject, TProjectType } from '@/types'
 import { ProjectList, TypeFilter } from './components'
 import { AVAILABLE_TYPE_PROJECTS, PROJECTS } from '@/utils/projects'
 import { SearchProvider } from './contexts/search.context'
+import { Suspense } from 'react'
 
 type ProjectsProps = {
   projectType?: string
@@ -24,9 +25,12 @@ export function Projects({ projectType = '' }: ProjectsProps) {
 
   return (
     <SearchProvider>
-      <main className="m-auto flex min-h-screen w-full max-w-5xl flex-col items-center">
+      <main className="m-auto flex w-full max-w-5xl flex-col items-center">
         <TypeFilter projectType={isValidProjectType ? projectType as TProjectType : null} />
-        <ProjectList projects={projects} />
+
+        <Suspense fallback={<p>Loading projects...</p>}>
+          <ProjectList projects={projects} />
+        </Suspense>
       </main>
     </SearchProvider>
   )

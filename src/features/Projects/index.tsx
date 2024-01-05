@@ -25,7 +25,7 @@ export function Projects({ projectType = '' }: ProjectsProps) {
 
   return (
     <SearchProvider>
-      <main className="m-auto flex w-full max-w-5xl flex-col items-center">
+      <main className="m-auto flex w-full max-w-5xl flex-col items-center gap-8">
         <TypeFilter projectType={isValidProjectType ? projectType as TProjectType : null} />
 
         <Suspense fallback={<p>Loading projects...</p>}>

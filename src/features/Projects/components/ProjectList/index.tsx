@@ -35,7 +35,7 @@ export function ProjectList({ projects }: ProjectListProps) {
       }
       </div>
 
-      <div className="mt-4 flex items-center justify-end gap-2">
+      <div className="mt-8 flex items-center justify-end gap-2">
         <button onClick={() => setCurrentPage(prev => prev - 1)} disabled={currentPage === 0} type="button" className="rounded-full transition-all hover:enabled:text-on-layer-0-l1 disabled:cursor-not-allowed disabled:opacity-30">
           <LucideChevronLeft />
         </button>

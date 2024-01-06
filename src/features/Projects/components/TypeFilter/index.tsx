@@ -7,7 +7,7 @@ type TypeFilterProps = {
 
 export function TypeFilter({ projectType }: TypeFilterProps) {
   return (
-    <nav className="flex w-full flex-col p-4 sm:flex-row sm:justify-between">
+    <nav className="flex w-full flex-col gap-2 p-4 sm:flex-row sm:justify-between">
       <SelectInput projectType={projectType} />
       <SearchInput />
     </nav>

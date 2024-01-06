@@ -4,6 +4,7 @@ import './globals.css'
 import React from 'react'
 import { ProgressBarProvider } from '@/providers/progress-bar.provider'
 import { Footer } from '@/components/Footer'
+import 'react-multi-carousel/lib/styles.css'
 
 const lora = Lora({
   subsets: ['latin'],

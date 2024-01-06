@@ -66,4 +66,29 @@
   .design-btn {
     @apply rounded-sm bg-brand-primary px-2 py-4 text-brand-on-primary ring-4 ring-transparent transition-all hover:bg-brand-hover-primary
   }
+
+  .prose h2 {
+    @apply text-on-layer-0-l1 text-2xl font-title mb-2;
+  }
+  .prose p {
+    @apply mb-4 text-justify
+  }
+  .prose a {
+    @apply design-link
+  }
+  .prose ul {
+    @apply list-disc ml-4 marker:text-brand-primary
+  }
+  .prose ol {
+    @apply list-decimal ml-4 marker:text-brand-primary
+  }
+  .prose cite, .prose i, .prose em {
+    @apply italic
+  }
+  .prose strong {
+    @apply font-bold
+  }
+  .prose img {
+    @apply m-auto max-h-[600px] p-4
+  }
 }

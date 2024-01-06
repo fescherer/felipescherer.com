@@ -29,23 +29,26 @@ export function ProjectList({ projects }: ProjectListProps) {
     <div>
       <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 md:min-h-[680px] lg:grid-cols-3">
         {
-        filteredProjects.slice(currentPage * 6, currentPage * 6 + 6).map(project => (
+        filteredProjects.slice(currentPage * PAGES_NUMBER, currentPage * PAGES_NUMBER + PAGES_NUMBER).map(project => (
           <ProjectCard key={project.id} project={project} />
         ))
       }
       </div>
 
-      <div className="mt-8 flex items-center justify-end gap-2">
-        <button onClick={() => setCurrentPage(prev => prev - 1)} disabled={currentPage === 0} type="button" className="rounded-full transition-all hover:enabled:text-on-layer-0-l1 disabled:cursor-not-allowed disabled:opacity-30">
-          <LucideChevronLeft />
-        </button>
+      { filteredProjects.length > PAGES_NUMBER && (
+        <div className="mt-8 flex items-center justify-end gap-2">
+          <button onClick={() => setCurrentPage(prev => prev - 1)} disabled={currentPage === 0} type="button" className="rounded-full transition-all hover:enabled:text-on-layer-0-l1 disabled:cursor-not-allowed disabled:opacity-30">
+            <LucideChevronLeft />
+          </button>
 
-        {pages.map(page => <button onClick={() => setCurrentPage(page)} type="button" className={`flex h-8 w-8 items-center justify-center rounded-full transition-all hover:bg-brand-hover-primary ${currentPage === page ? 'bg-brand-primary text-brand-on-primary' : ''}`} key={page}>{page + 1}</button>)}
+          {pages.map(page => <button onClick={() => setCurrentPage(page)} type="button" className={`flex h-8 w-8 items-center justify-center rounded-full transition-all hover:bg-brand-hover-primary ${currentPage === page ? 'bg-brand-primary text-brand-on-primary' : ''}`} key={page}>{page + 1}</button>)}
 
-        <button onClick={() => setCurrentPage(prev => prev + 1)} disabled={currentPage === pages.length - 1} type="button" className="rounded-full transition-all hover:enabled:text-on-layer-0-l1 disabled:cursor-not-allowed disabled:opacity-30">
-          <LucideChevronRight />
-        </button>
-      </div>
+          <button onClick={() => setCurrentPage(prev => prev + 1)} disabled={currentPage === pages.length - 1} type="button" className="rounded-full transition-all hover:enabled:text-on-layer-0-l1 disabled:cursor-not-allowed disabled:opacity-30">
+            <LucideChevronRight />
+          </button>
+        </div>
+      )}
+
     </div>
   )
 }

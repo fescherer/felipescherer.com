@@ -1,7 +1,8 @@
-import { IProject } from '@/types'
+import { IProject, IType } from '@/types'
 import { OWNER_CONFIGS } from '../owner.config'
+import { PROJECTS_TYPES } from './projectsType'
 
-const PROJECT_TYPE = 'original'
+const PROJECT_TYPE: IType = PROJECTS_TYPES.original
 
 export const ORIGINAL_PROJECTS: IProject[] = [
   {

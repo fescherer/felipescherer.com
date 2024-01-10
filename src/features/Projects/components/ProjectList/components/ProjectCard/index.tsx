@@ -2,21 +2,32 @@ import { IProject } from '@/types'
 import { LayoutPanelLeft, LucideCode2, PanelTop } from 'lucide-react'
 import Link from 'next/link'
 import { LinkBtn } from './components'
+import { Ribbon } from '@/components'
 
 type ProjectCardProps = {
   project: IProject
 }
 export function ProjectCard({ project }: ProjectCardProps) {
   const iconClassName = 'absolute inset-1/2 -translate-x-1/2 -translate-y-1/2 text-brand-on-primary'
+  const linkPath = `/projects/${project.type.id}/${project.id}`
+  const imagePath = `/projects/${project.type.id}/${project.id}`
 
   return (
     <div title={project.title.pt} className="relative flex h-80 w-60 flex-col rounded bg-layer-1 text-on-layer-1-l2 transition-all hover:scale-105">
-      <Link href={`/projects/${project.type}/${project.id}`} className="absolute left-0 top-0 h-full w-full" />
 
-      <Link href={`/projects/${project.type}/${project.id}`} className="relative min-h-[40%] overflow-hidden">
-        <div className="h-full scale-110 bg-cover bg-center blur-sm" style={{ backgroundImage: `url(/projects/${project.type}/${project.id}/thumb.png)` }} />
-        <div className="absolute top-0 h-full w-full bg-contain bg-center bg-no-repeat" style={{ backgroundImage: `url(/projects/${project.type}/${project.id}/thumb.png)` }} />
+      <Link href={linkPath} className="absolute left-0 top-0 h-full w-full" />
+
+      <Link href={linkPath} className="relative min-h-[40%] overflow-hidden">
+        <div className="h-full scale-110 bg-cover bg-center blur-sm" style={{ backgroundImage: `url(${imagePath}/thumb.png)` }} />
+        <div className="absolute top-0 h-full w-full bg-contain bg-center bg-no-repeat" style={{ backgroundImage: `url(${imagePath}/thumb.png)` }} />
       </Link>
+
+      <Ribbon
+        href={`/projects/${project.type.id}`}
+        bgColor={project.type.color.bg}
+        textColor={project.type.color.text}
+        title={project.type.title.en || ''}
+      />
 
       <div className="relative">
         <div className="h-1 w-full bg-brand-primary" />

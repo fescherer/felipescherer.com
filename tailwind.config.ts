@@ -47,6 +47,7 @@ const config: Config = {
         title: 'var(--font-title)',
         text: 'var(--font-text)',
       },
+      // TODO Rework fonts- now in most places i am using sm as base
       fontSize: {
         '3xs': ['0.5rem', '1'],
         '2xs': ['0.625rem', '1'],

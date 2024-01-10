@@ -10,7 +10,7 @@ type ProjectsProps = {
 
 function getAllProjects(availableProjects: TProjectType[]): IProject[] {
   let allProjects: IProject[] = []
-  availableProjects.map(projectType => allProjects = [...allProjects, ...PROJECTS[projectType]])
+  availableProjects.map(projectType => allProjects = [...allProjects, ...PROJECTS[projectType as keyof typeof PROJECTS]])
   return allProjects
 }
 

@@ -67,6 +67,10 @@
     @apply rounded-sm bg-brand-primary px-2 py-4 text-brand-on-primary ring-4 ring-transparent transition-all hover:bg-brand-hover-primary
   }
 
+  .design-anchor-btn {
+    @apply rounded-sm bg-layer-1 px-4 py-2 text-on-layer-0-l2 ring-4 ring-transparent transition-all hover:text-on-layer-0-l1
+  }
+
   .prose h2 {
     @apply text-on-layer-0-l1 text-2xl font-title mb-2;
   }

@@ -44,7 +44,7 @@ export function Header({ project }: HeaderProps) {
         <div className="flex gap-2 self-end">
           {
             project.site && (
-              <Link title="Project site" className="transition-all hover:text-brand-primary" target="_blank" href={project.site}>
+              <Link title="Project site" className="rounded-full bg-layer-1 p-1 transition-all hover:text-brand-primary" target="_blank" href={project.site}>
                 <PanelTop />
               </Link>
             )
@@ -52,7 +52,7 @@ export function Header({ project }: HeaderProps) {
 
           {
             project.github && (
-              <Link title="Code source" className="transition-all hover:text-brand-primary" target="_blank" href={project.github}>
+              <Link title="Code source" className="rounded-full bg-layer-1 p-1 transition-all hover:text-brand-primary" target="_blank" href={project.github}>
                 <LucideCode2 />
               </Link>
             )
@@ -60,7 +60,7 @@ export function Header({ project }: HeaderProps) {
 
           {
             project.figma && (
-              <Link title="Layout source" className="transition-all hover:text-brand-primary" target="_blank" href={project.figma}>
+              <Link title="Layout source" className="rounded-full bg-layer-1 p-1 transition-all hover:text-brand-primary" target="_blank" href={project.figma}>
                 <LayoutPanelLeft />
               </Link>
             )

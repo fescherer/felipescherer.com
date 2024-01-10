@@ -23,7 +23,7 @@ export function ProjectCarrousel({ project }: ProjectCarrouselProps) {
       <div className="absolute bottom-5 left-1/2 flex -translate-x-1/2 gap-2">
         {
           project.images.map((photo, index) => (
-            <button key={photo} onClick={() => setPhotoSelected(index)} type="button" className={`h-5 w-5 rounded-full opacity-60 ${photoSelected === index ? 'bg-brand-primary' : 'bg-layer-1'}`} />
+            <button key={photo} onClick={() => setPhotoSelected(index)} type="button" className={`h-5 w-5 rounded-full border border-brand-primary opacity-60 hover:bg-brand-hover-primary ${photoSelected === index ? 'bg-brand-primary' : 'bg-layer-1'}`} />
           ))
         }
       </div>

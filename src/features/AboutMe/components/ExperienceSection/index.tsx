@@ -29,7 +29,7 @@ export function ExperienceSection() {
       }
       </div>
 
-      <div className="m-4 flex gap-2">
+      <div className="m-4 flex flex-col gap-2 md:flex-row">
         <div className="flex flex-col gap-4" style={{ minWidth: experienceSelected.img_showcase.width + 6 }}>
           <Image src={experienceSelected.img_showcase.img} width={experienceSelected.img_showcase.width} height={experienceSelected.img_showcase.height} alt={experienceSelected.img_showcase.alt} />
 

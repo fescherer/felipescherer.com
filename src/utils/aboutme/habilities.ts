@@ -1,0 +1,118 @@
+import { IHability } from '@/types'
+
+const imagePath = '/images/logos'
+
+export const HABILITIES_DATA: IHability[] = [
+  {
+    id: 'css',
+    icon: `${imagePath}/css.svg`,
+    title: 'CSS 3',
+    text: 'Cascading Style Sheets (CSS). It is an essential skill for frontend developers, a style sheet language that serves mostly to style HTML code. It become like a pattern to style stuff.',
+    doc: 'https://developer.mozilla.org/en-US/docs/Web/CSS',
+  },
+  {
+    id: 'figma',
+    icon: `${imagePath}/figma.svg`,
+    title: 'Figma',
+    text: 'Design tool used to create amazing designs, prototypes and collaborative platform. It is amazing and really useful for developers with easy integration of translations to CSS.',
+    doc: 'https://www.figma.com/design-overview',
+  },
+  {
+    id: 'firebase',
+    icon: `${imagePath}/firebase.svg`,
+    title: 'Firebase',
+    text: 'Firebase is a platform to help developers to create apps. It can serve a lot of services but I personally used most for Google Analytics, Cloud Firestore (A NoSQL document database) and Authentification (Single Sign On, SSO integration with a lot of providers like Facebook, Google, Apple, Email, Twitter, Github and lot more).',
+    doc: 'https://firebase.google.com',
+  },
+  {
+    id: 'html',
+    icon: `${imagePath}/html.svg`,
+    title: 'HTML',
+    text: 'HTML(HyperText Markup Language) is a pattern to create web pages using structure blocks called `tags`. It is most basic tecnology to learn as frontend developer, but it is always good to study, because choosing the best tag for semantic is not a out of box ideia.',
+    doc: 'https://developer.mozilla.org/en-US/docs/Web/HTML',
+  },
+  {
+    id: 'java',
+    icon: `${imagePath}/java.svg`,
+    title: 'Java',
+    text: 'Java is an object oriented programming language that can be used to create a lot of types of applications most likely because the Java Virtual Machine, a platform to run the code in many devices, because of that, Java can run in almost all devices from smartphones,computers, watches and even tv apps.',
+    doc: 'https://docs.oracle.com/javase/tutorial',
+  },
+  {
+    id: 'javascript',
+    icon: `${imagePath}/javascript.svg`,
+    title: '',
+    text: '',
+    doc: '',
+  },
+  {
+    id: 'markdown',
+    icon: `${imagePath}/markdown.svg`,
+    title: '',
+    text: '',
+    doc: '',
+  },
+  {
+    id: 'mui',
+    icon: `${imagePath}/mui.svg`,
+    title: '',
+    text: '',
+    doc: '',
+  },
+  {
+    id: 'nextjs',
+    icon: `${imagePath}/nextjs.svg`,
+    title: '',
+    text: '',
+    doc: '',
+  },
+  {
+    id: 'photoshop',
+    icon: `${imagePath}/photoshop.svg`,
+    title: '',
+    text: '',
+    doc: '',
+  },
+  {
+    id: 'python',
+    icon: `${imagePath}/python.svg`,
+    title: '',
+    text: '',
+    doc: '',
+  },
+  {
+    id: 'react-query',
+    icon: `${imagePath}/react-query.svg`,
+    title: '',
+    text: '',
+    doc: '',
+  },
+  {
+    id: 'react',
+    icon: `${imagePath}/react.svg`,
+    title: '',
+    text: '',
+    doc: '',
+  },
+  {
+    id: 'sass',
+    icon: `${imagePath}/sass.svg`,
+    title: '',
+    text: '',
+    doc: '',
+  },
+  {
+    id: 'tailwind',
+    icon: `${imagePath}/tailwind.svg`,
+    title: '',
+    text: '',
+    doc: '',
+  },
+  {
+    id: 'turbopack',
+    icon: `${imagePath}/turbopack.svg`,
+    title: '',
+    text: '',
+    doc: '',
+  },
+]

@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { AboutCard, ExperienceSection } from './components'
+import { AboutCard, ExperienceSection, HabilitiesSection } from './components'
 import { HISTORY_DATA } from '@/utils/aboutme/history'
 
 export function AboutMe() {
@@ -28,6 +28,7 @@ export function AboutMe() {
 
       <section id="habilities">
         <h2 className={titleSectionClassname}>Habilities</h2>
+        <HabilitiesSection />
       </section>
 
       <section id="experience">

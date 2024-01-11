@@ -20,3 +20,11 @@ export interface IExperience {
   img_showcase: IImage
   logo: string
 }
+
+export interface IHability {
+  id: string
+  title: string
+  text: string
+  icon: string
+  doc: string
+}

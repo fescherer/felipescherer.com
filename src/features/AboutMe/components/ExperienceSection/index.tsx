@@ -1,5 +1,6 @@
 'use client'
 
+import { IExperience } from '@/types'
 import { EXPERIENCES_DATA } from '@/utils/aboutme/experiences'
 import Image from 'next/image'
 import { useState } from 'react'
@@ -8,6 +9,7 @@ export function ExperienceSection() {
   const experiences = EXPERIENCES_DATA
 
   const [experienceSelected, setExperienceSeletected] = useState(experiences[0])
+  const [isMoreInfoToggled, setIsMoreInfoToggled] = useState(false)
   const startExperiencePeriod = new Date(experienceSelected.date_start)
   const endExperiencePeriod = new Date(experienceSelected.date_end ?? '')
   console.log(endExperiencePeriod)
@@ -16,12 +18,17 @@ export function ExperienceSection() {
   }).format
   const experiencePeriod = `${monthFormat(startExperiencePeriod)}, ${startExperiencePeriod.getFullYear()} - ${monthFormat(endExperiencePeriod)},  ${endExperiencePeriod.getFullYear()}`
 
+  function handleExperienceSelected(experience: IExperience) {
+    setExperienceSeletected(experience)
+    setIsMoreInfoToggled(false)
+  }
+
   return (
     <div>
       <div className="flex flex-wrap gap-2">
         {
         experiences.map((experience, index) => (
-          <button onClick={() => setExperienceSeletected(experiences[index])} type="button" className={`flex items-center rounded-full border px-4 py-2 text-sm transition-all  ${experienceSelected.id === experience.id ? 'border-brand-primary text-brand-primary' : 'border-layer-1 hover:text-on-layer-0-l1'}`} key={experience.id}>
+          <button onClick={() => handleExperienceSelected(experiences[index])} type="button" className={`flex items-center rounded-full border px-4 py-2 text-sm transition-all  ${experienceSelected.id === experience.id ? 'border-brand-primary text-brand-primary' : 'border-layer-1 hover:text-on-layer-0-l1'}`} key={experience.id}>
             <Image src={experience.logo} alt="" width={30} height={30} />
             <span>{experience.info.title}</span>
           </button>
@@ -49,9 +56,20 @@ export function ExperienceSection() {
           </div>
         </div>
 
-        <div>
+        <div className="flex flex-col">
           <h3 className="mb-2 font-title text-lg text-on-layer-0-l1">{experienceSelected.info.title}</h3>
-          <p className="text-sm leading-6">{experienceSelected.info.desc}</p>
+
+          <p className="text-sm leading-6">
+            {
+              isMoreInfoToggled
+                ? experienceSelected.info.desc
+                : experienceSelected.info.short_desc
+            }
+          </p>
+
+          {
+            !isMoreInfoToggled && <button onClick={() => setIsMoreInfoToggled(prev => !prev)} type="button" className="design-link mt-2 self-end">Mais informações</button>
+          }
         </div>
       </div>
     </div>

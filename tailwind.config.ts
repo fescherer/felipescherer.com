@@ -99,6 +99,14 @@ const config: Config = {
           from: { opacity: '0', transform: 'translateX(2px)' },
           to: { opacity: '1', transform: 'translateX(0)' },
         },
+        spinPlanetKey: {
+          '0%': {
+            transform: 'translate(-50%, -50%) rotate(0deg)',
+          },
+          '100%': {
+            transform: 'translate(-50%, -50%) rotate(360deg)',
+          },
+        },
       },
       animation: {
         comet: 'cometKeyframe 10s linear infinite',
@@ -107,6 +115,7 @@ const config: Config = {
         slideRightAndFade: 'slideRightAndFade 400ms cubic-bezier(0.16, 1, 0.3, 1)',
         slideDownAndFade: 'slideDownAndFade 400ms cubic-bezier(0.16, 1, 0.3, 1)',
         slideLeftAndFade: 'slideLeftAndFade 400ms cubic-bezier(0.16, 1, 0.3, 1)',
+        spinPlanet: 'spinPlanetKey linear infinite',
       },
       gradientColorStopPositions: {
         '99%': '99%',

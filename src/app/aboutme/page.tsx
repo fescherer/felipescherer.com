@@ -1,8 +1,7 @@
-import { LoadingScreen } from '@/components/LoadingScreen'
+import { AboutMe } from '@/features/AboutMe'
 
 export default function AboutMePage() {
   return (
-    // <AboutMe />
-    <LoadingScreen />
+    <AboutMe />
   )
 }

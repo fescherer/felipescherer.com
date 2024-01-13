@@ -16,7 +16,7 @@ export function AboutMe() {
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Id veritatis deserunt nulla dicta, voluptate dolore dolor perspiciatis odio tempora magni ipsam quaerat eius, reiciendis delectus laborum! Perspiciatis eveniet quaerat optio.
             </p>
 
-            <div className="flex justify-evenly">
+            <div className="flex flex-col justify-evenly md:flex-row">
               <Link className="design-anchor-btn" href="#habilities">Habilidades</Link>
               <Link className="design-anchor-btn" href="#experience">Experiences</Link>
               <Link className="design-anchor-btn" href="#resume">Resume</Link>

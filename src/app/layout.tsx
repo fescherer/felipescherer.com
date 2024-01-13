@@ -5,6 +5,7 @@ import React from 'react'
 import { ProgressBarProvider } from '@/providers/progress-bar.provider'
 import { Footer } from '@/components/Footer'
 import 'react-multi-carousel/lib/styles.css'
+import { MainComponent } from '@/components/MainComponent'
 
 const lora = Lora({
   subsets: ['latin'],
@@ -33,8 +34,10 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${lora.variable} ${poppins.variable} bg-layer-0 font-text text-on-layer-0-l2`}>
         <ProgressBarProvider>
-          {children}
-          <Footer />
+          <MainComponent>
+            {children}
+            <Footer />
+          </MainComponent>
         </ProgressBarProvider>
       </body>
     </html>

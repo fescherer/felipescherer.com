@@ -11,7 +11,9 @@ function generateRandomInt(max: number, min: number) {
 const numOfPlanets = 50
 var colorArray = ['aliceblue', 'aqua', 'aquamarine', 'azure', 'blueviolet', 'blue', 'cadetblue', 'chartreuse', 'coral', 'cornflowerblue', 'cyan', 'crimson', 'darkblue', 'darkcyan', 'darkgoldenrod', 'darkmagenta', 'darkseagreen', 'darkorange', 'darkslateblue', 'darkorchid', 'darkslategray', 'darkturquoise', 'deeppink', 'darkviolet', 'dodgerblue', 'floralwhite', 'fuchsia', 'gold', 'greenyellow', 'honeydew', 'hotpink', 'indigo', 'lawngreen', 'lightblue', 'lightcyan', 'lightgreen', 'lightskyblue', 'lightsalmon', 'lightseagreen', 'mediumslateblue', 'mediumpurple', 'midnightblue', 'paleturquoise', 'palegreen']
 
-export function LoadingScreen() {
+// TODO Better Splash screen with project logo insted an text
+
+export function SplashScreen() {
   function generatePlanets() {
     const squareDiv = document.getElementById('square')
     if (!squareDiv) return
@@ -54,9 +56,9 @@ export function LoadingScreen() {
 
   return (
     <div className="min-h-screen">
-      <div id="square" className="relative mx-auto my-0 flex h-[720px] w-[1280px] flex-col items-center">
-        <h1>ORBITAL</h1>
-        <p>LOADING PAGE</p>
+      <div id="square" className="absolute mx-auto my-0 flex h-screen w-screen flex-col items-center overflow-hidden bg-[#090511]">
+        <div className="absolute h-full w-full backdrop-blur-sm" />
+        <h1 className="z-10 m-auto font-title text-xl text-on-layer-0-l1 ">Wellcome to Felipe Scherer&apos;s Portifolio</h1>
       </div>
     </div>
   )

@@ -31,7 +31,7 @@ export function Resume() {
       </ToggleGroup.Root>
 
       <Link target="_blank" href={`/resume/felipe-scherer-resume-${language}.pdf`} download={`felipe-scherer-resume-${language}`} className={twMerge('design-btn flex gap-2', 'rounded-none', 'rounded-b')}>
-        <span>Download my Resume</span>
+        Download my Resume
         <LucideDownload size={20} />
       </Link>
 

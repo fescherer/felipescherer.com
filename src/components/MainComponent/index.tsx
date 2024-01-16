@@ -9,7 +9,7 @@ export function MainComponent({ children }: PropsWithChildren) {
   useEffect(() => {
     const timeoutId = setTimeout(() => {
       setHasShowedSplashScreen(true)
-    }, 2000)
+    }, 1800)
     return () => clearTimeout(timeoutId)
   }, [])
 

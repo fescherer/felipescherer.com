@@ -140,6 +140,9 @@ const config: Config = {
         '.animation-paused': {
           'animation-play-state': 'paused',
         },
+        '.animation-fill-forwards': {
+          'animation-fill-mode': 'forwards',
+        },
       })
     }),
   ],

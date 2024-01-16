@@ -17,10 +17,10 @@ export function ProjectCard({ project }: ProjectCardProps) {
 
       <Link href={linkPath} className="absolute left-0 top-0 h-full w-full" />
 
-      <Link href={linkPath} className="relative min-h-[40%] overflow-hidden">
-        <div className="h-full scale-110 bg-cover bg-center blur-sm" style={{ backgroundImage: `url(${imagePath}/thumb.png)` }} />
-        <div className="absolute top-0 h-full w-full bg-contain bg-center bg-no-repeat" style={{ backgroundImage: `url(${imagePath}/thumb.png)` }} />
-      </Link>
+      <div className="relative min-h-[40%] overflow-hidden">
+        <Link href={linkPath} className="h-full scale-110 bg-cover bg-center blur-sm" style={{ backgroundImage: `url(${imagePath}/thumb.png)` }} />
+        <Link href={linkPath} className="absolute top-0 h-full w-full bg-contain bg-center bg-no-repeat" style={{ backgroundImage: `url(${imagePath}/thumb.png)` }} />
+      </div>
 
       <Ribbon
         href={`/projects/${project.type.id}`}

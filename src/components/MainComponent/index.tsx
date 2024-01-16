@@ -9,21 +9,19 @@ export function MainComponent({ children }: PropsWithChildren) {
   useEffect(() => {
     const timeoutId = setTimeout(() => {
       setHasShowedSplashScreen(true)
-    }, 1800)
+    }, 1000)
     return () => clearTimeout(timeoutId)
   }, [])
 
-  // TODO solve bug that makes some stars visible in the section
+  // TODO make better animation of changing items
 
   return (
-    <div className="relative overflow-hidden" style={{ maxHeight: hasShowedSplashScreen ? 'none' : '100vh' }}>
+    <>
       {
-        !hasShowedSplashScreen
-        && <SplashScreen />
-      }
-
-      {children}
-    </div>
-
+      !hasShowedSplashScreen
+        ? <SplashScreen />
+        : <>{ children }</>
+    }
+    </>
   )
 }

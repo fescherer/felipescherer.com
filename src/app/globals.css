@@ -9,7 +9,8 @@
  --layer-2: #656565;
 
  --on-layer-0-l1: #FFFFFF;
- --on-layer-0-l2: #c0c0c0;
+ --on-layer-0-l2: #747c86;
+ --on-layer-0-l3: #333333;
 
  --on-layer-1-l1: #EAEAEA;
  --on-layer-1-l2: #DDDDDD;
@@ -21,7 +22,7 @@
   --brand-secondary: #BB6ABD;
   --brand-on-primary: #E1E1E1;
   --brand-on-secondary: #FEFEEB;
-  --brand-hover-primary: #19444b;
+  --brand-hover-primary: #37aec0;
   --brand-hover-secondary: #4f2c50;
 }
 

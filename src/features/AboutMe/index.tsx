@@ -1,6 +1,7 @@
 import Link from 'next/link'
-import { AboutCard, ExperienceSection, HabilitiesSection } from './components'
+import { AboutCard, ExperienceSection } from './components'
 import { HISTORY_DATA } from '@/utils/aboutme/history'
+import { ToolkitSection } from './components/ToolkitSection'
 
 export function AboutMe() {
   const titleSectionClassname = 'my-4 font-title text-2xl text-on-layer-0-l1'
@@ -27,8 +28,9 @@ export function AboutMe() {
       </section>
 
       <section id="habilities">
-        <h2 className={titleSectionClassname}>Habilities</h2>
-        <HabilitiesSection />
+        <h2 className={titleSectionClassname}>Toolkit</h2>
+        {/* <HabilitiesSection /> */}
+        <ToolkitSection />
       </section>
 
       <section id="experience">

@@ -26,12 +26,11 @@
   --brand-hover-secondary: #4f2c50;
 }
 
+html {
+  scroll-behavior: smooth;
+}
 
 @layer base {
-  html {
-    scroll-behavior: smooth;
-  }
-
   input:not([type=button]):not([type=reset]):not([type=submit]):not([type=image]):focus,textarea:focus, button:focus-visible, a:focus-visible {
     outline: 0;
     @apply ring-2 ring-brand-hover-primary border-transparent

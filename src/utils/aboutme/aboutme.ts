@@ -4,7 +4,6 @@ export const ABOUT_ME_DATA = {
   buttons: [
     'Toolkit',
     'Experiences',
-    'Resume',
     'My History',
   ],
 }

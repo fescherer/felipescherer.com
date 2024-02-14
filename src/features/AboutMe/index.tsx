@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { AboutCard, ExperienceSection, ResumeSection } from './components'
+import { AboutCard, ExperienceSection, QuoteSection } from './components'
 import { HISTORY_DATA } from '@/utils/aboutme/history'
 import { ToolkitSection } from './components/ToolkitSection'
 import { ABOUT_ME_DATA } from '@/utils/aboutme/aboutme'
@@ -22,6 +22,8 @@ export function AboutMe() {
               {ABOUT_ME_DATA.buttons.map(title => (
                 <Link key={title} className="design-anchor-btn text-center" href={`#${title}`}>{title}</Link>
               ))}
+
+              <Link className="design-anchor-btn text-center" href="/resume">Résumé/CV</Link>
             </div>
           </div>
         </AboutCard>
@@ -38,12 +40,9 @@ export function AboutMe() {
         <ExperienceSection />
       </section>
 
-      <section id={ABOUT_ME_DATA.buttons[2]}>
-        <h2 className={titleSectionClassname}>Resume</h2>
-        <ResumeSection />
-      </section>
+      <QuoteSection />
 
-      <section id={ABOUT_ME_DATA.buttons[3]}>
+      <section id={ABOUT_ME_DATA.buttons[2]}>
         <h2 className={titleSectionClassname}>My History</h2>
 
         {

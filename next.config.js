@@ -13,6 +13,11 @@ const nextConfig = {
         hostname: 'user-images.githubusercontent.com',
         port: '',
       },
+      {
+        protocol: 'https',
+        hostname: 'www-cs-faculty.stanford.edu',
+        port: '',
+      },
     ],
   },
 }

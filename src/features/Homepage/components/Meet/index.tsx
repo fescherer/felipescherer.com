@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { StarryNight } from './components'
+import { StarryNight, Typewriter } from './components'
 import { ContentWrapper } from '..'
 
 export function Meet() {
@@ -12,8 +12,7 @@ export function Meet() {
         <div className="flex flex-col text-center font-title tracking-wide md:text-left">
           <h2 className="text-2xl font-medium leading-none">Meet</h2>
           <h1 className="text-4xl font-medium text-on-layer-0-l1 md:text-6xl">Felipe Scherer</h1>
-          {/* TODO Make a typing effect for what I am. Developer, Designer, Content Creator, Game Developer */}
-          <span className="font-mono">Developer</span>
+          <Typewriter />
 
           <Link href="#aboutme" className="design-btn mt-6 self-center text-xl md:self-start ">
             Explore my Portifolio

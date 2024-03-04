@@ -27,4 +27,7 @@ export interface IHability {
   text: string
   icon: string
   doc: string
+  short_description: string
+  category: 'software' | 'css' | 'javascript' | 'other'
+  isFavorite: boolean
 }

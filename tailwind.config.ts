@@ -19,6 +19,7 @@ const config: Config = {
       'on-layer-0': {
         l1: 'var(--on-layer-0-l1)',
         l2: 'var(--on-layer-0-l2)',
+        l3: 'var(--on-layer-0-l3)',
       },
       'on-layer-1': {
         l1: 'var(--on-layer-1-l1)',
@@ -39,6 +40,10 @@ const config: Config = {
           primary: 'var(--brand-hover-primary)',
           secondary: 'var(--brand-hover-secondary)',
         },
+      },
+      'default': {
+        yellow: '#bbb80e',
+        red: '#aa0000',
       },
       'transparent': 'transparent',
     },

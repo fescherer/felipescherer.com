@@ -8,14 +8,14 @@
  --layer-1: #242424;
  --layer-2: #656565;
 
- --on-layer-0-l1: #FFFFFF;
- --on-layer-0-l2: #747c86;
+ --on-layer-0-l1: #e2e2e2;
+ --on-layer-0-l2: #9097a0;
  --on-layer-0-l3: #333333;
 
  --on-layer-1-l1: #EAEAEA;
  --on-layer-1-l2: #DDDDDD;
 
- --on-layer-2-l1: #FFFFFF;
+ --on-layer-2-l1: #e2e2e2;
  --on-layer-2-l2: #E8E8E8;
 
   --brand-primary: #2E7A85;
@@ -57,6 +57,16 @@ html {
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
+  }
+
+  .maskFade {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+
+    mask: linear-gradient(to top, transparent, black 30%);
+    backdrop-filter: saturate(180%) blur(2px);
   }
 
   .design-link {

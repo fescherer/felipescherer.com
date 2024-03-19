@@ -7,6 +7,7 @@ import { Footer } from '@/components/Footer'
 import 'react-multi-carousel/lib/styles.css'
 import { MainComponent } from '@/components/MainComponent'
 import { METADATA } from './metadata'
+import { Header } from '@/components'
 
 const lora = Lora({
   subsets: ['latin'],
@@ -35,7 +36,12 @@ export default function RootLayout({ children }: PropsWithChildren) {
       <body className={`${lora.variable} ${poppins.variable} bg-layer-0 font-text text-on-layer-0-l2`}>
         <ProgressBarProvider>
           <MainComponent>
-            {children}
+            <Header />
+
+            <main className="pt-16">
+              {children}
+            </main>
+
             <Footer />
           </MainComponent>
         </ProgressBarProvider>

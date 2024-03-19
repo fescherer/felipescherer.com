@@ -14,7 +14,7 @@ export function Resume() {
 
   return (
     <div className="m-auto my-4 flex max-w-5xl flex-col gap-2">
-      <h2 className="font-title text-3xl text-on-layer-0-l1">View/Download my Resumé</h2>
+      <h2 className="font-title text-3xl text-on-layer-0-l1">View/Download my Resume</h2>
       <p>Thank you for your interest in my work. By clicking on the download button, you&apos;ll gain access to a detailed document that highlights my educational background, work history, key achievements, and areas of expertise. Whether you&apos;re a potential employer, collaborator, or simply curious about my career trajectory, my CV/resume offers valuable insights.</p>
 
       <div className="flex flex-col justify-between gap-2 md:flex-row">

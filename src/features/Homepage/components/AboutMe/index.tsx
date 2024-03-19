@@ -3,7 +3,8 @@ import { ContentWrapper } from '..'
 import { OWNER_CONFIGS } from '@/utils/owner.config'
 import Link from 'next/link'
 import { SocialIcon } from '@/icons/Social/Social'
-import { Carrousel, Resume } from './components'
+import { Carrousel } from './components'
+import { ResumeSection } from '@/components'
 
 export function AboutMe() {
   const yearsOld = getYearsOld()
@@ -34,7 +35,7 @@ export function AboutMe() {
             .
           </p>
 
-          <Resume />
+          <ResumeSection />
         </div>
 
         <div className="flex flex-row justify-center gap-2 self-start md:flex-col">

@@ -18,7 +18,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
       <Link href={linkPath} className="absolute left-0 top-0 h-full w-full" />
 
       <div className="relative min-h-[40%] overflow-hidden">
-        <Link href={linkPath} className="h-full scale-110 bg-cover bg-center blur-sm" style={{ backgroundImage: `url(${imagePath}/thumb.png)` }} />
+        <Link href={linkPath} className="absolute h-full w-full scale-110 bg-cover bg-center blur-sm" style={{ backgroundImage: `url(${imagePath}/thumb.png)` }} />
         <Link href={linkPath} className="absolute top-0 h-full w-full bg-contain bg-center bg-no-repeat" style={{ backgroundImage: `url(${imagePath}/thumb.png)` }} />
       </div>
 

@@ -5,5 +5,6 @@ export const ABOUT_ME_DATA = {
     'Toolkit',
     'Experiences',
     'My History',
+    'Book Recomendation',
   ],
 }

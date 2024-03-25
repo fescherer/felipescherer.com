@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { AboutCard, ExperienceSection, QuoteSection } from './components'
+import { AboutCard, BookList, ExperienceSection, QuoteSection } from './components'
 import { HISTORY_DATA } from '@/utils/aboutme/history'
 import { ToolkitSection } from './components/ToolkitSection'
 import { ABOUT_ME_DATA } from '@/utils/aboutme/aboutme'
@@ -18,7 +18,7 @@ export function AboutMe() {
               {ABOUT_ME_DATA.text}
             </p>
 
-            <div className="flex flex-col justify-evenly md:flex-row">
+            <div className="flex flex-col flex-wrap gap-2 md:flex-row">
               {ABOUT_ME_DATA.buttons.map(title => (
                 <Link key={title} className="design-anchor-btn text-center" href={`#${title}`}>{title}</Link>
               ))}
@@ -29,20 +29,25 @@ export function AboutMe() {
         </AboutCard>
       </section>
 
-      <section id={ABOUT_ME_DATA.buttons[0]}>
+      <section id={ABOUT_ME_DATA.buttons[0]} className="scroll-m-20">
         <h2 className={titleSectionClassname}>Toolkit</h2>
         {/* <HabilitiesSection /> */}
         <ToolkitSection />
       </section>
 
-      <section id={ABOUT_ME_DATA.buttons[1]}>
+      <section id={ABOUT_ME_DATA.buttons[1]} className="scroll-m-20">
         <h2 className={titleSectionClassname}>Experiences</h2>
         <ExperienceSection />
       </section>
 
       <QuoteSection />
 
-      <section id={ABOUT_ME_DATA.buttons[2]}>
+      <section id={ABOUT_ME_DATA.buttons[3]}className="scroll-m-20">
+        <h2 className={titleSectionClassname}>Book Recomendation</h2>
+        <BookList />
+      </section>
+
+      <section id={ABOUT_ME_DATA.buttons[2]} className="scroll-m-20">
         <h2 className={titleSectionClassname}>My History</h2>
 
         {

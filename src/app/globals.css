@@ -78,7 +78,7 @@ html {
   }
 
   .design-anchor-btn {
-    @apply rounded-sm bg-layer-1 px-4 py-2 text-on-layer-0-l2 ring-4 ring-transparent transition-all hover:text-on-layer-0-l1
+    @apply rounded-full bg-layer-1 px-4 py-2 text-on-layer-0-l2 ring-4 ring-transparent transition-all hover:text-on-layer-0-l1
   }
 
   .prose h2 {

@@ -29,6 +29,10 @@ const items = [
     name: 'Blog',
     link: 'https://blog.felipescherer.com',
   },
+  {
+    name: 'Now',
+    link: '/now',
+  },
 ]
 
 export function Header() {

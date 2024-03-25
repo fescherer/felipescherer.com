@@ -20,7 +20,7 @@ export default function Now() {
       </p>
 
       <p>
-        Going regulary to gym and running on weekends.
+        Going regularly to gym and running on weekends.
       </p>
 
       <p>
@@ -30,7 +30,7 @@ export default function Now() {
       </p>
 
       <p>
-        Studing drawing, chinese, artificial intelligence and game development.
+        Studying drawing, chinese, artificial intelligence and game development.
       </p>
 
     </div>

@@ -31,3 +31,13 @@ export interface IHability {
   category: 'software' | 'css' | 'javascript' | 'other'
   isFavorite: boolean
 }
+
+export interface IBookList {
+  id: string
+  title: string
+  authors: string[]
+  isReading?: boolean
+  isPlanToRead?: boolean
+  rate?: number
+  link: string
+}

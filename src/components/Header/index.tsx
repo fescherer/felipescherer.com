@@ -3,6 +3,7 @@
 import { LogoIcon } from '@/icons'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
+import LocaleSwitcher from '../LocaleSwitcher'
 
 const items = [
   {
@@ -50,6 +51,8 @@ export function Header() {
             <Link key={item.name} href={item.link} className={`border-b transition-all hover:border-brand-primary hover:text-brand-hover-primary ${path === item.link ? 'border-brand-primary text-brand-primary' : 'border-transparent text-on-layer-0-l2 '}`}>{item.name}</Link>
           ))}
         </div>
+
+        <LocaleSwitcher />
       </header>
     </div>
   )

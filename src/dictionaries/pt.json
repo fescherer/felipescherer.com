@@ -1,0 +1,9 @@
+{
+  "server-component": {
+    "welcome": "DETROID"
+  },
+  "counter": {
+    "increment": "Increment",
+    "decrement": "Decrement"
+  }
+}

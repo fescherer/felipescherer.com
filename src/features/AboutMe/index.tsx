@@ -3,12 +3,21 @@ import { AboutCard, BookList, ExperienceSection, QuoteSection } from './componen
 import { HISTORY_DATA } from '@/utils/aboutme/history'
 import { ToolkitSection } from './components/ToolkitSection'
 import { ABOUT_ME_DATA } from '@/utils/aboutme/aboutme'
+import { getDictionary } from '@/get-dictionary'
+import { Locale } from '@/i18n-config'
 
-export function AboutMe() {
+type AboutMeProps = {
+  lang: Locale
+}
+
+export async function AboutMe({ lang }: AboutMeProps) {
   const titleSectionClassname = 'my-4 font-title text-2xl text-on-layer-0-l1'
+  const dictionary = await getDictionary(lang)
 
   return (
     <div className="m-auto max-w-5xl p-4">
+      {dictionary['server-component'].welcome}
+
       <section id="aboutme">
         <h2 className={titleSectionClassname}>About me</h2>
 

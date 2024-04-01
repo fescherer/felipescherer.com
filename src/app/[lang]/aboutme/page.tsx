@@ -1,4 +1,5 @@
 import { AboutMe } from '@/features/AboutMe'
+import { Locale } from '@/i18n-config'
 import { getMetadata } from '@/utils/functions/getMetada'
 import { Metadata } from 'next'
 
@@ -11,8 +12,14 @@ export const metadata: Metadata = getMetadata({
   defaultKeywords: ['about-me'],
 })
 
-export default function AboutMePage() {
+type RootLayoutType = {
+  params: {
+    lang: Locale
+  }
+}
+
+export default function AboutMePage({ params }: RootLayoutType) {
   return (
-    <AboutMe />
+    <AboutMe lang={params.lang} />
   )
 }

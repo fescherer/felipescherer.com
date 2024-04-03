@@ -61,5 +61,6 @@ export function middleware(request: NextRequest) {
 
 export const config = {
   // Matcher ignoring `/_next/` and `/api/`
-  matcher: ['/((?!api|_next/static|_next/image|favicon.ico).*)'],
+  // Ignore public assets https://clerk.com/blog/skip-nextjs-middleware-static-and-public-files
+  matcher: ['/((?!api|_next/static|_next/image|favicon.ico|icon.svg|apple-icon.png|.*\\.).*)'],
 }

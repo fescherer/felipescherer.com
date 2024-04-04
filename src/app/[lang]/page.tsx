@@ -1,4 +1,5 @@
 import { Homepage } from '@/features'
+import { RootLayoutType } from '@/types/Page'
 import { getMetadata } from '@/utils/functions/getMetada'
 import type { Metadata } from 'next'
 
@@ -11,8 +12,8 @@ export const metadata: Metadata = getMetadata({
   defaultKeywords: ['institucional-page'],
 })
 
-export default function Home() {
+export default function Home({ params }: RootLayoutType) {
   return (
-    <Homepage />
+    <Homepage lang={params.lang} />
   )
 }

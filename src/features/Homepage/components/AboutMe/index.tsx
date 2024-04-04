@@ -5,8 +5,16 @@ import Link from 'next/link'
 import { SocialIcon } from '@/icons/Social/Social'
 import { Carrousel } from './components'
 import { ResumeSection } from '@/components'
+import { getDictionary } from '@/get-dictionary'
+import { Locale } from '@/i18n-config'
 
-export function AboutMe() {
+type AboutMeProps = {
+  lang: Locale
+}
+
+export async function AboutMe({ lang }: AboutMeProps) {
+  const dictionary = await getDictionary(lang)
+
   const yearsOld = getYearsOld()
 
   return (
@@ -18,24 +26,26 @@ export function AboutMe() {
           <h2 className="mb-4 font-title text-4xl font-semibold tracking-wide text-on-layer-0-l1">About Me</h2>
 
           <p className="flex-1 text-justify text-base">
-            Hello! My name is Felipe Scherer,
+            {dictionary.homepage.aboutme.hello}
+            ,
             {` ${yearsOld} `}
             {' '}
-            years old
-            and a developer 🤓. Currently working with web development (ReactJS - NextJS - NodeJS) and game development (Unreal Engine). Sometimes creating content for internet 😊. You can find mostly of my projects on my
+            {dictionary.homepage.aboutme.yearsOld}
             {' '}
-            <Link className="design-link" href={OWNER_CONFIGS.github_link}>Github&apos;s Page</Link>
+            {dictionary.homepage.aboutme.description}
+            {' '}
+            <Link className="design-link" href={OWNER_CONFIGS.github_link}>{dictionary.homepage.aboutme.githubPage}</Link>
             .
           </p>
 
           <p>
-            Find more about me
+            {dictionary.homepage.aboutme.findMore}
             {' '}
             <Link className="design-link" href="/aboutme">here</Link>
             .
           </p>
 
-          <ResumeSection />
+          <ResumeSection defaultLang={lang} />
         </div>
 
         <div className="flex flex-row justify-center gap-2 self-start md:flex-col">

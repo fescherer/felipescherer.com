@@ -1,10 +1,15 @@
+import { Locale } from '@/i18n-config'
 import { AboutMe, Blog, Meet, Projects } from './components'
 
-export function Homepage() {
+type HomepageProps = {
+  lang: Locale
+}
+
+export function Homepage({ lang }: HomepageProps) {
   return (
     <main className="flex flex-col">
       <Meet />
-      <AboutMe />
+      <AboutMe lang={lang} />
       <Blog />
       <Projects />
     </main>

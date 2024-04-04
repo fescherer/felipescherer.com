@@ -5,5 +5,15 @@
   "counter": {
     "increment": "Increment",
     "decrement": "Decrement"
+  },
+  "homepage": {
+    "aboutme": {
+      "hello": "Hello! My name is Felipe Scherer",
+      "yearsOld": "years old",
+      "description": "and a developer 🤓. Currently working with web development (ReactJS - NextJS - NodeJS) and game development (Unreal Engine). Sometimes creating content for internet 😊. You can find mostly of my projects on my",
+      "githubPage": "Github's page",
+      "findMore": "Find more about me",
+      "here": "here"
+    }
   }
 }

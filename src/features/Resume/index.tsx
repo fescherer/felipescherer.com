@@ -1,16 +1,14 @@
 'use client'
 
+import { Locale, i18nWithName } from '@/i18n-config'
 import { useState } from 'react'
 
-type ILanguage = {
-  id: string
-  text: string
+type ResumeProps = {
+  lang: Locale
 }
 
-const availableLanguages: ILanguage[] = [{ id: 'en', text: 'english' }, { id: 'pt-br', text: 'português' }]
-
-export function Resume() {
-  const [selectedLanguage, setSelectedLanguage] = useState(availableLanguages[0])
+export function Resume({ lang }: ResumeProps) {
+  const [selectedLanguage, setSelectedLanguage] = useState(lang)
 
   return (
     <div className="m-auto my-4 flex max-w-5xl flex-col gap-2">
@@ -20,19 +18,19 @@ export function Resume() {
       <div className="flex flex-col justify-between gap-2 md:flex-row">
         <p>
           You are seeing the
-          <strong className="text-brand-primary">{` ${selectedLanguage.text} `}</strong>
+          <strong className="text-brand-primary">{` ${i18nWithName.locales.find(locale => locale.id === selectedLanguage)?.name} `}</strong>
           version.
         </p>
 
         <div className="flex gap-1 rounded border border-layer-2">
-          {availableLanguages.map(language => (
-            <button onClick={() => setSelectedLanguage(language)} key={language.id} type="button" className={`px-4 py-2 capitalize ${language.id === selectedLanguage.id ? 'bg-brand-primary text-brand-on-primary' : 'bg-transparent'}`}>{language.text}</button>
+          {i18nWithName.locales.map(language => (
+            <button onClick={() => setSelectedLanguage(language.id)} key={language.id} type="button" className={`px-4 py-2 capitalize ${language.id === selectedLanguage ? 'bg-brand-primary text-brand-on-primary' : 'bg-transparent'}`}>{language.name}</button>
           ))}
         </div>
       </div>
 
-      <object data={`/resume/felipe-scherer-resume-${selectedLanguage.id}.pdf`} width="80%" height="1000" className="mx-auto my-4 w-full md:w-10/12">
-        <embed src={`/resume/felipe-scherer-resume-${selectedLanguage.id}.pdf`} width="80%" height="1000px" className="w-full" />
+      <object data={`/resume/felipe-scherer-resume-${selectedLanguage}.pdf`} width="80%" height="1000" className="mx-auto my-4 w-full md:w-10/12">
+        <embed src={`/resume/felipe-scherer-resume-${selectedLanguage}.pdf`} width="80%" height="1000px" className="w-full" />
       </object>
     </div>
   )

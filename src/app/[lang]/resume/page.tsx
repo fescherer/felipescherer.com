@@ -1,4 +1,5 @@
 import { Resume } from '@/features'
+import { RootLayoutType } from '@/types/Page'
 import { getMetadata } from '@/utils/functions/getMetada'
 import { Metadata } from 'next'
 
@@ -11,8 +12,8 @@ export const metadata: Metadata = getMetadata({
   defaultKeywords: ['resume', 'cv'],
 })
 
-export default function Page() {
+export default function Page({ params }: RootLayoutType) {
   return (
-    <Resume />
+    <Resume lang={params.lang} />
   )
 }

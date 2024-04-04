@@ -4,20 +4,14 @@ import { LucideChevronDown, LucideFileText } from 'lucide-react'
 import Link from 'next/link'
 import { useState } from 'react'
 import * as Select from '@radix-ui/react-select'
+import { Locale, i18nWithName } from '@/i18n-config'
 
-const languages = [
-  {
-    value: 'en',
-    title: 'English',
-  },
-  {
-    value: 'pt-br',
-    title: 'Português',
-  },
-]
+type ResumeSectionProps = {
+  defaultLang: Locale
+}
 
-export function ResumeSection() {
-  const [language, setLanguage] = useState('en')
+export function ResumeSection({ defaultLang }: ResumeSectionProps) {
+  const [language, setLanguage] = useState(defaultLang)
 
   return (
     <div className="my-6 flex flex-col gap-2 rounded border border-layer-1 p-4">
@@ -33,7 +27,7 @@ export function ResumeSection() {
       </p>
 
       <div className="mt-4 flex justify-end gap-3">
-        <Select.Root value={language} onValueChange={setLanguage}>
+        <Select.Root value={language} onValueChange={(value: Locale) => setLanguage(value)}>
           <Select.Trigger className="flex items-center justify-center gap-2 rounded-sm border border-layer-1 px-4 py-2 transition-colors hover:border-on-layer-0-l1 hover:text-on-layer-0-l1 focus:text-on-layer-0-l1">
             <Select.Value />
             <LucideChevronDown size={14} />
@@ -42,9 +36,9 @@ export function ResumeSection() {
           <Select.Portal>
             <Select.Content className="overflow-hidden rounded-md bg-layer-1">
               <Select.Viewport className="space-y-2 p-2">
-                {languages.map(language => (
-                  <Select.Item value={language.value} key={language.value} className="relative flex cursor-pointer select-none items-center rounded-sm p-3 text-base leading-none transition-colors data-[highlighted]:bg-brand-primary data-[highlighted]:text-brand-on-primary data-[highlighted]:outline-none">
-                    <Select.ItemText>{language.title}</Select.ItemText>
+                {i18nWithName.locales.map(language => (
+                  <Select.Item value={language.id} key={language.id} className="relative flex cursor-pointer select-none items-center rounded-sm p-3 text-base leading-none transition-colors data-[highlighted]:bg-brand-primary data-[highlighted]:text-brand-on-primary data-[highlighted]:outline-none">
+                    <Select.ItemText>{language.name}</Select.ItemText>
                     <Select.ItemIndicator />
                   </Select.Item>
                 ))}

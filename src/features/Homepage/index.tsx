@@ -8,10 +8,10 @@ type HomepageProps = {
 export function Homepage({ lang }: HomepageProps) {
   return (
     <main className="flex flex-col">
-      <Meet />
+      <Meet lang={lang} />
       <AboutMe lang={lang} />
-      <Blog />
-      <Projects />
+      <Blog lang={lang} />
+      <Projects lang={lang} />
     </main>
   )
 }

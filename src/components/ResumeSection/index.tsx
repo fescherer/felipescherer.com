@@ -5,25 +5,27 @@ import Link from 'next/link'
 import { useState } from 'react'
 import * as Select from '@radix-ui/react-select'
 import { Locale, i18nWithName } from '@/i18n-config'
+import { getDictionary } from '@/get-dictionary'
 
 type ResumeSectionProps = {
   defaultLang: Locale
+  translation: Awaited<ReturnType<typeof getDictionary>>
 }
 
-export function ResumeSection({ defaultLang }: ResumeSectionProps) {
+export function ResumeSection({ defaultLang, translation }: ResumeSectionProps) {
   const [language, setLanguage] = useState(defaultLang)
 
   return (
     <div className="my-6 flex flex-col gap-2 rounded border border-layer-1 p-4">
       <Link href="/resume" className="flex items-center gap-2 self-start font-medium text-on-layer-0-l1 transition-colors hover:text-brand-primary hover:underline focus:text-brand-primary">
         <LucideFileText />
-        <h3>Resume</h3>
+        <h3>{translation.homepage.aboutme.resume.title}</h3>
       </Link>
 
       <p className="ml-1 text-sm">
-        If you looking for my resume
-        <Link className="design-link ml-1" href="/resume">go the this page</Link>
-        , but if you want to download just choose the prefered language and click download
+        {translation.homepage.aboutme.resume.p1}
+        <Link className="design-link ml-1" href="/resume">{translation.homepage.aboutme.resume.p2}</Link>
+        {translation.homepage.aboutme.resume.p3}
       </p>
 
       <div className="mt-4 flex justify-end gap-3">
@@ -49,7 +51,7 @@ export function ResumeSection({ defaultLang }: ResumeSectionProps) {
           </Select.Portal>
         </Select.Root>
 
-        <Link target="_blank" className="rounded bg-brand-primary px-4 py-2 text-brand-on-primary hover:bg-brand-hover-primary focus:bg-brand-hover-primary" href={`/resume/felipe-scherer-resume-${language}.pdf`} download={`felipe-scherer-resume-${language}`}>Download</Link>
+        <Link target="_blank" className="rounded bg-brand-primary px-4 py-2 text-brand-on-primary hover:bg-brand-hover-primary focus:bg-brand-hover-primary" href={`/resume/felipe-scherer-resume-${language}.pdf`} download={`felipe-scherer-resume-${language}`}>{translation.homepage.aboutme.resume.btn}</Link>
       </div>
     </div>
   )

@@ -7,13 +7,41 @@
     "decrement": "Decrement"
   },
   "homepage": {
+    "meet": {
+      "title": "Meet",
+      "typewriter": [
+        "Web Developer",
+        "Designer",
+        "Game Developer",
+        "Content Creator"
+      ],
+      "button": "Explore my Portfolio"
+    },
     "aboutme": {
+      "title": "About me",
       "hello": "Hello! My name is Felipe Scherer",
       "yearsOld": "years old",
       "description": "and a developer 🤓. Currently working with web development (ReactJS - NextJS - NodeJS) and game development (Unreal Engine). Sometimes creating content for internet 😊. You can find mostly of my projects on my",
       "githubPage": "Github's page",
       "findMore": "Find more about me",
-      "here": "here"
+      "here": "here",
+      "resume": {
+        "title": "Resume",
+        "p1": "If you looking for my resume",
+        "p2": "go the this page",
+        "p3": ", but if you want to download just choose the prefered language and click download",
+        "btn": "Download"
+      }
+    },
+    "blog": {
+      "title": "Blog",
+      "description": "Sometimes I like to create articles about what I learned or just to share what I am thinking. Feel free to check it out 😁. And of course, you can leave suggestions for next blogs in",
+      "myEmail": "my email",
+      "checkMyBlog": "Checkout my blog"
+    },
+    "projects": {
+      "title": "Projects",
+      "moreProjects": "More projects"
     }
   }
 }

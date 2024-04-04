@@ -23,7 +23,7 @@ export async function AboutMe({ lang }: AboutMeProps) {
 
       <div className="flex h-full max-w-[600px] flex-col gap-4 md:flex-row">
         <div className="flex h-full flex-col">
-          <h2 className="mb-4 font-title text-4xl font-semibold tracking-wide text-on-layer-0-l1">About Me</h2>
+          <h2 className="mb-4 font-title text-4xl font-semibold tracking-wide text-on-layer-0-l1">{dictionary.homepage.aboutme.title}</h2>
 
           <p className="flex-1 text-justify text-base">
             {dictionary.homepage.aboutme.hello}
@@ -45,7 +45,7 @@ export async function AboutMe({ lang }: AboutMeProps) {
             .
           </p>
 
-          <ResumeSection defaultLang={lang} />
+          <ResumeSection defaultLang={lang} translation={dictionary} />
         </div>
 
         <div className="flex flex-row justify-center gap-2 self-start md:flex-col">

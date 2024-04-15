@@ -1,5 +1,13 @@
 {
   "homepage": {
+    "seo": {
+      "defaultDescription": "Bem vindo ao meu portifolio",
+      "defaultTitle": "Portifolio Felipe Scherer",
+      "defaultAltImage": "Felipe Scherer",
+      "defaultKeywords": [
+        "pagina-institucional"
+      ]
+    },
     "meet": {
       "title": "Conheça",
       "typewriter": [
@@ -38,6 +46,12 @@
     }
   },
   "aboutme": {
+    "seo": {
+      "defaultDescription": "",
+      "defaultTitle": "",
+      "defaultAltImage": "Felipe Scherer",
+      "defaultKeywords": []
+    },
     "title": "Sobre mim",
     "about_data": {
       "title": "Felipe Scherer",
@@ -68,12 +82,28 @@
     "my-history": "Minha história"
   },
   "resume": {
+    "seo": {
+      "defaultDescription": "Aqui você pode encontrar sobre carreira",
+      "defaultTitle": "Currículo",
+      "defaultAltImage": "Felipe Scherer",
+      "defaultKeywords": [
+        "curriculo"
+      ]
+    },
     "title": "Ver/Baixar meu currículo",
     "text": "Obrigado pelo seu interesse no meu trabalho. Ao clicar no botão de download, você terá acesso a um documento detalhado que destaca minha formação educacional, histórico profissional, principais conquistas e áreas de especialização. Quer você seja um potencial empregador, colaborador ou simplesmente curioso sobre minha trajetória profissional, meu currículo oferece informações valiosas.",
     "en-version": "You are seeing the english version",
     "pt-version": "Você está vendo a versão em português"
   },
   "projects": {
+    "seo": {
+      "defaultDescription": "Aqui você encontra todos meus projetos",
+      "defaultTitle": "Projetos",
+      "defaultAltImage": "Felipe Scherer",
+      "defaultKeywords": [
+        "projetos"
+      ]
+    },
     "title-header": "Projetos",
     "placeholder": {
       "search": "Pesquise",
@@ -82,5 +112,9 @@
     "project-card": {
       "read-more": "Read more..."
     }
+  },
+  "project": {
+    "notFound": "No project with this name",
+    "notExist": "The project type does not exist"
   }
 }

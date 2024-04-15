@@ -1,16 +1,20 @@
 import { Projects } from '@/features'
+import { getDictionary } from '@/get-dictionary'
 import { RootLayoutType } from '@/types/Page'
 import { getMetadata } from '@/utils/functions/getMetada'
-import { Metadata } from 'next'
 
-export const metadata: Metadata = getMetadata({
-  defaultDescription: 'Here you can find all my projects',
-  defaultTitle: 'Projects',
-  canonicalURL: '',
-  imagePath: '/thumb.png',
-  defaultAltImage: 'Felipe Schereer',
-  defaultKeywords: ['projects'],
-})
+export async function generateMetadata({ params }: RootLayoutType) {
+  const dictionary = await getDictionary(params.lang)
+  const defaultMetadata = {
+    canonicalURL: '/projects',
+    imagePath: '/thumb.png',
+  }
+
+  return getMetadata({
+    ...defaultMetadata,
+    ...dictionary.projects.seo,
+  })
+}
 
 export default function ProjectsPage({ params }: RootLayoutType) {
   return (

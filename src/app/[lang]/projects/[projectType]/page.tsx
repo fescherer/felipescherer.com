@@ -17,17 +17,17 @@ export async function generateMetadata(
     return getMetadata({
       defaultDescription: `${params.projectType} projects`,
       defaultTitle: `Projects ${params.projectType}`,
-      canonicalURL: '',
+      canonicalURL: `/projects/${params.projectType}`,
       imagePath: '/thumb.png',
-      defaultAltImage: 'Felipe Schereer',
-      defaultKeywords: ['projects'],
+      defaultAltImage: 'Felipe Scherer',
+      defaultKeywords: [`project-${params.projectType}`],
     })
   } else return getMetadata({
-    defaultDescription: 'O tipo de projeto não foi encontrado, por favor, verificar a url',
+    defaultDescription: 'The project type was not found, please check the url',
     defaultTitle: 'Projects',
     canonicalURL: '',
     imagePath: '/thumb.png',
-    defaultAltImage: 'Felipe Schereer',
+    defaultAltImage: 'Felipe Scherer',
     defaultKeywords: ['projects'],
   })
 }

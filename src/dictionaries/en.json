@@ -1,5 +1,13 @@
 {
   "homepage": {
+    "seo": {
+      "defaultDescription": "Wellcome to my portfolio",
+      "defaultTitle": "Portfolio Felipe Scherer",
+      "defaultAltImage": "Felipe Scherer",
+      "defaultKeywords": [
+        "institucional-page"
+      ]
+    },
     "meet": {
       "title": "Meet",
       "typewriter": [
@@ -38,6 +46,12 @@
     }
   },
   "aboutme": {
+    "seo": {
+      "defaultDescription": "",
+      "defaultTitle": "",
+      "defaultAltImage": "Felipe Scherer",
+      "defaultKeywords": []
+    },
     "title": "About me",
     "about_data": {
       "title": "Felipe Scherer",
@@ -68,12 +82,29 @@
     "my-history": "My History"
   },
   "resume": {
+    "seo": {
+      "defaultDescription": "Here you can find about career",
+      "defaultTitle": "Resume/CV",
+      "defaultAltImage": "Felipe Scherer",
+      "defaultKeywords": [
+        "resume",
+        "cv"
+      ]
+    },
     "title": "View/Download my Resume",
     "text": "Thank you for your interest in my work. By clicking on the download button, you'll gain access to a detailed document that highlights my educational background, work history, key achievements, and areas of expertise. Whether you're a potential employer, collaborator, or simply curious about my career trajectory, my CV/resume offers valuable insights.",
     "en-version": "You are seeing the english version",
     "pt-version": "Você está vendo a versão em português"
   },
   "projects": {
+    "seo": {
+      "defaultDescription": "Here you can find all my projects",
+      "defaultTitle": "Projects",
+      "defaultAltImage": "Felipe Scherer",
+      "defaultKeywords": [
+        "projects"
+      ]
+    },
     "title-header": "Projects",
     "placeholder": {
       "search": "Search",
@@ -82,5 +113,9 @@
     "project-card": {
       "read-more": "Read more..."
     }
+  },
+  "project": {
+    "notFound": "No project with this name",
+    "notExist": "The project type does not exist"
   }
 }

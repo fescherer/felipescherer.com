@@ -17,9 +17,9 @@ export async function generateMetadata(
   if (!Object.keys(PROJECTS).includes(params.projectType)) return getMetadata({
     defaultDescription: `Project not found`,
     defaultTitle: `Project Not Found`,
-    canonicalURL: '',
+    canonicalURL: `/projects/${params.projectType}/${params.projectId}`,
     imagePath: '/thumb.png',
-    defaultAltImage: 'Felipe Schereer',
+    defaultAltImage: 'Felipe Scherer',
     defaultKeywords: ['projects'],
   })
 
@@ -28,18 +28,18 @@ export async function generateMetadata(
   if (!project) return getMetadata({
     defaultDescription: `Project not found`,
     defaultTitle: `Project Not Found`,
-    canonicalURL: '',
+    canonicalURL: `/projects/${params.projectType}/${params.projectId}`,
     imagePath: '/thumb.png',
-    defaultAltImage: 'Felipe Schereer',
+    defaultAltImage: 'Felipe Scherer',
     defaultKeywords: ['projects'],
   })
 
   return getMetadata({
-    defaultDescription: project.description.pt ?? '',
-    defaultTitle: project.title.pt ?? '',
-    canonicalURL: '',
+    defaultDescription: project.description[params.lang] ?? '',
+    defaultTitle: project.title[params.lang] ?? '',
+    canonicalURL: `/projects/${params.projectType}/${params.projectId}`,
     imagePath: `/projects/${project.type.id}/${project.id}`,
-    defaultAltImage: project.title.pt ?? '',
+    defaultAltImage: project.title[params.lang] ?? '',
     defaultKeywords: [...project.tags],
   })
 }
@@ -47,11 +47,11 @@ export async function generateMetadata(
 export default async function ProjectPage({ params: { projectType, projectId, lang } }: ProjectPageProps) {
   const dictionary = await getDictionary(lang)
 
-  if (!Object.keys(PROJECTS).includes(projectType)) return <span>The project type does not exist</span>
+  if (!Object.keys(PROJECTS).includes(projectType)) return <span>{dictionary.project.notExist}</span>
 
   const project = PROJECTS[projectType as keyof typeof PROJECTS].find(project => (project.id === projectId))
 
-  if (!project) return <span>No project with this name</span>
+  if (!project) return <span>{dictionary.project.notFound}</span>
 
   return (
     <Project project={project} translation={{ title: dictionary.projects['title-header'] }} lang={lang} />

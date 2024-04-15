@@ -2,13 +2,35 @@ import Link from 'next/link'
 import { AboutCard, BookList, ExperienceSection, QuoteSection } from './components'
 import { HISTORY_DATA } from '@/utils/aboutme/history'
 import { ToolkitSection } from './components/ToolkitSection'
-import { ABOUT_ME_DATA } from '@/utils/aboutme/aboutme'
 import { getDictionary } from '@/get-dictionary'
 import { PropsWithLocale } from '@/types/language'
 
 export async function AboutMe({ lang }: PropsWithLocale) {
   const titleSectionClassname = 'my-4 font-title text-2xl text-on-layer-0-l1'
   const dictionary = await getDictionary(lang)
+
+  const ABOUT_ME_DATA = {
+    title: dictionary.aboutme.about_data.title,
+    text: dictionary.aboutme.about_data.text,
+    buttons: [
+      {
+        id: 'toolkit',
+        name: dictionary.aboutme.about_data.buttons.toolkit,
+      },
+      {
+        id: 'experiences',
+        name: dictionary.aboutme.about_data.buttons.experiences,
+      },
+      {
+        id: 'book_recomendation',
+        name: dictionary.aboutme.about_data.buttons.book_recomendation,
+      },
+      {
+        id: 'my_history',
+        name: dictionary.aboutme.about_data.buttons.my_history,
+      },
+    ],
+  }
 
   return (
     <div className="m-auto max-w-5xl p-4">
@@ -22,8 +44,8 @@ export async function AboutMe({ lang }: PropsWithLocale) {
             </p>
 
             <div className="flex flex-col flex-wrap gap-2 md:flex-row">
-              {ABOUT_ME_DATA.buttons.map(title => (
-                <Link key={title} className="design-anchor-btn text-center" href={`#${title}`}>{title}</Link>
+              {ABOUT_ME_DATA.buttons.map(btn => (
+                <Link key={btn.id} className="design-anchor-btn text-center" href={`#${btn.id}`}>{btn.name}</Link>
               ))}
 
               <Link className="design-anchor-btn text-center" href="/resume">
@@ -34,25 +56,24 @@ export async function AboutMe({ lang }: PropsWithLocale) {
         </AboutCard>
       </section>
 
-      <section id={ABOUT_ME_DATA.buttons[0]} className="scroll-m-20">
+      <section id={ABOUT_ME_DATA.buttons[0].id} className="scroll-m-20">
         <h2 className={titleSectionClassname}>{dictionary['aboutme'].toolkit.title}</h2>
-        {/* <HabilitiesSection /> */}
         <ToolkitSection lang={lang} />
       </section>
 
-      <section id={ABOUT_ME_DATA.buttons[1]} className="scroll-m-20">
+      <section id={ABOUT_ME_DATA.buttons[1].id} className="scroll-m-20">
         <h2 className={titleSectionClassname}>{dictionary['aboutme'].experiences}</h2>
         <ExperienceSection lang={lang} />
       </section>
 
       <QuoteSection lang={lang} />
 
-      <section id={ABOUT_ME_DATA.buttons[3]} className="scroll-m-20">
+      <section id={ABOUT_ME_DATA.buttons[3].id} className="scroll-m-20">
         <h2 className={titleSectionClassname}>{dictionary['aboutme']['book-recomendation'].title}</h2>
         <BookList titleString={dictionary['aboutme']['book-recomendation'].text} />
       </section>
 
-      <section id={ABOUT_ME_DATA.buttons[2]} className="scroll-m-20">
+      <section id={ABOUT_ME_DATA.buttons[2].id} className="scroll-m-20">
         <h2 className={titleSectionClassname}>{dictionary['aboutme']['my-history']}</h2>
 
         {

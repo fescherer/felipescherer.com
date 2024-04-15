@@ -39,6 +39,16 @@
   },
   "aboutme": {
     "title": "About me",
+    "about_data": {
+      "title": "Felipe Scherer",
+      "text": "Hello, my name is Felipe Scherer and I have several hobbies that inspire me and motivate me to be a more complete person. Programming is one of my great passions, especially Python, which led me to research more and more on the subject. I currently work with Javascript as a web frontend, but my goal is to specialize in low-level languages, such as C++, for game development. I believe that programming is an art, just like any other human production, and mathematical logic is fundamental to solving proposed problems. Furthermore, I am also passionate about graphic art, including drawings, layouts and compositions. My desire is to study more about the art of drawing, as this is an area that I have not yet fully mastered. I have a degree in Computer Science and I am always looking for new opportunities to learn and improve.",
+      "buttons": {
+        "toolkit": "Toolkit",
+        "experiences": "Experiences",
+        "my_history": "My History",
+        "book_recomendation": "Book Recomendation"
+      }
+    },
     "resume": "Resume/CV",
     "toolkit": {
       "title": "Toolkit",

@@ -7,13 +7,17 @@ import { LucideChevronLeft, LucideChevronRight } from 'lucide-react'
 
 const PAGES_NUMBER = 6
 
-export function BookList() {
+type BookListProps = {
+  titleString: string
+}
+
+export function BookList({ titleString }: BookListProps) {
   const [currentPage, setCurrentPage] = useState(0)
   const pages = Array.from(Array(Math.ceil(BOOK_LIST.length / PAGES_NUMBER)).keys())
 
   return (
     <div className="my-6 space-y-6">
-      <p>Esses são alguns dos meus livros favoritos. Nem todos são relacionados à programação, mas recomendo ler todos. </p>
+      <p>{titleString}</p>
 
       <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
         {

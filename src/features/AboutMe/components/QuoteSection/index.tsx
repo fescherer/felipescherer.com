@@ -1,4 +1,9 @@
-export function QuoteSection() {
+import { getDictionary } from '@/get-dictionary'
+import { PropsWithLocale } from '@/types/language'
+
+export async function QuoteSection({ lang }: PropsWithLocale) {
+  const dictionary = await getDictionary(lang)
+
   return (
     <figure className="mx-auto my-8 max-w-screen-md text-center">
       <svg className="mx-auto mb-3 h-10 w-10 text-on-layer-0-l2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 18 14">
@@ -6,7 +11,11 @@ export function QuoteSection() {
       </svg>
 
       <blockquote>
-        <p className="text-2xl font-medium italic text-on-layer-0-l2">&quot;An algorithm must be seen to be believed&quot;</p>
+        <p className="text-2xl font-medium italic text-on-layer-0-l2">
+          &quot;
+          {dictionary['aboutme'].quote.quote}
+          &quot;
+        </p>
       </blockquote>
 
       <figcaption className="mt-6 flex items-center justify-center space-x-3 rtl:space-x-reverse">
@@ -14,7 +23,10 @@ export function QuoteSection() {
 
         <div className="flex items-center divide-x-2 divide-on-layer-0-l2 rtl:divide-x-reverse">
           <cite className="pe-3 font-medium text-on-layer-0-l2">Donald Knuth</cite>
-          <cite className="ps-3 text-sm text-on-layer-0-l2">Professor of Stanford University</cite>
+
+          <cite className="ps-3 text-sm text-on-layer-0-l2">
+            {dictionary['aboutme'].quote.author}
+          </cite>
         </div>
       </figcaption>
     </figure>

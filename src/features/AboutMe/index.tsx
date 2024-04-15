@@ -4,13 +4,9 @@ import { HISTORY_DATA } from '@/utils/aboutme/history'
 import { ToolkitSection } from './components/ToolkitSection'
 import { ABOUT_ME_DATA } from '@/utils/aboutme/aboutme'
 import { getDictionary } from '@/get-dictionary'
-import { Locale } from '@/i18n-config'
+import { PropsWithLocale } from '@/types/language'
 
-type AboutMeProps = {
-  lang: Locale
-}
-
-export async function AboutMe({ lang }: AboutMeProps) {
+export async function AboutMe({ lang }: PropsWithLocale) {
   const titleSectionClassname = 'my-4 font-title text-2xl text-on-layer-0-l1'
   const dictionary = await getDictionary(lang)
 
@@ -32,7 +28,6 @@ export async function AboutMe({ lang }: AboutMeProps) {
 
               <Link className="design-anchor-btn text-center" href="/resume">
                 {dictionary['aboutme'].resume}
-                /CV
               </Link>
             </div>
           </div>
@@ -40,21 +35,21 @@ export async function AboutMe({ lang }: AboutMeProps) {
       </section>
 
       <section id={ABOUT_ME_DATA.buttons[0]} className="scroll-m-20">
-        <h2 className={titleSectionClassname}>{dictionary['aboutme'].toolkit}</h2>
+        <h2 className={titleSectionClassname}>{dictionary['aboutme'].toolkit.title}</h2>
         {/* <HabilitiesSection /> */}
-        <ToolkitSection />
+        <ToolkitSection lang={lang} />
       </section>
 
       <section id={ABOUT_ME_DATA.buttons[1]} className="scroll-m-20">
         <h2 className={titleSectionClassname}>{dictionary['aboutme'].experiences}</h2>
-        <ExperienceSection />
+        <ExperienceSection lang={lang} />
       </section>
 
-      <QuoteSection />
+      <QuoteSection lang={lang} />
 
       <section id={ABOUT_ME_DATA.buttons[3]} className="scroll-m-20">
-        <h2 className={titleSectionClassname}>{dictionary['aboutme']['book-recomendation']}</h2>
-        <BookList />
+        <h2 className={titleSectionClassname}>{dictionary['aboutme']['book-recomendation'].title}</h2>
+        <BookList titleString={dictionary['aboutme']['book-recomendation'].text} />
       </section>
 
       <section id={ABOUT_ME_DATA.buttons[2]} className="scroll-m-20">
@@ -66,9 +61,9 @@ export async function AboutMe({ lang }: AboutMeProps) {
               isInverted={index % 2 === 0}
               key={index}
               image={history.image}
-              title={history.title}
+              title={history.title[lang]}
             >
-              {history.text}
+              {history.text[lang]}
             </AboutCard>
           ))
         }

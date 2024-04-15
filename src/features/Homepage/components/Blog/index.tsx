@@ -4,13 +4,9 @@ import Link from 'next/link'
 import { OWNER_CONFIGS } from '@/utils/owner.config'
 import { twMerge } from 'tailwind-merge'
 import { getDictionary } from '@/get-dictionary'
-import { Locale } from '@/i18n-config'
+import { PropsWithLocale } from '@/types/language'
 
-type BlogProps = {
-  lang: Locale
-}
-
-export async function Blog({ lang }: BlogProps) {
+export async function Blog({ lang }: PropsWithLocale) {
   const dictionary = await getDictionary(lang)
 
   return (

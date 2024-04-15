@@ -5,15 +5,11 @@ import { twMerge } from 'tailwind-merge'
 import { Separator } from '@/components'
 import { PROJECTS } from '@/utils/projects'
 import { getDictionary } from '@/get-dictionary'
-import { Locale } from '@/i18n-config'
+import { PropsWithLocale } from '@/types/language'
 
 const ALL_PROJECTS = Object.values(PROJECTS).reduce((acc, arr) => [...acc, ...arr], [])
 
-type ProjectsProps = {
-  lang: Locale
-}
-
-export async function Projects({ lang }: ProjectsProps) {
+export async function Projects({ lang }: PropsWithLocale) {
   const dictionary = await getDictionary(lang)
 
   return (

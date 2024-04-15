@@ -39,10 +39,22 @@
   },
   "aboutme": {
     "title": "About me",
-    "resume": "Resume",
-    "toolkit": "Toolkit",
+    "resume": "Resume/CV",
+    "toolkit": {
+      "title": "Toolkit",
+      "text": "I am constantly improving and dedicating myself to studies in different areas of coding. I believe it is important to always be up to date and seek new knowledge to evolve in your career and grow professionally. Furthermore, I am always looking for new learning opportunities, courses, training, events and experiences that can add value to my knowledge and skills. Among the areas in which I dedicate myself with enthusiasm and interest are:",
+      "favorite-stack": "This is one of my favorite tech",
+      "read-docs": "Read the docs"
+    },
+    "quote": {
+      "quote": "An algorithm must be seen to be believed",
+      "author": "Professor of Stanford University"
+    },
     "experiences": "Experiences",
-    "book-recomendation": "Book Recomendation",
+    "book-recomendation": {
+      "title": "Book Recomendation",
+      "text": "These are some of my favorite books. Not all of them are programming related, but I recommend reading them all."
+    },
     "my-history": "My History"
   }
 }

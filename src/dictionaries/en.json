@@ -64,6 +64,7 @@
     "pt-version": "Você está vendo a versão em português"
   },
   "projects": {
+    "title-header": "Projects",
     "placeholder": {
       "search": "Search",
       "type": "Select a type filter..."

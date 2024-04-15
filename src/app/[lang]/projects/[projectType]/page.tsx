@@ -1,10 +1,12 @@
 import { Projects } from '@/features'
+import { Locale } from '@/i18n-config'
 import { getMetadata } from '@/utils/functions/getMetada'
 import { AVAILABLE_TYPE_PROJECTS } from '@/utils/projects'
 import { Metadata } from 'next'
 
 type ProjectTypePageProps = {
-  params: { projectType: string }
+  params: { projectType: string, lang: Locale }
+
 }
 
 export async function generateMetadata(
@@ -30,8 +32,8 @@ export async function generateMetadata(
   })
 }
 
-export default function ProjectTypePage({ params: { projectType } }: ProjectTypePageProps) {
+export default function ProjectTypePage({ params: { projectType, lang } }: ProjectTypePageProps) {
   return (
-    <Projects projectType={projectType} />
+    <Projects projectType={projectType} lang={lang} />
   )
 }

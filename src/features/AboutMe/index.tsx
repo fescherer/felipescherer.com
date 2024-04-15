@@ -16,10 +16,8 @@ export async function AboutMe({ lang }: AboutMeProps) {
 
   return (
     <div className="m-auto max-w-5xl p-4">
-      {dictionary['server-component'].welcome}
-
       <section id="aboutme">
-        <h2 className={titleSectionClassname}>About me</h2>
+        <h2 className={titleSectionClassname}>{dictionary['aboutme'].title}</h2>
 
         <AboutCard image="/felipe-scherer/photo-flower.webp" title={ABOUT_ME_DATA.title}>
           <div className="flex h-full flex-col gap-2">
@@ -32,32 +30,35 @@ export async function AboutMe({ lang }: AboutMeProps) {
                 <Link key={title} className="design-anchor-btn text-center" href={`#${title}`}>{title}</Link>
               ))}
 
-              <Link className="design-anchor-btn text-center" href="/resume">Résumé/CV</Link>
+              <Link className="design-anchor-btn text-center" href="/resume">
+                {dictionary['aboutme'].resume}
+                /CV
+              </Link>
             </div>
           </div>
         </AboutCard>
       </section>
 
       <section id={ABOUT_ME_DATA.buttons[0]} className="scroll-m-20">
-        <h2 className={titleSectionClassname}>Toolkit</h2>
+        <h2 className={titleSectionClassname}>{dictionary['aboutme'].toolkit}</h2>
         {/* <HabilitiesSection /> */}
         <ToolkitSection />
       </section>
 
       <section id={ABOUT_ME_DATA.buttons[1]} className="scroll-m-20">
-        <h2 className={titleSectionClassname}>Experiences</h2>
+        <h2 className={titleSectionClassname}>{dictionary['aboutme'].experiences}</h2>
         <ExperienceSection />
       </section>
 
       <QuoteSection />
 
-      <section id={ABOUT_ME_DATA.buttons[3]}className="scroll-m-20">
-        <h2 className={titleSectionClassname}>Book Recomendation</h2>
+      <section id={ABOUT_ME_DATA.buttons[3]} className="scroll-m-20">
+        <h2 className={titleSectionClassname}>{dictionary['aboutme']['book-recomendation']}</h2>
         <BookList />
       </section>
 
       <section id={ABOUT_ME_DATA.buttons[2]} className="scroll-m-20">
-        <h2 className={titleSectionClassname}>My History</h2>
+        <h2 className={titleSectionClassname}>{dictionary['aboutme']['my-history']}</h2>
 
         {
           HISTORY_DATA.map((history, index) => (

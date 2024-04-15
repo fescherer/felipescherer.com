@@ -1,11 +1,4 @@
 {
-  "server-component": {
-    "welcome": "Welcome"
-  },
-  "counter": {
-    "increment": "Increment",
-    "decrement": "Decrement"
-  },
   "homepage": {
     "meet": {
       "title": "Meet",
@@ -43,5 +36,13 @@
       "title": "Projects",
       "moreProjects": "More projects"
     }
+  },
+  "aboutme": {
+    "title": "About me",
+    "resume": "Resume",
+    "toolkit": "Toolkit",
+    "experiences": "Experiences",
+    "book-recomendation": "Book Recomendation",
+    "my-history": "My History"
   }
 }

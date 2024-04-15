@@ -1,11 +1,4 @@
 {
-  "server-component": {
-    "welcome": "DETROID"
-  },
-  "counter": {
-    "increment": "Increment",
-    "decrement": "Decrement"
-  },
   "homepage": {
     "meet": {
       "title": "Conheça",
@@ -43,5 +36,13 @@
       "title": "Projetos",
       "moreProjects": "Mais projetos"
     }
+  },
+  "aboutme": {
+    "title": "Sobre mim",
+    "resume": "Curriculo",
+    "toolkit": "Ferramentas",
+    "experiences": "Experiências",
+    "book-recomendation": "Recomendação de livros",
+    "my-history": "Minha história"
   }
 }

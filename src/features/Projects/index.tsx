@@ -3,6 +3,8 @@ import { ProjectList, TypeFilter } from './components'
 import { AVAILABLE_TYPE_PROJECTS, PROJECTS } from '@/utils/projects'
 import { SearchProvider } from './contexts/search.context'
 import { Suspense } from 'react'
+import { PropsWithLocale } from '@/types/language'
+import { getDictionary } from '@/get-dictionary'
 
 type ProjectsProps = {
   projectType?: string
@@ -14,7 +16,9 @@ function getAllProjects(availableProjects: TProjectType[]): IProject[] {
   return allProjects
 }
 
-export function Projects({ projectType = '' }: ProjectsProps) {
+export async function Projects({ projectType = '', lang }: PropsWithLocale<ProjectsProps>) {
+  const dictionary = await getDictionary(lang)
+
   const isValidProjectType = AVAILABLE_TYPE_PROJECTS.some(type => projectType === type)
 
   const projects = projectType
@@ -26,10 +30,10 @@ export function Projects({ projectType = '' }: ProjectsProps) {
   return (
     <SearchProvider>
       <main className="m-auto flex w-full max-w-5xl flex-col items-center gap-8">
-        <TypeFilter projectType={isValidProjectType ? projectType as TProjectType : null} />
+        <TypeFilter projectType={isValidProjectType ? projectType as TProjectType : null} lang={lang} />
 
-        <Suspense fallback={<p>Loading projects...</p>}>
-          <ProjectList projects={projects} />
+        <Suspense fallback={<p>...</p>}>
+          <ProjectList projects={projects} lang={lang} translation={{ readMore: dictionary.projects['project-card']['read-more'] }} />
         </Suspense>
       </main>
     </SearchProvider>

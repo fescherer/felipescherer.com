@@ -3,11 +3,15 @@ import { LayoutPanelLeft, LucideCode2, PanelTop } from 'lucide-react'
 import Link from 'next/link'
 import { LinkBtn } from './components'
 import { Ribbon } from '@/components'
+import { PropsWithLocale } from '@/types/language'
 
 type ProjectCardProps = {
   project: IProject
+  translation: {
+    readMore: string
+  }
 }
-export function ProjectCard({ project }: ProjectCardProps) {
+export function ProjectCard({ project, lang, translation }: PropsWithLocale<ProjectCardProps>) {
   const iconClassName = 'absolute inset-1/2 -translate-x-1/2 -translate-y-1/2 text-brand-on-primary'
   const linkPath = `/projects/${project.type.id}/${project.id}`
   const imagePath = `/projects/${project.type.id}/${project.id}`
@@ -26,7 +30,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
         href={`/projects/${project.type.id}`}
         bgColor={project.type.color.bg}
         textColor={project.type.color.text}
-        title={project.type.title.en || ''}
+        title={project.type.title[lang] || ''}
       />
 
       <div className="relative">
@@ -61,11 +65,11 @@ export function ProjectCard({ project }: ProjectCardProps) {
       </div>
 
       <div className="h-full px-4 pb-2 pt-4">
-        <h2 title={project.title.pt} className="truncate font-title text-lg text-on-layer-1-l1">{project.title.pt}</h2>
-        <p className="vertical-ellipsis mt-2 text-sm text-on-layer-1-l2">{project.description.pt}</p>
+        <h2 title={project.title[lang]} className="truncate font-title text-lg text-on-layer-1-l1">{project.title[lang]}</h2>
+        <p className="vertical-ellipsis mt-2 text-sm text-on-layer-1-l2">{project.description[lang]}</p>
       </div>
 
-      <span className="self-end px-4  py-2 text-sm">Read more...</span>
+      <span className="self-end px-4  py-2 text-sm">{translation.readMore}</span>
     </div>
   )
 }

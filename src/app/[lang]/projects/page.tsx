@@ -1,4 +1,5 @@
 import { Projects } from '@/features'
+import { RootLayoutType } from '@/types/Page'
 import { getMetadata } from '@/utils/functions/getMetada'
 import { Metadata } from 'next'
 
@@ -11,8 +12,8 @@ export const metadata: Metadata = getMetadata({
   defaultKeywords: ['projects'],
 })
 
-export default function ProjectsPage() {
+export default function ProjectsPage({ params }: RootLayoutType) {
   return (
-    <Projects />
+    <Projects lang={params.lang} />
   )
 }

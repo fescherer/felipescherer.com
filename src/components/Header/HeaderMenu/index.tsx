@@ -5,39 +5,61 @@ import { LucideMenu, LucideX } from 'lucide-react'
 import LocaleSwitcher from '../LocaleSwitcher'
 import Link from 'next/link'
 import { useState } from 'react'
+import { PropsWithLocale } from '@/types/language'
 
 const items = [
   {
-    name: 'Home',
+    name: {
+      en: 'Home',
+      pt: 'Home',
+    },
     link: '',
   },
   {
-    name: 'About me',
+    name: {
+      en: 'About me',
+      pt: 'Sobre mim',
+    },
     link: 'aboutme',
   },
   {
-    name: 'Resume',
+    name: {
+      en: 'Resume/CV',
+      pt: 'Currículo',
+    },
     link: 'resume',
   },
   {
-    name: 'Services',
+    name: {
+      en: 'Services',
+      pt: 'Serviços',
+    },
     link: 'https://felipescherer.com',
   },
   {
-    name: 'Projects',
+    name: {
+      en: 'Projects',
+      pt: 'Projetos',
+    },
     link: 'projects',
   },
   {
-    name: 'Blog',
+    name: {
+      en: 'Blog',
+      pt: 'Blog',
+    },
     link: 'https://blog.felipescherer.com',
   },
   {
-    name: 'Now',
+    name: {
+      en: 'Now',
+      pt: 'Atualmente',
+    },
     link: 'now',
   },
 ]
 
-export function HeaderMenu() {
+export function HeaderMenu({ lang }: PropsWithLocale) {
   const path = usePathname()
   const currentPath = path.split('/')?.[2] || ''
 
@@ -62,10 +84,10 @@ export function HeaderMenu() {
           </button>
 
           {items.map(item => (
-            <Link onClick={() => setIsMenuOpen(false)} key={item.name} href={item.link} className={`border-b transition-all hover:border-brand-primary hover:text-brand-hover-primary ${currentPath === item.link ? 'border-brand-primary text-brand-primary' : 'border-transparent text-on-layer-0-l2 '}`}>{item.name}</Link>
+            <Link onClick={() => setIsMenuOpen(false)} key={item.name[lang]} href={item.link} className={`border-b transition-all hover:border-brand-primary hover:text-brand-hover-primary ${currentPath === item.link ? 'border-brand-primary text-brand-primary' : 'border-transparent text-on-layer-0-l2 '}`}>{item.name[lang]}</Link>
           ))}
 
-          <LocaleSwitcher />
+          <LocaleSwitcher title={lang === 'en' ? 'Locale:' : 'Idioma:'} />
         </div>
       )
     }

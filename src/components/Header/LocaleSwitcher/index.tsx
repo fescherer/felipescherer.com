@@ -4,7 +4,11 @@ import { usePathname } from 'next/navigation'
 import Link from 'next/link'
 import { LocaleWithName, i18nWithName } from '@/i18n-config'
 
-export default function LocaleSwitcher() {
+type LocaleSwitcherProps = {
+  title: string
+}
+
+export default function LocaleSwitcher({ title }: LocaleSwitcherProps) {
   const pathName = usePathname()
   const currentLanguage = pathName.split('/')[1]
 
@@ -17,7 +21,7 @@ export default function LocaleSwitcher() {
 
   return (
     <div className="text-on-layer-0-l2">
-      <p className="text-sm">Locale:</p>
+      <p className="text-sm">{title}</p>
 
       <ul className="my-1">
         {i18nWithName.locales.map((locale) => {

@@ -2,11 +2,15 @@
 
 import TypewriterComponent from 'typewriter-effect'
 
-export function Typewriter() {
+type TypeWriterProps = {
+  items: string[]
+}
+
+export function Typewriter({ items }: TypeWriterProps) {
   return (
     <TypewriterComponent
       options={{
-        strings: ['Web Developer', 'Designer', 'Game Developer', 'Content Creator'],
+        strings: items,
         autoStart: true,
         loop: true,
         wrapperClassName: 'font-mono',

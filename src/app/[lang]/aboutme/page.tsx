@@ -1,4 +1,5 @@
 import { AboutMe } from '@/features/AboutMe'
+import { RootLayoutType } from '@/types/Page'
 import { getMetadata } from '@/utils/functions/getMetada'
 import { Metadata } from 'next'
 
@@ -11,8 +12,8 @@ export const metadata: Metadata = getMetadata({
   defaultKeywords: ['about-me'],
 })
 
-export default function AboutMePage() {
+export default function AboutMePage({ params }: RootLayoutType) {
   return (
-    <AboutMe />
+    <AboutMe lang={params.lang} />
   )
 }

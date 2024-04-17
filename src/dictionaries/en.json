@@ -1,0 +1,121 @@
+{
+  "homepage": {
+    "seo": {
+      "defaultDescription": "Wellcome to my portfolio",
+      "defaultTitle": "Portfolio Felipe Scherer",
+      "defaultAltImage": "Felipe Scherer",
+      "defaultKeywords": [
+        "institucional-page"
+      ]
+    },
+    "meet": {
+      "title": "Meet",
+      "typewriter": [
+        "Web Developer",
+        "Designer",
+        "Game Developer",
+        "Content Creator"
+      ],
+      "button": "Explore my Portfolio"
+    },
+    "aboutme": {
+      "title": "About me",
+      "hello": "Hello! My name is Felipe Scherer",
+      "yearsOld": "years old",
+      "description": "and a developer 🤓. Currently working with web development (ReactJS - NextJS - NodeJS) and game development (Unreal Engine). Sometimes creating content for internet 😊. You can find mostly of my projects on my",
+      "githubPage": "Github's page",
+      "findMore": "Find more about me",
+      "here": "here",
+      "resume": {
+        "title": "Resume",
+        "p1": "If you looking for my resume",
+        "p2": "go the this page",
+        "p3": ", but if you want to download just choose the prefered language and click download",
+        "btn": "Download"
+      }
+    },
+    "blog": {
+      "title": "Blog",
+      "description": "Sometimes I like to create articles about what I learned or just to share what I am thinking. Feel free to check it out 😁. And of course, you can leave suggestions for next blogs in",
+      "myEmail": "my email",
+      "checkMyBlog": "Checkout my blog"
+    },
+    "projects": {
+      "title": "Projects",
+      "moreProjects": "More projects"
+    }
+  },
+  "aboutme": {
+    "seo": {
+      "defaultDescription": "",
+      "defaultTitle": "",
+      "defaultAltImage": "Felipe Scherer",
+      "defaultKeywords": []
+    },
+    "title": "About me",
+    "about_data": {
+      "title": "Felipe Scherer",
+      "text": "Hello, my name is Felipe Scherer and I have several hobbies that inspire me and motivate me to be a more complete person. Programming is one of my great passions, especially Python, which led me to research more and more on the subject. I currently work with Javascript as a web frontend, but my goal is to specialize in low-level languages, such as C++, for game development. I believe that programming is an art, just like any other human production, and mathematical logic is fundamental to solving proposed problems. Furthermore, I am also passionate about graphic art, including drawings, layouts and compositions. My desire is to study more about the art of drawing, as this is an area that I have not yet fully mastered. I have a degree in Computer Science and I am always looking for new opportunities to learn and improve.",
+      "buttons": {
+        "toolkit": "Toolkit",
+        "experiences": "Experiences",
+        "my_history": "My History",
+        "book_recomendation": "Book Recomendation"
+      }
+    },
+    "resume": "Resume/CV",
+    "toolkit": {
+      "title": "Toolkit",
+      "text": "I am constantly improving and dedicating myself to studies in different areas of coding. I believe it is important to always be up to date and seek new knowledge to evolve in your career and grow professionally. Furthermore, I am always looking for new learning opportunities, courses, training, events and experiences that can add value to my knowledge and skills. Among the areas in which I dedicate myself with enthusiasm and interest are:",
+      "favorite-stack": "This is one of my favorite tech",
+      "read-docs": "Read the docs"
+    },
+    "quote": {
+      "quote": "An algorithm must be seen to be believed",
+      "author": "Professor of Stanford University"
+    },
+    "experiences": "Experiences",
+    "book-recomendation": {
+      "title": "Book Recomendation",
+      "text": "These are some of my favorite books. Not all of them are programming related, but I recommend reading them all."
+    },
+    "my-history": "My History"
+  },
+  "resume": {
+    "seo": {
+      "defaultDescription": "Here you can find about career",
+      "defaultTitle": "Resume/CV",
+      "defaultAltImage": "Felipe Scherer",
+      "defaultKeywords": [
+        "resume",
+        "cv"
+      ]
+    },
+    "title": "View/Download my Resume",
+    "text": "Thank you for your interest in my work. By clicking on the download button, you'll gain access to a detailed document that highlights my educational background, work history, key achievements, and areas of expertise. Whether you're a potential employer, collaborator, or simply curious about my career trajectory, my CV/resume offers valuable insights.",
+    "en-version": "You are seeing the english version",
+    "pt-version": "Você está vendo a versão em português"
+  },
+  "projects": {
+    "seo": {
+      "defaultDescription": "Here you can find all my projects",
+      "defaultTitle": "Projects",
+      "defaultAltImage": "Felipe Scherer",
+      "defaultKeywords": [
+        "projects"
+      ]
+    },
+    "title-header": "Projects",
+    "placeholder": {
+      "search": "Search",
+      "type": "Select a type filter..."
+    },
+    "project-card": {
+      "read-more": "Read more..."
+    }
+  },
+  "project": {
+    "notFound": "No project with this name",
+    "notExist": "The project type does not exist"
+  }
+}

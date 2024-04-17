@@ -6,13 +6,17 @@ import { getProjectsSortedByDate } from '@/utils/functions/getProjectsSorted'
 import { ProjectCard } from './components'
 import { useState } from 'react'
 import { LucideChevronLeft, LucideChevronRight } from 'lucide-react'
+import { PropsWithLocale } from '@/types/language'
 
 type ProjectListProps = {
   projects: IProject[]
+  translation: {
+    readMore: string
+  }
 }
 const PAGES_NUMBER = 6
 
-export function ProjectList({ projects }: ProjectListProps) {
+export function ProjectList({ projects, lang, translation }: PropsWithLocale<ProjectListProps>) {
   const { search } = useSearchContext()
   const [currentPage, setCurrentPage] = useState(0)
 
@@ -30,7 +34,7 @@ export function ProjectList({ projects }: ProjectListProps) {
       <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 md:min-h-[680px] lg:grid-cols-3">
         {
         filteredProjects.slice(currentPage * PAGES_NUMBER, currentPage * PAGES_NUMBER + PAGES_NUMBER).map(project => (
-          <ProjectCard key={project.id} project={project} />
+          <ProjectCard key={project.id} project={project} lang={lang} translation={translation} />
         ))
       }
       </div>

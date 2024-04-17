@@ -1,12 +1,13 @@
 import { AboutMe, Blog, Meet, Projects } from './components'
+import { PropsWithLocale } from '@/types/language'
 
-export function Homepage() {
+export function Homepage({ lang }: PropsWithLocale) {
   return (
     <main className="flex flex-col">
-      <Meet />
-      <AboutMe />
-      <Blog />
-      <Projects />
+      <Meet lang={lang} />
+      <AboutMe lang={lang} />
+      <Blog lang={lang} />
+      <Projects lang={lang} />
     </main>
   )
 }

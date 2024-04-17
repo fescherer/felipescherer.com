@@ -1,0 +1,120 @@
+{
+  "homepage": {
+    "seo": {
+      "defaultDescription": "Bem vindo ao meu portifolio",
+      "defaultTitle": "Portifolio Felipe Scherer",
+      "defaultAltImage": "Felipe Scherer",
+      "defaultKeywords": [
+        "pagina-institucional"
+      ]
+    },
+    "meet": {
+      "title": "Conheça",
+      "typewriter": [
+        "Desenvolvedor Web",
+        "Designer",
+        "Desenvolvedor de Jogos",
+        "Criador de Conteúdo"
+      ],
+      "button": "Explore meu Portifolio"
+    },
+    "aboutme": {
+      "title": "Sobre mim",
+      "hello": "Olá! Meu nome é Felipe Scherer",
+      "yearsOld": "anos de idade",
+      "description": "e um desenvolvedor 🤓. Atualmente trabalhando com desenvolvimento web (ReactJS - NextJS - NodeJS) e desenvolvimento de jogos (Unreal Engine). As vezes criando conteúdo para internet 😊. Você pode achar a maioria dos meus projetos na minha",
+      "githubPage": "página do Github",
+      "findMore": "Descubra mais sobre mim",
+      "here": "aqui",
+      "resume": {
+        "title": "Currículo",
+        "p1": "Se está procurando por uma página do meu currículo",
+        "p2": "clique aqui",
+        "p3": ", mas se só quer baixa-lo, apenas escolha a lingua preferida e clique em baixar",
+        "btn": "Baixar"
+      }
+    },
+    "blog": {
+      "title": "Blog",
+      "description": "As vezes gosto de criar artigos sobre o que aprendi ou apenas compartilhar o que estou pensando. Sinta-se a vontade para lê-los 😁. E claro, você pode deixar sugestões de outros artigos no",
+      "myEmail": "meu email",
+      "checkMyBlog": "Veja meu blog"
+    },
+    "projects": {
+      "title": "Projetos",
+      "moreProjects": "Mais projetos"
+    }
+  },
+  "aboutme": {
+    "seo": {
+      "defaultDescription": "",
+      "defaultTitle": "",
+      "defaultAltImage": "Felipe Scherer",
+      "defaultKeywords": []
+    },
+    "title": "Sobre mim",
+    "about_data": {
+      "title": "Felipe Scherer",
+      "text": "Olá, meu nome é Felipe Scherer e tenho diversos hobbies que me inspiram e me motivam a ser uma pessoa mais completa. A programação é uma das minhas grandes paixões, em especial Python, que me levou a buscar cada vez mais sobre o assunto. Atualmente, trabalho com Javascript como frontend web, mas meu objetivo é me especializar em linguagens de baixo nível, como C++, para desenvolvimento de jogos. Acredito que programação é uma arte, assim como qualquer outra produção humana, e a lógica matemática é fundamental para resolver problemas propostos. Além disso, também sou apaixonado pela arte gráfica, incluindo desenhos, layouts e composições. Meu desejo é estudar mais sobre a arte do desenho, já que esta é uma área que ainda não domino totalmente. Sou formado em Ciências da Computação e estou sempre em busca de novas oportunidades de aprendizado e aprimoramento.",
+      "buttons": {
+        "toolkit": "Toolkit",
+        "experiences": "Experiences",
+        "my_history": "My History",
+        "book_recomendation": "Book Recomendation"
+      }
+    },
+    "resume": "Currículo",
+    "toolkit": {
+      "title": "Ferramentas",
+      "text": "Estou em constante aprimoramento e dedicação aos estudos em diferentes áreas da programação. Acredito que é importante estar sempre atualizado e buscar novos conhecimentos para evoluir na carreira e crescer profissionalmente. Além disso, estou sempre em busca de novas oportunidades de aprendizado, cursos, treinamentos, eventos e experiências que possam agregar valor ao meu conhecimento e habilidades. Entre as áreas em que me dedico com entusiasmo e interesse estão:",
+      "favorite-stack": "Essa é uma das minhas tecnologias favoritas",
+      "read-docs": "Leia a documentação"
+    },
+    "quote": {
+      "quote": "Um algoritmo precisa ser visto para ser acreditado",
+      "author": "Professor da Universidade de Stanford"
+    },
+    "experiences": "Experiências",
+    "book-recomendation": {
+      "title": "Recomendação de livros",
+      "text": "Esses são alguns dos meus livros favoritos. Nem todos são relacionados à programação, mas recomendo ler todos."
+    },
+    "my-history": "Minha história"
+  },
+  "resume": {
+    "seo": {
+      "defaultDescription": "Aqui você pode encontrar sobre carreira",
+      "defaultTitle": "Currículo",
+      "defaultAltImage": "Felipe Scherer",
+      "defaultKeywords": [
+        "curriculo"
+      ]
+    },
+    "title": "Ver/Baixar meu currículo",
+    "text": "Obrigado pelo seu interesse no meu trabalho. Ao clicar no botão de download, você terá acesso a um documento detalhado que destaca minha formação educacional, histórico profissional, principais conquistas e áreas de especialização. Quer você seja um potencial empregador, colaborador ou simplesmente curioso sobre minha trajetória profissional, meu currículo oferece informações valiosas.",
+    "en-version": "You are seeing the english version",
+    "pt-version": "Você está vendo a versão em português"
+  },
+  "projects": {
+    "seo": {
+      "defaultDescription": "Aqui você encontra todos meus projetos",
+      "defaultTitle": "Projetos",
+      "defaultAltImage": "Felipe Scherer",
+      "defaultKeywords": [
+        "projetos"
+      ]
+    },
+    "title-header": "Projetos",
+    "placeholder": {
+      "search": "Pesquise",
+      "type": "Selecione um filtro de tipo..."
+    },
+    "project-card": {
+      "read-more": "Read more..."
+    }
+  },
+  "project": {
+    "notFound": "No project with this name",
+    "notExist": "The project type does not exist"
+  }
+}

@@ -1,8 +1,12 @@
 import Link from 'next/link'
 import { StarryNight, Typewriter } from './components'
 import { ContentWrapper } from '..'
+import { getDictionary } from '@/get-dictionary'
+import { PropsWithLocale } from '@/types/language'
 
-export function Meet() {
+export async function Meet({ lang }: PropsWithLocale) {
+  const dictionary = await getDictionary(lang)
+
   return (
     <div className="relative overflow-hidden">
       <StarryNight />
@@ -10,12 +14,12 @@ export function Meet() {
       <ContentWrapper anchor="#aboutme" id="meet" isFlexReverse index={0}>
 
         <div className="flex flex-col text-center font-title tracking-wide md:text-left">
-          <h2 className="text-2xl font-medium leading-none">Meet</h2>
+          <h2 className="text-2xl font-medium leading-none">{dictionary.homepage.meet.title}</h2>
           <h1 className="text-4xl font-medium text-on-layer-0-l1 md:text-6xl">Felipe Scherer</h1>
-          <Typewriter />
+          <Typewriter items={dictionary.homepage.meet.typewriter} />
 
           <Link href="#aboutme" className="design-btn mt-6 self-center text-xl md:self-start ">
-            Explore my Portifolio
+            {dictionary.homepage.meet.button}
           </Link>
         </div>
 

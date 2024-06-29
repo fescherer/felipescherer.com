@@ -69,7 +69,7 @@ const config: Config = {
         '7xl': ['4.5rem', '1.5'],
       },
       backgroundImage: {
-        profile: 'url(https://github.com/fescherer.png)',
+        profile: 'url(/felipe-scherer/aboutme/me.webp)',
       },
       keyframes: {
         twinkleKeyFrame: {

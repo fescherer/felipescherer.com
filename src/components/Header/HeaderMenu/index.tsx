@@ -21,7 +21,7 @@ const items = [
   },
   {
     name: 'Services',
-    link: 'https://felipescherer.com',
+    link: 'https://services.fennectales.com',
   },
   {
     name: 'Projects',
@@ -29,7 +29,7 @@ const items = [
   },
   {
     name: 'Blog',
-    link: 'https://blog.felipescherer.com',
+    link: 'https://fennectales.com',
   },
   {
     name: 'Now',
@@ -49,26 +49,26 @@ export function HeaderMenu() {
       </button>
 
       {
-      isMenuOpen && (
-        <button type="button" onClick={() => setIsMenuOpen(false)} className="fixed right-0 top-0 h-full w-full cursor-default bg-[#000000af]" />
-      )
+        isMenuOpen && (
+          <button type="button" onClick={() => setIsMenuOpen(false)} className="fixed right-0 top-0 h-full w-full cursor-default bg-[#000000af]" />
+        )
       }
 
       {
-      isMenuOpen && (
-        <div className="fixed right-0 top-0 flex h-full flex-col items-start gap-4 bg-layer-1 px-8 pt-8">
-          <button type="button" onClick={() => setIsMenuOpen(false)} className="text-on-layer-0-l2 transition-colors hover:text-brand-primary focus:text-brand-primary">
-            <LucideX />
-          </button>
+        isMenuOpen && (
+          <div className="fixed right-0 top-0 flex h-full flex-col items-start gap-4 bg-layer-1 px-8 pt-8">
+            <button type="button" onClick={() => setIsMenuOpen(false)} className="text-on-layer-0-l2 transition-colors hover:text-brand-primary focus:text-brand-primary">
+              <LucideX />
+            </button>
 
-          {items.map(item => (
-            <Link onClick={() => setIsMenuOpen(false)} key={item.name} href={item.link} className={`border-b transition-all hover:border-brand-primary hover:text-brand-hover-primary ${currentPath === item.link ? 'border-brand-primary text-brand-primary' : 'border-transparent text-on-layer-0-l2 '}`}>{item.name}</Link>
-          ))}
+            {items.map(item => (
+              <Link onClick={() => setIsMenuOpen(false)} key={item.name} href={item.link} className={`border-b transition-all hover:border-brand-primary hover:text-brand-hover-primary ${currentPath === item.link ? 'border-brand-primary text-brand-primary' : 'border-transparent text-on-layer-0-l2 '}`}>{item.name}</Link>
+            ))}
 
-          <LocaleSwitcher />
-        </div>
-      )
-    }
+            <LocaleSwitcher />
+          </div>
+        )
+      }
 
     </>
   )

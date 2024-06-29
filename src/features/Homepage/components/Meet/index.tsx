@@ -1,14 +1,10 @@
 import Link from 'next/link'
 import { StarryNight, Typewriter } from './components'
 import { ContentWrapper } from '..'
-import { Locale } from '@/i18n-config'
 import { getDictionary } from '@/get-dictionary'
+import { PropsWithLocale } from '@/types/language'
 
-type MeetProps = {
-  lang: Locale
-}
-
-export async function Meet({ lang }: MeetProps) {
+export async function Meet({ lang }: PropsWithLocale) {
   const dictionary = await getDictionary(lang)
 
   return (

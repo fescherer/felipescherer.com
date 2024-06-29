@@ -1,16 +1,20 @@
 import { Homepage } from '@/features'
+import { getDictionary } from '@/get-dictionary'
 import { RootLayoutType } from '@/types/Page'
 import { getMetadata } from '@/utils/functions/getMetada'
-import type { Metadata } from 'next'
 
-export const metadata: Metadata = getMetadata({
-  defaultDescription: 'Here you can find about my life, hobbies and works that I\'ve done',
-  defaultTitle: 'Portfolio Felipe Scherer',
-  canonicalURL: '',
-  imagePath: '/thumb.png',
-  defaultAltImage: 'Felipe Schereer',
-  defaultKeywords: ['institucional-page'],
-})
+export async function generateMetadata({ params }: RootLayoutType) {
+  const dictionary = await getDictionary(params.lang)
+  const defaultMetadata = {
+    canonicalURL: '',
+    imagePath: '/thumb.png',
+  }
+
+  return getMetadata({
+    ...defaultMetadata,
+    ...dictionary.homepage.seo,
+  })
+}
 
 export default function Home({ params }: RootLayoutType) {
   return (

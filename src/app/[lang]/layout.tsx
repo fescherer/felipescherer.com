@@ -47,13 +47,13 @@ export default function RootLayout({ children, params }: PropsWithChildren<RootL
       <body className={`${lora.variable} ${poppins.variable} bg-layer-0 font-text text-on-layer-0-l2`}>
         <ProgressBarProvider>
           <MainComponent>
-            <Header />
+            <Header lang={params.lang} />
 
             <main className="pt-16">
               {children}
             </main>
 
-            <Footer />
+            <Footer lang={params.lang} />
           </MainComponent>
         </ProgressBarProvider>
       </body>

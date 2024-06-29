@@ -6,13 +6,9 @@ import { SocialIcon } from '@/icons/Social/Social'
 import { Carrousel } from './components'
 import { ResumeSection } from '@/components'
 import { getDictionary } from '@/get-dictionary'
-import { Locale } from '@/i18n-config'
+import { PropsWithLocale } from '@/types/language'
 
-type AboutMeProps = {
-  lang: Locale
-}
-
-export async function AboutMe({ lang }: AboutMeProps) {
+export async function AboutMe({ lang }: PropsWithLocale) {
   const dictionary = await getDictionary(lang)
 
   const yearsOld = getYearsOld()

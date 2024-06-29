@@ -2,15 +2,19 @@
 
 import { Ribbon } from '@/components'
 import { IProject } from '@/types'
+import { PropsWithLocale } from '@/types/language'
 import { LayoutPanelLeft, LucideChevronRight, LucideCode2, PanelTop } from 'lucide-react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 
 type HeaderProps = {
   project: IProject
+  translation: {
+    title: string
+  }
 }
 
-export function Header({ project }: HeaderProps) {
+export function Header({ project, lang, translation }: PropsWithLocale<HeaderProps>) {
   const linkPath = `/projects/${project.type.id}`
   const pathname = usePathname()
 
@@ -26,9 +30,9 @@ export function Header({ project }: HeaderProps) {
   return (
     <header>
       <div className="my-4 flex items-center gap-2 text-xs capitalize">
-        <Link className="design-link text-on-layer-0-l2" href="/projects">Projects</Link>
+        <Link className="design-link text-on-layer-0-l2" href="/projects">{translation.title}</Link>
         <LucideChevronRight size={16} />
-        <Link className={`design-link ${project.type.title.en !== lastRoute ? 'text-on-layer-0-l2' : ''}`} href={linkPath}>{project.type.title.en}</Link>
+        <Link className={`design-link ${project.type.title[lang] !== lastRoute ? 'text-on-layer-0-l2' : ''}`} href={linkPath}>{project.type.title[lang]}</Link>
         <LucideChevronRight size={16} />
         <Link className={`design-link ${project.id !== lastRoute ? 'text-on-layer-0-l2' : ''}`} href={`${linkPath}/${project.id}`}>{project.id}</Link>
       </div>
@@ -44,13 +48,13 @@ export function Header({ project }: HeaderProps) {
           href={`/projects/${project.type.id}`}
           bgColor={project.type.color.bg}
           textColor={project.type.color.text}
-          title={project.type.title.en || ''}
+          title={project.type.title[lang] || ''}
         />
 
       </div>
 
       <div className="flex flex-col items-center justify-between md:flex-row">
-        <h2 className="font-title text-4xl uppercase text-on-layer-0-l1">{project.title.pt}</h2>
+        <h2 className="font-title text-4xl uppercase text-on-layer-0-l1">{project.title[lang]}</h2>
 
         <div className="flex gap-2 self-end">
           {
@@ -81,7 +85,7 @@ export function Header({ project }: HeaderProps) {
       </div>
 
       <time dateTime={articleDateFormated} className="capitalize">{articleDateFormated}</time>
-      <p className="mt-4 text-sm">{project.description.pt}</p>
+      <p className="mt-4 text-sm">{project.description[lang]}</p>
     </header>
   )
 }

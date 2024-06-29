@@ -2,6 +2,7 @@ import { TCustomMetadata } from '@/types/Metadata'
 import { Metadata } from 'next'
 
 export function getMetadata(data: TCustomMetadata): Metadata {
+  const url = 'https://portfolio.felipescherer.com'
   return {
     title: data.defaultTitle,
     description: `Wellcome to my portfolio | ${data.defaultDescription}`,
@@ -14,7 +15,7 @@ export function getMetadata(data: TCustomMetadata): Metadata {
       ...data.defaultKeywords,
     ],
     openGraph: {
-      url: `https://portfolio.felipescherer.com${data.canonicalURL}`,
+      url: `${url}${data.canonicalURL}`,
       title: data.defaultTitle,
       /* Generate this image as code */
       images: [
@@ -43,7 +44,7 @@ export function getMetadata(data: TCustomMetadata): Metadata {
       ],
     },
     alternates: {
-      canonical: `https://portfolio.felipescherer.com${data.canonicalURL}`,
+      canonical: `${url}${data.canonicalURL}`,
     },
   }
 }

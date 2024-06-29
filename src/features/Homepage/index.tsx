@@ -1,11 +1,7 @@
-import { Locale } from '@/i18n-config'
 import { AboutMe, Blog, Meet, Projects } from './components'
+import { PropsWithLocale } from '@/types/language'
 
-type HomepageProps = {
-  lang: Locale
-}
-
-export function Homepage({ lang }: HomepageProps) {
+export function Homepage({ lang }: PropsWithLocale) {
   return (
     <main className="flex flex-col">
       <Meet lang={lang} />

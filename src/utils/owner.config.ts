@@ -5,8 +5,11 @@ export const OWNER_CONFIGS = {
   appName: 'blog-fescherer',
   name: 'Felipe Scherer',
   user: 'fescherer',
-  description: 'This is a blog owned by Felipe Scherer, and we write about technology, specially coding and design, bringing ideias and how to build them 😊 Feel free to contact us on our socials. 📱',
   rss: 'https://fennectales.com/feed.xml',
+  description: {
+    en: 'This is Felipe Scherer\'s portfolio, feel free to check it out 😁',
+    pt: 'Este é o portfolio de Felipe Scherer, fique a vontade para conhecer 😁',
+  },
   github_link: 'https://github.com/fescherer',
   linkedin_link: 'https://www.linkedin.com/in/fescherer',
   blog_link: 'https://fennectales.com',

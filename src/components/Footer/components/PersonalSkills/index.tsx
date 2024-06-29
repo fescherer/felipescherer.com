@@ -1,12 +1,13 @@
 import { LogoIcon } from '@/icons'
+import { PropsWithLocale } from '@/types/language'
 import { OWNER_CONFIGS } from '@/utils/owner.config'
 
-export function PersonalSkills() {
+export async function PersonalSkills({ lang }: PropsWithLocale) {
   return (
     <div className="flex flex-col gap-2 ">
 
       <LogoIcon color="var(--brand-primary)" />
-      <p className="max-w-prose text-sm">{OWNER_CONFIGS.description}</p>
+      <p className="max-w-prose text-sm">{OWNER_CONFIGS.description[lang]}</p>
 
       <div className="flex gap-4">
         {/* <Link aria-label="Go to RSS's author" href="/feed.xml">

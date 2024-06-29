@@ -9,6 +9,7 @@ export const PROJECTS_TYPES: TProjectTypeObj = {
     id: 'original',
     title: {
       en: 'Original',
+      pt: 'Original',
     },
     color: {
       bg: '#00C06B',
@@ -19,6 +20,7 @@ export const PROJECTS_TYPES: TProjectTypeObj = {
     id: 'college-lesson',
     title: {
       en: 'College Lesson',
+      pt: 'Lição da Faculdade',
     },
     color: {
       bg: '#EE0A0A',
@@ -29,6 +31,7 @@ export const PROJECTS_TYPES: TProjectTypeObj = {
     id: 'coding-week',
     title: {
       en: 'Coding Week',
+      pt: 'Semana Intensiva de Código',
     },
     color: {
       bg: '#F6D319',
@@ -39,6 +42,7 @@ export const PROJECTS_TYPES: TProjectTypeObj = {
     id: 'coding-lesson',
     title: {
       en: 'Coding Lesson',
+      pt: 'Código',
     },
     color: {
       bg: '#8F47EC',
@@ -49,6 +53,7 @@ export const PROJECTS_TYPES: TProjectTypeObj = {
     id: 'drawing',
     title: {
       en: 'Drawing',
+      pt: 'Desenho',
     },
     color: {
       bg: '#FF28CF',
@@ -59,6 +64,7 @@ export const PROJECTS_TYPES: TProjectTypeObj = {
     id: 'snippets',
     title: {
       en: 'Snippets',
+      pt: 'Snippets',
     },
     color: {
       bg: '#3272EF',

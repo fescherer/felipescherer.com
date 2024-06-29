@@ -1,7 +1,9 @@
+import { LocaleText } from '@/i18n-config'
+
 export interface IImage {
   img: string
-  title: string
-  alt: string
+  title: LocaleText
+  alt: LocaleText
   height: number
   width: number
 }
@@ -10,9 +12,9 @@ export interface IExperience {
   id: string
   info: {
     title: string
-    short_desc: string
-    desc: string[]
-    job: string
+    short_desc: LocaleText
+    desc: LocaleText[]
+    job: LocaleText
   }
   date_start: string
   date_end: string
@@ -24,10 +26,10 @@ export interface IExperience {
 export interface IHability {
   id: string
   title: string
-  text: string
+  text: LocaleText
   icon: string
   doc: string
-  short_description: string
+  short_description: LocaleText
   category: 'software' | 'css' | 'javascript' | 'other'
   isFavorite: boolean
 }
@@ -40,4 +42,10 @@ export interface IBookList {
   isPlanToRead?: boolean
   rate?: number
   link: string
+}
+
+export interface IMyHistory {
+  title: LocaleText
+  text: LocaleText
+  image: string
 }

@@ -5,26 +5,43 @@ import { LucideMenu, LucideX } from 'lucide-react'
 import LocaleSwitcher from '../LocaleSwitcher'
 import Link from 'next/link'
 import { useState } from 'react'
+import { PropsWithLocale } from '@/types/language'
 
 const items = [
   {
-    name: 'Home',
+    name: {
+      en: 'Home',
+      pt: 'Home',
+    },
     link: '',
   },
   {
-    name: 'About me',
+    name: {
+      en: 'About me',
+      pt: 'Sobre mim',
+    },
     link: 'aboutme',
   },
   {
-    name: 'Resume',
+    name: {
+      en: 'Resume/CV',
+      pt: 'Currículo',
+    },
     link: 'resume',
   },
   {
     name: 'Services',
     link: 'https://services.fennectales.com',
+    name: {
+      en: 'Services',
+      pt: 'Serviços',
+    },
   },
   {
-    name: 'Projects',
+    name: {
+      en: 'Projects',
+      pt: 'Projetos',
+    },
     link: 'projects',
   },
   {
@@ -32,12 +49,15 @@ const items = [
     link: 'https://fennectales.com',
   },
   {
-    name: 'Now',
+    name: {
+      en: 'Now',
+      pt: 'Atualmente',
+    },
     link: 'now',
   },
 ]
 
-export function HeaderMenu() {
+export function HeaderMenu({ lang }: PropsWithLocale) {
   const path = usePathname()
   const currentPath = path.split('/')?.[2] || ''
 
@@ -61,6 +81,7 @@ export function HeaderMenu() {
               <LucideX />
             </button>
 
+
             {items.map(item => (
               <Link onClick={() => setIsMenuOpen(false)} key={item.name} href={item.link} className={`border-b transition-all hover:border-brand-primary hover:text-brand-hover-primary ${currentPath === item.link ? 'border-brand-primary text-brand-primary' : 'border-transparent text-on-layer-0-l2 '}`}>{item.name}</Link>
             ))}
@@ -69,6 +90,7 @@ export function HeaderMenu() {
           </div>
         )
       }
+
 
     </>
   )

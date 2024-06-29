@@ -11,3 +11,8 @@ export const i18nWithName = {
 } as const
 
 export type LocaleWithName = (typeof i18nWithName)['locales'][number]
+
+export type LocaleText = {
+  pt: string
+  en: string
+}

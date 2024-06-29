@@ -30,7 +30,6 @@ const items = [
     link: 'resume',
   },
   {
-    name: 'Services',
     link: 'https://services.fennectales.com',
     name: {
       en: 'Services',
@@ -45,7 +44,10 @@ const items = [
     link: 'projects',
   },
   {
-    name: 'Blog',
+    name: {
+      en: 'Blog',
+      pt: 'Blog',
+    },
     link: 'https://fennectales.com',
   },
   {
@@ -81,16 +83,14 @@ export function HeaderMenu({ lang }: PropsWithLocale) {
               <LucideX />
             </button>
 
-
             {items.map(item => (
-              <Link onClick={() => setIsMenuOpen(false)} key={item.name} href={item.link} className={`border-b transition-all hover:border-brand-primary hover:text-brand-hover-primary ${currentPath === item.link ? 'border-brand-primary text-brand-primary' : 'border-transparent text-on-layer-0-l2 '}`}>{item.name}</Link>
+              <Link onClick={() => setIsMenuOpen(false)} key={item.name[lang]} href={item.link} className={`border-b transition-all hover:border-brand-primary hover:text-brand-hover-primary ${currentPath === item.link ? 'border-brand-primary text-brand-primary' : 'border-transparent text-on-layer-0-l2 '}`}>{item.name[lang]}</Link>
             ))}
 
-            <LocaleSwitcher />
+            <LocaleSwitcher title={lang === 'pt' ? 'Idioma' : 'Language'} />
           </div>
         )
       }
-
 
     </>
   )

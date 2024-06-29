@@ -25,7 +25,7 @@ export default function Now() {
 
       <p>
         Writing my
-        <Link className="design-link ml-1" href="https://blog.felipescherer.com" target="_blank">blog</Link>
+        <Link className="design-link ml-1" href="https://fennectales.com" target="_blank">blog</Link>
         .
       </p>
 

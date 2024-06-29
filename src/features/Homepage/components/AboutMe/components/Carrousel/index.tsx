@@ -7,10 +7,9 @@ Add carrousel animation, this probably will need a 3th party lib
 */
 const photos = [
   'bg-[url(/felipe-scherer/photo-flower.webp)]',
-  'bg-[url(/felipe-scherer/big-shoes.webp)]',
-  'bg-[url(/felipe-scherer/black-white.webp)]',
+  'bg-[url(/felipe-scherer/smile.webp)]',
+  'bg-[url(/felipe-scherer/photo-flower-sunflower.webp)]',
   'bg-[url(/felipe-scherer/coconout.webp)]',
-  'bg-[url(/felipe-scherer/dark-side.webp)]',
 ]
 
 export function Carrousel() {

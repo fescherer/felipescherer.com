@@ -1,5 +1,4 @@
 export * from './Footer'
-export * from './Header'
 export * from './Separator'
 export * from './Ribbon'
 export * from './SimpleLink'

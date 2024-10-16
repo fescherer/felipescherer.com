@@ -7,8 +7,8 @@ import { Footer } from '@/components/Footer'
 import 'react-multi-carousel/lib/styles.css'
 import { MainComponent } from '@/components/MainComponent'
 import { METADATA } from './metadata'
-import { Header } from '@/components'
 import { Locale, i18n } from '@/i18n-config'
+import { Header } from '@/components/header'
 
 const lora = Lora({
   subsets: ['latin'],

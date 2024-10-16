@@ -1,7 +1,8 @@
 export default function AboutPage() {
   return (
     <div>
-      <span>about</span>
+      <span id="aboutme">about me</span>
+      <span id="tech">texh</span>
     </div>
   )
 }

@@ -5,6 +5,7 @@ type TMenu = {
     en: ReactNode
     pt: ReactNode
   }
+  sublink?: TMenu[]
   link: string
 }
 
@@ -21,7 +22,23 @@ export const MENU_ITEMS: TMenu[] = [
       en: 'About',
       pt: 'Sobre',
     },
-    link: '/about',
+    // sublink: [
+    //   {
+    //     name: {
+    //       en: 'About me',
+    //       pt: 'Sobre mim',
+    //     },
+    //     link: '/about#aboutme',
+    //   },
+    //   {
+    //     name: {
+    //       en: 'Tecnologias',
+    //       pt: 'Tech',
+    //     },
+    //     link: '/about#tech',
+    //   },
+    // ],
+    link: '/aboutme',
   },
 ]
 //   {

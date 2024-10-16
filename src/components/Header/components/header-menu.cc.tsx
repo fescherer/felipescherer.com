@@ -1,12 +1,13 @@
 'use client'
 
 import { usePathname } from 'next/navigation'
-import { LucideAlignLeft } from 'lucide-react'
+import { LucideAlignLeft, LucideChevronDown } from 'lucide-react'
 import Link from 'next/link'
 import { PropsWithLocale } from '@/types/language'
 import { MENU_ITEMS } from '@/utils/menu-items'
 import { cn } from '@/utils/cn.function'
 import { ClassNameValue } from 'tailwind-merge'
+import { DropdownMenuComponent } from '@/components/primitives'
 
 type TCCHeaderMenu = {
   className: ClassNameValue
@@ -25,13 +26,35 @@ export function CCHeaderMenu({ lang, className }: PropsWithLocale<TCCHeaderMenu>
       </div>
 
       {/* DESKTOP VERSION */}
-      <div className={cn('hidden gap-8 md:flex', className)}>
+      <nav className={cn('hidden gap-8 md:flex', className)}>
         {
           MENU_ITEMS.map(menuItem => (
-            <Link className={cn('hover:border-brand-primary hover:bg-brand-primary hover:text-brand-on-primary transition-all rounded p-2', currentPath === menuItem.link.replace('/', '') ? 'text-brand-hover-primary' : '')} key={menuItem.link} href={menuItem.link}>{menuItem.name[lang]}</Link>
+            <>
+              {menuItem.sublink?.length
+                ? (
+                  <DropdownMenuComponent trigger={(
+                    <>
+                      {menuItem.name[lang]}
+                      <LucideChevronDown size={14} />
+                    </>
+                  )}
+                  >
+                    {menuItem.sublink.map((submenu) => {
+                      return (
+                        <Link key={submenu.link} className={cn('p-2 rounded hover:text-brand-on-primary hover:bg-brand-hover-primary transition-all', currentPath === submenu.link ? 'bg-brand-primary text-brand-on-primary' : 'text-on-layer-0-l2')} href={submenu.link}>{submenu.name[lang]}</Link>
+                      )
+                    })}
+                  </DropdownMenuComponent>
+                  )
+                : (
+                  <Link className={cn('hover:border-brand-primary hover:bg-brand-primary hover:text-brand-on-primary transition-all rounded p-2', currentPath === menuItem.link.replace('/', '') ? 'text-brand-hover-primary' : '')} key={menuItem.link} href={menuItem.link}>
+                    {menuItem.name[lang]}
+                  </Link>
+                  )}
+            </>
           ))
         }
-      </div>
+      </nav>
     </>
   )
 }

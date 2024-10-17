@@ -44,7 +44,7 @@ export async function generateStaticParams() {
 export default function RootLayout({ children, params }: PropsWithChildren<RootLayoutType>) {
   return (
     <html lang={params.lang}>
-      <body className={`${lora.variable} ${poppins.variable} bg-layer-0 font-text text-on-layer-0-l2`}>
+      <body className={`${lora.variable} ${poppins.variable} h-screen bg-layer-0 font-text text-on-layer-0-l2`}>
         <ProgressBarProvider>
           <MainComponent>
             <div className="relative">

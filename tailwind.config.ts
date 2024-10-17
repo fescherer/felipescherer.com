@@ -1,5 +1,5 @@
 import type { Config } from 'tailwindcss'
-const plugin = require('tailwindcss/plugin')
+import plugin from 'tailwindcss/plugin'
 
 const config: Config = {
   content: [
@@ -88,6 +88,13 @@ const config: Config = {
             opacity: '0',
           },
         },
+        contentShow: {
+          from: {
+            opacity: '0',
+            transform: 'translate(-50%, -48%) scale(0.96)',
+          },
+          to: { opacity: '1', transform: 'translate(-50%, -50%) scale(1)' },
+        },
         slideUpAndFade: {
           from: { opacity: '0', transform: 'translateY(2px)' },
           to: { opacity: '1', transform: 'translateY(0)' },
@@ -121,6 +128,8 @@ const config: Config = {
         slideDownAndFade: 'slideDownAndFade 400ms cubic-bezier(0.16, 1, 0.3, 1)',
         slideLeftAndFade: 'slideLeftAndFade 400ms cubic-bezier(0.16, 1, 0.3, 1)',
         spinPlanet: 'spinPlanetKey linear infinite',
+        overlayShow: 'overlayShow 150ms cubic-bezier(0.16, 1, 0.3, 1)',
+        contentShow: 'contentShow 150ms cubic-bezier(0.16, 1, 0.3, 1)',
       },
       gradientColorStopPositions: {
         '99%': '99%',
@@ -128,10 +137,10 @@ const config: Config = {
     },
   },
   plugins: [
-    plugin(({ matchUtilities, theme, addUtilities }: any) => {
+    plugin(({ matchUtilities, theme, addUtilities, addComponents }) => {
       matchUtilities(
         {
-          'animation-delay': (value: any) => {
+          'animation-delay': (value) => {
             return {
               'animation-delay': value,
             }
@@ -147,6 +156,15 @@ const config: Config = {
         },
         '.animation-fill-forwards': {
           'animation-fill-mode': 'forwards',
+        },
+      }),
+      addComponents({
+        '.p': {
+          marginTop: theme('spacing.2'),
+          marginBottom: theme('spacing.2'),
+          textAlign: 'justify',
+          lineHeight: '1.375',
+          textIndent: theme('spacing.4'),
         },
       })
     }),

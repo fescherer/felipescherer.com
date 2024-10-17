@@ -19,6 +19,29 @@ export const MENU_ITEMS: TMenu[] = [
   },
   {
     name: {
+      en: 'About me',
+      pt: 'Sobre mim',
+    },
+    // sublink: [
+    //   {
+    //     name: {
+    //       en: 'About me',
+    //       pt: 'Sobre mim',
+    //     },
+    //     link: '/about#aboutme',
+    //   },
+    //   {
+    //     name: {
+    //       en: 'Tecnologias',
+    //       pt: 'Tech',
+    //     },
+    //     link: '/about#tech',
+    //   },
+    // ],
+    link: '/aboutme',
+  },
+  {
+    name: {
       en: 'About',
       pt: 'Sobre',
     },
@@ -38,7 +61,7 @@ export const MENU_ITEMS: TMenu[] = [
     //     link: '/about#tech',
     //   },
     // ],
-    link: '/aboutme',
+    link: '/about',
   },
 ]
 //   {

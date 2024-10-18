@@ -18,7 +18,7 @@ export function ProjectsSection({ lang }: PropsWithLocale) {
           <ProjectComponent
             project={RECENT_PROJECTS[1]}
             lang={lang}
-            ribbon={<Ribbon href={`/projects/${RECENT_PROJECTS[0].type.id}/${RECENT_PROJECTS[0].id}`} title="Popular" bgColor="var(--brand-primary)" textColor="--on-brand-primary" className="z-10" />}
+            ribbon={<Ribbon href={`/projects/${RECENT_PROJECTS[0].type.id}/${RECENT_PROJECTS[0].id}`} title="Popular" bgColor="var(--brand-primary)" textColor="var(--brand-on-primary)" className="z-10" />}
           />
 
           <Separator dataOrientation="vertical" className="hidden md:flex" />
@@ -27,7 +27,7 @@ export function ProjectsSection({ lang }: PropsWithLocale) {
           <ProjectComponent
             project={RECENT_PROJECTS[0]}
             lang={lang}
-            ribbon={<Ribbon href={`/projects/${RECENT_PROJECTS[0].type.id}/${RECENT_PROJECTS[0].id}`} title="Recent" bgColor="var(--brand-secondary)" textColor="--on-brand-secondary" className="z-10" />}
+            ribbon={<Ribbon href={`/projects/${RECENT_PROJECTS[0].type.id}/${RECENT_PROJECTS[0].id}`} title="Recent" bgColor="var(--brand-secondary)" textColor="var(--brand-on-secondary)" className="z-10" />}
           />
         </div>
 

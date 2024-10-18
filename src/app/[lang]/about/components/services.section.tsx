@@ -2,12 +2,12 @@
 
 import Link from 'next/link'
 import { CardWrapper } from './card-wrapper.component'
-import { SERVICES } from '@/utils/services.data'
+import { SERVICES } from '@/utils/data/services.data'
 
 export function ServicesSection() {
   return (
     <CardWrapper direction="collumn" id="services">
-      <h2 className="text-center text-4xl leading-loose tracking-wider">
+      <h2 className="text-center text-4xl leading-loose tracking-wider text-on-layer-0-l1">
         Services
       </h2>
 

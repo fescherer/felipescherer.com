@@ -3,6 +3,7 @@ import { CardWrapper } from './card-wrapper.component'
 import { LinkedinIcon } from '@/icons/social/linkedin.icon'
 import { GithubIcon } from '@/icons/social/github.icon'
 import { Separator } from '@/components'
+import QRCode from 'react-qr-code'
 
 export function EducationSection() {
   return (
@@ -12,6 +13,14 @@ export function EducationSection() {
         <p className="p">I hold a Bachelor’s degree in Computer Science, complemented by a technical course in Electronics and several specialized tech certifications. I am currently pursuing a postgraduate specialization on Coursera.  </p>
         <p className="p">With over 5 years of experience in software development, I bring a blend of technical expertise and practical industry experience. </p>
         <p className="p">To view my full resume, click the button below or scan the QR code. Feel free to explore my social profiles as well.</p>
+        <h3 className="text-3xl leading-relaxed tracking-wider text-on-layer-0-l1">Experiences</h3>
+
+        <p className="p">
+
+          <ul>
+            <li>Central informatica</li>
+          </ul>
+        </p>
 
         <div className="mt-10 flex gap-3 ">
           <Link className="btn btn-secondary" href="/resume">CV/Resume</Link>
@@ -30,7 +39,10 @@ export function EducationSection() {
           /fescherer
         </Link>
 
-        <div>qr code</div>
+        <div className="rounded bg-[#fff] p-4">
+          <QRCode value="https://www.felipescherer.com/pt/resume" />
+        </div>
+
         <Separator />
         <h3 className="text-2xl leading-loose tracking-wide">Languages</h3>
 

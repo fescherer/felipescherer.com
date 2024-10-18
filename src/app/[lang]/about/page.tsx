@@ -11,7 +11,7 @@ export default function AboutPage({ params }: RootLayoutType) {
   return (
     <div className="relative m-auto flex w-full max-w-4xl flex-col space-y-32">
       <AboutSection />
-      <EducationSection />
+      <EducationSection lang={params.lang} />
       <SoftSkillsSection />
       <ToolkitSection />
       <ServicesSection />

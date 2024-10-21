@@ -33,7 +33,7 @@ export function BookList({ titleString }: BookListProps) {
             <LucideChevronLeft />
           </button>
 
-          {pages.map(page => <button onClick={() => setCurrentPage(page)} type="button" className={`flex h-8 w-8 items-center justify-center rounded-full transition-all hover:bg-brand-hover-primary ${currentPage === page ? 'bg-brand-primary text-brand-on-primary' : ''}`} key={page}>{page + 1}</button>)}
+          {pages.map(page => <button onClick={() => setCurrentPage(page)} type="button" className={`flex size-8 items-center justify-center rounded-full transition-all hover:bg-brand-hover-primary ${currentPage === page ? 'bg-brand-primary text-brand-on-primary' : ''}`} key={page}>{page + 1}</button>)}
 
           <button onClick={() => setCurrentPage(prev => prev + 1)} disabled={currentPage === pages.length - 1} type="button" className="rounded-full transition-all hover:enabled:text-on-layer-0-l1 disabled:cursor-not-allowed disabled:opacity-30">
             <LucideChevronRight />

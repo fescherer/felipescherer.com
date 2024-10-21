@@ -13,8 +13,8 @@ export function Card({ project }: CardProps) {
       {/* <div className="h-48 w-full overflow-hidden rounded bg-cover bg-center transition-all group-hover:scale-110" style={{ backgroundImage: `url(${imagePath}/thumb.png)` }} /> */}
 
       <div className="group relative h-48 overflow-hidden">
-        <div className="absolute h-full w-full scale-110 bg-cover bg-center blur-sm" style={{ backgroundImage: `url(${imagePath}/thumb.png)` }} />
-        <div className="absolute top-0 h-full w-full bg-contain bg-center bg-no-repeat transition-transform group-hover:scale-110" style={{ backgroundImage: `url(${imagePath}/thumb.png)` }} />
+        <div className="absolute size-full scale-110 bg-cover bg-center blur-sm" style={{ backgroundImage: `url(${imagePath}/thumb.png)` }} />
+        <div className="absolute top-0 size-full bg-contain bg-center bg-no-repeat transition-transform group-hover:scale-110" style={{ backgroundImage: `url(${imagePath}/thumb.png)` }} />
       </div>
 
       <h3 className="mt-4 font-title text-2xl font-semibold text-on-layer-0-l1 transition-all group-hover:text-brand-primary">

@@ -29,7 +29,7 @@ export function SplashScreen() {
   return (
     <div id="square" className="absolute z-50 mx-auto my-0 flex h-screen min-h-screen w-screen flex-col items-center overflow-hidden bg-[#090511]">
       {planets}
-      <div className="absolute h-full w-full backdrop-blur-sm" />
+      <div className="absolute size-full backdrop-blur-sm" />
       <Image src="/favicon.svg" className="z-10 m-auto animate-[ping_2s_ease-in-out] animation-fill-forwards" width={80} height={80} alt="site-logo" />
     </div>
   )

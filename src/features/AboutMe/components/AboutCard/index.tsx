@@ -13,7 +13,7 @@ export function AboutCard({ image, title, children, isInverted = false }: PropsW
 
       <div className="text-justify">
         <h3 className="mb-3 font-title text-xl text-on-layer-0-l1">{title}</h3>
-        <div className="max-w-[65ch] indent-4 text-sm leading-6">{children}</div>
+        <div className="max-w-prose indent-4 text-sm leading-6">{children}</div>
       </div>
     </div>
   )

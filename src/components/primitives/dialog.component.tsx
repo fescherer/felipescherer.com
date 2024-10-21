@@ -24,7 +24,7 @@ export function Dialog({ trigger, children }: PropsWithChildren<TDialog>) {
           <DialogPrimitive.Close asChild>
             <button
               type="button"
-              className="text-violet11 hover:bg-violet4 focus:shadow-violet7 absolute right-2.5 top-2.5 inline-flex size-[25px] appearance-none items-center justify-center rounded-full focus:shadow-[0_0_0_2px] focus:outline-none"
+              className="absolute right-2.5 top-2.5 inline-flex size-6 appearance-none items-center justify-center rounded-full text-on-layer-0-l1 hover:brightness-90"
               aria-label="Close"
             >
               <LucideX />

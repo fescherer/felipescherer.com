@@ -2,7 +2,7 @@ import Link from 'next/link'
 import { CardWrapper } from './card-wrapper.component'
 import { LinkedinIcon } from '@/icons/social/linkedin.icon'
 import { GithubIcon } from '@/icons/social/github.icon'
-import { Separator, SimpleAccordion } from '@/components'
+import { Separator } from '@/components'
 import QRCode from 'react-qr-code'
 import { LucideBadgeInfo, LucideCalendar, LucideUser } from 'lucide-react'
 import { PropsWithLocale } from '@/types/language'
@@ -45,50 +45,37 @@ export function EducationSection({ lang }: PropsWithLocale) {
 
         <h3 className="text-3xl leading-relaxed tracking-wider text-on-layer-0-l1">Experiences</h3>
 
-        <p className="p">
-
-          <ul className="list-disc space-y-4">
-            {
+        <ul className="list-disc space-y-4">
+          {
               EXPERIENCES.map(experience => (
-                <li key={experience.id} className="flex flex-col gap-2">
-                  <SimpleAccordion
-                    trigger={(
-                      <div className="flex flex-col gap-2">
-                        <div key={experience.id} className="flex items-center rounded ">
-                          <Image src={experience.logo} alt={experience.img_showcase.alt[lang]} width={30} height={30} />
-                          <h3>{experience.info.title}</h3>
-                        </div>
+                <li key={experience.id} className="flex w-full flex-col justify-between gap-2 rounded border border-layer-1 p-4">
+                  <div key={experience.id} className="flex items-center rounded ">
+                    <Image src={experience.logo} alt={experience.img_showcase.alt[lang]} width={30} height={30} />
+                    <h3>{experience.info.title}</h3>
+                  </div>
 
-                        <div className="flex flex-col gap-2 md:flex-row">
-                          <div className="flex items-center gap-2 text-sm">
-                            <LucideCalendar size={12} />
-                            <span className="capitalize">{formatDate(experience.date_start, experience.date_end, monthFormat)}</span>
-                          </div>
-
-                          <span className="hidden md:block">|</span>
-
-                          <div className="flex items-center gap-2 text-sm">
-                            <LucideUser size={12} />
-                            <span>{experience.info.job[lang]}</span>
-                          </div>
-                        </div>
-                      </div>
-                    )}
-                  >
-                    <div className="p-4">
-                      {experience.info.desc.map(desc => desc[lang])}
+                  <div className="flex flex-col gap-2 md:flex-row">
+                    <div className="flex items-center gap-2 text-sm">
+                      <LucideCalendar size={12} />
+                      <span className="capitalize">{formatDate(experience.date_start, experience.date_end, monthFormat)}</span>
                     </div>
-                  </SimpleAccordion>
+
+                    <span className="hidden md:block">|</span>
+
+                    <div className="flex items-center text-sm">
+                      <LucideUser size={12} />
+                      <span>{experience.info.job[lang]}</span>
+                    </div>
+                  </div>
                 </li>
               ))
             }
-          </ul>
-        </p>
+        </ul>
 
-        <strong className="mt-10 flex gap-2 rounded bg-layer-1 p-2 text-on-layer-0-l1">
+        <p className="mt-10 flex gap-2 rounded bg-layer-1 p-2 text-on-layer-0-l1">
           <LucideBadgeInfo size={46} className="text-brand-primary" />
           To access my complete resume, click the button below or scan the QR code. You can also explore my social profiles for a detailed insight of my experiences.
-        </strong>
+        </p>
 
         <div className="mt-10 flex gap-3 ">
           <Link className="btn btn-secondary" href="/resume">CV/Resume</Link>

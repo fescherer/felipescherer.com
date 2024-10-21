@@ -6,8 +6,8 @@ import { useState } from 'react'
 type ResumeProps = {
   lang: Locale
   translations: {
-    title: string
-    text: string
+    'title': string
+    'text': string
     'en-version': string
     'pt-version': string
   }

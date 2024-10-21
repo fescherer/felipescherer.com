@@ -31,7 +31,7 @@ export async function ToolkitList({ tools, title, lang }: PropsWithLocale<Toolki
                     </div>
                   </SimpleTooltip>
                   )
-                : <div className="h-3 w-3" />}
+                : <div className="size-3" />}
 
               <Image src={tool.icon} alt={`${tool.title} icon`} width={20} height={20} unoptimized />
               <SimpleLink target="_blank" href={tool.doc}>{tool.title}</SimpleLink>

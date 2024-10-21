@@ -19,11 +19,11 @@ export function ProjectCard({ project, lang, translation }: PropsWithLocale<Proj
   return (
     <div title={project.title.pt} className="relative flex h-80 w-60 flex-col rounded bg-layer-1 text-on-layer-1-l2 transition-all hover:scale-105">
 
-      <Link href={linkPath} className="absolute left-0 top-0 h-full w-full" />
+      <Link href={linkPath} className="absolute left-0 top-0 size-full" />
 
       <div className="relative min-h-[40%] overflow-hidden">
-        <Link href={linkPath} className="absolute h-full w-full scale-110 bg-cover bg-center blur-sm" style={{ backgroundImage: `url(${imagePath}/thumb.png)` }} />
-        <Link href={linkPath} className="absolute top-0 h-full w-full bg-contain bg-center bg-no-repeat" style={{ backgroundImage: `url(${imagePath}/thumb.png)` }} />
+        <Link href={linkPath} className="absolute size-full scale-110 bg-cover bg-center blur-sm" style={{ backgroundImage: `url(${imagePath}/thumb.png)` }} />
+        <Link href={linkPath} className="absolute top-0 size-full bg-contain bg-center bg-no-repeat" style={{ backgroundImage: `url(${imagePath}/thumb.png)` }} />
       </div>
 
       <Ribbon

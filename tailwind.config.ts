@@ -162,7 +162,6 @@ const config: Config = {
         '.p': {
           marginTop: theme('spacing.2'),
           marginBottom: theme('spacing.2'),
-          textAlign: 'justify',
           lineHeight: '1.375',
           textIndent: theme('spacing.4'),
         },

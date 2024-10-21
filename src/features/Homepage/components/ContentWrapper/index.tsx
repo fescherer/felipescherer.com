@@ -14,7 +14,7 @@ export function ContentWrapper({ children, id, anchor, isFlexReverse, isLastItem
 
   return (
     <div id={id} className={`relative flex min-h-screen w-full flex-col items-center  justify-center overflow-hidden ${bgColor}`}>
-      <section className={`m-auto flex h-full w-full max-w-5xl items-center gap-6 p-4 md:flex-row md:justify-between ${isFlexReverse ? 'flex-col-reverse' : 'flex-col'}`}>
+      <section className={`m-auto flex size-full max-w-5xl items-center gap-6 p-4 md:flex-row md:justify-between ${isFlexReverse ? 'flex-col-reverse' : 'flex-col'}`}>
         {children}
       </section>
 

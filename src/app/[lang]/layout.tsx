@@ -3,12 +3,14 @@ import { Lora, Poppins } from 'next/font/google'
 import '../globals.css'
 import React, { PropsWithChildren } from 'react'
 import { ProgressBarProvider } from '@/providers/progress-bar.provider'
-import { Footer } from '@/components/Footer'
 import 'react-multi-carousel/lib/styles.css'
 import { MainComponent } from '@/components/MainComponent'
 import { METADATA } from './metadata'
 import { Locale, i18n } from '@/i18n-config'
 import { Header } from '@/components/header'
+import { ToastContainer } from 'react-toastify'
+import { Footer } from '@/components/footer.component'
+import 'react-toastify/dist/ReactToastify.css'
 
 const lora = Lora({
   subsets: ['latin'],
@@ -47,6 +49,8 @@ export default function RootLayout({ children, params }: PropsWithChildren<RootL
       <body className={`${lora.variable} ${poppins.variable} h-screen bg-layer-0 font-text text-on-layer-0-l2`}>
         <ProgressBarProvider>
           <MainComponent>
+            <ToastContainer />
+
             <div className="relative">
               <Header lang={params.lang} />
             </div>
@@ -55,7 +59,7 @@ export default function RootLayout({ children, params }: PropsWithChildren<RootL
               {children}
             </main>
 
-            <Footer lang={params.lang} />
+            <Footer />
           </MainComponent>
         </ProgressBarProvider>
       </body>

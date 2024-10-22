@@ -49,7 +49,7 @@ export function CCHeaderMenu({ lang, className }: PropsWithLocale<TCCHeaderMenu>
                   </DropdownMenuComponent>
                   )
                 : (
-                  <Link className={cn('hover:border-brand-primary hover:bg-brand-primary hover:text-brand-on-primary transition-all rounded p-2', currentPath === menuItem.link.replace('/', '') ? 'text-brand-hover-primary' : '')} href={menuItem.link}>
+                  <Link className={cn('hover:border-brand-primary hover:bg-brand-primary hover:text-brand-on-primary transition-all rounded p-2 text-on-layer-0-l1', currentPath === menuItem.link.replace('/', '') ? 'text-brand-hover-primary' : '')} href={menuItem.link}>
                     {menuItem.name[lang]}
                   </Link>
                   )}

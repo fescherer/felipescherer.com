@@ -4,13 +4,13 @@ import '../globals.css'
 import React, { PropsWithChildren } from 'react'
 import { ProgressBarProvider } from '@/providers/progress-bar.provider'
 import 'react-multi-carousel/lib/styles.css'
-import { MainComponent } from '@/components/MainComponent'
 import { METADATA } from './metadata'
 import { Locale, i18n } from '@/i18n-config'
-import { Header } from '@/components/header'
+import { Header } from '@/components/header/header.component'
 import { ToastContainer } from 'react-toastify'
-import { Footer } from '@/components/footer.component'
+import { Footer } from '@/components/footer/footer.component'
 import 'react-toastify/dist/ReactToastify.css'
+import { MainComponent } from '@/components/splash-screen/main.component'
 
 const lora = Lora({
   subsets: ['latin'],

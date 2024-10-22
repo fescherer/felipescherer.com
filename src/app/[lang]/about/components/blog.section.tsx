@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import { CardWrapper } from './card-wrapper.component'
+import { CardWrapper } from '../../../../components/card-wrapper.component'
 import Link from 'next/link'
 
 export function BlogSection() {

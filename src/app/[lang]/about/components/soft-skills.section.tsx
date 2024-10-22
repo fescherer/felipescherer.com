@@ -1,5 +1,5 @@
 import { SOFT_SKILLS } from '@/utils/data/soft-skills.data'
-import { CardWrapper } from './card-wrapper.component'
+import { CardWrapper } from '../../../../components/card-wrapper.component'
 import { Dialog } from '@/components/primitives'
 
 export function SoftSkillsSection() {

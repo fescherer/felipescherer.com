@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import { CardWrapper } from './card-wrapper.component'
+import { CardWrapper } from '../../../../components/card-wrapper.component'
 import { SocialsComponent } from '@/components/socials.component'
 
 export async function AboutSection() {

@@ -1,6 +1,6 @@
 'use client'
 
-import { Ribbon } from '@/components'
+import { Ribbon } from '@/components/primitives'
 import { IProject } from '@/types'
 import { PropsWithLocale } from '@/types/language'
 import { LayoutPanelLeft, LucideChevronRight, LucideCode2, PanelTop } from 'lucide-react'

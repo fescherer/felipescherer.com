@@ -1,7 +1,7 @@
-import { Resume } from '@/features'
 import { getDictionary } from '@/get-dictionary'
 import { RootLayoutType } from '@/types/Page'
 import { getMetadata } from '@/utils/functions/getMetada'
+import { ResumeComponent } from './resume.component'
 
 export async function generateMetadata({ params }: RootLayoutType) {
   const dictionary = await getDictionary(params.lang)
@@ -20,7 +20,7 @@ export default async function Page({ params }: RootLayoutType) {
   const dictionary = await getDictionary(params.lang)
 
   return (
-    <Resume
+    <ResumeComponent
       lang={params.lang}
       translations={{
         'title': dictionary.resume.title,

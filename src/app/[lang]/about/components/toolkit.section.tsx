@@ -1,4 +1,4 @@
-import { CardWrapper } from './card-wrapper.component'
+import { CardWrapper } from '../../../../components/card-wrapper.component'
 import Link from 'next/link'
 import { Dialog } from '@/components/primitives'
 import { TOOLKIT } from '@/utils/data/toolkit.data'

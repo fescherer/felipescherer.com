@@ -1,13 +1,13 @@
 import Link from 'next/link'
-import { CardWrapper } from './card-wrapper.component'
+import { CardWrapper } from '../../../../components/card-wrapper.component'
 import { LinkedinIcon } from '@/icons/social/linkedin.icon'
 import { GithubIcon } from '@/icons/social/github.icon'
-import { Separator } from '@/components'
 import QRCode from 'react-qr-code'
 import { LucideBadgeInfo, LucideCalendar, LucideUser } from 'lucide-react'
 import { PropsWithLocale } from '@/types/language'
 import { EXPERIENCES } from '@/utils/data/experiencies.data'
 import Image from 'next/image'
+import { Separator } from '@/components/primitives'
 
 function formatDate(start: string, end: string, monthFormat: any) {
   const formatStartDate = new Date(start)
@@ -16,7 +16,7 @@ function formatDate(start: string, end: string, monthFormat: any) {
   return `${monthFormat(formatStartDate)}, ${formatStartDate.getFullYear()} - ${monthFormat(formatEndDate)},  ${formatEndDate.getFullYear()}`
 }
 
-export function EducationSection({ lang }: PropsWithLocale) {
+export async function EducationSection({ lang }: PropsWithLocale) {
   const monthFormat = new Intl.DateTimeFormat(lang === 'en' ? 'en-US' : 'pt-BR', {
     month: 'long',
   }).format
@@ -106,6 +106,7 @@ export function EducationSection({ lang }: PropsWithLocale) {
           <li>English</li>
         </ol>
       </div>
+
     </CardWrapper>
   )
 }

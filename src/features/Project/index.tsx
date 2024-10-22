@@ -1,7 +1,7 @@
 import { IProject } from '@/types'
 import { Header, ProjectCarrousel } from './components'
-import { Separator } from '@/components'
 import { PropsWithLocale } from '@/types/language'
+import { Separator } from '@/components/primitives'
 
 type ProjectProps = {
   project: IProject

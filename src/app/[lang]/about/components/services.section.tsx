@@ -1,7 +1,7 @@
 /* TODO Update images in background of each card */
 
 import Link from 'next/link'
-import { CardWrapper } from './card-wrapper.component'
+import { CardWrapper } from '../../../../components/card-wrapper.component'
 import { SERVICES } from '@/utils/data/services.data'
 
 export function ServicesSection() {
@@ -39,6 +39,7 @@ export function ServicesSection() {
 
         <p>
           Get in touch in a
+          {' '}
           <strong>free</strong>
           {' '}
           call!

@@ -1,11 +1,11 @@
-import { CardWrapper } from '@/components/card-wrapper.component'
 import { ProjectsShowcaseComponent } from '@/components/sections/projects/projects-showcase.component'
+import { ContentWrapperComponent } from '../content-wrapper.component'
 import { PropsWithLocale } from '@/types/language'
 
 export function ProjectsSection({ lang }: PropsWithLocale) {
   return (
-    <CardWrapper direction="collumn" id="projects">
+    <ContentWrapperComponent anchor="#home" id="projects" isLastItem index={3}>
       <ProjectsShowcaseComponent lang={lang} />
-    </CardWrapper>
+    </ContentWrapperComponent>
   )
 }

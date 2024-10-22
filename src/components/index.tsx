@@ -1,7 +1,0 @@
-export * from './Separator'
-export * from './Ribbon'
-export * from './SimpleLink'
-export * from './SimpleTooltip'
-export * from './SimplePopover'
-export * from './SimpleAccordion'
-export * from './ResumeSection'

@@ -4,13 +4,17 @@ import { PropsWithLocale } from '@/types/language'
 import { cn } from '@/utils/cn.function'
 import { Ribbon, Separator } from '@/components/primitives'
 import { ProjectComponent } from './project.component'
+import { getDictionary } from '@/get-dictionary'
 
 const RECENT_PROJECTS = Object.values(PROJECTS).reduce((acc, arr) => [...acc, ...arr], [])
 
-export function ProjectsShowcaseComponent({ lang }: PropsWithLocale) {
+export async function ProjectsShowcaseComponent({ lang }: PropsWithLocale) {
+  const dictionary = await getDictionary(lang)
+  const t = dictionary.projects
+
   return (
     <div className="flex w-full flex-col">
-      <h2 className="mb-4 font-title text-4xl font-semibold tracking-wide text-on-layer-0-l1">Projects</h2>
+      <h2 className="text-4xl leading-loose tracking-wider text-on-layer-0-l1">{t['title-header']}</h2>
 
       <div className="flex flex-col items-center gap-4 md:flex-row md:justify-between md:gap-2">
         <ProjectComponent

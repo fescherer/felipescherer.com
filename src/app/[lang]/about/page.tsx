@@ -1,6 +1,6 @@
 import { RootLayoutType } from '@/types/Page'
 import { AboutSection } from './components/about.section'
-import { BlogSection } from './components/blog.section'
+import { FennecTalesStudioSection } from './components/fennec-tales-studio.section'
 import { EducationSection } from './components/education.section'
 import { ServicesSection } from './components/services.section'
 import { ToolkitSection } from './components/toolkit.section'
@@ -22,14 +22,14 @@ export const metadata: Metadata = getMetadata({
 export default function AboutPage({ params }: RootLayoutType) {
   return (
     <div className="relative m-auto flex w-full max-w-4xl flex-col space-y-32">
-      <AboutSection />
+      <AboutSection lang={params.lang} />
       <EducationSection lang={params.lang} />
       <QuoteSection lang={params.lang} />
-      <SoftSkillsSection />
-      <ToolkitSection />
-      <ServicesSection />
-      <BlogSection />
+      <FennecTalesStudioSection lang={params.lang} />
       <ProjectsSection lang={params.lang} />
+      <SoftSkillsSection lang={params.lang} />
+      <ToolkitSection lang={params.lang} />
+      <ServicesSection lang={params.lang} />
     </div>
   )
 }

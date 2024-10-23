@@ -2,8 +2,13 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { CardWrapper } from '../../../../components/card-wrapper.component'
 import { SocialsComponent } from '@/components/socials.component'
+import { getDictionary } from '@/get-dictionary'
+import { PropsWithLocale } from '@/types/language'
 
-export async function AboutSection() {
+export async function AboutSection({ lang }: PropsWithLocale) {
+  const dictionary = await getDictionary(lang)
+  const t = dictionary.aboutme.aboutme
+
   return (
     <CardWrapper id="about">
       <div className="flex flex-col gap-2">
@@ -15,16 +20,18 @@ export async function AboutSection() {
       </div>
 
       <div className="flex flex-col items-center md:ml-10 md:items-start">
-        <h1 className="text-4xl leading-loose tracking-wider text-on-layer-0-l1">about</h1>
-        <p className="p">I am Felipe Scherer, creator of Fennec Tales Studio and a software developer with over five years of experience in delivering innovative solutions across various platforms. My expertise spans web and mobile application development, with a strong emphasis on user experience and performance optimization. </p>
+        <h1 className="text-4xl leading-loose tracking-wider text-on-layer-0-l1">{t.title}</h1>
+        <p className="p">{t.text1}</p>
+        <p className="p">{t.text2}</p>
 
-        <p className="p">
-          Currently, I am expanding my skills in game development. Committed to continuous learning, I stay updated with industry trends to ensure the highest quality results.
-        </p>
-
-        <div className="mt-10 flex gap-3 ">
-          <Link className="btn btn-primary" href="#contact">Hire Me</Link>
-          <Link className="btn btn-secondary" href="#education">Resume</Link>
+        <div className="mt-10 flex flex-wrap gap-3">
+          <Link className="btn btn-primary" href="#contact">{t.anchors['hire-me']}</Link>
+          <Link className="btn btn-secondary" href="#education">{t.anchors.education}</Link>
+          <Link className="btn btn-secondary" href="#fennec-tales-studio">{t.anchors['fennec-tales-studio']}</Link>
+          <Link className="btn btn-secondary" href="#projects">{t.anchors.projects}</Link>
+          <Link className="btn btn-secondary" href="#softskills">{t.anchors['soft-skills']}</Link>
+          <Link className="btn btn-secondary" href="#toolkit">{t.anchors.toolbox}</Link>
+          <Link className="btn btn-secondary" href="#services">{t.anchors.services}</Link>
         </div>
       </div>
     </CardWrapper>

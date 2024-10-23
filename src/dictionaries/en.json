@@ -52,34 +52,63 @@
       "defaultAltImage": "Felipe Scherer",
       "defaultKeywords": []
     },
-    "title": "About me",
-    "about_data": {
-      "title": "Felipe Scherer",
-      "text": "Hello, my name is Felipe Scherer and I have several hobbies that inspire me and motivate me to be a more complete person. Programming is one of my great passions, especially Python, which led me to research more and more on the subject. I currently work with Javascript as a web frontend, but my goal is to specialize in low-level languages, such as C++, for game development. I believe that programming is an art, just like any other human production, and mathematical logic is fundamental to solving proposed problems. Furthermore, I am also passionate about graphic art, including drawings, layouts and compositions. My desire is to study more about the art of drawing, as this is an area that I have not yet fully mastered. I have a degree in Computer Science and I am always looking for new opportunities to learn and improve.",
-      "buttons": {
-        "toolkit": "Toolkit",
-        "experiences": "Experiences",
-        "my_history": "My History",
-        "book_recomendation": "Book Recomendation"
+    "aboutme": {
+      "title": "About me",
+      "text1": "I am Felipe Scherer, creator of Fennec Tales Studio and a software developer with over five years of experience in delivering innovative solutions across various platforms. My expertise spans web and mobile application development, with a strong emphasis on user experience and performance.",
+      "text2": "Currently, I am expanding my skills in game development. Committed to continuous learning, I stay updated with industry trends to ensure the highest quality results.",
+      "anchors": {
+        "hire-me": "Hire Me",
+        "education": "Education & Experiences",
+        "soft-skills": "Soft Skills",
+        "toolbox": "Toolbox",
+        "services": "Services",
+        "fennec-tales-studio": "Fennec Tales Studio",
+        "projects": "Projects"
       }
     },
-    "resume": "Resume/CV",
     "toolkit": {
-      "title": "Toolkit",
-      "text": "I am constantly improving and dedicating myself to studies in different areas of coding. I believe it is important to always be up to date and seek new knowledge to evolve in your career and grow professionally. Furthermore, I am always looking for new learning opportunities, courses, training, events and experiences that can add value to my knowledge and skills. Among the areas in which I dedicate myself with enthusiasm and interest are:",
-      "favorite-stack": "This is one of my favorite tech",
+      "title": "My toolkit",
       "read-docs": "Read the docs"
+    },
+    "softskills": {
+      "title": "Soft Skills"
+    },
+    "services": {
+      "title": "Services",
+      "project-idea": {
+        "callout": "Do you have a great project idea?",
+        "solution": "I would love to build for you!",
+        "contact": "Get in touch in a ",
+        "free-call": "free call",
+        "button": "EMAIL ME"
+      }
     },
     "quote": {
       "quote": "An algorithm must be seen to be believed",
       "author": "Professor of Stanford University"
     },
-    "experiences": "Experiences",
-    "book-recomendation": {
-      "title": "Book Recomendation",
-      "text": "These are some of my favorite books. Not all of them are programming related, but I recommend reading them all."
-    },
-    "my-history": "My History"
+    "education": {
+      "title": "Education & Experiences",
+      "text": {
+        "part1": "Over five years",
+        "part2": " of experience in software development, I hold a Bachelor's degree in",
+        "part3": " Computer Science ",
+        "part4": "and multiple tech courses certifications. Currently, I'm pursuing a postgraduate specialization in algorithms."
+      },
+      "experiences": {
+        "title": "Experiences"
+      },
+      "resume": {
+        "callout-text": "To access my complete resume, click the button below or scan the QR code. You can also explore my social profiles for a detailed insight of my experiences.",
+        "btn-resume": "CV/Resume",
+        "btn-hire": "Hire Me"
+      },
+      "languages": {
+        "title": "Languages",
+        "pt": "Portuguese",
+        "en": "English"
+      }
+    }
   },
   "resume": {
     "seo": {
@@ -117,5 +146,11 @@
   "project": {
     "notFound": "No project with this name",
     "notExist": "The project type does not exist"
+  },
+  "fennec-tales": {
+    "title": "Fennec Tales Studio",
+    "text": "Fennec Tales Studio is a project about sharing knowledge and creativity. Our blog features monthly articles, offering insights on tech, game design and professional experiences. On our YouTube channel, you can dive into weekly videos that explore these topics in greater depth. Additionally, we showcase carousel images on LinkedIn and Instagram, providing quick tips content to keep you inspired. We invite you to explore our work, engage with our content and share your thoughts!",
+    "btn-blog": "Blog",
+    "btn-contact": "Contact"
   }
 }

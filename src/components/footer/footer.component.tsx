@@ -8,7 +8,7 @@ export function Footer() {
 
   return (
     <>
-      <div id="contact" className="mt-40 flex h-20 w-full items-center justify-center rounded-t-full bg-brand-primary text-brand-on-primary">
+      <div id="contact" className="mt-40 flex h-20 w-full scroll-mt-20 items-center justify-center rounded-t-full bg-brand-primary text-brand-on-primary">
         <h2 className="text-2xl">Contact</h2>
       </div>
 

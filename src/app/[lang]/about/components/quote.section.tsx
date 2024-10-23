@@ -3,6 +3,7 @@ import { PropsWithLocale } from '@/types/language'
 
 export async function QuoteSection({ lang }: PropsWithLocale) {
   const dictionary = await getDictionary(lang)
+  const t = dictionary.aboutme.quote
 
   return (
     <figure className="mx-auto my-8 max-w-screen-md text-center">
@@ -13,7 +14,7 @@ export async function QuoteSection({ lang }: PropsWithLocale) {
       <blockquote>
         <p className="text-2xl font-medium italic text-on-layer-0-l2">
           &quot;
-          {dictionary['aboutme'].quote.quote}
+          {t.quote}
           &quot;
         </p>
       </blockquote>
@@ -25,7 +26,7 @@ export async function QuoteSection({ lang }: PropsWithLocale) {
           <cite className="pe-3 font-medium text-on-layer-0-l2">Donald Knuth</cite>
 
           <cite className="ps-3 text-sm text-on-layer-0-l2">
-            {dictionary['aboutme'].quote.author}
+            {t.author}
           </cite>
         </div>
       </figcaption>

@@ -10,7 +10,7 @@ type TCardWrapper = {
 
 export function CardWrapper({ children, direction = 'row', className, id }: PropsWithChildren<TCardWrapper>) {
   return (
-    <section id={id} className={cn('m-4 space-y-8 flex flex-col items-center', direction === 'row' ? 'md:flex-row md:items-start justify-between gap-4' : '', className)}>
+    <section id={id} className={cn('m-4 space-y-8 flex flex-col items-center scroll-mt-20', direction === 'row' ? 'md:flex-row md:items-start justify-between gap-4' : '', className)}>
       {children}
     </section>
   )

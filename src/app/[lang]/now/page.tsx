@@ -1,38 +1,32 @@
+import { getDictionary } from '@/get-dictionary'
+import { RootLayoutType } from '@/types/Page'
 import Link from 'next/link'
 
-export default function Now() {
+export default async function Now({ params }: RootLayoutType) {
+  const dictionary = await getDictionary(params.lang)
+  const t = dictionary.now
+
   return (
     <div className="prose m-auto max-w-5xl p-4">
-      <h2>Inspiration</h2>
+      <h2>{t.inspiration.title}</h2>
 
       <p>
-        This page was inspired by
+        {t.inspiration.text1}
         <Link target="_blank" className="design-link mx-1" href="https://sive.rs/">Derek Sivers</Link>
-        and
+        {t.inspiration.text2}
         <Link className="design-link ml-1" href="https://nownownow.com/" target="_blank">nownownow.com</Link>
-        . Last updated 25 March, 2024.
-      </p>
-
-      <h2>I am currently</h2>
-
-      <p>
-        Working as web developer, using React and NextJS.
-      </p>
-
-      <p>
-        Going regularly to gym and running on weekends.
-      </p>
-
-      <p>
-        Writing my
-        <Link className="design-link ml-1" href="https://fennectales.com" target="_blank">blog</Link>
         .
+        {' '}
+        {t.inspiration.text3}
+        {' '}
+        24 October, 2024.
       </p>
 
-      <p>
-        Studying drawing, chinese, artificial intelligence and game development.
-      </p>
+      <h2>{t.currently.title}</h2>
 
+      {[t.currently.item1, t.currently.item2, t.currently.item3, t.currently.item4].map(item => (
+        <p key={item}>{item}</p>
+      ))}
     </div>
   )
 }

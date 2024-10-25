@@ -151,5 +151,20 @@
     "text": "Fennec Tales Studio é um projeto sobre compartilhar conhecimento e criatividade. Nosso blog apresenta artigos mensais, oferencendo insights sobre tecnologia, game design e experiências professionais. No nosso canal do Youtube, você pode mergulhar semanalmente em vídeos que exploram esses tópicos em melhor profundidade. Também, nós fazemos carrosséis no LinkedIn e Instagram, fornecendo dicas rápidas para te manter inspirado. Nós o convidamos a explorar nosso trabalho, engajando em nosso conteúdo e compartilhando suas opiniões!",
     "btn-blog": "Blog",
     "btn-contact": "Contato"
+  },
+  "now": {
+    "inspiration": {
+      "title": "Inspiração",
+      "text1": "Essa página foi inspirada por ",
+      "text2": " e ",
+      "text3": "Atualizado em: "
+    },
+    "currently": {
+      "title": "Estou atualmente",
+      "item1": "Trablhando como desenvolvedor web, usando React e NextJS.",
+      "item2": "Indo regulamente para a academia e correndo aos fins de semana.",
+      "item3": "Escrevendo meu blog e criando vídeos para Fennec Tales Studio.",
+      "item4": "Estudando desenho, animação e desenvolvimento de jogo."
+    }
   }
 }

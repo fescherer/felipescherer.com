@@ -40,6 +40,13 @@ export const MENU_ITEMS: TMenu[] = [
     // ],
     link: '/about',
   },
+  {
+    name: {
+      en: 'Now',
+      pt: 'Agora',
+    },
+    link: '/now',
+  },
 ]
 //   {
 //     name: {

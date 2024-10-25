@@ -36,7 +36,7 @@ export function CCConfigSelector({ className }: TCCConfigSelector) {
       >
         {i18nWithName.locales.map((locale) => {
           return (
-            <Link key={locale.id} className={cn('p-2 rounded hover:text-brand-on-primary hover:bg-brand-hover-primary transition-all', currentLanguage === locale.id ? 'bg-brand-primary text-brand-on-primary' : 'text-on-layer-0-l2')} href={redirectedPathName(locale)}>{locale.name}</Link>
+            <Link key={locale.id} className={cn('p-4 rounded hover:text-brand-on-secondary text-sm hover:bg-brand-hover-secondary transition-all', currentLanguage === locale.id ? 'bg-brand-hover-secondary text-brand-on-secondary' : 'text-on-layer-0-l2')} href={redirectedPathName(locale)}>{locale.name}</Link>
           )
         })}
       </DropdownMenuComponent>

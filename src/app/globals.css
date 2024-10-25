@@ -21,13 +21,13 @@
   --brand-primary: #2E7A85;
   --brand-secondary: #b9b9b9;
   --brand-on-primary: #E1E1E1;
-  --brand-on-secondary: #FEFEEB;
+  --brand-on-secondary: #131313;
   --brand-hover-primary: #37aec0;
-  --brand-hover-secondary: #4f2c50;
+  --brand-hover-secondary: #e2e2e2;
 }
 
 /* :root {
-  --layer-0: #131313;
+  --layer-0: #131313;4f2c50
   --layer-0-5: #101010;
   --layer-1: #242424;
   --layer-2: #656565;

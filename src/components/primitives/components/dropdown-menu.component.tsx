@@ -1,21 +1,25 @@
+import { cn } from '@/utils/cn.function'
 import * as DropdownMenuPrimitive from '@radix-ui/react-dropdown-menu'
+import { ClassValue } from 'clsx'
 import { PropsWithChildren, ReactNode } from 'react'
 
 type TPrimitive = {
   trigger: ReactNode
+  triggerClass?: ClassValue
+  contentClass?: ClassValue
 }
 
-export function DropdownMenuComponent({ trigger, children }: PropsWithChildren<TPrimitive>) {
+export function DropdownMenuComponent({ trigger, triggerClass, contentClass, children }: PropsWithChildren<TPrimitive>) {
   return (
     <DropdownMenuPrimitive.Root>
-      <DropdownMenuPrimitive.Trigger className="flex items-center gap-1 rounded p-2 transition-all hover:bg-brand-primary hover:text-brand-on-primary">
+      <DropdownMenuPrimitive.Trigger className={cn('flex items-center gap-1 rounded p-2 transition-all hover:bg-brand-hover-secondary hover:text-brand-on-secondary', triggerClass)}>
         {trigger}
       </DropdownMenuPrimitive.Trigger>
 
       <DropdownMenuPrimitive.Portal>
-        <DropdownMenuPrimitive.Content className="flex flex-col gap-2 rounded bg-layer-1 p-2">
+        <DropdownMenuPrimitive.Content className={cn('overflow-y-auto max-h-[calc(100vh-75px)] flex flex-col gap-2 rounded border border-brand-secondary bg-layer-0 p-2', contentClass)}>
           {children}
-          <DropdownMenuPrimitive.Arrow className="mb-2 fill-layer-1" />
+          <DropdownMenuPrimitive.Arrow className="fill-brand-secondary" />
         </DropdownMenuPrimitive.Content>
       </DropdownMenuPrimitive.Portal>
     </DropdownMenuPrimitive.Root>

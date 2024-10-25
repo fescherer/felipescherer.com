@@ -51,15 +51,13 @@ export default function RootLayout({ children, params }: PropsWithChildren<RootL
           <MainComponent>
             <ToastContainer />
 
-            <div className="relative">
-              <Header lang={params.lang} />
-            </div>
-
             <main className="pt-16">
               {children}
             </main>
 
             <Footer />
+            <Header lang={params.lang} />
+
           </MainComponent>
         </ProgressBarProvider>
       </body>

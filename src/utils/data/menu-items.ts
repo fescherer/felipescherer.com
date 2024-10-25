@@ -22,23 +22,58 @@ export const MENU_ITEMS: TMenu[] = [
       en: 'About',
       pt: 'Sobre',
     },
-    // sublink: [
-    //   {
-    //     name: {
-    //       en: 'About me',
-    //       pt: 'Sobre mim',
-    //     },
-    //     link: '/about#aboutme',
-    //   },
-    //   {
-    //     name: {
-    //       en: 'Tecnologias',
-    //       pt: 'Tech',
-    //     },
-    //     link: '/about#tech',
-    //   },
-    // ],
+    sublink: [
+      {
+        name: {
+          en: 'About me',
+          pt: 'Sobre mim',
+        },
+        link: '#aboutme',
+      },
+      {
+        name: {
+          en: 'Education',
+          pt: 'Ensino',
+        },
+        link: '#education',
+      },
+      {
+        name: {
+          en: 'Fennec Tales Studio',
+          pt: 'Fennec Tales Studio',
+        },
+        link: '#fennec-tales-studio',
+      },
+      {
+        name: {
+          en: 'Soft Skills',
+          pt: 'Habilidades Interpessoais',
+        },
+        link: '#softskills',
+      },
+      {
+        name: {
+          en: 'Toolkit',
+          pt: 'Caixa de Ferramenta',
+        },
+        link: '#toolkit',
+      },
+      {
+        name: {
+          en: 'Services',
+          pt: 'Serviços',
+        },
+        link: '#services',
+      },
+    ],
     link: '/about',
+  },
+  {
+    name: {
+      en: 'Projects',
+      pt: 'Projetos',
+    },
+    link: '/projects',
   },
   {
     name: {
@@ -48,46 +83,3 @@ export const MENU_ITEMS: TMenu[] = [
     link: '/now',
   },
 ]
-//   {
-//     name: {
-//       en: 'About me',
-//       pt: 'Sobre mim',
-//     },
-//     link: 'aboutme',
-//   },
-//   {
-//     name: {
-//       en: 'Resume/CV',
-//       pt: 'Currículo',
-//     },
-//     link: 'resume',
-//   },
-//   {
-//     link: 'https://services.fennectales.com',
-//     name: {
-//       en: 'Services',
-//       pt: 'Serviços',
-//     },
-//   },
-//   {
-//     name: {
-//       en: 'Projects',
-//       pt: 'Projetos',
-//     },
-//     link: 'projects',
-//   },
-//   {
-//     name: {
-//       en: 'Blog',
-//       pt: 'Blog',
-//     },
-//     link: 'https://fennectales.com',
-//   },
-//   {
-//     name: {
-//       en: 'Now',
-//       pt: 'Atualmente',
-//     },
-//     link: 'now',
-//   },
-// ]

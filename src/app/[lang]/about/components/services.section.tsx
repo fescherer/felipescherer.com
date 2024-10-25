@@ -49,9 +49,13 @@ export async function ServicesSection({ lang }: PropsWithLocale) {
         </p>
       </div>
 
-      <Link href="/about#contact" className="btn btn-primary my-6">
-        {t['project-idea'].button}
-      </Link>
+      <div className="grid grid-cols-2 gap-4">
+        <Link target="_blank" href="https://services.fennectales.com" className="btn btn-primary my-6">{t['project-idea'].button2}</Link>
+
+        <Link href="/about#contact" className="btn btn-primary my-6">
+          {t['project-idea'].button}
+        </Link>
+      </div>
     </CardWrapper>
   )
 }

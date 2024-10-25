@@ -33,6 +33,5 @@ export function Dialog({ trigger, children }: PropsWithChildren<TDialog>) {
         </DialogPrimitive.Content>
       </DialogPrimitive.Portal>
     </DialogPrimitive.Root>
-
   )
 }

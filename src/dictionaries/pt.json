@@ -30,7 +30,7 @@
         "title": "Currículo",
         "p1": "Se está procurando por uma página do meu currículo",
         "p2": "clique aqui",
-        "p3": ", mas se só quer baixa-lo, apenas escolha a lingua preferida e clique em baixar",
+        "p3": ", mas se só quer baixa-lo, apenas escolha o idioma preferido e clique em baixar",
         "btn": "Baixar"
       }
     },
@@ -42,7 +42,11 @@
     },
     "projects": {
       "title": "Projetos",
-      "moreProjects": "Mais projetos"
+      "moreProjects": "Mais projetos",
+      "tag": {
+        "popular": "Popular",
+        "recent": "Recente"
+      }
     }
   },
   "aboutme": {
@@ -81,7 +85,7 @@
         "contact": "Entre em contato com uma ",
         "free-call": "chamada gratuita",
         "button": "Envie-me um e-mail",
-        "button2": "More Info"
+        "button2": "Mais informações"
       }
     },
     "quote": {
@@ -166,6 +170,34 @@
       "item2": "Indo regulamente para a academia e correndo aos fins de semana.",
       "item3": "Escrevendo meu blog e criando vídeos para Fennec Tales Studio.",
       "item4": "Estudando desenho, animação e desenvolvimento de jogo."
+    }
+  },
+  "footer": {
+    "title": "Contato",
+    "text1": "Deixe-me uma mensagem",
+    "text2": "Você tem uma dúvida ou um projeto incrível em mente? Entre em contato pelo email ou formulário abaixo, e respondei você em 48 horas. Vamos nos conectar e criar algo incrível juntos!",
+    "location": "Itatiba, São Paulo, Brasil",
+    "form": {
+      "toast-sucess": "Mensagem enviada. Obrigado. Responderei você o quanto antes 😊",
+      "toast-error": "Por favor, preencha todos os campos antes de enviar",
+      "field": {
+        "name": {
+          "label": "Seu nome",
+          "placeholder": "Jonatas Silva"
+        },
+        "email": {
+          "label": "Seu email",
+          "placeholder": "mail@exemplo.com"
+        },
+        "message": {
+          "label": "Sua mensagem",
+          "placeholder": "Olá, eu sou..."
+        }
+      },
+      "submit": {
+        "loading": "Enviando...",
+        "load": "Enviado"
+      }
     }
   }
 }

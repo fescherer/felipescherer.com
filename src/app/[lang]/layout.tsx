@@ -60,7 +60,7 @@ export default function RootLayout({ children, params }: PropsWithChildren<RootL
               {children}
             </main>
 
-            <Footer />
+            <Footer lang={params.lang} />
             <Header lang={params.lang} />
 
           </MainComponent>

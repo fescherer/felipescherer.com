@@ -12,7 +12,11 @@ type FormValues = {
   access_key: string
 }
 
-export function FormComponent() {
+type PropsFormComponent = {
+  t: any
+}
+
+export function FormComponent({ t }: PropsFormComponent) {
   const { register, handleSubmit, reset } = useForm<FormValues>()
 
   const [isSubmitting, setIsSubmitting] = useState(false)
@@ -22,20 +26,20 @@ export function FormComponent() {
       setIsSubmitting(true)
       axios.post('https://api.web3forms.com/submit', { ...data, access_key: 'aa04600c-d258-4c8e-9987-3384d0f470ee' })
         .then(() => {
-          toast.success('Message sent. Thank you. I will reply soon as possible 😊')
+          toast.success(t['toast-sucess'])
         })
         .catch(e => console.log(e))
         .finally(() => {
           setIsSubmitting(false)
           reset()
         })
-    } else toast.warning('Please, fill all fields before submitting')
+    } else toast.warning(t['toast-error'])
   }
 
   return (
     <form onSubmit={handleSubmit(onSubmit)} data-theme="light" className="flex w-80 flex-col gap-2 rounded border border-layer-1 bg-layer-1 p-4 shadow-lg">
       <label htmlFor="input-group-1" className="block text-sm font-medium text-on-layer-1-l1 opacity-90 ">
-        Your name
+        {t.field.name.label}
       </label>
 
       <div className="relative mb-3">
@@ -52,11 +56,11 @@ export function FormComponent() {
           </svg>
         </div>
 
-        <input {...register('name')} type="text" id="input-group-1" className="block w-full rounded-lg border border-brand-secondary bg-layer-1  p-2.5 ps-10 text-sm text-on-layer-1-l1 focus:border-brand-primary focus:ring-brand-primary" placeholder="John Doe" />
+        <input {...register('name')} type="text" id="input-group-1" className="block w-full rounded-lg border border-brand-secondary bg-layer-1  p-2.5 ps-10 text-sm text-on-layer-1-l1 focus:border-brand-primary focus:ring-brand-primary" placeholder={t.field.name.placeholder} />
       </div>
 
       <label htmlFor="input-group-1" className="block text-sm font-medium text-on-layer-1-l1 opacity-90">
-        Your Email
+        {t.field.email.label}
       </label>
 
       <div className="relative mb-3">
@@ -67,15 +71,15 @@ export function FormComponent() {
           </svg>
         </div>
 
-        <input type="email" {...register('email')} id="input-group-1" className="block w-full rounded-lg border border-brand-secondary bg-layer-1  p-2.5 ps-10 text-sm text-on-layer-1-l2 focus:border-brand-primary focus:ring-brand-primary" placeholder="mail@example.com" />
+        <input type="email" {...register('email')} id="input-group-1" className="block w-full rounded-lg border border-brand-secondary bg-layer-1  p-2.5 ps-10 text-sm text-on-layer-1-l2 focus:border-brand-primary focus:ring-brand-primary" placeholder={t.field.email.placeholder} />
       </div>
 
       <label htmlFor="message" className="block text-sm font-medium text-on-layer-1-l1 opacity-90">
-        Your message
+        {t.field.message.label}
       </label>
 
-      <textarea {...register('message')} id="message" className="mb-6 block w-full rounded-lg border border-brand-secondary bg-layer-1 p-2.5 text-sm  text-on-layer-1-l2 focus:border-brand-primary focus:ring-brand-primary" placeholder="Hello, I am..." />
-      <button className="btn btn-primary disabled:cursor-wait disabled:bg-brand-secondary" type="submit" disabled={isSubmitting}>{isSubmitting ? 'Sending...' : 'Send'}</button>
+      <textarea {...register('message')} id="message" className="mb-6 block w-full rounded-lg border border-brand-secondary bg-layer-1 p-2.5 text-sm  text-on-layer-1-l2 focus:border-brand-primary focus:ring-brand-primary" placeholder={t.field.message.placeholder} />
+      <button className="btn btn-primary disabled:cursor-wait disabled:bg-brand-secondary" type="submit" disabled={isSubmitting}>{isSubmitting ? t.submit.loading : t.submit.load}</button>
     </form>
   )
 }

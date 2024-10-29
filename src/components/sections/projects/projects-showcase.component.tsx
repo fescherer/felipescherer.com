@@ -20,7 +20,7 @@ export async function ProjectsShowcaseComponent({ lang }: PropsWithLocale) {
         <ProjectComponent
           project={RECENT_PROJECTS[1]}
           lang={lang}
-          ribbon={<Ribbon href={`/projects/${RECENT_PROJECTS[0].type.id}/${RECENT_PROJECTS[0].id}`} title="Popular" bgColor="var(--brand-primary)" textColor="var(--brand-on-primary)" />}
+          ribbon={<Ribbon href={`/projects/${RECENT_PROJECTS[0].type.id}/${RECENT_PROJECTS[0].id}`} title={dictionary.homepage.projects.tag.popular} bgColor="var(--brand-primary)" textColor="var(--brand-on-primary)" />}
         />
 
         <Separator dataOrientation="vertical" className="hidden md:flex" />
@@ -29,12 +29,12 @@ export async function ProjectsShowcaseComponent({ lang }: PropsWithLocale) {
         <ProjectComponent
           project={RECENT_PROJECTS[0]}
           lang={lang}
-          ribbon={<Ribbon href={`/projects/${RECENT_PROJECTS[0].type.id}/${RECENT_PROJECTS[0].id}`} title="Recent" bgColor="var(--brand-secondary)" textColor="var(--brand-on-secondary)" />}
+          ribbon={<Ribbon href={`/projects/${RECENT_PROJECTS[0].type.id}/${RECENT_PROJECTS[0].id}`} title={dictionary.homepage.projects.tag.recent} bgColor="var(--brand-secondary)" textColor="var(--brand-on-secondary)" />}
         />
       </div>
 
       <Link href="/projects" className={cn('design-btn', 'mt-10 self-center px-8')}>
-        {` More projects (+${RECENT_PROJECTS.length - 2})`}
+        {dictionary.homepage.projects.moreProjects + ` (+${RECENT_PROJECTS.length - 2})`}
       </Link>
     </div>
   )

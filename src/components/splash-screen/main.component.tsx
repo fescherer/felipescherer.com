@@ -4,7 +4,7 @@ import { PropsWithChildren, useEffect, useState } from 'react'
 import { SplashScreenComponent } from './splash-screen.component'
 
 export function MainComponent({ children }: PropsWithChildren) {
-  const [hasShowedSplashScreen, setHasShowedSplashScreen] = useState(false)
+  const [hasShowedSplashScreen, setHasShowedSplashScreen] = useState(true)
 
   useEffect(() => {
     const timeoutId = setTimeout(() => {

@@ -29,7 +29,7 @@ export function CCHeaderMenu({ lang, className }: PropsWithLocale<TCCHeaderMenu>
       <div className={cn('lg:hidden select-none', className)}>
 
         <DropdownMenuComponent
-          contentClass="min-w-[75vw]"
+          contentClass="w-[300px]"
           trigger={(
             <>
               <LucideAlignLeft />

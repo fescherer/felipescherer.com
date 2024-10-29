@@ -2,7 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
+@import '../themes/index.css';
+
+
+/* :root {
  --layer-0: #fdfdfd;
  --layer-0-5: #ffffff;
  --layer-1: #e9e9e9;
@@ -24,7 +27,7 @@
   --brand-on-secondary: #131313;
   --brand-hover-primary: #37aec0;
   --brand-hover-secondary: #e2e2e2;
-}
+} */
 
 /* :root {
   --layer-0: #131313;4f2c50
@@ -49,10 +52,6 @@
    --brand-hover-primary: #37aec0;
    --brand-hover-secondary: #4f2c50;
  } */
-
-html {
-  scroll-behavior: smooth;
-}
 
 @layer base {
   input:not([type=button]):not([type=reset]):not([type=submit]):not([type=image]):focus,textarea:focus, button:focus-visible, a:focus-visible {

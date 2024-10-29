@@ -14,7 +14,6 @@ export function ProjectComponent({ project, lang, ribbon }: PropsWithLocale<TPro
 
   return (
     <div className="relative max-w-[350px]">
-      {ribbon}
 
       <Link href={linkPath} className="group">
 
@@ -29,6 +28,8 @@ export function ProjectComponent({ project, lang, ribbon }: PropsWithLocale<TPro
 
         <p className="text-sm transition-all group-hover:text-brand-primary">{project.description[lang]}</p>
       </Link>
+
+      {ribbon}
     </div>
   )
 }

@@ -33,7 +33,7 @@ export async function ProjectsShowcaseComponent({ lang }: PropsWithLocale) {
         />
       </div>
 
-      <Link href="/projects" className={cn('design-btn', 'mt-10 self-center px-8')}>
+      <Link href="/projects" className={cn('btn-primary btn', 'py-4 mt-10 self-center px-8')}>
         {dictionary.homepage.projects.moreProjects + ` (+${RECENT_PROJECTS.length - 2})`}
       </Link>
     </div>

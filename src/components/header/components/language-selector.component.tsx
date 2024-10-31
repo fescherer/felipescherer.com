@@ -42,7 +42,6 @@ export function LanguageSelectorComponent({ cookieLang }: LanguageSelectorProps)
   return (
     <DropdownMenuComponent trigger={(
       <>
-        {`${hasRunned}`}
         <LucideLanguages />
         <LucideChevronDown size={14} />
       </>

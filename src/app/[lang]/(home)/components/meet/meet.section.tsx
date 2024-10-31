@@ -18,7 +18,7 @@ export async function MeetSection({ lang }: PropsWithLocale) {
           <h1 className="text-4xl font-medium md:text-6xl">Felipe Scherer</h1>
           <Typewriter items={dictionary.homepage.meet.typewriter} />
 
-          <Link href="#aboutme" className="design-btn mt-6 self-center text-xl md:self-start ">
+          <Link href="#aboutme" className="btn btn-primary mt-6 self-center text-xl md:self-start ">
             {dictionary.homepage.meet.button}
           </Link>
         </div>

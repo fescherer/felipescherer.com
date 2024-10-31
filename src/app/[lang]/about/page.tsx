@@ -14,7 +14,7 @@ export const metadata: Metadata = getMetadata({
   defaultDescription: 'Here you can find about my life, hobbies and works that I\'ve done',
   defaultTitle: 'About me',
   canonicalURL: '',
-  imagePath: '/thumb.png',
+  imagePath: '/thumb.webp',
   defaultAltImage: 'Felipe Schereer',
   defaultKeywords: ['about-me'],
 })

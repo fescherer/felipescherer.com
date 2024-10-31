@@ -22,8 +22,8 @@ export function ProjectCard({ project, lang, translation }: PropsWithLocale<Proj
       <Link href={linkPath} className="absolute left-0 top-0 size-full" />
 
       <div className="relative min-h-[40%] overflow-hidden">
-        <Link href={linkPath} className="absolute size-full scale-110 bg-cover bg-center blur-sm" style={{ backgroundImage: `url(${imagePath}/thumb.png)` }} />
-        <Link href={linkPath} className="absolute top-0 size-full bg-contain bg-center bg-no-repeat" style={{ backgroundImage: `url(${imagePath}/thumb.png)` }} />
+        <Link href={linkPath} className="absolute size-full scale-110 bg-cover bg-center blur-sm" style={{ backgroundImage: `url(${imagePath}/thumb.webp)` }} />
+        <Link href={linkPath} className="absolute top-0 size-full bg-contain bg-center bg-no-repeat" style={{ backgroundImage: `url(${imagePath}/thumb.webp)` }} />
       </div>
 
       <Ribbon

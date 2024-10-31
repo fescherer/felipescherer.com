@@ -10,7 +10,7 @@ export async function generateMetadata({ params }: RootLayoutType) {
   const dictionary = await getDictionary(params.lang)
   const defaultMetadata = {
     canonicalURL: '',
-    imagePath: '/thumb.png',
+    imagePath: '/thumb.webp',
   }
 
   return getMetadata({

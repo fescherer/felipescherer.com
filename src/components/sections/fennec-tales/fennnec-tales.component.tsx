@@ -25,7 +25,7 @@ export async function FennecTalesComponent({ lang }: PropsWithLocale) {
       </div>
 
       <div className="flex flex-col gap-4">
-        <Image className="rounded" src="/blog.png" width={1068} height={922} alt="Blog" />
+        <Image className="rounded" src="/blog.webp" width={1068} height={922} alt="Blog" />
 
         {/* TODO add tooltip */}
         <div className="flex gap-2">

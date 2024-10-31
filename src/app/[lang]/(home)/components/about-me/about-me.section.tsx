@@ -38,7 +38,7 @@ export async function AboutMeSection({ lang }: PropsWithLocale) {
           <p>
             {dictionary.homepage.aboutme.findMore}
             {' '}
-            <Link className="design-link" href="/aboutme">here</Link>
+            <Link className="design-link" href={`${lang}/aboutme`}>here</Link>
             .
           </p>
 

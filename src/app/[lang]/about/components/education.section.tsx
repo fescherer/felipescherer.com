@@ -73,7 +73,7 @@ export async function EducationSection({ lang }: PropsWithLocale) {
 
         <div className="mt-10 flex gap-3 ">
           <Link className="btn btn-secondary" href="/resume">{t.resume['btn-resume']}</Link>
-          <Link className="btn btn-primary" href="#hire-me">{t.resume['btn-hire']}</Link>
+          <Link className="btn btn-primary" href="#contact">{t.resume['btn-hire']}</Link>
         </div>
       </div>
 
@@ -89,7 +89,7 @@ export async function EducationSection({ lang }: PropsWithLocale) {
         </Link>
 
         <div className="rounded bg-[#fff] p-4">
-          <QRCode value="https://www.felipescherer.com/pt/resume" />
+          <QRCode value={`https://www.felipescherer.com/${lang}/resume`} />
         </div>
 
         <Separator />

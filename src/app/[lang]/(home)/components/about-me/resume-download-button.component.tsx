@@ -17,14 +17,14 @@ export function ResumeSection({ defaultLang, translation }: ResumeSectionProps) 
 
   return (
     <div className="my-6 flex flex-col gap-2 rounded border border-layer-1 p-4">
-      <Link href="/resume" className="flex items-center gap-2 self-start font-medium text-on-layer-0-l1 transition-colors hover:text-brand-primary hover:underline focus:text-brand-primary">
+      <Link href={`${defaultLang}/resume`} className="flex items-center gap-2 self-start font-medium text-on-layer-0-l1 transition-colors hover:text-brand-primary hover:underline focus:text-brand-primary">
         <LucideFileText />
         <h3>{translation.homepage.aboutme.resume.title}</h3>
       </Link>
 
       <p className="ml-1 text-sm">
         {translation.homepage.aboutme.resume.p1}
-        <Link className="design-link ml-1" href="/resume">{translation.homepage.aboutme.resume.p2}</Link>
+        <Link className="design-link ml-1" href={`${defaultLang}/resume`}>{translation.homepage.aboutme.resume.p2}</Link>
         {translation.homepage.aboutme.resume.p3}
       </p>
 

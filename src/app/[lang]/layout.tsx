@@ -4,13 +4,15 @@ import '../globals.css'
 import React, { PropsWithChildren } from 'react'
 import { ProgressBarProvider } from '@/providers/progress-bar.provider'
 import 'react-multi-carousel/lib/styles.css'
-import { MainComponent } from '@/components/MainComponent'
 import { METADATA } from './metadata'
 import { Locale, i18n } from '@/i18n-config'
-import { Header } from '@/components/header'
+import { Header } from '@/components/header/header.component'
 import { ToastContainer } from 'react-toastify'
-import { Footer } from '@/components/footer.component'
+import { Footer } from '@/components/footer/footer.component'
 import 'react-toastify/dist/ReactToastify.css'
+import { MainComponent } from '@/components/splash-screen/main.component'
+import { cookies } from 'next/headers'
+import { themes } from '@/themes/server-theme'
 
 const lora = Lora({
   subsets: ['latin'],
@@ -44,22 +46,23 @@ export async function generateStaticParams() {
 }
 
 export default function RootLayout({ children, params }: PropsWithChildren<RootLayoutType>) {
+  const cookieTheme = cookies().get('data-theme')
+  const theme = themes.includes(cookieTheme?.value ?? '') ? cookieTheme?.value : ''
+
   return (
-    <html lang={params.lang}>
+    <html className="scroll-smooth" lang={params.lang} data-theme={theme} style={{ colorScheme: theme }}>
       <body className={`${lora.variable} ${poppins.variable} h-screen bg-layer-0 font-text text-on-layer-0-l2`}>
         <ProgressBarProvider>
           <MainComponent>
             <ToastContainer />
 
-            <div className="relative">
-              <Header lang={params.lang} />
-            </div>
-
             <main className="pt-16">
               {children}
             </main>
 
-            <Footer />
+            <Footer lang={params.lang} />
+            <Header lang={params.lang} />
+
           </MainComponent>
         </ProgressBarProvider>
       </body>

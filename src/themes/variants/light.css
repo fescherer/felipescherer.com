@@ -1,0 +1,24 @@
+
+[data-theme='light'] {
+  --layer-0: #fdfdfd;
+  --layer-0-5: #ffffff;
+  --layer-1: #e9e9e9;
+  --layer-2: #656565;
+
+  --on-layer-0-l1: #131313;
+  --on-layer-0-l2: #3a3b3b;
+  --on-layer-0-l3: #333333;
+
+  --on-layer-1-l1: #353535;
+  --on-layer-1-l2: #2e2e2e;
+
+  --on-layer-2-l1: #1d1d1d;
+  --on-layer-2-l2: #353535;
+
+   --brand-primary: #2E7A85;
+   --brand-secondary: #b9b9b9;
+   --brand-on-primary: #E1E1E1;
+   --brand-on-secondary: #131313;
+   --brand-hover-primary: #37aec0;
+   --brand-hover-secondary: #e2e2e2;
+  }

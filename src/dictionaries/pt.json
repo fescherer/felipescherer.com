@@ -30,7 +30,7 @@
         "title": "Currículo",
         "p1": "Se está procurando por uma página do meu currículo",
         "p2": "clique aqui",
-        "p3": ", mas se só quer baixa-lo, apenas escolha a lingua preferida e clique em baixar",
+        "p3": ", mas se só quer baixa-lo, apenas escolha o idioma preferido e clique em baixar",
         "btn": "Baixar"
       }
     },
@@ -42,7 +42,11 @@
     },
     "projects": {
       "title": "Projetos",
-      "moreProjects": "Mais projetos"
+      "moreProjects": "Mais projetos",
+      "tag": {
+        "popular": "Popular",
+        "recent": "Recente"
+      }
     }
   },
   "aboutme": {
@@ -52,34 +56,64 @@
       "defaultAltImage": "Felipe Scherer",
       "defaultKeywords": []
     },
-    "title": "Sobre mim",
-    "about_data": {
-      "title": "Felipe Scherer",
-      "text": "Olá, meu nome é Felipe Scherer e tenho diversos hobbies que me inspiram e me motivam a ser uma pessoa mais completa. A programação é uma das minhas grandes paixões, em especial Python, que me levou a buscar cada vez mais sobre o assunto. Atualmente, trabalho com Javascript como frontend web, mas meu objetivo é me especializar em linguagens de baixo nível, como C++, para desenvolvimento de jogos. Acredito que programação é uma arte, assim como qualquer outra produção humana, e a lógica matemática é fundamental para resolver problemas propostos. Além disso, também sou apaixonado pela arte gráfica, incluindo desenhos, layouts e composições. Meu desejo é estudar mais sobre a arte do desenho, já que esta é uma área que ainda não domino totalmente. Sou formado em Ciências da Computação e estou sempre em busca de novas oportunidades de aprendizado e aprimoramento.",
-      "buttons": {
-        "toolkit": "Toolkit",
-        "experiences": "Experiences",
-        "my_history": "My History",
-        "book_recomendation": "Book Recomendation"
+    "aboutme": {
+      "title": "Sobre mim",
+      "text1": "Meu nome é Felipe Scherer, criador da Fennec Tales Studio e um desenvolvedor de software com mais de 5 anos de experiência entregando soluções inovadoras entre diversas plataformas. Minha experiência vai da web até aplicações mobile, com forte enfâse na experiência do usuário e performance.",
+      "text2": "Atualmente, estou expandindo minhas habilidades no desenvolvimento de jogos. Empenhado com aprendizado continuo, estou sempre me atualizando com tendências da indústria para garantir a maior qualidade nos resultados",
+      "anchors": {
+        "hire-me": "Hire Me",
+        "education": "Education & Experiences",
+        "soft-skills": "Soft Skills",
+        "toolbox": "Toolbox",
+        "services": "Services",
+        "fennec-tales-studio": "Fennec Tales Studio",
+        "projects": "Projects"
       }
     },
-    "resume": "Currículo",
     "toolkit": {
-      "title": "Ferramentas",
-      "text": "Estou em constante aprimoramento e dedicação aos estudos em diferentes áreas da programação. Acredito que é importante estar sempre atualizado e buscar novos conhecimentos para evoluir na carreira e crescer profissionalmente. Além disso, estou sempre em busca de novas oportunidades de aprendizado, cursos, treinamentos, eventos e experiências que possam agregar valor ao meu conhecimento e habilidades. Entre as áreas em que me dedico com entusiasmo e interesse estão:",
-      "favorite-stack": "Essa é uma das minhas tecnologias favoritas",
+      "title": "Minha caixa de ferramentas",
       "read-docs": "Leia a documentação"
     },
+    "softskills": {
+      "title": "Habilidades interpessoais"
+    },
+    "services": {
+      "title": "Serviços",
+      "project-idea": {
+        "callout": "Você tem uma boa ideia de projeto?",
+        "solution": "Eu adoraria fazer para você!",
+        "contact": "Entre em contato com uma ",
+        "free-call": "chamada gratuita",
+        "button": "Envie-me um e-mail",
+        "button2": "Mais informações"
+      }
+    },
     "quote": {
-      "quote": "Um algoritmo precisa ser visto para ser acreditado",
+      "quote": "Um algoritmo precisa ser visto para se acreditar",
       "author": "Professor da Universidade de Stanford"
     },
-    "experiences": "Experiências",
-    "book-recomendation": {
-      "title": "Recomendação de livros",
-      "text": "Esses são alguns dos meus livros favoritos. Nem todos são relacionados à programação, mas recomendo ler todos."
-    },
-    "my-history": "Minha história"
+    "education": {
+      "title": "Ensino & Experiências",
+      "text": {
+        "part1": "Com mais de 5 anos",
+        "part2": " de experiência de desenvolvimento de software, carrego um diploma de bacharelado em ",
+        "part3": " Ciência da Computação ",
+        "part4": "e multiplus certificados de cursos tech. Atualmente, estou cursando uma pós graduação com especialização em algoritmos."
+      },
+      "experiences": {
+        "title": "Experiências"
+      },
+      "resume": {
+        "callout-text": "Para acessar meu currículo completo, clique no button abaixo ou escaneie o QR code. Você também pode explorar meus perfis em redes sociais para uma visão mais detalhada das minhas experiências.",
+        "btn-resume": "Currículo",
+        "btn-hire": "Me contrate"
+      },
+      "languages": {
+        "title": "Idiomas",
+        "pt": "Português",
+        "en": "Inglês"
+      }
+    }
   },
   "resume": {
     "seo": {
@@ -116,5 +150,54 @@
   "project": {
     "notFound": "No project with this name",
     "notExist": "The project type does not exist"
+  },
+  "fennec-tales": {
+    "title": "Fennec Tales Studio",
+    "text": "Fennec Tales Studio é um projeto sobre compartilhar conhecimento e criatividade. Nosso blog apresenta artigos mensais, oferencendo insights sobre tecnologia, game design e experiências professionais. No nosso canal do Youtube, você pode mergulhar semanalmente em vídeos que exploram esses tópicos em melhor profundidade. Também, nós fazemos carrosséis no LinkedIn e Instagram, fornecendo dicas rápidas para te manter inspirado. Nós o convidamos a explorar nosso trabalho, engajando em nosso conteúdo e compartilhando suas opiniões!",
+    "btn-blog": "Blog",
+    "btn-contact": "Contato"
+  },
+  "now": {
+    "inspiration": {
+      "title": "Inspiração",
+      "text1": "Essa página foi inspirada por ",
+      "text2": " e ",
+      "text3": "Atualizado em: "
+    },
+    "currently": {
+      "title": "Estou atualmente",
+      "item1": "Trablhando como desenvolvedor web, usando React e NextJS.",
+      "item2": "Indo regulamente para a academia e correndo aos fins de semana.",
+      "item3": "Escrevendo meu blog e criando vídeos para Fennec Tales Studio.",
+      "item4": "Estudando desenho, animação e desenvolvimento de jogo."
+    }
+  },
+  "footer": {
+    "title": "Contato",
+    "text1": "Deixe-me uma mensagem",
+    "text2": "Você tem uma dúvida ou um projeto incrível em mente? Entre em contato pelo email ou formulário abaixo, e respondei você em 48 horas. Vamos nos conectar e criar algo incrível juntos!",
+    "location": "Itatiba, São Paulo, Brasil",
+    "form": {
+      "toast-sucess": "Mensagem enviada. Obrigado. Responderei você o quanto antes 😊",
+      "toast-error": "Por favor, preencha todos os campos antes de enviar",
+      "field": {
+        "name": {
+          "label": "Seu nome",
+          "placeholder": "Jonatas Silva"
+        },
+        "email": {
+          "label": "Seu email",
+          "placeholder": "mail@exemplo.com"
+        },
+        "message": {
+          "label": "Sua mensagem",
+          "placeholder": "Olá, eu sou..."
+        }
+      },
+      "submit": {
+        "loading": "Enviando...",
+        "load": "Enviado"
+      }
+    }
   }
 }

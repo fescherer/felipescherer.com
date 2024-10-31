@@ -5,6 +5,7 @@ import { i18n } from './i18n-config'
 
 import { match as matchLocale } from '@formatjs/intl-localematcher'
 import Negotiator from 'negotiator'
+import { cookies } from 'next/headers'
 
 function getLocale(request: NextRequest): string | undefined {
   // Negotiator expects plain object so we need to transform headers
@@ -18,9 +19,10 @@ function getLocale(request: NextRequest): string | undefined {
   let languages = new Negotiator({ headers: negotiatorHeaders }).languages(
     locales,
   )
+  const cookieLang = cookies().get('data-lang')
+  if (cookieLang && cookieLang.value) return cookieLang.value
 
   const locale = matchLocale(languages, locales, i18n.defaultLocale)
-
   return locale
 }
 

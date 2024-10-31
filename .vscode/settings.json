@@ -16,4 +16,7 @@
   },
   "eslint.validate": ["javascript"],
   "prettier.enable": false,
+  "files.associations": {
+  "*.css": "tailwindcss"
+  },
 }

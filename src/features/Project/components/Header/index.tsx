@@ -1,6 +1,6 @@
 'use client'
 
-import { Ribbon } from '@/components'
+import { Ribbon } from '@/components/primitives'
 import { IProject } from '@/types'
 import { PropsWithLocale } from '@/types/language'
 import { LayoutPanelLeft, LucideChevronRight, LucideCode2, PanelTop } from 'lucide-react'
@@ -22,7 +22,7 @@ export function Header({ project, lang, translation }: PropsWithLocale<HeaderPro
   const lastRoute = routes[routes.length - 1]
 
   const articleDate = new Date(project.date)
-  const monthFormat = new Intl.DateTimeFormat('us', {
+  const monthFormat = new Intl.DateTimeFormat(lang, {
     month: 'long',
   }).format
   const articleDateFormated = `${monthFormat(articleDate.getMonth())}, ${articleDate.getDate()}, ${articleDate.getFullYear()}`

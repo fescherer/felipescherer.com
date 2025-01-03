@@ -94,4 +94,26 @@ export const ORIGINAL_PROJECTS: IProject[] = [
       pt: '<h2>Introdução</h2><p>Segunda versão da ficha do sistema <em>WHITN</em> ou <cite>What Happened in That Night</cite> que foi um sistema de RPG criado por mim baseado em <cite>Trail of Cthulhu</cite> que consequentemente foi baseado em <cite>Call of Cthulhu</cite>. Ele foi desenvolvido para poder jogar com alguns amigos algo diferente do convencional, algo que fosse mais dramático do que nossos jogos na <a href="https://store.steampowered.com" target="_blank">Steam</a>. A primeira temporada foi muito divertida, porém, o sistema que havia criado era muito complexo e muitas das vezes ou esquecíamos das condições que nossos personagens haviam desenvolvido ou mesmo perdíamos muito tempo com isso. Foi por isso que depois de alguns acontecimentos dentro da história, separei ela e decidi chamar essa segunda metade de <strong>temporada 2</strong>. Decidi mudar um pouco o sistema como um todo com a finalidade de simplificar ao máximo as mecânicas para focar mais nos diálogos entre os personagens que eram a parte mais legal do RPG.</p><h2>Sobre</h2><p>Essa ficha é produto da simplificação do sistema <em>WHITN</em>, dito isso, tem muitas coisas semelhantes, mas também melhorias novas como por exemplo, a versão mobile e tema escuro. Em outros aspectos foram somente mudanças relacionadas com a necessidade dos dados dessa nova versão do <em>WHITN</em>.</p><p>O desenvolvimento dela foi muito fluído, como já havia tido mais experiência como desenvolvedor e feito uma versão V1 desse projeto, consegui me virar bem com as regras de negócio e como transportá-las para o frontend. O projeto foi feito em Angular.</p>',
     },
   },
+  {
+    id: 'morse-secret-scripter',
+    type: PROJECT_TYPE,
+    tags: ['javascript', 'css', 'html', 'react'],
+    date: '2024-06-30T10:00:00.000Z',
+    title: {
+      en: 'Morse Secret Encoder/Decoder',
+      pt: 'Codificador/Decodificador de Código Morse',
+    },
+    github: `${OWNER_CONFIGS.github_profile}/morse-secret-scripter`,
+    figma: '',
+    site: 'https://morse-secret-scripter.felipescherer.com',
+    description: {
+      en: 'Simple encoder/decoder morse code project.',
+      pt: 'Projeto simples de codificador/decodificador de código morse.',
+    },
+    images: ['thumb.webp'],
+    text: {
+      en: '<p>This is a translator for morse code. Very simple and easy to use. Just write your sentence in latin words in the encoder or morse words in decoder. Morse works by having two separate "letters" - short bip and long big, which you can see in the Morse Dictionary.</p>',
+      pt: '<p>Este é um tradutor para código morse. Muito simples e fácil de usar. Basta escrever sua frase em palavras latinas no codificador ou em palavras morse no decodificador. Morse funciona com duas "letras" separadas - bip curto e grande grande, que você pode ver no Dicionário Morse.</p>',
+    },
+  },
 ]

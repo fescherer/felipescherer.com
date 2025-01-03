@@ -18,7 +18,7 @@ export async function generateMetadata(
       defaultDescription: `${params.projectType} projects`,
       defaultTitle: `Projects ${params.projectType}`,
       canonicalURL: `/projects/${params.projectType}`,
-      imagePath: '/thumb.png',
+      imagePath: '/thumb.webp',
       defaultAltImage: 'Felipe Scherer',
       defaultKeywords: [`project-${params.projectType}`],
     })
@@ -26,7 +26,7 @@ export async function generateMetadata(
     defaultDescription: 'The project type was not found, please check the url',
     defaultTitle: 'Projects',
     canonicalURL: '',
-    imagePath: '/thumb.png',
+    imagePath: '/thumb.webp',
     defaultAltImage: 'Felipe Scherer',
     defaultKeywords: ['projects'],
   })

@@ -46,7 +46,7 @@ This portfolio showcases the best work of Felipe Scherer, the creator of Fennec 
 <!-- **********************🐲Gifs Prints🐲********************** -->
 <a name="gifsPrints"></a>
 
-## 🏞️ Gifs Prints
+## 🏞️ Gifs  aPrints
 
 
 ![Gif showing site. We have some homepage introducing the content and after we show about me page and the projects page](https://github.com/user-attachments/assets/4e908703-339c-46a3-9f78-5fc1ad58cf4c)

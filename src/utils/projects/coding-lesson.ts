@@ -93,4 +93,26 @@ export const CODING_LESSON_PROJECTS: IProject[] = [
       pt: '<h2>Rocketseat challenges</h2><h2>Introdução</h2><p>Este é um repositório que contém o projeto desafio 02 da Rocketseat Ignite.</p><p>O projeto se chama Coffee Delivery e nele contém sistema de compra online de cafés.</p><p>É bem simples porém, esse é o propósito, para treinar os mais intermediários do React, como hooks, contexts e reducers.</p>',
     },
   },
+  {
+    id: 'rocketseat-challenge-03-',
+    type: PROJECT_TYPE,
+    tags: ['html', 'css', 'javascript', 'react', 'vite'],
+    date: '2023-06-24T10:00:00.000Z',
+    title: {
+      en: '',
+      pt: '',
+    },
+    github: `${OWNER_CONFIGS.github_profile}/rocket-seat-challenges/tree/main/02-coffee-delivery`,
+    figma: 'https://www.figma.com/file/5yT9ZzZmRQRS4yivGGB3pl/Coffee-Delivery/duplicate',
+    site: 'https://challenge-02.felipescherer.com',
+    description: {
+      en: 'This repository contains challenge 03 -  from Rocketseat\'s Ignite bootcamp',
+      pt: 'Este repositório contém o desafio 03 -  do bootcamp Ignite da Rocketseat',
+    },
+    images: ['overview.gif', 'overview-mobile.gif'],
+    text: {
+      en: '',
+      pt: '',
+    },
+  },
 ]

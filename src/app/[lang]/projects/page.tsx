@@ -19,5 +19,12 @@ export async function generateMetadata({ params }: RootLayoutType) {
 export default function ProjectsPage({ params }: RootLayoutType) {
   return (
     <Projects lang={params.lang} />
+    // <div>
+    //   {
+    //     [1,2,3].map((project) => (
+    //       <ProjectCard project={project} key={project}/>
+    //     ))
+    //   }
+    // </div>
   )
 }

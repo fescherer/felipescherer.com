@@ -19,4 +19,9 @@
   "files.associations": {
   "*.css": "tailwindcss"
   },
+  "cSpell.enabledFileTypes": {
+    "*": false,
+    "md": true,
+    "mdx": true
+  },
 }

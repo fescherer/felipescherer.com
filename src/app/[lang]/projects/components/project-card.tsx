@@ -1,37 +1,59 @@
-import { Dialog } from '@/components/primitives'
+import { Dialog, Separator } from '@/components/primitives'
 import { PropsWithLocale } from '@/types/language'
 import { IProject } from '@/utils/data/projects.data'
 import Link from 'next/link'
+import { ProjectCarrousel } from './project-carrousel'
+import { LayoutPanelLeft, LucideCode2, PanelTop } from 'lucide-react'
 
 type ProjectCardProps = {
   project: IProject
 }
 
-export function ProjectCard({ project }: PropsWithLocale<ProjectCardProps>) {
+export function ProjectCard({ project, lang }: PropsWithLocale<ProjectCardProps>) {
+  const imagePath = `/projects/${project.type.id}/${project.id}`
+
+  const articleDate = new Date(project.date)
+  const monthFormat = new Intl.DateTimeFormat(lang, {
+    month: 'long',
+  }).format
+  const articleDateFormated = `${monthFormat(articleDate.getMonth())}, ${articleDate.getDate()}, ${articleDate.getFullYear()}`
+
   return (
     <Dialog
+      classContent="max-w-[1200px]"
       trigger={(
-        <button type="button" className="flex h-full w-24 flex-col items-center gap-4 transition-all hover:scale-110 hover:text-on-layer-0-l1">
-          <div className="rounded bg-[#fff] p-1">
-            card
-            {' '}
-            {project?.id}
+        <button type="button" title={project.title.pt} className="relative flex h-72 w-60 flex-col rounded bg-layer-1 text-on-layer-1-l2 transition-all hover:scale-105">
+
+          <div className="relative min-h-[60%] overflow-hidden rounded">
+            <div className="absolute size-full scale-110 bg-cover bg-center blur-sm" style={{ backgroundImage: `url(${imagePath}/thumb.webp)` }} />
+            <div className="absolute top-0 size-full bg-contain bg-center bg-no-repeat" style={{ backgroundImage: `url(${imagePath}/thumb.webp)` }} />
           </div>
 
-          <p className="flex-1">card nbame</p>
+          <div className="h-full px-4 pb-2 pt-4">
+            <h2 title={project.title[lang]} className="font-title text-lg text-on-layer-1-l1">{project.title[lang]}</h2>
+          </div>
         </button>
       )}
     >
-      <div className="relative flex flex-col gap-8 rounded bg-layer-1 p-2">
-        <p className="flex-1">project description</p>
+      <div className="flex flex-col gap-4 lg:flex-row">
+        <ProjectCarrousel project={project} />
 
-        <Link href="" target="_blank" className="mt-4 flex items-center gap-2 text-sm transition-all hover:brightness-90">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" className="size-4">
-            <path fillRule="evenodd" d="M4 2a1.5 1.5 0 0 0-1.5 1.5v9A1.5 1.5 0 0 0 4 14h8a1.5 1.5 0 0 0 1.5-1.5V6.621a1.5 1.5 0 0 0-.44-1.06L9.94 2.439A1.5 1.5 0 0 0 8.878 2H4Zm1 5.75A.75.75 0 0 1 5.75 7h4.5a.75.75 0 0 1 0 1.5h-4.5A.75.75 0 0 1 5 7.75Zm0 3a.75.75 0 0 1 .75-.75h4.5a.75.75 0 0 1 0 1.5h-4.5a.75.75 0 0 1-.75-.75Z" clipRule="evenodd" />
-          </svg>
+        <div className="flex w-full flex-col p-2">
+          <h2 className="text-4xl text-on-layer-0-l1">{project.title[lang]}</h2>
 
-          dsadas
-        </Link>
+          <div className="flex justify-between">
+            <time dateTime={articleDateFormated} className="capitalize">{articleDateFormated}</time>
+
+            <div className="flex items-center gap-4">
+              {project.links.figma ? <Link target="_blank" className="transition-all hover:text-on-layer-0-l1" href={project.links.figma}><PanelTop size={16} /></Link> : null}
+              {project.links.github ? <Link target="_blank" className="transition-all hover:text-on-layer-0-l1" href={project.links.github}><LucideCode2 size={16} /></Link> : null}
+              {project.links.site ? <Link target="_blank" className="transition-all hover:text-on-layer-0-l1" href={project.links.site}><LayoutPanelLeft size={16} /></Link> : null}
+            </div>
+          </div>
+
+          <Separator dataOrientation="horizontal" className="bg-on-layer-0-l2" />
+          <p className="flex-1">{project.description[lang]}</p>
+        </div>
       </div>
     </Dialog>
   )

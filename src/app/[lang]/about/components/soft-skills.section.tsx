@@ -18,6 +18,7 @@ export async function SoftSkillsSection({ lang }: PropsWithLocale) {
         {
           SOFT_SKILLS.map(soft => (
             <Dialog
+              classContent="max-w-[450px]"
               key={soft.text[lang]}
               trigger={(
                 <button type="button" className="flex h-36 w-32 flex-col items-center gap-4 rounded border border-brand-primary p-4 text-center transition-all hover:scale-110 hover:text-on-layer-0-l1 hover:brightness-90">

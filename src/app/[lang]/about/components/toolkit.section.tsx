@@ -19,6 +19,7 @@ export async function ToolkitSection({ lang }: PropsWithLocale) {
         {
           TOOLKIT.map(tool => (
             <Dialog
+              classContent="max-w-[450px]"
               key={tool.name}
               trigger={(
                 <button type="button" className="flex h-full w-24 flex-col items-center gap-4 transition-all hover:scale-110 hover:text-on-layer-0-l1">

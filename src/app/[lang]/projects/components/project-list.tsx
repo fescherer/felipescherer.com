@@ -40,7 +40,7 @@ export function ProjectList({ projects, lang }: PropsWithLocale<ProjectListProps
 
   return (
     <div>
-      <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 md:min-h-[680px] lg:grid-cols-3">
+      <div className="my-10 grid grid-cols-1 gap-10 sm:grid-cols-2 md:min-h-[680px] lg:grid-cols-3">
         {
       filteredProjects.slice(currentPage * PAGES_NUMBER, currentPage * PAGES_NUMBER + PAGES_NUMBER).map(project => (
         <ProjectCard key={project.id} project={project} lang={lang} />

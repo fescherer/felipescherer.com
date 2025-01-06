@@ -1,7 +1,13 @@
 import { Dialog } from '@/components/primitives'
+import { PropsWithLocale } from '@/types/language'
+import { IProject } from '@/utils/data/projects.data'
 import Link from 'next/link'
 
-export function ProjectCard({ project }: any) {
+type ProjectCardProps = {
+  project: IProject
+}
+
+export function ProjectCard({ project }: PropsWithLocale<ProjectCardProps>) {
   return (
     <Dialog
       trigger={(

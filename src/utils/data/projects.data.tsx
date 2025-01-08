@@ -764,7 +764,7 @@ export const PROJECTS: IProject[] = [
       site: 'https://morse-secret-scripter.felipescherer.com',
     },
     description: {
-      en: 'Simple encoder/decoder morse code project.',
+      en: 'Simple encoder/decoder morse code project. ',
       pt: 'Projeto simples de codificador/decodificador de código morse.',
     },
     images: ['thumb.webp'],

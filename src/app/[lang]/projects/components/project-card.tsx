@@ -44,15 +44,48 @@ export function ProjectCard({ project, lang }: PropsWithLocale<ProjectCardProps>
           <div className="flex justify-between">
             <time dateTime={articleDateFormated} className="capitalize">{articleDateFormated}</time>
 
-            <div className="flex items-center gap-4">
-              {project.links.figma ? <Link target="_blank" className="transition-all hover:text-on-layer-0-l1" href={project.links.figma}><PanelTop size={16} /></Link> : null}
-              {project.links.github ? <Link target="_blank" className="transition-all hover:text-on-layer-0-l1" href={project.links.github}><LucideCode2 size={16} /></Link> : null}
-              {project.links.site ? <Link target="_blank" className="transition-all hover:text-on-layer-0-l1" href={project.links.site}><LayoutPanelLeft size={16} /></Link> : null}
-            </div>
           </div>
 
           <Separator dataOrientation="horizontal" className="bg-on-layer-0-l2" />
-          <p className="flex-1">{project.description[lang]}</p>
+
+          <div className="relative h-96 max-h-96 flex-1 space-y-4 overflow-scroll">
+            {project.description[lang].split('\n').map((p, index) => (
+              <p key={index}>{p}</p>
+            ))}
+
+            <div className="pointer-events-none sticky inset-x-0 bottom-0 h-12 bg-gradient-to-b from-transparent to-layer-1" />
+          </div>
+
+          <div className="flex items-center gap-4">
+            {project.links.figma
+              ? (
+                <Link target="_blank" className="flex items-center gap-2 transition-all hover:text-on-layer-0-l1" href={project.links.figma}>
+                  <PanelTop size={16} />
+                  {' '}
+                  Figma
+                </Link>
+                )
+              : null}
+
+            {project.links.github
+              ? (
+                <Link target="_blank" className="flex items-center gap-2 transition-all hover:text-on-layer-0-l1" href={project.links.github}>
+                  <LucideCode2 size={16} />
+                  {' '}
+                  Code
+                </Link>
+                )
+              : null}
+
+            {project.links.site
+              ? (
+                <Link target="_blank" className="flex items-center gap-2 transition-all hover:text-on-layer-0-l1" href={project.links.site}>
+                  <LayoutPanelLeft size={16} />
+                  Site
+                </Link>
+                )
+              : null}
+          </div>
         </div>
       </div>
     </Dialog>

@@ -103,8 +103,8 @@ export const PROJECTS: IProject[] = [
       site: '',
     },
     description: {
-      en: 'This is a larger project with several projects carried out during my period of subscribing to the Alura online course platform. Here you will find everything from programming to management',
-      pt: 'Este é um projeto maior com diversos projetos feitos durante meu periodo de assinatura da plataforma de cursos online Alura. Aqui você encontrará desde programação a gestão',
+      en: 'This repository showcases a collection of projects I completed during my subscription to the Alura online course platform. These projects span a wide range of topics, including programming, web development, management, and design.\nThrough these courses, I gained hands-on experience in both technical and creative fields, ranging from frontend and backend development to UX/UI design and social media strategies. Each course offered valuable insights and skills, contributing to a well-rounded learning experience.',
+      pt: 'Esse repositório apresenta a coleção de projetos que completei durante minha inscrição na plataforma de cursos online da Alura. Nesses projetos existem uma variedade de tópicos incluindo programação, desenvolvimento web, administração e design.\n Através desses cursos, ganhei experiências em ambos campos técnico e criativo, contribuindo para o aprendizado completo.',
     },
     images: ['thumb.webp'],
   },

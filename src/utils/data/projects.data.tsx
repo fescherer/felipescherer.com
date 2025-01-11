@@ -123,8 +123,8 @@ export const PROJECTS: IProject[] = [
       site: '',
     },
     description: {
-      en: 'This repository contains several projects developed during Rocketseat bootcamp classes related to web, mobile and backend',
-      pt: 'Este repositório contém diversos projetos desenvolvidos durante as aulas do bootcamp da Rocketseat relacionados com web, mobile e backend',
+      en: 'This repository features a collection of projects developed during my participation in the Rocketseat bootcamp. These projects cover web, mobile, and backend development, reflecting the comprehensive and immersive learning experience provided by the platform. The bootcamp included in-depth modules focused on modern development technologies, such as React, React Native and Node JS.',
+      pt: 'Esse repositório apresenta uma coleção de projetos desenvolvidos durante minha participação do bootcamp da Rocketseat. Eles abrangem desenvolvimento web, mobile e backend, refletindo na compreensão e imersão da experiência providenciada pela plataforma. O bootcamp inclui foco nos modulos com tecnologias modernas como React, React Native e Node JS.',
     },
     images: ['thumb.webp'],
   },

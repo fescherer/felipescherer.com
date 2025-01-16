@@ -140,16 +140,16 @@ export const PROJECTS: IProject[] = [
     links: {
       github: `${OWNER_CONFIGS.github_profile}/rocket-seat-challenges/tree/main/01-to-do-list`,
       figma: 'https://www.figma.com/file/0n0zDN7zbzhRbaEO74Xesx/ToDo-List/duplicate',
-      site: 'https://challenge-01.felipescherer.com',
+      site: 'https://challenge-01.felipescherer.com     ',
     },
     description: {
-      en: 'This repository contains challenge 01 - Todo List from Rocketseat\'s Ignite bootcamp',
-      pt: 'Este repositório contém o desafio 01 - Todo List do bootcamp Ignite da Rocketseat',
+      en: 'This repository contains the implementation of Challenge 01: Todo List from Rocketseat\'s Ignite bootcamp. The project focuses on building a simple task management application with basic functionalities, such as adding, completing, and deleting tasks. While the layout and features are intentionally straightforward, the challenge serves as an excellent opportunity to practice and reinforce the foundational concepts of React. \nThe Todo List project is designed to help developers understand React component structure, manage state effectively in a React application, and handle user interactions such as form submissions and button clicks. By focusing on these essentials, this challenge provides a strong starting point for mastering React and modern frontend development.',
+      pt: 'Este repositório contém a implementação do Desafio 01: Lista de Tarefas do bootcamp Ignite da Rocketseat. O projeto tem como objetivo construir uma aplicação simples de gerenciamento de tarefas com funcionalidades básicas, como adicionar, concluir e excluir tarefas. Embora o layout e os recursos sejam propositalmente simples, o desafio é uma excelente oportunidade para praticar e reforçar os conceitos fundamentais do React.\nO projeto da Lista de Tarefas foi projetado para ajudar os desenvolvedores a compreender a estrutura de componentes do React, gerenciar estado de forma eficaz em uma aplicação React e lidar com interações do usuário, como envio de formulários e cliques em botões. Ao focar nesses conceitos essenciais, este desafio oferece uma base sólida para dominar o React e o desenvolvimento moderno de frontend.',
     },
     images: [`thumb.webp`],
   },
   {
-    id: 'rocketseat-challenge-02-coffee-delivery',
+    id: 'rocketseat-challenge-02-coffee-delivery  ',
     type: TYPE_CODING_LESSON,
     tags: ['html', 'css', 'javascript', 'react', 'vite'],
     date: '2023-06-24T10:00:00.000Z',

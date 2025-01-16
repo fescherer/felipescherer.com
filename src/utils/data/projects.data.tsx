@@ -163,52 +163,11 @@ export const PROJECTS: IProject[] = [
       site: 'https://challenge-02.felipescherer.com',
     },
     description: {
-      en: 'This repository contains challenge 02 - Coffee Delivery from Rocketseat\'s Ignite bootcamp',
-      pt: 'Este repositório contém o desafio 02 - Coffee Delivery do bootcamp Ignite da Rocketseat',
+      en: 'This repository contains the implementation of Challenge 02: Coffee Delivery from Rocketseat\'s Ignite bootcamp. The project focuses on building an online coffee purchasing system, providing an opportunity to practice intermediate React skills such as hooks, contexts, and reducers. \nThe challenge is designed to help developers enhance their understanding of React\'s state management and component interactions while creating a functional and user-friendly application. Despite its simplicity, the project serves as a valuable exercise in applying React concepts to real-world scenarios.',
+      pt: 'Este repositório contém a implementação do Desafio 02: Coffee Delivery do bootcamp Ignite da Rocketseat. O projeto tem como objetivo construir um sistema de compra online de cafés, oferecendo uma oportunidade para praticar habilidades intermediárias em React, como hooks, contextos e reducers.\nO desafio foi projetado para ajudar os desenvolvedores a aprimorar sua compreensão sobre o gerenciamento de estado e interações entre componentes no React, enquanto criam uma aplicação funcional e amigável para o usuário. Apesar de sua simplicidade, o projeto é um exercício valioso para aplicar os conceitos de React em cenários do mundo real.',
     },
     images: ['overview.gif', 'overview-mobile.gif'],
   },
-  {
-    id: 'rocketseat-challenge-03-',
-    type: TYPE_CODING_LESSON,
-    tags: ['html', 'css', 'javascript', 'react', 'vite'],
-    date: '2023-06-24T10:00:00.000Z',
-    title: {
-      en: '',
-      pt: '',
-    },
-    links: {
-      github: `${OWNER_CONFIGS.github_profile}/rocket-seat-challenges/tree/main/02-coffee-delivery`,
-      figma: 'https://www.figma.com/file/5yT9ZzZmRQRS4yivGGB3pl/Coffee-Delivery/duplicate',
-      site: 'https://challenge-02.felipescherer.com',
-    },
-    description: {
-      en: 'This repository contains challenge 03 -  from Rocketseat\'s Ignite bootcamp',
-      pt: 'Este repositório contém o desafio 03 -  do bootcamp Ignite da Rocketseat',
-    },
-    images: ['overview.gif', 'overview-mobile.gif'],
-  },
-  {
-    id: 'rocketseat-challenge-04-',
-    type: TYPE_CODING_LESSON,
-    tags: ['html', 'css', 'javascript', 'react', 'vite'],
-    date: '2023-06-24T10:00:00.000Z',
-    title: {
-      en: '',
-      pt: '',
-    },
-    links: {
-      github: `${OWNER_CONFIGS.github_profile}/rocket-seat-challenges/tree/main/02-coffee-delivery`,
-      figma: 'https://www.figma.com/file/5yT9ZzZmRQRS4yivGGB3pl/Coffee-Delivery/duplicate',
-      site: 'https://challenge-02.felipescherer.com',
-    },
-    description: {
-      en: 'This repository contains challenge 03 -  from Rocketseat\'s Ignite bootcamp',
-      pt: 'Este repositório contém o desafio 03 -  do bootcamp Ignite da Rocketseat',
-    },
-    images: ['overview.gif', 'overview-mobile.gif'],
-  },
-
   {
     id: 'alura-animal-quiz',
     type: TYPE_CODING_WEEK,

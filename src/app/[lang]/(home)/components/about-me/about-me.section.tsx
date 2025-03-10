@@ -14,7 +14,7 @@ export async function AboutMeSection({ lang }: PropsWithLocale) {
 
   return (
     <ContentWrapperComponent anchor="#blog" id="aboutme" index={1}>
-      <div className="relative overflow-hidden rounded ">
+      <div className="relative overflow-hidden rounded-sm ">
         <div className="h-[410px] min-w-[316px] bg-layer-1 bg-[url(/felipe-scherer/photo-flower.webp)] bg-cover" />
       </div>
 
@@ -46,11 +46,11 @@ export async function AboutMeSection({ lang }: PropsWithLocale) {
         </div>
 
         <div className="flex flex-row justify-center gap-2 self-start md:flex-col">
-          <Link href={OWNER_CONFIGS.github_link} type="button" className="rounded">
+          <Link href={OWNER_CONFIGS.github_link} type="button" className="rounded-sm">
             <SocialIcon type="github" />
           </Link>
 
-          <Link href={OWNER_CONFIGS.linkedin_link} type="button" className="rounded">
+          <Link href={OWNER_CONFIGS.linkedin_link} type="button" className="rounded-sm">
             <SocialIcon type="linkedin" />
           </Link>
         </div>

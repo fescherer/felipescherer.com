@@ -25,7 +25,7 @@ export async function FennecTalesComponent({ lang }: PropsWithLocale) {
       </div>
 
       <div className="flex flex-col gap-4">
-        <Image className="rounded" src="/blog.webp" width={1068} height={922} alt="Blog" />
+        <Image className="rounded-sm" src="/blog.webp" width={1068} height={922} alt="Blog" />
 
         {/* TODO add tooltip */}
         <div className="flex gap-2">
@@ -37,7 +37,7 @@ export async function FennecTalesComponent({ lang }: PropsWithLocale) {
             <LinkedinIcon className="size-8" />
           </Link>
 
-          <Link target="_blank" href="https://www.linkedin.com/company/fennec-tales-studio" className="rounded-full bg-gradient-to-r from-[#833ab4] via-[#fd1d1d] to-[#fcb045] p-2 text-[#fff] transition-all hover:brightness-90">
+          <Link target="_blank" href="https://www.linkedin.com/company/fennec-tales-studio" className="rounded-full bg-linear-to-r from-[#833ab4] via-[#fd1d1d] to-[#fcb045] p-2 text-[#fff] transition-all hover:brightness-90">
             <InstagramIcon className="size-8" />
           </Link>
         </div>

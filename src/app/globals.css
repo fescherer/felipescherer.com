@@ -1,8 +1,172 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss';
 
-@import '../themes/index.css';
+@import '../themes/index.css' layer(utilities);
+@import '../lib/tailwindcss/index.css';
+
+@theme {
+  --color-*: initial;
+  --color-layer-0: var(--layer-0);
+  --color-layer-1: var(--layer-1);
+  --color-layer-2: var(--layer-2);
+  --color-layer-0-5: var(--layer-0-5);
+
+  --color-on-layer-0-l1: var(--on-layer-0-l1);
+  --color-on-layer-0-l2: var(--on-layer-0-l2);
+  --color-on-layer-0-l3: var(--on-layer-0-l3);
+
+  --color-on-layer-1-l1: var(--on-layer-1-l1);
+  --color-on-layer-1-l2: var(--on-layer-1-l2);
+
+  --color-on-layer-2-l1: var(--on-layer-2-l1);
+  --color-on-layer-2-l2: var(--on-layer-2-l2);
+
+  --color-brand-primary: var(--brand-primary);
+  --color-brand-secondary: var(--brand-secondary);
+
+  --color-brand-on-primary: var(--brand-on-primary);
+  --color-brand-on-secondary: var(--brand-on-secondary);
+
+  --color-brand-hover-primary: var(--brand-hover-primary);
+  --color-brand-hover-secondary: var(--brand-hover-secondary);
+
+  --color-default-yellow: #bbb80e;
+  --color-default-red: #aa0000;
+
+  --color-transparent: transparent;
+
+  --font-title: var(--font-title);
+  --font-text: var(--font-text);
+
+  --text-3xs: 0.5rem, 1;
+  --text-2xs: 0.625rem, 1;
+  --text-xs: 0.75rem, 1;
+  --text-sm: 0.875rem, 1.25;
+  --text-base: 1rem, 1.5;
+  --text-lg: 1.125rem, 1.5;
+  --text-xl: 1.25rem, 1.5;
+  --text-2xl: 1.5rem, 1.5;
+  --text-3xl: 1.875rem, 1.5;
+  --text-4xl: 2.25rem, 1.5;
+  --text-5xl: 3rem, 1.5;
+  --text-6xl: 3.75rem, 1.5;
+  --text-7xl: 4.5rem, 1.5;
+
+  --background-image-profile: url(/felipe-scherer/aboutme/me.webp);
+
+  --animate-comet: cometKeyframe 10s linear infinite;
+  --animate-star: twinkleKeyFrame 4s ease-in-out infinite;
+  --animate-slide-up-and-fade: slideUpAndFade 400ms
+    cubic-bezier(0.16, 1, 0.3, 1);
+  --animate-slide-right-and-fade: slideRightAndFade 400ms
+    cubic-bezier(0.16, 1, 0.3, 1);
+  --animate-slide-down-and-fade: slideDownAndFade 400ms
+    cubic-bezier(0.16, 1, 0.3, 1);
+  --animate-slide-left-and-fade: slideLeftAndFade 400ms
+    cubic-bezier(0.16, 1, 0.3, 1);
+  --animate-spin-planet: spinPlanetKey linear infinite;
+  --animate-overlay-show: overlayShow 150ms cubic-bezier(0.16, 1, 0.3, 1);
+  --animate-content-show: contentShow 150ms cubic-bezier(0.16, 1, 0.3, 1);
+
+  --gradient-color-stop-positions-99\%: 99%;
+
+  @keyframes twinkleKeyFrame {
+    25% {
+      opacity: 0;
+    }
+  }
+  @keyframes cometKeyframe {
+    0%,
+    40% {
+      transform: translateX(0);
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+    60%,
+    100% {
+      transform: translateX(-100vmax);
+      opacity: 0;
+    }
+  }
+  @keyframes contentShow {
+    from {
+      opacity: 0;
+      transform: translate(-50%, -48%) scale(0.96);
+    }
+    to {
+      opacity: 1;
+      transform: translate(-50%, -50%) scale(1);
+    }
+  }
+  @keyframes slideUpAndFade {
+    from {
+      opacity: 0;
+      transform: translateY(2px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  @keyframes slideRightAndFade {
+    from {
+      opacity: 0;
+      transform: translateX(-2px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  @keyframes slideDownAndFade {
+    from {
+      opacity: 0;
+      transform: translateY(-2px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  @keyframes slideLeftAndFade {
+    from {
+      opacity: 0;
+      transform: translateX(2px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  @keyframes spinPlanetKey {
+    0% {
+      transform: translate(-50%, -50%) rotate(0deg);
+    }
+    100% {
+      transform: translate(-50%, -50%) rotate(360deg);
+    }
+  }
+}
+
+/*
+  The default border color has changed to `currentColor` in Tailwind CSS v4,
+  so we've added these compatibility styles to make sure everything still
+  looks the same as it did with Tailwind CSS v3.
+
+  If we ever want to remove these styles, we need to add an explicit border
+  color utility to any element that depends on these defaults.
+*/
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentColor);
+  }
+}
+
 .sticky-gradient {
   position: sticky;
   bottom: 0;

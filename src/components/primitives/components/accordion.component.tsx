@@ -22,7 +22,7 @@ export function AccordionComponent({ accordions }: TAccordion) {
         accordions.map(accordion => (
           <PrimitiveAccordion.Item key={accordion.id} value={accordion.id}>
             <PrimitiveAccordion.Header>
-              <PrimitiveAccordion.Trigger className={cn('group flex w-full justify-between rounded p-4 transition-all hover:bg-brand-hover-secondary hover:text-brand-on-secondary', accordion.triggerClass)}>
+              <PrimitiveAccordion.Trigger className={cn('group flex w-full justify-between rounded-sm p-4 transition-all hover:bg-brand-hover-secondary hover:text-brand-on-secondary', accordion.triggerClass)}>
                 {accordion.trigger}
 
                 <LucideChevronDown

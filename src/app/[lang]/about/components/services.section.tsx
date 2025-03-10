@@ -19,7 +19,7 @@ export async function ServicesSection({ lang }: PropsWithLocale) {
       <div className="grid grid-cols-1 gap-10 md:grid-cols-2">
         {
           SERVICES.map(card => (
-            <div key={card.title[lang]} className="rounded border border-brand-primary p-4">
+            <div key={card.title[lang]} className="rounded-sm border border-brand-primary p-4">
               <div className="flex items-center gap-2">
                 <div className="rounded-full bg-brand-primary p-3 text-[#fff]">
                   {card.icon}

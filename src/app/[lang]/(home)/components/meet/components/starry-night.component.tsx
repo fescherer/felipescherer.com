@@ -8,14 +8,13 @@ export function StarryNightComponent() {
   const comets = generateComets()
 
   return (
-    // eslint-disable-next-line tailwindcss/no-contradicting-classname
-    <div className="pointer-events-none absolute -z-10 size-full overflow-hidden bg-gradient-to-b from-[#17121b] via-[#0d0d1d] via-99%">
+    <div className="pointer-events-none absolute -z-10 size-full overflow-hidden bg-linear-to-b from-[#17121b] via-[#0d0d1d] via-99%">
       {
         constellation.map((stars, index) => (
-          <svg key={index} className="absolute inset-0 animate-star [&:nth-child(2)]:animation-delay-[calc(4s_*_-0.33)] [&:nth-child(3)]:animation-delay-[calc(4s_*_-0.66)]" width="100%" height="100%" preserveAspectRatio="none">
+          <svg key={index} className="absolute inset-0 animate-star nth-2:animation-delay-[calc(4s*-0.33)] nth-3:animation-delay-[calc(4s*-0.66)]" width="100%" height="100%" preserveAspectRatio="none">
             {
               stars.map(star => (
-                <circle key={star.id} style={{ fill: star.color }} className="[&:nth-child(13n)]:opacity-40 [&:nth-child(19n)]:opacity-20 [&:nth-child(3n)]:opacity-80 [&:nth-child(7n)]:opacity-60" cx={star.cx} cy={star.cy} r={star.r} />
+                <circle key={star.id} style={{ fill: star.color }} className="nth-[13n]:opacity-40 nth-[19n]:opacity-20 nth-[3n]:opacity-80 nth-[7n]:opacity-60" cx={star.cx} cy={star.cy} r={star.r} />
               ))
             }
           </svg>

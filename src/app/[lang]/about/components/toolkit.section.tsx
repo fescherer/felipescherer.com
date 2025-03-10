@@ -23,7 +23,7 @@ export async function ToolkitSection({ lang }: PropsWithLocale) {
               key={tool.name}
               trigger={(
                 <button type="button" className="flex h-full w-24 flex-col items-center gap-4 transition-all hover:scale-110 hover:text-on-layer-0-l1">
-                  <div className="rounded bg-[#fff] p-1">
+                  <div className="rounded-sm bg-[#fff] p-1">
                     {tool.icon}
                   </div>
 
@@ -31,7 +31,7 @@ export async function ToolkitSection({ lang }: PropsWithLocale) {
                 </button>
               )}
             >
-              <div className="relative flex flex-col gap-8 rounded bg-layer-1 p-2">
+              <div className="relative flex flex-col gap-8 rounded-sm bg-layer-1 p-2">
                 <p className="flex-1">{tool.description[lang]}</p>
 
                 <Link href={tool.docLink} target="_blank" className="mt-4 flex items-center gap-2 text-sm transition-all hover:brightness-90">

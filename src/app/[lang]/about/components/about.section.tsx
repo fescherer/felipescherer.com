@@ -12,7 +12,7 @@ export async function AboutSection({ lang }: PropsWithLocale) {
   return (
     <CardWrapper id="about">
       <div className="flex flex-col gap-2">
-        <div className="mockup-window rounded bg-layer-1">
+        <div className="mockup-window rounded-sm bg-layer-1">
           <Image width={1722} height={2330} className="flex min-w-72 justify-center bg-layer-1 p-2" alt="Felipe Scherer photo" src="/felipe-scherer.webp" unoptimized />
         </div>
 

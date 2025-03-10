@@ -42,8 +42,8 @@ export async function EducationSection({ lang }: PropsWithLocale) {
         <ul className="list-disc space-y-4">
           {
               EXPERIENCES.map(experience => (
-                <li key={experience.id} className="flex w-full flex-col justify-between gap-2 rounded border border-layer-1 p-4">
-                  <div key={experience.id} className="flex items-center rounded ">
+                <li key={experience.id} className="flex w-full flex-col justify-between gap-2 rounded-sm border border-layer-1 p-4">
+                  <div key={experience.id} className="flex items-center rounded-sm ">
                     <Image src={experience.logo} alt={experience.img_showcase.alt[lang]} width={30} height={30} />
                     <h3>{experience.info.title}</h3>
                   </div>
@@ -66,7 +66,7 @@ export async function EducationSection({ lang }: PropsWithLocale) {
             }
         </ul>
 
-        <p className="mt-10 flex gap-2 rounded bg-layer-1 p-2 text-on-layer-0-l1">
+        <p className="mt-10 flex gap-2 rounded-sm bg-layer-1 p-2 text-on-layer-0-l1">
           <LucideBadgeInfo size={46} className="text-brand-primary" />
           {t.resume['callout-text']}
         </p>
@@ -88,7 +88,7 @@ export async function EducationSection({ lang }: PropsWithLocale) {
           /fescherer
         </Link>
 
-        <div className="rounded bg-[#fff] p-4">
+        <div className="rounded-sm bg-[#fff] p-4">
           <QRCode value={`https://www.felipescherer.com/${lang}/resume`} />
         </div>
 

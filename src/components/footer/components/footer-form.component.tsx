@@ -37,7 +37,7 @@ export function FormComponent({ t }: PropsFormComponent) {
   }
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)} data-theme="light" className="flex w-80 flex-col gap-2 rounded border border-layer-1 bg-layer-1 p-4 shadow-lg">
+    <form onSubmit={handleSubmit(onSubmit)} data-theme="light" className="flex w-80 flex-col gap-2 rounded-sm border border-layer-1 bg-layer-1 p-4 shadow-lg">
       <label htmlFor="input-group-1" className="block text-sm font-medium text-on-layer-1-l1 opacity-90 ">
         {t.field.name.label}
       </label>

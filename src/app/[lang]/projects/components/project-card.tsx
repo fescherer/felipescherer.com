@@ -22,10 +22,10 @@ export function ProjectCard({ project, lang }: PropsWithLocale<ProjectCardProps>
     <Dialog
       classContent="max-w-[1200px]"
       trigger={(
-        <button type="button" title={project.title.pt} className="relative flex h-72 w-60 flex-col rounded bg-layer-1 text-on-layer-1-l2 transition-all hover:scale-105">
+        <button type="button" title={project.title.pt} className="relative flex h-72 w-60 flex-col rounded-sm bg-layer-1 text-on-layer-1-l2 transition-all hover:scale-105">
 
-          <div className="relative min-h-[60%] overflow-hidden rounded">
-            <div className="absolute size-full scale-110 bg-cover bg-center blur-sm" style={{ backgroundImage: `url(${imagePath}/thumb.webp)` }} />
+          <div className="relative min-h-[60%] overflow-hidden rounded-sm">
+            <div className="absolute size-full scale-110 bg-cover bg-center blur-xs" style={{ backgroundImage: `url(${imagePath}/thumb.webp)` }} />
             <div className="absolute top-0 size-full bg-contain bg-center bg-no-repeat" style={{ backgroundImage: `url(${imagePath}/thumb.webp)` }} />
           </div>
 
@@ -53,7 +53,7 @@ export function ProjectCard({ project, lang }: PropsWithLocale<ProjectCardProps>
               <p key={index}>{p}</p>
             ))}
 
-            <div className="pointer-events-none sticky inset-x-0 bottom-0 h-12 bg-gradient-to-b from-transparent to-layer-1" />
+            <div className="pointer-events-none sticky inset-x-0 bottom-0 h-12 bg-linear-to-b from-transparent to-layer-1" />
           </div>
 
           <div className="flex items-center gap-4">

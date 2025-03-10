@@ -20,7 +20,7 @@ export function ContentWrapperComponent({ children, id, anchor, isLastItem, inde
         {children}
       </CardWrapper>
 
-      <Link href={anchor} className="my-10 flex size-10 animate-bounce items-center justify-center rounded-full border-2 border-on-layer-0-l2 backdrop-blur transition-all hover:border-brand-primary hover:text-brand-primary hover:animation-paused">
+      <Link href={anchor} className="my-10 flex size-10 animate-bounce items-center justify-center rounded-full border-2 border-on-layer-0-l2 backdrop-blur-sm transition-all hover:border-brand-primary hover:text-brand-primary hover:animation-paused">
         {
         isLastItem
           ? <LucideArrowUp />

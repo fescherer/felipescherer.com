@@ -47,7 +47,7 @@ export function ThemeSelectorComponent({ theme, lang }: PropsWithLocale<ThemeSel
               data-theme={themeItem.id}
               aria-label={`Change theme to ${themeItem.id}`}
               type="button"
-              className={`flex flex-col gap-2 rounded border-2 bg-layer-0 p-2 text-xs capitalize ${themeSelected === themeItem.id ? 'border-brand-primary' : 'border-transparent'}`}
+              className={`flex flex-col gap-2 rounded-sm border-2 bg-layer-0 p-2 text-xs capitalize ${themeSelected === themeItem.id ? 'border-brand-primary' : 'border-transparent'}`}
               onClick={() => setTheme(themeItem.id)}
             >
               <div>
@@ -57,8 +57,8 @@ export function ThemeSelectorComponent({ theme, lang }: PropsWithLocale<ThemeSel
               </div>
 
               <div className="flex gap-2">
-                <div className="h-4 w-6 rounded-sm bg-layer-1" />
-                <div className="h-4 w-6 rounded bg-brand-primary" />
+                <div className="h-4 w-6 rounded-xs bg-layer-1" />
+                <div className="h-4 w-6 rounded-sm bg-brand-primary" />
                 <div className="h-4 w-6 border bg-brand-secondary" />
               </div>
 

@@ -16,7 +16,7 @@ export function ProjectCarrousel({ project }: ProjectCarrouselProps) {
   const [photoSelected, setPhotoSelected] = useState(0)
 
   return (
-    <div className="relative flex w-full overflow-hidden rounded bg-layer-1 p-2">
+    <div className="relative flex w-full overflow-hidden rounded-sm bg-layer-1 p-2">
       {/* <Image alt={project.images[photoSelected]} height={40} width={40} src=  /> */}
 
       <div className="h-[28rem] w-full bg-contain bg-center bg-no-repeat" style={{ backgroundImage: `url(${imagePath}/${project.images[photoSelected]})` }} />

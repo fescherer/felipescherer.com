@@ -18,7 +18,7 @@ type TCCHeaderMenu = {
 export function CCHeaderMenu({ lang, className }: PropsWithLocale<TCCHeaderMenu>) {
   const path = usePathname()
   const currentPath = '/' + (path.split('/')?.[2] || '')
-  const linkBtnClass: ClassValue = 'p-4 rounded hover:text-brand-on-secondary text-sm hover:bg-brand-hover-secondary transition-all'
+  const linkBtnClass: ClassValue = 'p-4 rounded-sm hover:text-brand-on-secondary text-sm hover:bg-brand-hover-secondary transition-all'
 
   const returnClassByCondition = (value1: string, value2: string) => value1 == value2 ? 'bg-brand-hover-secondary text-brand-on-secondary' : 'text-on-layer-0-l2'
   const returnClassByCurrentPath = (value: string) => returnClassByCondition(value, currentPath)

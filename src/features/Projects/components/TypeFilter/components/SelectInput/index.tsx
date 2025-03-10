@@ -21,7 +21,7 @@ export function SelectInput({ projectType, placeholder }: SelectInputProps) {
 
   return (
     <Select.Root defaultValue={projectType || ''} onValueChange={value => navigateTo(value)}>
-      <Select.Trigger className={`flex w-full items-center justify-between overflow-hidden rounded border px-2 py-1 text-sm transition-all sm:w-52 ${projectType ? 'border-brand-primary text-brand-primary hover:border-brand-hover-primary hover:text-brand-hover-primary' : 'border-layer-1 text-on-layer-0-l2 hover:border-on-layer-0-l1 hover:text-on-layer-0-l1'}`}>
+      <Select.Trigger className={`flex w-full items-center justify-between overflow-hidden rounded-sm border px-2 py-1 text-sm transition-all sm:w-52 ${projectType ? 'border-brand-primary text-brand-primary hover:border-brand-hover-primary hover:text-brand-hover-primary' : 'border-layer-1 text-on-layer-0-l2 hover:border-on-layer-0-l1 hover:text-on-layer-0-l1'}`}>
         <Select.Value placeholder={placeholder} />
         <ChevronDown />
       </Select.Trigger>
@@ -30,7 +30,7 @@ export function SelectInput({ projectType, placeholder }: SelectInputProps) {
         <Select.Content className="overflow-hidden rounded-md border border-layer-1 bg-layer-0 p-2">
           <Select.ScrollUpButton />
 
-          <Select.Item className="flex select-none items-center justify-between rounded-sm p-2 text-sm text-on-layer-0-l2 transition-colors data-[highlighted]:bg-brand-hover-primary data-[state='checked']:bg-brand-primary data-[highlighted]:text-brand-on-primary data-[state='checked']:text-brand-on-primary data-[highlighted]:outline-none" value="all">
+          <Select.Item className="flex select-none items-center justify-between rounded-xs p-2 text-sm text-on-layer-0-l2 transition-colors data-highlighted:bg-brand-hover-primary data-[state='checked']:bg-brand-primary data-highlighted:text-brand-on-primary data-[state='checked']:text-brand-on-primary data-highlighted:outline-hidden" value="all">
             <Select.ItemText>All</Select.ItemText>
 
             <Select.ItemIndicator>
@@ -41,7 +41,7 @@ export function SelectInput({ projectType, placeholder }: SelectInputProps) {
           {
           AVAILABLE_TYPE_PROJECTS.map(type => (
             <Select.Viewport key={type}>
-              <Select.Item className="flex select-none items-center justify-between rounded-sm p-2 text-sm text-on-layer-0-l2 transition-colors data-[highlighted]:bg-brand-hover-primary data-[state='checked']:bg-brand-primary data-[highlighted]:text-brand-on-primary data-[state='checked']:text-brand-on-primary data-[highlighted]:outline-none" value={type}>
+              <Select.Item className="flex select-none items-center justify-between rounded-xs p-2 text-sm text-on-layer-0-l2 transition-colors data-highlighted:bg-brand-hover-primary data-[state='checked']:bg-brand-primary data-highlighted:text-brand-on-primary data-[state='checked']:text-brand-on-primary data-highlighted:outline-hidden" value={type}>
                 <Select.ItemText>{type}</Select.ItemText>
 
                 <Select.ItemIndicator>

@@ -26,7 +26,7 @@ export function ResumeComponent({ lang, translations }: ResumeProps) {
           {selectedLanguage === 'en' ? translations['en-version'] : translations['pt-version']}
         </strong>
 
-        <div className="flex gap-1 rounded border border-layer-2">
+        <div className="flex gap-1 rounded-sm border border-layer-2">
           {i18nWithName.locales.map(language => (
             <button onClick={() => setSelectedLanguage(language.id)} key={language.id} type="button" className={`px-4 py-2 capitalize ${language.id === selectedLanguage ? 'bg-brand-primary text-brand-on-primary' : 'bg-transparent'}`}>{language.name}</button>
           ))}

@@ -1,7 +1,7 @@
 import { Projects } from '@/features'
-import { Locale } from '@/i18n-config'
-import { getMetadata } from '@/utils/functions/getMetada'
-import { AVAILABLE_TYPE_PROJECTS } from '@/utils/projects'
+import { Locale } from '@/lib/i18n/i18n-config'
+import { getMetadata } from '@/lib/_felipescherer.com/functions/getMetada'
+import { AVAILABLE_TYPE_PROJECTS } from '@/lib/_felipescherer.com/projects'
 import { Metadata } from 'next'
 
 type ProjectTypePageProps = {

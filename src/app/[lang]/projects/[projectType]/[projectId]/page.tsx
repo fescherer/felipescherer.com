@@ -1,10 +1,10 @@
 /* eslint-disable jsx-a11y/alt-text */
 /* eslint-disable @next/next/no-img-element */
 import { Project } from '@/features/Project'
-import { getDictionary } from '@/get-dictionary'
-import { Locale } from '@/i18n-config'
-import { getMetadata } from '@/utils/functions/getMetada'
-import { PROJECTS } from '@/utils/projects'
+import { getDictionary } from '@/lib/i18n/get-dictionary'
+import { Locale } from '@/lib/i18n/i18n-config'
+import { getMetadata } from '@/lib/_felipescherer.com/functions/getMetada'
+import { PROJECTS } from '@/lib/_felipescherer.com/projects'
 import { Metadata } from 'next'
 
 type ProjectPageProps = {

@@ -1,6 +1,6 @@
-import { getDictionary } from '@/get-dictionary'
-import { RootLayoutType } from '@/types/Page'
-import { getMetadata } from '@/utils/functions/getMetada'
+import { getDictionary } from '@/lib/i18n/get-dictionary'
+import { RootLayoutType } from '@/@types/Page'
+import { getMetadata } from '@/lib/_felipescherer.com/functions/getMetada'
 import { ResumeComponent } from './resume.component'
 
 export async function generateMetadata({ params }: RootLayoutType) {

@@ -1,6 +1,6 @@
-import { PropsWithLocale } from '@/types/language'
-import { CardWrapper } from '../../../../components/card-wrapper.component'
-import { FennecTalesComponent } from '@/components/sections/fennec-tales/fennnec-tales.component'
+import { PropsWithLocale } from '@/@types/language'
+import { CardWrapper } from '../../../../lib/_felipescherer.com/components/card-wrapper.component'
+import { FennecTalesComponent } from '@/lib/_felipescherer.com/components/sections/fennec-tales/fennnec-tales.component'
 
 export function FennecTalesStudioSection({ lang }: PropsWithLocale) {
   return (

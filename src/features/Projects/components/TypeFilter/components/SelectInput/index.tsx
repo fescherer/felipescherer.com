@@ -1,7 +1,7 @@
 'use client'
 
-import { TProjectType } from '@/types'
-import { AVAILABLE_TYPE_PROJECTS } from '@/utils/projects'
+import { TProjectType } from '@/@types'
+import { AVAILABLE_TYPE_PROJECTS } from '@/lib/_felipescherer.com/projects'
 import * as Select from '@radix-ui/react-select'
 import { ChevronDown, LucideCheck } from 'lucide-react'
 import { useRouter } from 'next/navigation'

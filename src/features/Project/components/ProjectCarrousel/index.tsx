@@ -1,6 +1,6 @@
 'use client'
 
-import { IProject } from '@/types'
+import { IProject } from '@/@types'
 import { useState } from 'react'
 
 /* TODO

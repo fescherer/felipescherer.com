@@ -1,4 +1,4 @@
-import { RootLayoutType } from '@/types/Page'
+import { RootLayoutType } from '@/@types/Page'
 import { ProjectLoader } from '../projects/components/project-loader'
 
 export default function NewPRPage({ params }: RootLayoutType) {

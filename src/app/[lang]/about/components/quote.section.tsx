@@ -1,5 +1,5 @@
-import { getDictionary } from '@/get-dictionary'
-import { PropsWithLocale } from '@/types/language'
+import { getDictionary } from '@/lib/i18n/get-dictionary'
+import { PropsWithLocale } from '@/@types/language'
 
 export async function QuoteSection({ lang }: PropsWithLocale) {
   const dictionary = await getDictionary(lang)

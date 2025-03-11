@@ -1,8 +1,8 @@
 'use client'
 
 import { useSearchContext } from '@/features/Projects/contexts/search.context'
-import { PropsWithLocale } from '@/types/language'
-import { IProject } from '@/utils/data/projects.data'
+import { PropsWithLocale } from '@/@types/language'
+import { IProject } from '@/lib/_felipescherer.com/data/projects.data'
 import { useState } from 'react'
 import { ProjectCard } from './project-card'
 import { LucideChevronLeft, LucideChevronRight } from 'lucide-react'

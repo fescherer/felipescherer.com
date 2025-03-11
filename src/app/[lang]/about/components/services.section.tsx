@@ -1,10 +1,10 @@
 /* TODO Update images in background of each card */
 
 import Link from 'next/link'
-import { CardWrapper } from '../../../../components/card-wrapper.component'
-import { SERVICES } from '@/utils/data/services.data'
-import { getDictionary } from '@/get-dictionary'
-import { PropsWithLocale } from '@/types/language'
+import { CardWrapper } from '../../../../lib/_felipescherer.com/components/card-wrapper.component'
+import { SERVICES } from '@/lib/_felipescherer.com/data/services.data'
+import { getDictionary } from '@/lib/i18n/get-dictionary'
+import { PropsWithLocale } from '@/@types/language'
 
 export async function ServicesSection({ lang }: PropsWithLocale) {
   const dictionary = await getDictionary(lang)

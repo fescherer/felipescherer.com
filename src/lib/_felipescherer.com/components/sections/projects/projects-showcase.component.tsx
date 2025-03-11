@@ -1,0 +1,41 @@
+import Link from 'next/link'
+import { PROJECTS } from '@/lib/_felipescherer.com/projects'
+import { PropsWithLocale } from '@/@types/language'
+import { cn } from '@/lib/clsx-tailwind-merge/cn.function'
+import { Ribbon, Separator } from '@/lib/_felipescherer.com/components/primitives'
+import { ProjectComponent } from './project.component'
+import { getDictionary } from '@/lib/i18n/get-dictionary'
+
+const RECENT_PROJECTS = Object.values(PROJECTS).reduce((acc, arr) => [...acc, ...arr], [])
+
+export async function ProjectsShowcaseComponent({ lang }: PropsWithLocale) {
+  const dictionary = await getDictionary(lang)
+  const t = dictionary.projects
+
+  return (
+    <div className="flex w-full flex-col">
+      <h2 className="text-4xl leading-loose tracking-wider text-on-layer-0-l1">{t['title-header']}</h2>
+
+      <div className="flex flex-col items-center gap-4 md:flex-row md:justify-between md:gap-2">
+        <ProjectComponent
+          project={RECENT_PROJECTS[1]}
+          lang={lang}
+          ribbon={<Ribbon href={`/projects/${RECENT_PROJECTS[0].type.id}/${RECENT_PROJECTS[0].id}`} title={dictionary.homepage.projects.tag.popular} bgColor="var(--brand-primary)" textColor="var(--brand-on-primary)" />}
+        />
+
+        <Separator dataOrientation="vertical" className="hidden md:flex" />
+        <Separator dataOrientation="horizontal" className="flex md:hidden" />
+
+        <ProjectComponent
+          project={RECENT_PROJECTS[0]}
+          lang={lang}
+          ribbon={<Ribbon href={`/projects/${RECENT_PROJECTS[0].type.id}/${RECENT_PROJECTS[0].id}`} title={dictionary.homepage.projects.tag.recent} bgColor="var(--brand-secondary)" textColor="var(--brand-on-secondary)" />}
+        />
+      </div>
+
+      <Link href="/projects" className={cn('btn-primary btn', 'py-4 mt-10 self-center px-8')}>
+        {dictionary.homepage.projects.moreProjects + ` (+${RECENT_PROJECTS.length - 2})`}
+      </Link>
+    </div>
+  )
+}

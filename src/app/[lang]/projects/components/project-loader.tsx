@@ -1,8 +1,8 @@
 import { SearchProvider } from '@/features/Projects/contexts/search.context'
 // import { getDictionary } from "@/get-dictionary"
-import { PropsWithLocale } from '@/types/language'
-import { PROJECTS } from '@/utils/data/projects.data'
-import { AVAILABLE_TYPE_PROJECTS } from '@/utils/projects'
+import { PropsWithLocale } from '@/@types/language'
+import { PROJECTS } from '@/lib/_felipescherer.com/data/projects.data'
+import { AVAILABLE_TYPE_PROJECTS } from '@/lib/_felipescherer.com/projects'
 import { Suspense } from 'react'
 import { ProjectList } from './project-list'
 

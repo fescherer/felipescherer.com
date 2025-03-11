@@ -1,9 +1,9 @@
-import { IProject } from '@/types'
+import { IProject } from '@/@types'
 import { LayoutPanelLeft, LucideCode2, PanelTop } from 'lucide-react'
 import Link from 'next/link'
 import { LinkBtn } from './components'
-import { PropsWithLocale } from '@/types/language'
-import { Ribbon } from '@/components/primitives'
+import { PropsWithLocale } from '@/@types/language'
+import { Ribbon } from '@/lib/_felipescherer.com/components/primitives'
 
 type ProjectCardProps = {
   project: IProject

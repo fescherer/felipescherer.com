@@ -1,7 +1,7 @@
-import { IProject } from '@/types'
+import { IProject } from '@/@types'
 import { Header, ProjectCarrousel } from './components'
-import { PropsWithLocale } from '@/types/language'
-import { Separator } from '@/components/primitives'
+import { PropsWithLocale } from '@/@types/language'
+import { Separator } from '@/lib/_felipescherer.com/components/primitives'
 
 type ProjectProps = {
   project: IProject

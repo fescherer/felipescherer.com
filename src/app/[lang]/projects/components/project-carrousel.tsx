@@ -1,6 +1,6 @@
 'use client'
 
-import { IProject } from '@/utils/data/projects.data'
+import { IProject } from '@/lib/_felipescherer.com/data/projects.data'
 import { useState } from 'react'
 
 /* TODO

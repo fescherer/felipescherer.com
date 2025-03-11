@@ -1,10 +1,10 @@
-import { IProject, TProjectType } from '@/types'
+import { IProject, TProjectType } from '@/@types'
 import { ProjectList, TypeFilter } from './components'
-import { AVAILABLE_TYPE_PROJECTS, PROJECTS } from '@/utils/projects'
+import { AVAILABLE_TYPE_PROJECTS, PROJECTS } from '@/lib/_felipescherer.com/projects'
 import { SearchProvider } from './contexts/search.context'
 import { Suspense } from 'react'
-import { PropsWithLocale } from '@/types/language'
-import { getDictionary } from '@/get-dictionary'
+import { PropsWithLocale } from '@/@types/language'
+import { getDictionary } from '@/lib/i18n/get-dictionary'
 
 type ProjectsProps = {
   projectType?: string

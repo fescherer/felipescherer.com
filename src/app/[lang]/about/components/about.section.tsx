@@ -1,9 +1,9 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import { CardWrapper } from '../../../../components/card-wrapper.component'
-import { SocialsComponent } from '@/components/socials.component'
-import { getDictionary } from '@/get-dictionary'
-import { PropsWithLocale } from '@/types/language'
+import { CardWrapper } from '../../../../lib/_felipescherer.com/components/card-wrapper.component'
+import { SocialsComponent } from '@/lib/_felipescherer.com/components/socials.component'
+import { getDictionary } from '@/lib/i18n/get-dictionary'
+import { PropsWithLocale } from '@/@types/language'
 
 export async function AboutSection({ lang }: PropsWithLocale) {
   const dictionary = await getDictionary(lang)

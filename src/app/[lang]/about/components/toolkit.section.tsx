@@ -1,9 +1,9 @@
-import { CardWrapper } from '../../../../components/card-wrapper.component'
+import { CardWrapper } from '../../../../lib/_felipescherer.com/components/card-wrapper.component'
 import Link from 'next/link'
-import { Dialog } from '@/components/primitives'
-import { TOOLKIT } from '@/utils/data/toolkit.data'
-import { PropsWithLocale } from '@/types/language'
-import { getDictionary } from '@/get-dictionary'
+import { Dialog } from '@/lib/_felipescherer.com/components/primitives'
+import { TOOLKIT } from '@/lib/_felipescherer.com/data/toolkit.data'
+import { PropsWithLocale } from '@/@types/language'
+import { getDictionary } from '@/lib/i18n/get-dictionary'
 
 export async function ToolkitSection({ lang }: PropsWithLocale) {
   const dictionary = await getDictionary(lang)

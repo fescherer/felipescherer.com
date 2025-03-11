@@ -1,8 +1,8 @@
-import { SOFT_SKILLS } from '@/utils/data/soft-skills.data'
-import { CardWrapper } from '../../../../components/card-wrapper.component'
-import { Dialog } from '@/components/primitives'
-import { PropsWithLocale } from '@/types/language'
-import { getDictionary } from '@/get-dictionary'
+import { SOFT_SKILLS } from '@/lib/_felipescherer.com/data/soft-skills.data'
+import { CardWrapper } from '../../../../lib/_felipescherer.com/components/card-wrapper.component'
+import { Dialog } from '@/lib/_felipescherer.com/components/primitives'
+import { PropsWithLocale } from '@/@types/language'
+import { getDictionary } from '@/lib/i18n/get-dictionary'
 
 export async function SoftSkillsSection({ lang }: PropsWithLocale) {
   const dictionary = await getDictionary(lang)

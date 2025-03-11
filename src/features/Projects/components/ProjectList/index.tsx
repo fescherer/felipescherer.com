@@ -1,12 +1,12 @@
 'use client'
 
-import { IProject } from '@/types'
+import { IProject } from '@/@types'
 import { useSearchContext } from '../../contexts/search.context'
-import { getProjectsSortedByDate } from '@/utils/functions/getProjectsSorted'
+import { getProjectsSortedByDate } from '@/lib/_felipescherer.com/functions/getProjectsSorted'
 import { ProjectCard } from './components'
 import { useState } from 'react'
 import { LucideChevronLeft, LucideChevronRight } from 'lucide-react'
-import { PropsWithLocale } from '@/types/language'
+import { PropsWithLocale } from '@/@types/language'
 
 type ProjectListProps = {
   projects: IProject[]

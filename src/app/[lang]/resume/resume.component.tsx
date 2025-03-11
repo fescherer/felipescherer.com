@@ -1,6 +1,6 @@
 'use client'
 
-import { Locale, i18nWithName } from '@/i18n-config'
+import { Locale, i18nWithName } from '@/lib/i18n/i18n-config'
 import { useState } from 'react'
 
 type ResumeProps = {

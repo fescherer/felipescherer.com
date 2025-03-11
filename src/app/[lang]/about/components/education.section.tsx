@@ -1,14 +1,14 @@
 import Link from 'next/link'
-import { CardWrapper } from '../../../../components/card-wrapper.component'
-import { LinkedinIcon } from '@/icons/social/linkedin.icon'
-import { GithubIcon } from '@/icons/social/github.icon'
+import { CardWrapper } from '../../../../lib/_felipescherer.com/components/card-wrapper.component'
+import { LinkedinIcon } from '@/lib/icons/social/linkedin.icon'
+import { GithubIcon } from '@/lib/icons/social/github.icon'
 import QRCode from 'react-qr-code'
 import { LucideBadgeInfo, LucideCalendar, LucideUser } from 'lucide-react'
-import { PropsWithLocale } from '@/types/language'
-import { EXPERIENCES } from '@/utils/data/experiencies.data'
+import { PropsWithLocale } from '@/@types/language'
+import { EXPERIENCES } from '@/lib/_felipescherer.com/data/experiencies.data'
 import Image from 'next/image'
-import { Separator } from '@/components/primitives'
-import { getDictionary } from '@/get-dictionary'
+import { Separator } from '@/lib/_felipescherer.com/components/primitives'
+import { getDictionary } from '@/lib/i18n/get-dictionary'
 
 function formatDate(start: string, end: string, monthFormat: any) {
   const formatStartDate = new Date(start)

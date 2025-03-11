@@ -1,4 +1,4 @@
-import { RootLayoutType } from '@/types/Page'
+import { RootLayoutType } from '@/@types/Page'
 import { Projects } from '@/features'
 
 // export async function generateMetadata({ params }: RootLayoutType) {

@@ -1,7 +1,7 @@
-import { TProjectType } from '@/types'
+import { TProjectType } from '@/@types'
 import { SearchInput, SelectInput } from './components'
-import { PropsWithLocale } from '@/types/language'
-import { getDictionary } from '@/get-dictionary'
+import { PropsWithLocale } from '@/@types/language'
+import { getDictionary } from '@/lib/i18n/get-dictionary'
 
 type TypeFilterProps = {
   projectType: TProjectType | null

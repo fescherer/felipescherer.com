@@ -1,5 +1,5 @@
 import type { Viewport } from 'next'
-import { Lora, Poppins } from 'next/font/google'
+import { Hepta_Slab, Archivo } from 'next/font/google'
 import '../globals.css'
 import React, { PropsWithChildren } from 'react'
 import { ProgressBarProvider } from '@/lib/progress-bar/progress-bar.provider'
@@ -12,13 +12,13 @@ import { Footer } from '@/lib/_felipescherer.com/components/footer/footer.compon
 import 'react-toastify/dist/ReactToastify.css'
 import { MainComponent } from '@/lib/_felipescherer.com/components/splash-screen/main.component'
 
-const lora = Lora({
+const heptaSlab = Hepta_Slab({
   subsets: ['latin'],
   variable: '--font-title',
   display: 'swap',
 })
 
-const poppins = Poppins({
+const archivo = Archivo({
   subsets: ['latin'],
   weight: ['400', '500', '600'],
   variable: '--font-text',
@@ -46,12 +46,12 @@ export async function generateStaticParams() {
 export default function RootLayout({ children, params }: PropsWithChildren<RootLayoutType>) {
   return (
     <html className="scroll-smooth" lang={params.lang}>
-      <body className={`${lora.variable} ${poppins.variable} h-screen bg-layer-0 font-text text-on-layer-0-l2`}>
+      <body className={`${archivo.variable} ${heptaSlab.variable} font-text h-screen bg-layer-0 text-on-layer-0-l2`}>
         <ProgressBarProvider>
           <MainComponent>
             <ToastContainer />
 
-            <main className="pt-16">
+            <main className="pt-16 flex m-auto">
               {children}
             </main>
 

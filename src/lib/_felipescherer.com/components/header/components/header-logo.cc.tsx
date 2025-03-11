@@ -13,7 +13,7 @@ export function CCHeaderLogo() {
   return (
     <Link
       href="/"
-      className={cn('text-brand-primary transition-all hover:text-brand-hover-primary', isCurrentPath ? 'pointer-events-none' : '')}
+      className={cn('text-primary transition-all hover:text-brand-hover-primary', isCurrentPath ? 'pointer-events-none' : '')}
       aria-disabled={isCurrentPath}
       tabIndex={isCurrentPath ? -1 : undefined}
     >

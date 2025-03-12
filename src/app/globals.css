@@ -9,3 +9,11 @@
   --font-title: var(--font-title);
   --font-text: var(--font-text);
 }
+
+@layer components {
+  .btn-primary {
+    background-color: var(--color-primary);
+    color: var(--color-on-primary);
+    @apply p-4 rounded-lg self-center hover:brightness-90 transition-all my-6;
+}
+}

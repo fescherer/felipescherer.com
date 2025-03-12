@@ -10,7 +10,7 @@ type TServices = {
 
 export const SERVICES: TServices[] = [
   {
-    icon: <LucideMousePointerClick />,
+    icon: <LucideMousePointerClick size={36} />,
     title: {
       en: 'Web development',
       pt: 'Desenvolvimento web',
@@ -21,7 +21,7 @@ export const SERVICES: TServices[] = [
     },
   },
   {
-    icon: <LucideBrush />,
+    icon: <LucideBrush size={36} />,
     title: {
       en: 'Company design identity',
       pt: 'Design da identidade da empresa',
@@ -32,7 +32,7 @@ export const SERVICES: TServices[] = [
     },
   },
   {
-    icon: <LucideCpu />,
+    icon: <LucideCpu size={36} />,
     title: {
       en: 'Image restoration using AI',
       pt: 'Restauração de imagem usando IA',
@@ -43,7 +43,7 @@ export const SERVICES: TServices[] = [
     },
   },
   {
-    icon: <LucideVideo />,
+    icon: <LucideVideo size={36} />,
     title: {
       en: 'Video Editing',
       pt: 'Edição de vídeo',

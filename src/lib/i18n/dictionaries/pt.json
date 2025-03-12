@@ -199,5 +199,13 @@
         "load": "Enviado"
       }
     }
+  },
+  "header": {
+    "menu": {
+      "home": "Home",
+      "about": "Sobre",
+      "projects": "Projects"
+    },
+    "logo-alt": "Felipe Scherer Developer Logo"
   }
 }

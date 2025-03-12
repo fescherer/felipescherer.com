@@ -3,8 +3,13 @@
 
 @theme {
   --color-dark: oklch(18.84% 0.0302 265.88);
+  --color-background: oklch(93.89% 0.0257 94.74);
   --color-primary: oklch(29.47% 0.0474 257.44);
+  --color-primary-hover: oklch(18.84% 0.0302 265.88);
+
   --color-on-primary: oklch(93.89% 0.0257 94.74);
+  --color-text-body: oklch(18.84% 0.0302 265.88 / 80%);
+  --color-text-title: oklch(18.84% 0.0302 265.88);
 
   --font-title: var(--font-title);
   --font-text: var(--font-text);
@@ -15,5 +20,14 @@
     background-color: var(--color-primary);
     color: var(--color-on-primary);
     @apply p-4 rounded-lg self-center hover:brightness-90 transition-all my-6;
-}
+  }
+
+  /* Use for items that want color primary and the hover effect */
+  .primary-text-effect {
+    @apply text-primary transition-all hover:text-primary-hover hover:scale-105
+  }
+
+  .primary-link-effect {
+    @apply text-text-body hover:text-text-title hover:border-text-title border-b border-transparent transition-all cursor-pointer
+  }
 }

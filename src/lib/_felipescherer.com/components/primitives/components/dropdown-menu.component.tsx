@@ -12,14 +12,14 @@ type TPrimitive = {
 export function DropdownMenuComponent({ trigger, triggerClass, contentClass, children }: PropsWithChildren<TPrimitive>) {
   return (
     <DropdownMenuPrimitive.Root>
-      <DropdownMenuPrimitive.Trigger className={cn('flex items-center gap-1 rounded-sm p-2 transition-all hover:bg-brand-hover-secondary hover:text-brand-on-secondary', triggerClass)}>
+      <DropdownMenuPrimitive.Trigger className={cn('flex items-center gap-1 rounded-sm p-2 transition-all hover:text-primary cursor-pointer', triggerClass)}>
         {trigger}
       </DropdownMenuPrimitive.Trigger>
 
       <DropdownMenuPrimitive.Portal>
-        <DropdownMenuPrimitive.Content className={cn('overflow-y-auto max-h-[calc(100vh-75px)] flex flex-col gap-2 rounded-sm border border-brand-secondary bg-layer-0 p-2', contentClass)}>
+        <DropdownMenuPrimitive.Content className={cn('overflow-y-auto max-h-[calc(100vh-75px)] flex flex-col gap-2 rounded-sm border border-primary/50 bg-background p-2', contentClass)}>
           {children}
-          <DropdownMenuPrimitive.Arrow className="fill-brand-secondary" />
+          <DropdownMenuPrimitive.Arrow className="fill-primary/50" />
         </DropdownMenuPrimitive.Content>
       </DropdownMenuPrimitive.Portal>
     </DropdownMenuPrimitive.Root>

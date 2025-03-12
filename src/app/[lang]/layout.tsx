@@ -6,7 +6,7 @@ import { ProgressBarProvider } from '@/lib/progress-bar/progress-bar.provider'
 import 'react-multi-carousel/lib/styles.css'
 import { METADATA } from './metadata'
 import { Locale, i18n } from '@/lib/i18n/i18n-config'
-import { Header } from '@/lib/_felipescherer.com/components/header/header.component'
+import { Header } from '@/@components/header/header.component'
 import { ToastContainer } from 'react-toastify'
 import { Footer } from '@/lib/_felipescherer.com/components/footer/footer.component'
 import 'react-toastify/dist/ReactToastify.css'
@@ -46,7 +46,7 @@ export async function generateStaticParams() {
 export default function RootLayout({ children, params }: PropsWithChildren<RootLayoutType>) {
   return (
     <html className="scroll-smooth" lang={params.lang}>
-      <body className={`${archivo.variable} ${heptaSlab.variable} font-text h-screen bg-layer-0 text-on-layer-0-l2`}>
+      <body className={`${archivo.variable} ${heptaSlab.variable} font-text h-screen bg-layer-0 text-text-body bg-background`}>
         <ProgressBarProvider>
           <MainComponent>
             <ToastContainer />

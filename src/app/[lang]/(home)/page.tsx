@@ -21,7 +21,7 @@ export default async function HomePage({ params: { lang } }: RootLayoutType) {
   const t = dictionary.aboutme
 
   return (
-    <div className="m-auto pt-8 max-w-3xl">
+    <div className="m-auto pt-8 max-w-4xl">
       <div className="flex flex-col items-center gap-4">
         <Image src="/perfil.jpg" width={2128} height={2128} alt="Felipe Scherer Photo" className="rounded-full size-80 border-primary border-4" />
         <h1 className="font-title text-5xl">Felipe Scherer</h1>
@@ -111,9 +111,9 @@ export default async function HomePage({ params: { lang } }: RootLayoutType) {
           </div>
 
           <div className="flex justify-center gap-10">
-            <Link target="_blank" href="https://services.fennectales.com" className="btn-primary">{t.services['project-idea'].button2}</Link>
+            <Link target="_blank" href="https://services.fennectales.com" className="btn">{t.services['project-idea'].button2}</Link>
 
-            <Link href="/about#contact" className="btn-primary">
+            <Link href="/about#contact" className="btn-accent">
               {t.services['project-idea'].button}
             </Link>
           </div>
@@ -127,7 +127,7 @@ export default async function HomePage({ params: { lang } }: RootLayoutType) {
                   classContent="max-w-[450px]"
                   key={soft.text[lang]}
                   trigger={(
-                    <button type="button" className="flex h-36 w-32 flex-col items-center gap-4 rounded-sm border border-brand-primary p-4 text-center transition-all hover:scale-110 hover:text-on-layer-0-l1 hover:brightness-90">
+                    <button type="button" className="flex h-36 w-32 flex-col items-center gap-4 rounded-sm p-4 text-center card-primary">
                       {soft.icon}
                       <p className="flex flex-1 items-center">{soft.title[lang]}</p>
                     </button>

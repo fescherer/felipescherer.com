@@ -46,17 +46,17 @@ export async function generateStaticParams() {
 export default function RootLayout({ children, params }: PropsWithChildren<RootLayoutType>) {
   return (
     <html className="scroll-smooth" lang={params.lang}>
-      <body className={`${archivo.variable} ${heptaSlab.variable} font-text h-screen bg-layer-0 text-text-body bg-background`}>
+      <body className={`${archivo.variable} ${heptaSlab.variable} font-text h-screen bg-layer-0 text-text bg-base-300`}>
         <ProgressBarProvider>
           <MainComponent>
             <ToastContainer />
+            <Header lang={params.lang} />
 
             <main className="pt-16 flex m-auto">
               {children}
             </main>
 
             <Footer lang={params.lang} />
-            <Header lang={params.lang} />
 
           </MainComponent>
         </ProgressBarProvider>

@@ -10,7 +10,7 @@ export async function Header({ lang }: PropsWithLocale) {
   const dictionary = await getDictionary(lang)
 
   return (
-    <div className="fixed right-0 top-0 flex w-full bg-background after:maskFade after:backdrop-blur-md">
+    <div className="fixed right-0 top-0 flex w-full maskFade backdrop-blur-sm">
       <header className="flex m-auto max-w-4xl w-full justify-between p-4 items-center">
         <CCHeaderMenu dictionary={dictionary} lang={lang} isMobile={true} />
         <CCHeaderLogo />

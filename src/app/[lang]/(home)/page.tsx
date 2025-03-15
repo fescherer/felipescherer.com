@@ -10,15 +10,17 @@ import { GithubIcon } from '@/lib/icons/social/github.icon'
 import { LucideArrowDown } from 'lucide-react'
 import QRCode from 'react-qr-code'
 import { ContentContainer } from './components/content-container.component'
-import { SERVICES } from '@/lib/_felipescherer.com/data/services.data'
 import { SOFT_SKILLS } from '@/lib/_felipescherer.com/data/soft-skills.data'
 import { Dialog } from '@/lib/_felipescherer.com/components/primitives'
 import { TOOLKIT } from '@/lib/_felipescherer.com/data/toolkit.data'
 import { ProjectsShowcaseComponent } from '@/lib/_felipescherer.com/components/sections/projects/projects-showcase.component'
+import { getServicesData } from '@/@data/services.data'
 
 export default async function HomePage({ params: { lang } }: RootLayoutType) {
   const dictionary = await getDictionary(lang)
   const t = dictionary.aboutme
+
+  const SERVICES_DATA = await getServicesData(lang)
 
   return (
     <div className="m-auto pt-8 max-w-4xl">
@@ -83,16 +85,20 @@ export default async function HomePage({ params: { lang } }: RootLayoutType) {
           <div className="grid grid-cols-4 gap-4">
             {/* TODO: Make dialog here for description */}
             {
-              SERVICES.map(card => (
-                <div key={card.title[lang]} className="rounded-sm shadow-lg border border-primary/10 p-4">
-                  <div className="flex flex-col items-center gap-2">
-                    <div className="rounded-full bg-brand-primary p-3  text-primary">
-                      {card.icon}
-                    </div>
+              SERVICES_DATA.map(card => (
+                <div key={card.title} className="relative rounded-sm shadow-lg p-[3px] overflow-hidden animate-gradient-border" style={{ background: card.border, backgroundSize: '200% 200%' }}>
+                  <div className="relative rounded-sm p-4 text-white bg-cover bg-center h-full" style={{ backgroundImage: `url(${card.image})` }}>
+                    <div className="absolute inset-0 bg-black/70" />
 
-                    <h3 className="text-lg font-medium text-center">
-                      {card.title[lang]}
-                    </h3>
+                    <div className="relative flex flex-col items-center gap-2">
+                      <div className="rounded-full bg-brand-primary p-3 text-accent">
+                        {card.icon}
+                      </div>
+
+                      <h3 className="text-lg font-bold tracking-wide text-center">
+                        {card.title}
+                      </h3>
+                    </div>
                   </div>
                 </div>
               ))

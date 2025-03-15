@@ -111,6 +111,12 @@
    --color-error: #bf616a;
    --color-error-content: #0d0304;
 
+  --animate-gradient-border: gradientAnimation 1s ease-in-out infinite;
+  @keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
 }
 
 @layer base {

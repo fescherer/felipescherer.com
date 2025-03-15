@@ -208,5 +208,24 @@
       "projects": "Projects"
     },
     "logo-alt": "Felipe Scherer Developer Logo"
+  },
+
+  "services": {
+    "web": {
+      "title": "Web development",
+      "text": "I build custom websites like restaurant menus, online stores, and more using WordPress or React & Next.js. Fast, responsive and tailored to your needs."
+    },
+    "design": {
+      "title": "Company design identity",
+      "text": "I create unique brand identities, including logos, color schemes and typography, to help your business stand out. Let's design a cohesive look that reflects your company's values and vision."
+    },
+    "ai": {
+      "title": "Image restoration using AI",
+      "text": "I offer AI-powered image restoration services to bring your old or damaged photos back to life. Experience enhanced clarity and detail while preserving the original essence of your cherished memories."
+    },
+    "editing": {
+      "title": "Video Editing",
+      "text": "I provide professional video editing services to transform your raw footage into polished, engaging content. From cuts and transitions to color correction and sound design, I'll help bring your vision to life."
+    }
   }
 }

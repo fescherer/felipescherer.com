@@ -98,7 +98,7 @@
    --color-neutral: oklch(96% 0.001 286.375);
    --color-neutral-content: oklch(21% 0.006 285.885);
 
-   --color-primary: #0D1321;
+   --color-primary: #1D2D44;
    --color-primary-content: #d8dee9;
 
    --color-accent: #F2A541 ;
@@ -111,6 +111,13 @@
    --color-error: #bf616a;
    --color-error-content: #0d0304;
 
+}
+
+@layer base {
+  strong {
+    color: var(--color-accent);
+    border-bottom: 1px solid var(--color-accent);
+  }
 }
 
 @layer components {

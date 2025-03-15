@@ -80,8 +80,7 @@
     "services": {
       "title": "Serviços",
       "project-idea": {
-        "callout": "Você tem uma boa ideia de projeto?",
-        "solution": "Eu adoraria fazer para você!",
+        "callout": "Você tem uma ideia de projeto?",
         "contact": "Entre em contato com uma ",
         "free-call": "chamada gratuita",
         "button": "Envie-me um e-mail",

@@ -66,7 +66,7 @@ export default async function HomePage({ params: { lang } }: RootLayoutType) {
 
             <div className="space-y-4 flex flex-col">
               <p>
-                Com mais de 5 anos de experiência de desenvolvimento de software, carrego um diploma de bacharelado em  Ciência da Computação e multiplus certificados de cursos tech. Atualmente, est  ou cursando uma pós graduação com especialização em algoritmos.
+                Com mais de 5 anos de experiência de desenvolvimento de software, carrego um diploma de bacharelado em  Ciência da Computação e multiplus certificados de cursos tech. Atualmente, estou cursando uma pós graduação com especialização em algoritmos.
               </p>
 
               <p className="font-medium">Idiomas: Inglês e Português</p>
@@ -99,9 +99,8 @@ export default async function HomePage({ params: { lang } }: RootLayoutType) {
             }
           </div>
 
-          <div className="mt-12 flex flex-col items-center space-y-2">
-            <p className="text-lg">{t.services['project-idea'].callout}</p>
-            <p>{t.services['project-idea'].solution}</p>
+          <div className="mt-12 text-2xl flex flex-col items-center space-y-2">
+            <p>{t.services['project-idea'].callout}</p>
 
             <p>
               {t.services['project-idea'].contact}
@@ -113,7 +112,7 @@ export default async function HomePage({ params: { lang } }: RootLayoutType) {
           <div className="flex justify-center gap-10">
             <Link target="_blank" href="https://services.fennectales.com" className="btn">{t.services['project-idea'].button2}</Link>
 
-            <Link href="/about#contact" className="btn-accent">
+            <Link href="/about#contact" className="btn-primary">
               {t.services['project-idea'].button}
             </Link>
           </div>

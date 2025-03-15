@@ -225,5 +225,48 @@
       "title": "Edição de vídeo",
       "text": "Eu forneço serviços de edição profissional de vídeo para transformar sua filmagem bruta em conteúdo sofisticado e envolvente. Desde cortes e transições até correção de cor e design de som, irei ajudar levar sua visão à vida."
     }
+  },
+
+  "soft-skills": {
+    "organized": {
+      "title": "Organizado",
+      "text": "Sendo organizado me permite admistrar múltiplos projetos eficientemente, priorizando tarefas e prazos. Me ajuda a me manter atento e garante qualidade em todos os detalhes do meu trabalho."
+    },
+    "problem-solving": {
+      "title": "Resolução de Problemas",
+      "text": "Através da minha experiência, aprendi a investir em desafios como corrigir código, otimizar performance e desenvolver sistemas eficientes. Habilidades fortes de resolver problemas são essenciais para navegar nesses obstáculos com sucesso."
+    },
+    "collaboration": {
+      "title": "Colaboração",
+      "text": "Eu me criei em ambientes com times, valorizo diversas perspectivas e sou aberto à comunicação. Trabalho perfeitamente com desenvolvedores, designers e patrocinadores, contribuindo efetivamente para projetos Agile ou Scrum e promovendo positividade e produtividade dinâmica."
+    },
+    "adaptability": {
+      "title": "Adaptabilidade & Aprendizado Contínuo",
+      "text": "Eu estou atento na evolução contínua da tecnologia, rapidamente adaptando para novas ferramentas, linguagens e frameworks. Empenhado para o aprendizado contínuo, eu abraço tendências interessantes para continuar com minhas habilidades afiadas e relevantes."
+    },
+    "attention": {
+      "title": "Atenção aos Detalhes",
+      "text": "Eu trago precisão para meu código, reconhecendo que o menor dos erros pode levar a problemas maiores. Minha atenção aos detalhes garante precisão na escrita, correção e revisão de código para um bom trabalho."
+    },
+    "creativity": {
+      "title": "Criatividade",
+      "text": "Sou excelente em pensar fora da caixa para desenvolver soluções inovadoras, design intuitivo e interfaces para usuário. Criatividade conduz meu trabalho em design UX/UI, desenvolvimento de jogos e elaboração engajante de experiência digital."
+    },
+    "empathy": {
+      "title": "Empatia",
+      "text": "Eu priorizo o conhecimento das necessidades e dores do usuário, o que me habilita a desenvolver produtos intuitivos e acessíveis. Essa abordagem empática é crucial para melhor o design da experiência do usuário (UX) e interface do usuário (UI)."
+    },
+    "teaching": {
+      "title": "Ensinar e ajudar outros",
+      "text": "Eu apoio ativamente outros compartilhando princípios de código, explicando conceitos e ajudando no geral. Isso me permite criar um ótimo ambiente e também aprendo enquanto ensino."
+    },
+   "adaptability-feedback": {
+      "title": "Adaptabilidade para Feedback",
+      "text": "Sou aberto a feedback de outros pares, clientes e usuários, vendo isso como chance de crescer e melhorar. Sendo adaptavél para critícas construtivas me ajuda a trilhar no caminho da constante mudança tecnologica."
+    },
+   "client": {
+      "title": "Preocupado com cliente",
+      "text": "Eu priorizo o entendimento das necessidades e expectativas do cliente, garantindo que meu trabalho alinhe com sua visão e objetivos. Ao manter comunicação aberta e ativa, procurando feedbacks, eu construo relações fortes e entrego resultados que superam a satisfação do cliente."
+    }
   }
 }

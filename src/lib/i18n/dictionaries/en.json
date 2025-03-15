@@ -227,5 +227,48 @@
       "title": "Video Editing",
       "text": "I provide professional video editing services to transform your raw footage into polished, engaging content. From cuts and transitions to color correction and sound design, I'll help bring your vision to life."
     }
+  },
+
+  "soft-skills": {
+    "organized": {
+      "title": "Organized",
+      "text": "Being organized allows me to manage multiple projects efficiently, prioritize tasks and meet deadlines. It helps me maintain careful and ensure quality in every detail of my work."
+    },
+    "problem-solving": {
+      "title": "Problem Solving",
+      "text": "Through my experience, I have learned to tackle challenges like debugging code, optimizing performance, and designing efficient systems. Strong problem-solving skills are essential for navigating these obstacles successfully."
+    },
+    "collaboration": {
+      "title": "Collaboration",
+      "text": "I thrive in team environments, valuing diverse perspectives and open communication. I work seamlessly with developers, designers, and stakeholders, contributing effectively to Agile or Scrum projects and fostering a positive, productive dynamic."
+    },
+    "adaptability": {
+      "title": "Adaptability & Continuous Learning",
+      "text": "I stay up in the ever-evolving tech landscape, quickly adapting to new tools, languages, and frameworks. Committed to continuous learning, I embrace interesting trends to keep my skills sharp and relevant."
+    },
+    "attention": {
+      "title": "Attention to Detail",
+      "text": "I bring precision to coding, recognizing that even minor errors can lead to major problems. My keen attention to detail ensures accuracy in writing, debugging, and reviewing code for a great work."
+    },
+    "creativity": {
+      "title": "Creativity",
+      "text": "I excel at thinking outside the box to develop innovative solutions, design intuitive and user-friendly interfaces. Creativity drives my work in UX/UI design, game development, and crafting engaging digital experiences."
+    },
+    "empathy": {
+      "title": "Empathy",
+      "text": "I prioritize understanding user needs and pain points, which enables me to design intuitive and accessible products. This empathetic approach is crucial in enhancing user experience (UX) and user interface (UI) design."
+    },
+    "teaching": {
+      "title": "Teaching and help others",
+      "text": "I actively support others by sharing coding principles, explaining concepts, and helping in general. This help me create a great environment and also learn while teaching."
+    },
+   "adaptability-feedback": {
+      "title": "Adaptability to Feedback",
+      "text": "I'm open to feedback from peers, clients, and users, seeing it as a chance to grow and improve. Being adaptable to constructive criticism helps me thrive in the ever-changing tech."
+    },
+   "client": {
+      "title": "Client concerned",
+      "text": "I prioritize understanding client needs and expectations, ensuring that my work aligns with their vision and objectives. By maintaining open communication and actively seeking feedback, I build strong relationships and deliver results that exceed client satisfaction."
+    }
   }
 }

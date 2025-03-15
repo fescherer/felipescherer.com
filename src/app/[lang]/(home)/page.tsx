@@ -10,17 +10,18 @@ import { GithubIcon } from '@/lib/icons/social/github.icon'
 import { LucideArrowDown } from 'lucide-react'
 import QRCode from 'react-qr-code'
 import { ContentContainer } from './components/content-container.component'
-import { SOFT_SKILLS } from '@/lib/_felipescherer.com/data/soft-skills.data'
 import { Dialog } from '@/lib/_felipescherer.com/components/primitives'
 import { TOOLKIT } from '@/lib/_felipescherer.com/data/toolkit.data'
 import { ProjectsShowcaseComponent } from '@/lib/_felipescherer.com/components/sections/projects/projects-showcase.component'
 import { getServicesData } from '@/@data/services.data'
+import { getSoftSkillsData } from '@/@data/soft-skills.data'
 
 export default async function HomePage({ params: { lang } }: RootLayoutType) {
   const dictionary = await getDictionary(lang)
   const t = dictionary.aboutme
 
   const SERVICES_DATA = await getServicesData(lang)
+  const SOFT_SKILLS_DATA = await getSoftSkillsData(lang)
 
   return (
     <div className="m-auto pt-8 max-w-4xl">
@@ -127,19 +128,19 @@ export default async function HomePage({ params: { lang } }: RootLayoutType) {
         <ContentContainer title="Softskills">
           <div className="flex flex-wrap justify-center gap-8 text-sm">
             {
-              SOFT_SKILLS.map(soft => (
+              SOFT_SKILLS_DATA.map(soft => (
                 <Dialog
                   classContent="max-w-[450px]"
-                  key={soft.text[lang]}
+                  key={soft.text}
                   trigger={(
                     <button type="button" className="flex h-36 w-32 flex-col items-center gap-4 rounded-sm p-4 text-center card-primary">
                       {soft.icon}
-                      <p className="flex flex-1 items-center">{soft.title[lang]}</p>
+                      <p className="flex flex-1 items-center">{soft.title}</p>
                     </button>
                   )}
                 >
-                  <div className="p-2">
-                    {soft.text[lang]}
+                  <div className="p-2 text-center text-base-content">
+                    {soft.text}
                   </div>
                 </Dialog>
               ))

@@ -149,7 +149,7 @@
     background-color: var(--color-base-200);
     border: 1px solid var(--color-base-300);
     color: var(--color-base-content);
-    @apply shadow-md transition-all hover:scale-105 hover:bg-primary hover:text-primary-content cursor-pointer;
+    @apply shadow-md transition-all hover:scale-105 hover:bg-primary hover:text-primary-content hover:border-primary cursor-pointer;
   }
 
   .primary-text-effect {
@@ -159,6 +159,6 @@
 
   .primary-link-effect {
     color: var(--color-base-content);
-    @apply hover:text-primary border-b border-transparent transition-all cursor-pointer
+    @apply hover:text-primary border-b border-transparent transition-all cursor-pointer hover:border-primary
   }
 }

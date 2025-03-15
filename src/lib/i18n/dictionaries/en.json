@@ -270,5 +270,41 @@
       "title": "Client concerned",
       "text": "I prioritize understanding client needs and expectations, ensuring that my work aligns with their vision and objectives. By maintaining open communication and actively seeking feedback, I build strong relationships and deliver results that exceed client satisfaction."
     }
+  },
+
+  "toolkit": {
+    "nextJS": {
+      "text": "React's framework for web. Create high-quality web applications."
+    },
+    "reacjs": {
+      "text": "JavaScript's library to create native and web user interfaces."
+    },
+    "javascript": {
+      "text": "Easy to use and lightweight language. Used for a lot of things, including most of the web."
+    },
+    "firebase": {
+      "text": "A Google Platform that offers a lot of services like databases, auth and much more."
+    },
+    "tailwind": {
+      "text": "A CSS framework that uses utility classes as principles. Provides a very good design system too."
+    },
+    "figma": {
+      "text": "A design platform use for most of web developers to create wireframes and layouts very easy."
+    },
+    "wordpress": {
+      "text": "A web design platform use in a lot of institutional sites, blogs, stores and much more."
+    },
+    "adobe-photoshop": {
+      "text": "A raster image graphics editor. Used for a lot of designers."
+    },
+    "adobe-illustrator": {
+      "text": "A vector image graphics editor. Used for a lot of designers."
+    },
+    "bootstrap": {
+      "text": "Frontend toolkit very opinated, but classic in web."
+    },
+    "material-ui": {
+      "text": "A component library for React (But has for other languages too) which offers a lot of ready-to-use components"
+    }
   }
 }

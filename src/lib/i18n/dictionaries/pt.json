@@ -268,5 +268,41 @@
       "title": "Preocupado com cliente",
       "text": "Eu priorizo o entendimento das necessidades e expectativas do cliente, garantindo que meu trabalho alinhe com sua visão e objetivos. Ao manter comunicação aberta e ativa, procurando feedbacks, eu construo relações fortes e entrego resultados que superam a satisfação do cliente."
     }
+  },
+
+  "toolkit": {
+    "nextJS": {
+      "text": "Framework feito com base em React para web. Cria aplicações web de alta qualidade."
+    },
+    "reacjs": {
+      "text": "Biblioteca de JavaScript usada para criar interfaces nativas quanto web"
+    },
+    "javascript": {
+      "text": "Linguagem fácil de usar. Utilizada para diversas coisas, incluindo a maior parte da web."
+    },
+    "firebase": {
+      "text": "Plataforma Google que oferece muitos serviços como banco de dados, autenticação e muito mais."
+    },
+    "tailwind": {
+      "text": "Um framework CSS que utiliza classes como princípío. Provê um design system muito bom também."
+    },
+    "figma": {
+      "text": "Uma plataforma de design usada pela maior parte dos desenvolvedores web para criar wireframes e layouts muito facilmente."
+    },
+    "wordpress": {
+      "text": "Uma plataforma de web design usada na maior parte dos sites institucionais, blogs, lojas e muito mais."
+    },
+    "adobe-photoshop": {
+      "text": "Um editor de imagens rasterizadas. Usado pela maior parte dos designers."
+    },
+    "adobe-illustrator": {
+      "text": "Um editor de imagens de vetor. Usado pela maior parte dos designers."
+    },
+    "bootstrap": {
+      "text": "Conjunto de ferramentas frontend muito opinado, mas um clássico da web."
+    },
+    "material-ui": {
+      "text": "Uma biblioteca de componente React (Mas existe em outras linguagens também) que oferece muitos componentes pronto-para-usar."
+    }
   }
 }

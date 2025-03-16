@@ -4,11 +4,13 @@ import Link from 'next/link'
 import { ReactNode } from 'react'
 
 type TProjectComponentPage = {
-  project: IProject
+  project: IProject | undefined
   ribbon: ReactNode
 }
 
 export function ProjectComponent({ project, lang, ribbon }: PropsWithLocale<TProjectComponentPage>) {
+  if (!project) return (<div>dasdas</div>)
+
   const imagePath = `/projects/${project.type.id}/${project.id}`
   const linkPath = `/projects/${project.type.id}/${project.id}`
 

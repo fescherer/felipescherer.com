@@ -11,10 +11,10 @@ import { LucideArrowDown } from 'lucide-react'
 import QRCode from 'react-qr-code'
 import { ContentContainer } from './components/content-container.component'
 import { Dialog } from '@/lib/_felipescherer.com/components/primitives'
-import { ProjectsShowcaseComponent } from '@/lib/_felipescherer.com/components/sections/projects/projects-showcase.component'
 import { getServicesData } from '@/@data/services.data'
 import { getSoftSkillsData } from '@/@data/soft-skills.data'
 import { getToolkitData } from '@/@data/toolkit.data'
+import { ProjectsShow } from './components/projects-show.component'
 
 export default async function HomePage({ params: { lang } }: RootLayoutType) {
   const dictionary = await getDictionary(lang)
@@ -184,7 +184,7 @@ export default async function HomePage({ params: { lang } }: RootLayoutType) {
         </ContentContainer>
 
         <ContentContainer title="Projetos">
-          <ProjectsShowcaseComponent lang={lang} />
+          <ProjectsShow params={{ lang: lang }} />
         </ContentContainer>
       </div>
 

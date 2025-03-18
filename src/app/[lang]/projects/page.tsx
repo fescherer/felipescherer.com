@@ -1,5 +1,5 @@
+import { Projects } from '@/@components/projects/page'
 import { RootLayoutType } from '@/@types/Page'
-import { Projects } from '@/features'
 
 // export async function generateMetadata({ params }: RootLayoutType) {
 //   const dictionary = await getDictionary(params.lang)

@@ -31,9 +31,9 @@
   --color-on-primary: oklch(93.89% 0.0257 94.74);
   --color-text-body: oklch(18.84% 0.0302 265.88 / 80%);
   --color-text-title: oklch(18.84% 0.0302 265.88);
-
+ */
   --font-title: var(--font-title);
-  --font-text: var(--font-text); */
+  --font-text: var(--font-text);
 
 
   /* Primary Colors

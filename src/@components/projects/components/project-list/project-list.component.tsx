@@ -6,17 +6,14 @@ import { useState } from 'react'
 import { LucideChevronLeft, LucideChevronRight } from 'lucide-react'
 import { PropsWithLocale } from '@/@types/language'
 import { useSearchContext } from '../../context/search.context'
-import { ProjectCard } from './components/project-card.component'
+import { Card } from './components/card.component'
 
 type ProjectListProps = {
   projects: IProject[]
-  translation: {
-    readMore: string
-  }
 }
 const PAGES_NUMBER = 6
 
-export function ProjectList({ projects, lang, translation }: PropsWithLocale<ProjectListProps>) {
+export function ProjectList({ projects, lang }: PropsWithLocale<ProjectListProps>) {
   const { search } = useSearchContext()
   const [currentPage, setCurrentPage] = useState(0)
 
@@ -30,11 +27,11 @@ export function ProjectList({ projects, lang, translation }: PropsWithLocale<Pro
   const pages = Array.from(Array(Math.ceil(filteredProjects.length / PAGES_NUMBER)).keys())
 
   return (
-    <div>
+    <>
       <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 md:min-h-[680px] lg:grid-cols-3">
         {
         filteredProjects.slice(currentPage * PAGES_NUMBER, currentPage * PAGES_NUMBER + PAGES_NUMBER).map(project => (
-          <ProjectCard key={project.id} project={project} lang={lang} translation={translation} />
+          <Card key={project.id} project={project} lang={lang} />
         ))
       }
       </div>
@@ -53,6 +50,6 @@ export function ProjectList({ projects, lang, translation }: PropsWithLocale<Pro
         </div>
       )}
 
-    </div>
+    </>
   )
 }

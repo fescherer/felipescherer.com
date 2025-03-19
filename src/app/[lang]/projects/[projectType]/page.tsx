@@ -1,8 +1,8 @@
-import { Projects } from '@/features'
 import { Locale } from '@/lib/i18n/i18n-config'
 import { getMetadata } from '@/lib/_felipescherer.com/functions/getMetada'
 import { AVAILABLE_TYPE_PROJECTS } from '@/lib/_felipescherer.com/projects'
 import { Metadata } from 'next'
+import { Projects } from '@/@components/projects/projects'
 
 type ProjectTypePageProps = {
   params: { projectType: string, lang: Locale }

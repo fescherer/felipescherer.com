@@ -2,7 +2,6 @@ import { IProject, TProjectType } from '@/@types'
 import { AVAILABLE_TYPE_PROJECTS, PROJECTS } from '@/lib/_felipescherer.com/projects'
 import { Suspense } from 'react'
 import { PropsWithLocale } from '@/@types/language'
-import { getDictionary } from '@/lib/i18n/get-dictionary'
 import { SearchProvider } from './context/search.context'
 import { TypeFilter } from './components/type-filter/type-filter'
 import { ProjectList } from './components/project-list/project-list.component'
@@ -18,8 +17,6 @@ function getAllProjects(availableProjects: TProjectType[]): IProject[] {
 }
 
 export async function Projects({ projectType = '', lang }: PropsWithLocale<ProjectsProps>) {
-  const dictionary = await getDictionary(lang)
-
   const isValidProjectType = AVAILABLE_TYPE_PROJECTS.some(type => projectType === type)
 
   const projects = projectType
@@ -30,12 +27,14 @@ export async function Projects({ projectType = '', lang }: PropsWithLocale<Proje
 
   return (
     <SearchProvider>
-      <div className="m-auto flex w-full max-w-4xl flex-col items-center gap-8">
-        <TypeFilter projectType={isValidProjectType ? projectType as TProjectType : null} lang={lang} />
+      <div className="m-auto flex w-full max-w-5xl flex-col items-center gap-8">
+        <div>
+          <TypeFilter projectType={isValidProjectType ? projectType as TProjectType : null} lang={lang} />
 
-        <Suspense fallback={<p>...</p>}>
-          <ProjectList projects={projects} lang={lang} translation={{ readMore: dictionary.projects['project-card']['read-more'] }} />
-        </Suspense>
+          <Suspense fallback={<p>...</p>}>
+            <ProjectList projects={projects} lang={lang} />
+          </Suspense>
+        </div>
       </div>
     </SearchProvider>
   )

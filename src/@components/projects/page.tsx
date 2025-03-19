@@ -30,13 +30,13 @@ export async function Projects({ projectType = '', lang }: PropsWithLocale<Proje
 
   return (
     <SearchProvider>
-      <main className="m-auto flex w-full max-w-5xl flex-col items-center gap-8">
+      <div className="m-auto flex w-full max-w-4xl flex-col items-center gap-8">
         <TypeFilter projectType={isValidProjectType ? projectType as TProjectType : null} lang={lang} />
 
         <Suspense fallback={<p>...</p>}>
           <ProjectList projects={projects} lang={lang} translation={{ readMore: dictionary.projects['project-card']['read-more'] }} />
         </Suspense>
-      </main>
+      </div>
     </SearchProvider>
   )
 }

@@ -13,7 +13,7 @@ type LinkBtnProps = {
 export function LinkBtn({ href, size, children, title }: LinkBtnProps) {
   return (
     <Link title={title} href={href} target="_blank" className="group/link-btn relative">
-      <HexagonIcon size={size} className="fill-brand-primary text-brand-primary transition-all group-hover/link-btn:fill-brand-hover-primary group-hover/link-btn:text-brand-hover-primary" />
+      <HexagonIcon size={size} className="fill-primary text-primary transition-all group-hover/link-btn:fill-accent group-hover/link-btn:text-accent" />
       {children}
     </Link>
   )

@@ -1,7 +1,7 @@
 'use client'
 
+import { AVAILABLE_TYPE_PROJECTS } from '@/@data/projects'
 import { TProjectType } from '@/@types'
-import { AVAILABLE_TYPE_PROJECTS } from '@/lib/_felipescherer.com/projects'
 import * as Select from '@radix-ui/react-select'
 import { ChevronDown, LucideCheck } from 'lucide-react'
 import { useRouter } from 'next/navigation'
@@ -21,16 +21,16 @@ export function SelectInput({ projectType, placeholder }: SelectInputProps) {
 
   return (
     <Select.Root defaultValue={projectType || ''} onValueChange={value => navigateTo(value)}>
-      <Select.Trigger className={`flex w-full items-center justify-between overflow-hidden rounded-sm border px-2 py-1 text-sm transition-all sm:w-52 ${projectType ? 'border-brand-primary text-brand-primary hover:border-brand-hover-primary hover:text-brand-hover-primary' : 'border-layer-1 text-on-layer-0-l2 hover:border-on-layer-0-l1 hover:text-on-layer-0-l1'}`}>
+      <Select.Trigger className={`flex w-full items-center justify-between whitespace-nowrap rounded-sm border px-4 py-2 text-sm transition-all sm:w-60 ${projectType ? 'border-primary text-primary hover:border-accent' : 'border-primary/50 text-base-content hover:border-primary'}`}>
         <Select.Value placeholder={placeholder} />
         <ChevronDown />
       </Select.Trigger>
 
       <Select.Portal>
-        <Select.Content className="overflow-hidden rounded-md border border-layer-1 bg-layer-0 p-2">
+        <Select.Content className="overflow-hidden rounded-md border border-primary/50 bg-base-100 p-2">
           <Select.ScrollUpButton />
 
-          <Select.Item className="flex select-none items-center justify-between rounded-xs p-2 text-sm text-on-layer-0-l2 transition-colors data-highlighted:bg-brand-hover-primary data-[state='checked']:bg-brand-primary data-highlighted:text-brand-on-primary data-[state='checked']:text-brand-on-primary data-highlighted:outline-hidden" value="all">
+          <Select.Item className="flex select-none items-center justify-between rounded-xs p-2 text-sm text-base-content transition-colors data-highlighted:bg-primary data-[state='checked']:bg-primary data-highlighted:text-primary-content data-[state='checked']:text-primary-content data-highlighted:outline-hidden" value="all">
             <Select.ItemText>All</Select.ItemText>
 
             <Select.ItemIndicator>
@@ -41,7 +41,7 @@ export function SelectInput({ projectType, placeholder }: SelectInputProps) {
           {
           AVAILABLE_TYPE_PROJECTS.map(type => (
             <Select.Viewport key={type}>
-              <Select.Item className="flex select-none items-center justify-between rounded-xs p-2 text-sm text-on-layer-0-l2 transition-colors data-highlighted:bg-brand-hover-primary data-[state='checked']:bg-brand-primary data-highlighted:text-brand-on-primary data-[state='checked']:text-brand-on-primary data-highlighted:outline-hidden" value={type}>
+              <Select.Item className="flex select-none items-center justify-between rounded-xs p-2 text-sm text-base-content transition-colors data-highlighted:bg-primary data-[state='checked']:bg-primary data-highlighted:text-primary-content data-[state='checked']:text-primary-content data-highlighted:outline-hidden" value={type}>
                 <Select.ItemText>{type}</Select.ItemText>
 
                 <Select.ItemIndicator>

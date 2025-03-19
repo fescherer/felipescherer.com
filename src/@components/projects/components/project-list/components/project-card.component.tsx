@@ -12,12 +12,12 @@ type ProjectCardProps = {
   }
 }
 export function ProjectCard({ project, lang, translation }: PropsWithLocale<ProjectCardProps>) {
-  const iconClassName = 'absolute inset-1/2 -translate-x-1/2 -translate-y-1/2 text-brand-on-primary'
+  const iconClassName = 'absolute inset-1/2 -translate-x-1/2 -translate-y-1/2 text-primary-content'
   const linkPath = `/projects/${project.type.id}/${project.id}`
   const imagePath = `/projects/${project.type.id}/${project.id}`
 
   return (
-    <div title={project.title.pt} className="relative flex h-80 w-60 flex-col rounded-sm bg-layer-1 text-on-layer-1-l2 transition-all hover:scale-105">
+    <div title={project.title.pt} className="relative flex h-80 w-60 flex-col rounded-sm transition-all hover:scale-105 shadow-md bg-base-100">
 
       <Link href={linkPath} className="absolute left-0 top-0 size-full" />
 
@@ -34,7 +34,7 @@ export function ProjectCard({ project, lang, translation }: PropsWithLocale<Proj
       />
 
       <div className="relative">
-        <div className="h-1 w-full bg-brand-primary" />
+        <div className="h-1 w-full bg-primary" />
 
         <div className="absolute top-0 flex -translate-y-1/2 items-center gap-1">
           {
@@ -69,7 +69,7 @@ export function ProjectCard({ project, lang, translation }: PropsWithLocale<Proj
         <p className="vertical-ellipsis mt-2 text-sm text-on-layer-1-l2">{project.description[lang]}</p>
       </div>
 
-      <span className="self-end px-4  py-2 text-sm">{translation.readMore}</span>
+      <span className="self-end px-4 py-2 text-sm">{translation.readMore}</span>
     </div>
   )
 }

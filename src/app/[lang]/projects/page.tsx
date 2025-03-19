@@ -16,9 +16,7 @@ import { RootLayoutType } from '@/@types/Page'
 
 export default function ProjectsPage({ params }: RootLayoutType) {
   return (
-    <div className="flex">
-      {/* <ProjectLoader lang={params.lang} /> */}
-      <Projects lang={params.lang} />
-    </div>
+    <Projects lang={params.lang} />
   )
 }
+{ /* <ProjectLoader lang={params.lang} /> */ }

@@ -13,8 +13,8 @@ export async function TypeFilter({ projectType, lang }: PropsWithLocale<TypeFilt
 
   return (
     <nav className="flex w-full flex-col gap-2 p-4 sm:flex-row sm:justify-between">
-      <SelectInput projectType={projectType} placeholder={dictionary.projects.placeholder.search} />
-      <SearchInput placeholder={dictionary.projects.placeholder.type} />
+      <SelectInput projectType={projectType} placeholder={dictionary.projects.placeholder.type} />
+      <SearchInput placeholder={dictionary.projects.placeholder.search} />
     </nav>
   )
 }

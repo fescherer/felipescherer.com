@@ -16,12 +16,10 @@ export function DropdownMenuComponent({ trigger, triggerClass, contentClass, chi
         {trigger}
       </DropdownMenuPrimitive.Trigger>
 
-      <DropdownMenuPrimitive.Portal>
-        <DropdownMenuPrimitive.Content className={cn('overflow-y-auto max-h-[calc(100vh-75px)] flex flex-col gap-2 rounded-sm border border-primary/50 bg-background p-2', contentClass)}>
-          {children}
-          <DropdownMenuPrimitive.Arrow className="fill-primary/50" />
-        </DropdownMenuPrimitive.Content>
-      </DropdownMenuPrimitive.Portal>
+      <DropdownMenuPrimitive.Content className={cn('overflow-y-auto max-h-[calc(100vh-75px)] flex flex-col gap-2 rounded-sm border border-primary/50 bg-base-100 p-2', contentClass)}>
+        {children}
+        <DropdownMenuPrimitive.Arrow className="fill-primary/50" />
+      </DropdownMenuPrimitive.Content>
     </DropdownMenuPrimitive.Root>
   )
 }

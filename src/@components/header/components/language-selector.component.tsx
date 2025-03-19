@@ -41,7 +41,7 @@ export function LanguageSelectorComponent({ cookieLang }: LanguageSelectorProps)
 
   return (
     <DropdownMenuComponent trigger={(
-      <div className={cn('primary-link-effect flex items-center gap-1', 'border-none')}>
+      <div className={cn('primary-link-effect flex items-center gap-1 ', 'border-none')}>
         <LucideLanguages />
         <LucideChevronDown size={14} />
       </div>
@@ -49,7 +49,7 @@ export function LanguageSelectorComponent({ cookieLang }: LanguageSelectorProps)
     >
       {i18nWithName.locales.map((locale) => {
         return (
-          <button type="button" key={locale.id} className={cn('py-1 px-4 primary-link-effect', currentLanguage === locale.id ? 'border-primary border-b text-primary' : '')} onClick={() => redirectedPathName(locale)}>{locale.name}</button>
+          <button type="button" key={locale.id} className={cn('py-1 px-4 primary-link-effect ', currentLanguage === locale.id ? 'border-primary border-b text-primary' : '')} onClick={() => redirectedPathName(locale)}>{locale.name}</button>
         )
       })}
     </DropdownMenuComponent>

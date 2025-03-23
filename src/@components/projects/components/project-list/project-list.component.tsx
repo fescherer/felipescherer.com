@@ -38,13 +38,13 @@ export function ProjectList({ projects, lang }: PropsWithLocale<ProjectListProps
 
       { filteredProjects.length > PAGES_NUMBER && (
         <div className="mt-8 flex items-center justify-end gap-2">
-          <button onClick={() => setCurrentPage(prev => prev - 1)} disabled={currentPage === 0} type="button" className="rounded-full transition-all hover:enabled:text-on-layer-0-l1 disabled:cursor-not-allowed disabled:opacity-30">
+          <button onClick={() => setCurrentPage(prev => prev - 1)} disabled={currentPage === 0} type="button" className="rounded-full transition-all hover:enabled:text-accent hover:enabled:cursor-pointer disabled:cursor-not-allowed disabled:opacity-30">
             <LucideChevronLeft />
           </button>
 
-          {pages.map(page => <button onClick={() => setCurrentPage(page)} type="button" className={`flex size-8 items-center justify-center rounded-full transition-all hover:bg-brand-hover-primary ${currentPage === page ? 'bg-brand-primary text-brand-on-primary' : ''}`} key={page}>{page + 1}</button>)}
+          {pages.map(page => <button onClick={() => setCurrentPage(page)} type="button" className={`flex size-8 cursor-pointer items-center justify-center rounded-full transition-all hover:bg-accent hover:text-accent-content ${currentPage === page ? 'bg-primary text-primary-content' : ''}`} key={page}>{page + 1}</button>)}
 
-          <button onClick={() => setCurrentPage(prev => prev + 1)} disabled={currentPage === pages.length - 1} type="button" className="rounded-full transition-all hover:enabled:text-on-layer-0-l1 disabled:cursor-not-allowed disabled:opacity-30">
+          <button onClick={() => setCurrentPage(prev => prev + 1)} disabled={currentPage === pages.length - 1} type="button" className="rounded-full transition-all hover:enabled:text-accent hover:enabled:cursor-pointer disabled:cursor-not-allowed disabled:opacity-30">
             <LucideChevronRight />
           </button>
         </div>

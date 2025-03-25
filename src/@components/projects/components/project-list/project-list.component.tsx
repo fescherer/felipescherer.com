@@ -1,19 +1,31 @@
 'use client'
 
-import { IProject } from '@/@types'
-import { getProjectsSortedByDate } from '@/lib/_felipescherer.com/functions/getProjectsSorted'
 import { useState } from 'react'
 import { LucideChevronLeft, LucideChevronRight } from 'lucide-react'
 import { PropsWithLocale } from '@/@types/language'
 import { useSearchContext } from '../../context/search.context'
 import { Card } from './components/card.component'
+import { IProject } from '@/@data/projects.data'
 
 type ProjectListProps = {
   projects: IProject[]
 }
 const PAGES_NUMBER = 6
 
-export function ProjectList({ projects, lang }: PropsWithLocale<ProjectListProps>) {
+function getProjectsSortedByDate(ProjectA: IProject, ProjectB: IProject) {
+  const dateProjectA = new Date(ProjectA?.date)
+  const dateProjectB = new Date(ProjectB?.date)
+
+  if (dateProjectA > dateProjectB)
+    return -1
+
+  if (dateProjectA < dateProjectB)
+    return 1
+
+  return 0
+}
+
+export function ProjectList({ projects }: PropsWithLocale<ProjectListProps>) {
   const { search } = useSearchContext()
   const [currentPage, setCurrentPage] = useState(0)
 
@@ -31,7 +43,7 @@ export function ProjectList({ projects, lang }: PropsWithLocale<ProjectListProps
       <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 md:min-h-[680px] lg:grid-cols-3">
         {
         filteredProjects.slice(currentPage * PAGES_NUMBER, currentPage * PAGES_NUMBER + PAGES_NUMBER).map(project => (
-          <Card key={project.id} project={project} lang={lang} />
+          <Card key={project.id} project={project} />
         ))
       }
       </div>

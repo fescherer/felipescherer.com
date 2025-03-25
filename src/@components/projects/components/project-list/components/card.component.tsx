@@ -1,17 +1,16 @@
-import { IProject } from '@/@types'
-import { PropsWithLocale } from '@/@types/language'
+import { IProject } from '@/@data/projects.data'
 import Link from 'next/link'
 
 type CardProps = {
   project: IProject
 }
 
-export async function Card({ project, lang }: PropsWithLocale<CardProps>) {
+export async function Card({ project }: CardProps) {
   const linkPath = `/projects/${project.type.id}/${project.id}`
   const imagePath = `/projects/${project.type.id}/${project.id}`
 
   return (
-    <Link href={linkPath} title={project.title.pt} className="relative flex h-80 w-70 flex-col rounded-sm transition-all hover:scale-105 shadow-md bg-base-100 z-0">
+    <Link href={linkPath} title={project.title} className="relative flex h-80 w-70 flex-col rounded-sm transition-all hover:scale-105 shadow-md bg-base-100 z-0">
 
       <div className="relative h-full overflow-hidden">
         <div className="absolute size-full scale-110 bg-cover bg-center blur-xs" style={{ backgroundImage: `url(${imagePath}/thumb.webp)` }} />
@@ -20,8 +19,8 @@ export async function Card({ project, lang }: PropsWithLocale<CardProps>) {
       </div>
 
       <div className="absolute bottom-0 p-4 text-white">
-        <h2 className="font-medium text-lg font-title pb-2">{project.title[lang]}</h2>
-        <p className="mb-4">{project.description[lang]}</p>
+        <h2 className="font-medium text-lg font-title pb-2">{project.title}</h2>
+        <p className="mb-4">{project.description}</p>
         <span className="text-sm">Read more...</span>
       </div>
     </Link>

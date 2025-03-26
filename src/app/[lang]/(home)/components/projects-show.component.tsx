@@ -5,20 +5,13 @@ import { getDictionary } from '@/lib/i18n/get-dictionary'
 import Link from 'next/link'
 import { getProjectsData } from '@/@data/projects.data'
 
-function getRandomItem<IProject>(array: IProject[]): IProject | undefined {
-  if (array.length === 0) return undefined
-  const randomIndex = Math.floor(Math.random() * array.length)
-  return array[randomIndex]
-}
-
 export async function ProjectsShow({ params: { lang } }: RootLayoutType) {
   const PROJECTS = await getProjectsData(lang)
   const RECENT_PROJECTS = PROJECTS.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
-  const ORIGINAL_PROJECTS = PROJECTS.filter(item => item.type.id = 'original')
 
   const dictionary = await getDictionary(lang)
   const RECENT_PROJECT = RECENT_PROJECTS[0]
-  const POPULAR_PROJECT = getRandomItem(ORIGINAL_PROJECTS) || RECENT_PROJECTS[1]
+  const POPULAR_PROJECT = PROJECTS.find(project => project.id === 'rpg') || RECENT_PROJECTS[1]
 
   return (
     <div className="flex flex-col items-center">

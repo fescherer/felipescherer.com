@@ -1,8 +1,8 @@
-import { Projects } from '@/features'
-import { Locale } from '@/i18n-config'
-import { getMetadata } from '@/utils/functions/getMetada'
-import { AVAILABLE_TYPE_PROJECTS } from '@/utils/projects'
+import { Locale } from '@/lib/i18n/i18n-config'
+import { getMetadata } from '@/@fn/getMetada'
 import { Metadata } from 'next'
+import { Projects } from '@/@components/projects/projects'
+import { getProjectsData } from '@/@data/projects.data'
 
 type ProjectTypePageProps = {
   params: { projectType: string, lang: Locale }
@@ -12,7 +12,8 @@ type ProjectTypePageProps = {
 export async function generateMetadata(
   { params }: ProjectTypePageProps,
 ): Promise<Metadata> {
-  const isValidProjectType = AVAILABLE_TYPE_PROJECTS.some(type => params.projectType === type)
+  const PROJECTS = await getProjectsData(params.lang)
+  const isValidProjectType = PROJECTS.some(type => params.projectType === type.id)
   if (isValidProjectType) {
     return getMetadata({
       defaultDescription: `${params.projectType} projects`,

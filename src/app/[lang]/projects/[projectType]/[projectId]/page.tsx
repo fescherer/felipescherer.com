@@ -1,10 +1,12 @@
-/* eslint-disable jsx-a11y/alt-text */
-/* eslint-disable @next/next/no-img-element */
-import { Project } from '@/features/Project'
-import { getDictionary } from '@/get-dictionary'
-import { Locale } from '@/i18n-config'
-import { getMetadata } from '@/utils/functions/getMetada'
-import { PROJECTS } from '@/utils/projects'
+// This page is supposed to act like a swipper of projects. It must have arrows to go to other projects, projects related and etc
+
+import { Header } from '@/@components/project/header'
+import { ProjectCarrousel } from '@/@components/project/project-carrousel.component'
+import { getProjectsData } from '@/@data/projects.data'
+import { Separator } from '@/lib/primitives'
+import { getMetadata } from '@/@fn/getMetada'
+import { getDictionary } from '@/lib/i18n/get-dictionary'
+import { Locale } from '@/lib/i18n/i18n-config'
 import { Metadata } from 'next'
 
 type ProjectPageProps = {
@@ -14,7 +16,9 @@ type ProjectPageProps = {
 export async function generateMetadata(
   { params }: ProjectPageProps,
 ): Promise<Metadata> {
-  if (!Object.keys(PROJECTS).includes(params.projectType)) return getMetadata({
+  const projects = await getProjectsData(params.lang)
+
+  if (!Object.keys(projects).includes(params.projectType)) return getMetadata({
     defaultDescription: `Project not found`,
     defaultTitle: `Project Not Found`,
     canonicalURL: `/projects/${params.projectType}/${params.projectId}`,
@@ -23,7 +27,7 @@ export async function generateMetadata(
     defaultKeywords: ['projects'],
   })
 
-  const project = PROJECTS[params.projectType as keyof typeof PROJECTS].find(project => (project.id === params.projectId))
+  const project = projects.find(project => (project.id === params.projectId))
 
   if (!project) return getMetadata({
     defaultDescription: `Project not found`,
@@ -35,25 +39,33 @@ export async function generateMetadata(
   })
 
   return getMetadata({
-    defaultDescription: project.description[params.lang] ?? '',
-    defaultTitle: project.title[params.lang] ?? '',
+    defaultDescription: project.description ?? '',
+    defaultTitle: project.title ?? '',
     canonicalURL: `/projects/${params.projectType}/${params.projectId}`,
     imagePath: `/projects/${project.type.id}/${project.id}`,
-    defaultAltImage: project.title[params.lang] ?? '',
+    defaultAltImage: project.title ?? '',
     defaultKeywords: [...project.tags],
   })
 }
 
-export default async function ProjectPage({ params: { projectType, projectId, lang } }: ProjectPageProps) {
+export default async function Project({ params: { projectId, lang } }: ProjectPageProps) {
+  const PROJECTS = await getProjectsData(lang)
   const dictionary = await getDictionary(lang)
 
-  if (!Object.keys(PROJECTS).includes(projectType)) return <span>{dictionary.project.notExist}</span>
-
-  const project = PROJECTS[projectType as keyof typeof PROJECTS].find(project => (project.id === projectId))
+  const project = PROJECTS.find(project => (project.id === projectId))
 
   if (!project) return <span>{dictionary.project.notFound}</span>
 
   return (
-    <Project project={project} translation={{ title: dictionary.projects['title-header'] }} lang={lang} />
+    <div className="m-auto max-w-5xl p-4">
+      <Header project={project} lang={lang} />
+      <Separator />
+
+      <p className="prose py-10 whitespace-pre-wrap">
+        {project.description}
+      </p>
+
+      <ProjectCarrousel project={project} />
+    </div>
   )
 }

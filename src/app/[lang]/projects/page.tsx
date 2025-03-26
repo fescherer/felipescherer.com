@@ -1,5 +1,5 @@
-import { RootLayoutType } from '@/types/Page'
-import { Projects } from '@/features'
+import { Projects } from '@/@components/projects/projects'
+import { RootLayoutType } from '@/@types/Page'
 
 // export async function generateMetadata({ params }: RootLayoutType) {
 //   const dictionary = await getDictionary(params.lang)
@@ -16,9 +16,7 @@ import { Projects } from '@/features'
 
 export default function ProjectsPage({ params }: RootLayoutType) {
   return (
-    <div className="flex">
-      {/* <ProjectLoader lang={params.lang} /> */}
-      <Projects lang={params.lang} />
-    </div>
+    <Projects lang={params.lang} />
   )
 }
+{ /* <ProjectLoader lang={params.lang} /> */ }

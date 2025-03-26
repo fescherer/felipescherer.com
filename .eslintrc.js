@@ -4,7 +4,6 @@ module.exports = {
     'eslint:recommended',
     'plugin:react/recommended',
     'plugin:@stylistic/recommended-extends',
-    'plugin:tailwindcss/recommended',
   ],
   plugins: ['react', '@stylistic'],
   parserOptions: {

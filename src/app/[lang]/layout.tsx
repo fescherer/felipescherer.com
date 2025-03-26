@@ -1,26 +1,24 @@
 import type { Viewport } from 'next'
-import { Lora, Poppins } from 'next/font/google'
+import { Hepta_Slab, Archivo } from 'next/font/google'
 import '../globals.css'
 import React, { PropsWithChildren } from 'react'
-import { ProgressBarProvider } from '@/providers/progress-bar.provider'
+import { ProgressBarProvider } from '@/lib/progress-bar/progress-bar.provider'
 import 'react-multi-carousel/lib/styles.css'
 import { METADATA } from './metadata'
-import { Locale, i18n } from '@/i18n-config'
-import { Header } from '@/components/header/header.component'
+import { Locale, i18n } from '@/lib/i18n/i18n-config'
+import { Header } from '@/@components/header/header.component'
 import { ToastContainer } from 'react-toastify'
-import { Footer } from '@/components/footer/footer.component'
+import { Footer } from '@/@components/footer/footer.component'
 import 'react-toastify/dist/ReactToastify.css'
-import { MainComponent } from '@/components/splash-screen/main.component'
-import { cookies } from 'next/headers'
-import { themes } from '@/themes/server-theme'
+import { MainComponent } from '@/@components/main.component'
 
-const lora = Lora({
+const heptaSlab = Hepta_Slab({
   subsets: ['latin'],
   variable: '--font-title',
   display: 'swap',
 })
 
-const poppins = Poppins({
+const archivo = Archivo({
   subsets: ['latin'],
   weight: ['400', '500', '600'],
   variable: '--font-text',
@@ -46,22 +44,19 @@ export async function generateStaticParams() {
 }
 
 export default function RootLayout({ children, params }: PropsWithChildren<RootLayoutType>) {
-  const cookieTheme = cookies().get('data-theme')
-  const theme = themes.includes(cookieTheme?.value ?? '') ? cookieTheme?.value : ''
-
   return (
-    <html className="scroll-smooth" lang={params.lang} data-theme={theme} style={{ colorScheme: theme }}>
-      <body className={`${lora.variable} ${poppins.variable} h-screen bg-layer-0 font-text text-on-layer-0-l2`}>
+    <html className="scroll-smooth" lang={params.lang}>
+      <body className={`${archivo.variable} ${heptaSlab.variable} font-text h-screen bg-layer-0 text-text bg-base-300`}>
         <ProgressBarProvider>
           <MainComponent>
             <ToastContainer />
+            <Header lang={params.lang} />
 
-            <main className="pt-16">
+            <main className="pt-16 flex m-auto">
               {children}
             </main>
 
             <Footer lang={params.lang} />
-            <Header lang={params.lang} />
 
           </MainComponent>
         </ProgressBarProvider>

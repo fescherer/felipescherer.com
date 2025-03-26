@@ -1,12 +1,9 @@
 import { RootLayoutType } from '@/@types/Page'
-import { Ribbon, Separator } from '@/lib/_felipescherer.com/components/primitives'
-import { PROJECTS } from '@/lib/_felipescherer.com/projects'
-import { ORIGINAL_PROJECTS } from '@/lib/_felipescherer.com/projects/original'
+import { Ribbon, Separator } from '@/lib/primitives'
 import { cn } from '@/lib/clsx-tailwind-merge/cn.function'
 import { getDictionary } from '@/lib/i18n/get-dictionary'
 import Link from 'next/link'
-
-const RECENT_PROJECTS = Object.values(PROJECTS).reduce((acc, arr) => [...acc, ...arr], []).sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
+import { getProjectsData } from '@/@data/projects.data'
 
 function getRandomItem<IProject>(array: IProject[]): IProject | undefined {
   if (array.length === 0) return undefined
@@ -15,6 +12,10 @@ function getRandomItem<IProject>(array: IProject[]): IProject | undefined {
 }
 
 export async function ProjectsShow({ params: { lang } }: RootLayoutType) {
+  const PROJECTS = await getProjectsData(lang)
+  const RECENT_PROJECTS = PROJECTS.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
+  const ORIGINAL_PROJECTS = PROJECTS.filter(item => item.type.id = 'original')
+
   const dictionary = await getDictionary(lang)
   const RECENT_PROJECT = RECENT_PROJECTS[0]
   const POPULAR_PROJECT = getRandomItem(ORIGINAL_PROJECTS) || RECENT_PROJECTS[1]
@@ -33,10 +34,10 @@ export async function ProjectsShow({ params: { lang } }: RootLayoutType) {
                 </div>
 
                 <h3 className="mt-4 font-title text-xl font-semibold text-on-layer-0-l1 transition-all group-hover:text-brand-primary">
-                  {project.title[lang]}
+                  {project.title}
                 </h3>
 
-                <p className="text-sm transition-all group-hover:text-brand-primary">{project.description[lang]}</p>
+                <p className="text-sm transition-all group-hover:text-brand-primary">{project.description}</p>
               </Link>
 
               <Ribbon

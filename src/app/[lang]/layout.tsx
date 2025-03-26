@@ -8,9 +8,9 @@ import { METADATA } from './metadata'
 import { Locale, i18n } from '@/lib/i18n/i18n-config'
 import { Header } from '@/@components/header/header.component'
 import { ToastContainer } from 'react-toastify'
-import { Footer } from '@/lib/_felipescherer.com/components/footer/footer.component'
+import { Footer } from '@/@components/footer/footer.component'
 import 'react-toastify/dist/ReactToastify.css'
-import { MainComponent } from '@/lib/_felipescherer.com/components/splash-screen/main.component'
+import { MainComponent } from '@/@components/main.component'
 
 const heptaSlab = Hepta_Slab({
   subsets: ['latin'],

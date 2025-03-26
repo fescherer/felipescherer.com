@@ -2,7 +2,7 @@ import { IProject } from '@/@types'
 import { LayoutPanelLeft, LucideCode2, PanelTop } from 'lucide-react'
 import Link from 'next/link'
 import { PropsWithLocale } from '@/@types/language'
-import { Ribbon } from '@/lib/_felipescherer.com/components/primitives'
+import { Ribbon } from '@/lib/primitives'
 import { LinkBtn } from './link-btn.component'
 
 type ProjectCardProps = {

@@ -1,8 +1,8 @@
 import Link from 'next/link'
 import { FormComponent } from './components/footer-form.component'
-import { OWNER_CONFIGS } from '@/lib/_felipescherer.com/owner.config'
 import { PropsWithLocale } from '@/@types/language'
 import { getDictionary } from '@/lib/i18n/get-dictionary'
+import { OWNER_CONFIGS } from '@/@data/owener-config'
 
 export async function Footer({ lang }: PropsWithLocale) {
   const initialDate = new Date('2023-08-20')

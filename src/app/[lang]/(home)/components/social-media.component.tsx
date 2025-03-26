@@ -1,7 +1,7 @@
+import { OWNER_CONFIGS } from '@/@data/owener-config'
 import { GithubIcon } from '@/lib/icons/social/github.icon'
 import { LinkedinIcon } from '@/lib/icons/social/linkedin.icon'
 import { YoutubeIcon } from '@/lib/icons/social/youtube.icon'
-import { OWNER_CONFIGS } from '@/lib/_felipescherer.com/owner.config'
 import Link from 'next/link'
 
 export function SocialMediaComponent() {

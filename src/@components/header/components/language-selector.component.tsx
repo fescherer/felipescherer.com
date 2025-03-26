@@ -4,7 +4,7 @@ import { i18nWithName, LocaleWithName } from '@/lib/i18n/i18n-config'
 import { LucideChevronDown, LucideLanguages } from 'lucide-react'
 import { usePathname, useRouter } from 'next/navigation'
 import { cn } from '@/lib/clsx-tailwind-merge/cn.function'
-import { DropdownMenuComponent } from '@/lib/_felipescherer.com/components/primitives'
+import { DropdownMenuComponent } from '@/lib/primitives'
 import { setCookie } from 'cookies-next'
 import { useEffect, useState } from 'react'
 

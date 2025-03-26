@@ -20,7 +20,7 @@ export async function Card({ project }: CardProps) {
 
       <div className="absolute bottom-0 p-4 text-white">
         <h2 className="font-medium text-lg font-title pb-2">{project.title}</h2>
-        <p className="mb-4">{project.description}</p>
+        <p className="vertical-ellipsis mt-2 text-sm text-on-layer-1-l2">{project.description}</p>
         <span className="text-sm">Read more...</span>
       </div>
     </Link>

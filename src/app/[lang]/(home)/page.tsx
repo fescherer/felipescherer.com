@@ -5,16 +5,16 @@ import { Typewriter } from './components/typewritter.component'
 import Link from 'next/link'
 import { YoutubeIcon } from '@/lib/icons/social/youtube.icon'
 import { LinkedinIcon } from '@/lib/icons/social/linkedin.icon'
-import { OWNER_CONFIGS } from '@/lib/_felipescherer.com/owner.config'
 import { GithubIcon } from '@/lib/icons/social/github.icon'
 import { LucideArrowDown } from 'lucide-react'
 import QRCode from 'react-qr-code'
 import { ContentContainer } from './components/content-container.component'
-import { Dialog } from '@/lib/_felipescherer.com/components/primitives'
+import { Dialog } from '@/lib/primitives'
 import { getServicesData } from '@/@data/services.data'
 import { getSoftSkillsData } from '@/@data/soft-skills.data'
 import { getToolkitData } from '@/@data/toolkit.data'
 import { ProjectsShow } from './components/projects-show.component'
+import { OWNER_CONFIGS } from '@/@data/owener-config'
 
 export default async function HomePage({ params: { lang } }: RootLayoutType) {
   const dictionary = await getDictionary(lang)

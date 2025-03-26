@@ -1,6 +1,6 @@
 'use client'
 
-import { AVAILABLE_TYPE_PROJECTS } from '@/@data/projects'
+import { AVAILABLE_TYPE_PROJECTS } from '@/@data/project-type.data'
 import { TProjectType } from '@/@types'
 import * as Select from '@radix-ui/react-select'
 import { ChevronDown, LucideCheck } from 'lucide-react'

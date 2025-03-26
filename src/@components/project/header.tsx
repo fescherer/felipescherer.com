@@ -1,20 +1,17 @@
 'use client'
 
-import { Ribbon } from '@/lib/_felipescherer.com/components/primitives'
+import { Ribbon } from '@/lib/primitives'
 import { PropsWithLocale } from '@/@types/language'
 import { LucideChevronRight } from 'lucide-react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import { IProject } from '@/@data/projects'
+import { IProject } from '@/@data/projects.data'
 
 type HeaderProps = {
   project: IProject
-  translation: {
-    title: string
-  }
 }
 
-export function Header({ project, lang, translation }: PropsWithLocale<HeaderProps>) {
+export function Header({ project, lang }: PropsWithLocale<HeaderProps>) {
   const linkPath = `/projects/${project.type.id}`
   const pathname = usePathname()
 
@@ -30,7 +27,7 @@ export function Header({ project, lang, translation }: PropsWithLocale<HeaderPro
   return (
     <header>
       <div className="my-4 flex items-center gap-2 text-xs capitalize">
-        <Link className="design-link text-on-layer-0-l2" href="/projects">{translation.title}</Link>
+        <Link className="design-link text-on-layer-0-l2" href="/projects">{project.title}</Link>
         <LucideChevronRight size={16} />
         <Link className={`design-link ${project.type.title !== lastRoute ? 'text-on-layer-0-l2' : ''}`} href={linkPath}>{project.type.title}</Link>
         <LucideChevronRight size={16} />
@@ -54,7 +51,7 @@ export function Header({ project, lang, translation }: PropsWithLocale<HeaderPro
       </div>
 
       <div className="flex flex-col items-center justify-between md:flex-row">
-        <h2 className="font-title text-4xl uppercase text-on-layer-0-l1">{project.title[lang]}</h2>
+        <h2 className="font-title text-4xl uppercase text-on-layer-0-l1">{project.title}</h2>
         {/* <div className="flex gap-2 self-end">
           {
             project.site && (
@@ -84,7 +81,6 @@ export function Header({ project, lang, translation }: PropsWithLocale<HeaderPro
       </div>
 
       <time dateTime={articleDateFormated} className="capitalize">{articleDateFormated}</time>
-      <p className="mt-4 text-sm">{project.description[lang]}</p>
     </header>
   )
 }

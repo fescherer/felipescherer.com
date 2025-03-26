@@ -1,5 +1,4 @@
 @import 'tailwindcss';
-@import '../lib/tailwindcss/index.css';
 
 /* ========== Light Theme ========== */
 /* [data-theme="light"] {
@@ -161,4 +160,64 @@
     color: var(--color-base-content);
     @apply hover:text-primary border-b border-transparent transition-all cursor-pointer hover:border-primary
   }
+
+  .vertical-ellipsis {
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+
+    .prose {
+      h2 {
+        color: var(--color-primary);
+        @apply text-2xl font-title m-2;
+      };
+      p {
+        text-align: justify;
+        @apply m-4;
+      };
+      a {
+        color: var(--color-accent);
+        @apply transition-all;
+        &:hover {
+          color: var(--color-accent);
+          text-decoration-line: underline;
+        };
+      };
+      ul {
+        list-style-type: disc;
+        @apply m-4;
+        li::marker {
+          color: var(--color-primary);
+        };
+      };
+      ol {
+        list-style-type: decimal;
+        @apply m-4;
+        &::marker {
+          color: var(--color-primary);
+        };
+      };
+      cite {
+        font-style: italic;
+      };
+      i {
+        font-style: italic;
+      };
+      em {
+        font-style: italic;
+      };
+      strong {
+        @apply font-bold;
+      };
+      img {
+        margin: auto;
+        max-height: 600px;
+        @apply p-4;
+      }
+    }
+
 }

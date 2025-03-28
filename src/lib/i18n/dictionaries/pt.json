@@ -275,6 +275,30 @@
       "morse-secret-scripter": {
         "title": "Codificador/Decodificador Morse",
         "description": "Tradutor simples de código Morse. Converte texto latino em Morse (pontos/traços) e decodifica de volta para texto, incluindo dicionário de referência."
+      },
+      "fennec-tales-blog": {
+        "title": "Fennec Tales Blog",
+        "description": "Fennec Tales Blog é onde compartilho insights sobre programação, padrões e boas práticas que aprendi como desenvolvedor. De dicas de depuração a estratégias de design, o foco é aprimorar habilidades. Além da tecnologia, exploro metas de vida e projetos pessoais, refletindo sobre desafios e crescimento. Um espaço de aprendizado, paixão e progresso! 🚀"
+      },
+      "readme-generator": {
+        "title": "Gerador de Readme",
+        "description": "Gerador de README para GitHub ajuda a manter todos os meus projetos organizados com arquivos README bem formatados. Com diversas opções de configuração, ele se adapta a qualquer tipo de projeto, garantindo clareza e profissionalismo. Chega de READMEs bagunçados—apenas documentação limpa e estruturada"
+      },
+      "game-off-2023": {
+        "title": "Game Off 2023",
+        "description": "Jogo de Tower Defense criado para o Game Off 2023, organizado pelo GitHub. Desenvolvido com a Godot, este projeto marca minha primeira experiência com uma grande engine. Combina jogabilidade estratégica com mecânicas envolventes, representando minha jornada no desenvolvimento de jogos. Uma experiência desafiadora e gratificante!"
+      },
+      "services": {
+        "title": "Landing Page de Serviços",
+        "description": "Página de Destino de Serviços Simples criada para praticar design de layout e medir o tempo necessário para criar uma página limpa e funcional. Focada em responsividade, simplicidade e eficiência, este projeto ajudou a aprimorar minhas habilidades em front-end, explorando princípios eficazes de UI/UX"
+      },
+      "game-off-2024": {
+        "title": "Game Off 2024",
+        "description": "A Game Off 2024 edição teve o tema SECRETS, desafiando os participantes a criar um jogo baseado nesse conceito. Criei um jogo de clicker onde os jogadores devem descobrir a receita correta da poção para atender aos pedidos de cada cliente."
+      },
+      "restaurant-menu": {
+        "title": "Cardápio de Restaurante",
+        "description": "Este projeto envolve o design de um cardápio simples e fácil de usar para um restaurante local. Ele organiza os itens de forma clara, destacando informações importantes como preços. O objetivo é aprimorar a experiência gastronômica, oferecendo um menu intuitivo e de fácil leitura."
       }
     },
     "notFound": "Projeto não foi encontrado!",

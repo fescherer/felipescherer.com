@@ -278,6 +278,30 @@
       "morse-secret-scripter": {
         "title": "Morse Secret Encoder/Decoder",
         "description": "A simple Morse code translator tool. Encodes Latin text to Morse (dots/dashes) and decodes Morse back to text, with a built-in Morse dictionary reference."
+      },
+      "fennec-tales-blog": {
+        "title": "Fennec Tales Blog",
+        "description": "Fennec Tales Blog is where I share coding insights, patterns, and best practices I've learned as a developer. From debugging tips to design strategies, it's all about improving skills. Beyond tech, I explore life goals and personal projects, reflecting on growth and challenges. A space for learning, passion, and progress! 🚀"
+      },
+      "readme-generator": {
+        "title": "Readme Generator",
+        "description": "GitHub README Generator helps keep all my projects well-organized with consistent, well-formatted README files. With extensive configuration options, it adapts to any project type, ensuring clarity and professionalism. No more messy READMEs—just clean, structured documentation every time!"
+      },
+      "game-off-2023": {
+        "title": "Game Off 2023",
+        "description": "Tower Defense Game created for Game Off 2023, hosted by GitHub. Built with the Godot engine, this project marks my first dive into a major game engine. It blends strategic gameplay with engaging mechanics, showcasing my journey into game development. A challenging and rewarding experience!"
+      },
+      "services": {
+        "title": "Services Landing Page",
+        "description": "Simple Services Landing Page built to practice layout design and measure how quickly I could create a clean, functional page. Focused on responsiveness, simplicity, and efficiency, this project helped refine my front-end skills while exploring effective UI/UX principles"
+      },
+      "game-off-2024": {
+        "title": "Game Off 2024",
+        "description": "The 2024 edition of Game Off featured the theme SECRETS, challenging participants to create a game incorporating this concept. I developed a clicker game where players must uncover the correct potion recipe to fulfill each client's request."
+      },
+      "restaurant-menu": {
+        "title": "Restaurant Menu",
+        "description": "This project involves designing a simple, user-friendly local restaurant menu. It organizes items clearly, highlighting key information like prices. The goal is to enhance the eating experience by providing an intuitive and easy-to-read menu."
       }
     },
     "notFound": "No project with this name",

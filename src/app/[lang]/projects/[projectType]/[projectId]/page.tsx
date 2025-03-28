@@ -9,6 +9,7 @@ import { ProjectPage } from '@/@components/project/project-page'
 import Link from 'next/link'
 import Image from 'next/image'
 import { cn } from '@/lib/clsx-tailwind-merge/cn.function'
+import { ArrowLeft } from 'lucide-react'
 
 type ProjectPageProps = {
   params: { projectId: string, projectType: string, lang: Locale }
@@ -62,18 +63,22 @@ export default async function Project({ params: { projectId, lang } }: ProjectPa
   const prevNext = getPrevNext(PROJECTS, project)
 
   return (
-    <div className="m-auto p-4 mt-24">
-      <Link href="/projects">Voltar aos projectos</Link>
+    <div className="m-auto p-4 mt-12">
+      <Link href="/projects" className="p-1 primary-link-effect">
+        <ArrowLeft className="float-left" />
+        {' '}
+        {dictionary.project['back-to-project']}
+      </Link>
 
-      <div className="relative">
+      <div className="relative mt-6">
         {
           prevNext.map((item, index) => (
             <Link
               key={`prevItem-${item.id}`}
               href={`/projects/${item.type.id}/${item.id}`}
-              className={cn('opacity-50 absolute top-1/2 -translate-y-1/2 h-4/5 flex rounded-sm shadow-lg p-2 bg-base-100 border border-primary/30  hover:opacity-100 hover:scale-110 transition-all cursor-pointer', { '-right-10': index, '-left-10': !index })}
+              className={cn('opacity-50 absolute top-1/2 -translate-y-1/2 h-4/5 flex rounded-sm shadow-lg p-2 bg-base-100 border border-primary/30  hover:opacity-100 hover:scale-110 transition-all cursor-pointer group', { '-right-10': index, '-left-10': !index })}
             >
-              <Image src={`${`/projects/${item.type.id}/${item.id}`}/thumb.webp`} width={600} height={400} alt="" />
+              <Image className="blur-xs group-hover:blur-none" src={`${`/projects/${item.type.id}/${item.id}`}/thumb.webp`} width={600} height={400} alt="" />
             </Link>
           ))
         }

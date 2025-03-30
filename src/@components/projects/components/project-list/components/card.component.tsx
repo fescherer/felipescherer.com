@@ -18,7 +18,7 @@ export async function Card({ project }: CardProps) {
         <div className="w-full h-full absolute top-0 left-0 bg-black/50" />
       </div>
 
-      <div className="absolute bottom-0 p-4 text-white">
+      <div className="absolute bottom-0 p-4 text-white backdrop-blur-lg">
         <h2 className="font-medium text-lg font-title pb-2">{project.title}</h2>
         <p className="vertical-ellipsis mt-2 text-sm text-on-layer-1-l2">{project.description}</p>
         <span className="text-sm">Read more...</span>

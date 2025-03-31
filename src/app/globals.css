@@ -52,6 +52,8 @@
   }
 }
 
+
+
 @layer base {
   strong {
     color: var(--color-accent);
@@ -60,6 +62,15 @@
 }
 
 @layer components {
+
+
+  .text:hover {
+    cursor:pointer;
+    background-color:color-mix(in oklab,var(--color-base-content)10%,transparent);
+    --tw-outline-style:none;
+    outline-style:none;
+    box-shadow:inset 0 1px #00000003,inset 0 -1px #ffffff03
+  }
   .btn-primary {
     background-color: var(--color-primary);
     color: var(--color-primary-content);

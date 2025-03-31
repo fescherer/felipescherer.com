@@ -4,10 +4,12 @@ import { CCHeaderLogo } from './components/header-logo.cc'
 import { LanguageSelectorComponent } from './components/language-selector.component'
 import { cookies } from 'next/headers'
 import { getDictionary } from '@/lib/i18n/get-dictionary'
+import { getAvailableLanguages } from '@/@data/available-languages.data'
 
 export async function Header({ lang }: PropsWithLocale) {
   const cookieLang = cookies().get('data-lang')
   const dictionary = await getDictionary(lang)
+  const languages = await getAvailableLanguages(lang)
 
   return (
     <div className="fixed right-0 top-0 flex w-full maskFade backdrop-blur-sm z-10 bg-base-100/70">
@@ -17,7 +19,7 @@ export async function Header({ lang }: PropsWithLocale) {
 
         <div className="flex gap-2">
           <CCHeaderMenu dictionary={dictionary} lang={lang} isMobile={false} />
-          <LanguageSelectorComponent cookieLang={cookieLang?.value ?? ''} />
+          <LanguageSelectorComponent cookieLang={cookieLang?.value ?? ''} languages={languages} />
         </div>
       </header>
     </div>

@@ -49,7 +49,7 @@ export function LanguageSelectorComponent({ cookieLang }: LanguageSelectorProps)
     >
       {i18nWithName.locales.map((locale) => {
         return (
-          <button type="button" key={locale.id} className={cn('py-1 px-4 primary-link-effect ', currentLanguage === locale.id ? 'border-primary border-b text-primary' : '')} onClick={() => redirectedPathName(locale)}>{locale.name}</button>
+          <button type="button" key={locale.id} className={cn('py-1 px-4 primary hover:bg-primary rounded hover:text-primary-content transition-all cursor-pointer', currentLanguage === locale.id ? 'bg-primary/90 rounded text-primary-content' : '')} onClick={() => redirectedPathName(locale)}>{locale.name}</button>
         )
       })}
     </DropdownMenuComponent>

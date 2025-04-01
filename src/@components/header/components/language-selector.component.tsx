@@ -51,7 +51,7 @@ export function LanguageSelectorComponent({ cookieLang, languages }: LanguageSel
     >
       {
         ['en', 'pt'].map(item => (
-          <button key={item} type="button" className={cn('py-1 px-4 primary hover:bg-primary rounded hover:text-primary-content transition-all cursor-pointer', currentLanguage === item ? 'bg-primary/90 rounded text-primary-content' : '')} onClick={() => redirectedPathName(item as Locale)} title={languages.tooltip}>{languages[item as Locale]}</button>
+          <button key={item} type="button" className={cn('py-1 px-4 primary rounded transition-all cursor-pointer hover', currentLanguage === item ? 'bg-primary text-primary-content' : '')} onClick={() => redirectedPathName(item as Locale)} title={languages.tooltip}>{languages[item as Locale]}</button>
         ))
       }
     </DropdownMenuComponent>

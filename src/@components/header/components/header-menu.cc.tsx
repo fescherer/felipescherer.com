@@ -18,11 +18,8 @@ type TCCHeaderMenu = {
 export function CCHeaderMenu({ dictionary, isMobile }: PropsWithLocale<TCCHeaderMenu>) {
   const path = usePathname()
   const currentPath = '/' + (path.split('/')?.[2] || '')
-  const linkBtnClass: ClassValue = 'py-2 px-4 rounded text'
-  // rounded-sm hover:text-brand-on-secondary text-sm hover:bg-brand-hover-secondary transition-all
+  const linkBtnClass: ClassValue = 'py-2 px-4 rounded hover'
   const returnClassByCurrentPath = (value: string) => value == currentPath ? 'bg-primary text-primary-content' : ''
-
-  // hover:bg-primary hover:text-primary-content transition-all
 
   const headerItems = [
     { name: dictionary.header.menu.home,

@@ -157,7 +157,7 @@ export default async function HomePage({ params: { lang } }: RootLayoutType) {
                   classContent="max-w-[450px]"
                   key={tool.title}
                   trigger={(
-                    <button type="button" className="w-24 h-36 card-primary rounded flex flex-col items-center">
+                    <button type="button" className="w-24 h-36 card-primary rounded flex flex-col items-center border-none">
                       <div className="bg-white w-full flex justify-center p-4">
                         {tool.icon}
                       </div>

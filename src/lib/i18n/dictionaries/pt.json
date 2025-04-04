@@ -356,9 +356,9 @@
   },
   "header": {
     "menu": {
-      "home": "Home",
+      "home": "Início",
       "about": "Sobre",
-      "projects": "Projects"
+      "projects": "Projetos"
     },
     "logo-alt": "Felipe Scherer Developer Logo"
   },
@@ -459,5 +459,10 @@
     "material-ui": {
       "text": "Uma biblioteca de componente React (Mas existe em outras linguagens também) que oferece muitos componentes pronto-para-usar."
     }
+  },
+  "languages": {
+    "toltip": "Selecione seu idioma",
+    "pt": "Português",
+    "en": "Inglês"
   }
 }

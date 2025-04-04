@@ -1,5 +1,7 @@
 import { Metadata } from 'next'
 
+// TODO Fix metadata//
+
 const SITE_NAME = 'Portfolio'
 
 export const METADATA: Metadata = {

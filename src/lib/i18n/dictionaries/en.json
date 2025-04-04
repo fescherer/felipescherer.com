@@ -361,7 +361,7 @@
   "header": {
     "menu": {
       "home": "Home",
-      "about": "Sobre",
+      "about": "About",
       "projects": "Projects"
     },
     "logo-alt": "Felipe Scherer Developer Logo"
@@ -463,5 +463,10 @@
     "material-ui": {
       "text": "A component library for React (But has for other languages too) which offers a lot of ready-to-use components"
     }
+  },
+  "languages": {
+    "toltip": "Select your language",
+    "pt": "Portuguese",
+    "en": "English"
   }
 }

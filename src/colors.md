@@ -5,5 +5,3 @@ var
 
 - hovered (transparency of primary or primary)
 - text inside hovered
-
--

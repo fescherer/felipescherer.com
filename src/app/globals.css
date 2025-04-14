@@ -73,19 +73,20 @@
   .btn-primary {
     background-color: var(--color-primary);
     color: var(--color-primary-content);
-    @apply p-4 rounded-lg self-center transition-all my-6 shadow-md;
+    cursor: pointer;
+    @apply p-4 rounded-lg self-center transition-all my-6 shadow-md not-disabled:hover:scale-105 disabled:cursor-not-allowed;
   }
   .btn-accent {
     background-color: var(--color-accent);
     color: var(--color-accent-content);
-    @apply p-4 rounded-lg self-center transition-all my-6 shadow-md;
+    @apply p-4 rounded-lg self-center transition-all my-6 shadow-md hover:scale-105;
   }
 
   .btn {
     background-color: var(--color-base-200);
     border: 1px solid var(--color-base-300);
     color: var(--color-base-content);
-    @apply p-4 rounded-lg self-center transition-all my-6 shadow-md;
+    @apply p-4 rounded-lg self-center transition-all my-6 shadow-md hover:scale-105;
   }
 
   .card-primary {

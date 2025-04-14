@@ -23,6 +23,7 @@ export function FormComponent({ t }: PropsFormComponent) {
 
   function onSubmit(data: FormValues) {
     if (data.email && data.message && data.name) {
+      // Here I need to have this state because I want to know when the API for email ends, and not only the formstate isSubmitting of the React Forms
       setIsSubmitting(true)
       axios.post('https://api.web3forms.com/submit', { ...data, access_key: 'aa04600c-d258-4c8e-9987-3384d0f470ee' })
         .then(() => {
@@ -37,13 +38,13 @@ export function FormComponent({ t }: PropsFormComponent) {
   }
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)} data-theme="light" className="flex w-80 flex-col gap-2 rounded-sm border border-layer-1 bg-layer-1 p-4 shadow-lg">
-      <label htmlFor="input-group-1" className="block text-sm font-medium text-on-layer-1-l1 opacity-90 ">
+    <form onSubmit={handleSubmit(onSubmit)} data-theme="light" className="flex w-80 flex-col gap-2 rounded-sm p-4 shadow-md border border-primary/10">
+      <label htmlFor="input-group-1" className="block text-sm font-medium text-base-content opacity-90 ">
         {t.field.name.label}
       </label>
 
       <div className="relative mb-3">
-        <div className="pointer-events-none absolute inset-y-0 start-0 flex items-center ps-3.5 text-on-layer-1-l1">
+        <div className="pointer-events-none absolute inset-y-0 start-0 flex items-center ps-3.5 text-base-content">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 16 16"
@@ -56,30 +57,30 @@ export function FormComponent({ t }: PropsFormComponent) {
           </svg>
         </div>
 
-        <input {...register('name')} type="text" id="input-group-1" className="block w-full rounded-lg border border-brand-secondary bg-layer-1  p-2.5 ps-10 text-sm text-on-layer-1-l1 focus:border-brand-primary focus:ring-brand-primary" placeholder={t.field.name.placeholder} />
+        <input {...register('name')} type="text" id="input-group-1" className="block w-full rounded-lg border border-brand-secondary bg-base-300  p-2.5 ps-10 text-sm text-base-content focus:border-brand-primary focus:ring-brand-primary" placeholder={t.field.name.placeholder} />
       </div>
 
-      <label htmlFor="input-group-1" className="block text-sm font-medium text-on-layer-1-l1 opacity-90">
+      <label htmlFor="input-group-1" className="block text-sm font-medium text-base-content opacity-90">
         {t.field.email.label}
       </label>
 
       <div className="relative mb-3">
-        <div className="pointer-events-none absolute inset-y-0 start-0 flex items-center ps-3.5 text-on-layer-1-l1 opacity-75">
+        <div className="pointer-events-none absolute inset-y-0 start-0 flex items-center ps-3.5 text-base-content opacity-75">
           <svg className="size-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 16">
             <path d="m10.036 8.278 9.258-7.79A1.979 1.979 0 0 0 18 0H2A1.987 1.987 0 0 0 .641.541l9.395 7.737Z" />
             <path d="M11.241 9.817c-.36.275-.801.425-1.255.427-.428 0-.845-.138-1.187-.395L0 2.6V14a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V2.5l-8.759 7.317Z" />
           </svg>
         </div>
 
-        <input type="email" {...register('email')} id="input-group-1" className="block w-full rounded-lg border border-brand-secondary bg-layer-1  p-2.5 ps-10 text-sm text-on-layer-1-l2 focus:border-brand-primary focus:ring-brand-primary" placeholder={t.field.email.placeholder} />
+        <input type="email" {...register('email')} id="input-group-1" className="block w-full rounded-lg border border-brand-secondary bg-base-300  p-2.5 ps-10 text-sm text-base-content-l2 focus:border-brand-primary focus:ring-brand-primary" placeholder={t.field.email.placeholder} />
       </div>
 
-      <label htmlFor="message" className="block text-sm font-medium text-on-layer-1-l1 opacity-90">
+      <label htmlFor="message" className="block text-sm font-medium text-base-content opacity-90">
         {t.field.message.label}
       </label>
 
-      <textarea {...register('message')} id="message" className="mb-6 block w-full rounded-lg border border-brand-secondary bg-layer-1 p-2.5 text-sm  text-on-layer-1-l2 focus:border-brand-primary focus:ring-brand-primary" placeholder={t.field.message.placeholder} />
-      <button className="btn btn-primary disabled:cursor-wait disabled:bg-brand-secondary" type="submit" disabled={isSubmitting}>{isSubmitting ? t.submit.loading : t.submit.load}</button>
+      <textarea {...register('message')} id="message" className="mb-6 block w-full rounded-lg border border-brand-secondary bg-base-300 p-2.5 text-sm  text-base-content-l2 focus:border-brand-primary focus:ring-brand-primary" placeholder={t.field.message.placeholder} />
+      <button className="btn-primary" type="submit" disabled={isSubmitting}>{isSubmitting ? t.submit.loading : t.submit.load}</button>
     </form>
   )
 }

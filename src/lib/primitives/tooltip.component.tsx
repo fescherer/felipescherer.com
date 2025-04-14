@@ -17,11 +17,11 @@ export function Tooltip({ children, tooltip }: PropsWithChildren<TooltipProps>) 
 
         <PrimitiveTooltip.Portal>
           <PrimitiveTooltip.Content
-            className="select-none rounded-md bg-layer-1 px-4 py-2 text-sm leading-none text-on-layer-0-l2 will-change-[transform,opacity] data-[state=delayed-open]:data-[side=bottom]:animate-slideUpAndFade data-[state=delayed-open]:data-[side=left]:animate-slideRightAndFade data-[state=delayed-open]:data-[side=right]:animate-slideLeftAndFade data-[state=delayed-open]:data-[side=top]:animate-slideDownAndFade"
+            className="select-none rounded-md bg-primary px-4 py-2 text-sm leading-none text-primary-content will-change-[transform,opacity] data-[state=delayed-open]:data-[side=bottom]:animate-slideUpAndFade data-[state=delayed-open]:data-[side=left]:animate-slideRightAndFade data-[state=delayed-open]:data-[side=right]:animate-slideLeftAndFade data-[state=delayed-open]:data-[side=top]:animate-slideDownAndFade shadow-md"
             sideOffset={5}
           >
             {tooltip}
-            <PrimitiveTooltip.Arrow className="fill-layer-1" />
+            <PrimitiveTooltip.Arrow className="fill-primary" />
           </PrimitiveTooltip.Content>
         </PrimitiveTooltip.Portal>
       </PrimitiveTooltip.Root>

@@ -9,7 +9,7 @@ import { GithubIcon } from '@/lib/icons/social/github.icon'
 import { LucideArrowDown } from 'lucide-react'
 import QRCode from 'react-qr-code'
 import { ContentContainer } from './components/content-container.component'
-import { Dialog } from '@/lib/primitives'
+import { Dialog, Tooltip } from '@/lib/primitives'
 import { getServicesData } from '@/@data/services.data'
 import { getSoftSkillsData } from '@/@data/soft-skills.data'
 import { getToolkitData } from '@/@data/toolkit.data'
@@ -32,17 +32,23 @@ export default async function HomePage({ params: { lang } }: RootLayoutType) {
         <Typewriter items={dictionary.homepage.meet.typewriter} />
 
         <div className="flex flex-wrap justify-center gap-3 pt-6 text-[#fff] md:justify-start">
-          <Link href="https://youtube.com/@fennectales" target="_blank" className="rounded-full bg-primary p-2 transition-all hover:brightness-75">
-            <YoutubeIcon className="size-6" />
-          </Link>
+          <Tooltip tooltip="Youtube">
+            <Link href="https://youtube.com/@fennectales" target="_blank" className="rounded-full bg-primary p-2 transition-all hover:brightness-75">
+              <YoutubeIcon className="size-6" />
+            </Link>
+          </Tooltip>
 
-          <Link href={OWNER_CONFIGS.linkedin_link} target="_blank" className="rounded-full bg-primary p-2 transition-all hover:brightness-75">
-            <LinkedinIcon className="size-6" />
-          </Link>
+          <Tooltip tooltip="Linkedin">
+            <Link href={OWNER_CONFIGS.linkedin_link} target="_blank" className="rounded-full bg-primary p-2 transition-all hover:brightness-75">
+              <LinkedinIcon className="size-6" />
+            </Link>
+          </Tooltip>
 
-          <Link href={OWNER_CONFIGS.github_link} target="_blank" className="rounded-full bg-primary p-2 transition-all hover:brightness-75">
-            <GithubIcon className="size-6" />
-          </Link>
+          <Tooltip tooltip="Github">
+            <Link href={OWNER_CONFIGS.github_link} target="_blank" className="rounded-full bg-primary p-2 transition-all hover:brightness-75">
+              <GithubIcon className="size-6" />
+            </Link>
+          </Tooltip>
         </div>
       </div>
 

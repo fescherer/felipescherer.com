@@ -57,30 +57,30 @@ export default async function HomePage({ params: { lang } }: RootLayoutType) {
       </Link>
 
       <div className="space-y-10">
-        <ContentContainer title="Sobre">
+        <ContentContainer title={dictionary.homepage.aboutme.title}>
           <div className="flex gap-4">
             <Image src="/perfil.jpg" width={2128} height={2128} alt="Felipe Scherer Photo" className="size-80" />
 
             <div className="space-y-4">
               <p>
-                Meu nome é Felipe Scherer, criador da Fennec Tales Studio e um desenvolvedor de software com mais de 5 anos de experiência  entregando soluções inovadoras entre diversas plataformas. Minha  experiência vai da web até aplicações mobile, com forte enfâse na  experiência do usuário e performance.
+                {dictionary.homepage.aboutme.p1}
               </p>
 
-              <p>Atualmente, estou  expandindo minhas habilidades no desenvolvimento de jogos. Empenhado com aprendizado continuo, estou sempre me atualizando com tendências da  indústria para garantir a maior qualidade nos resultados</p>
+              <p>{dictionary.homepage.aboutme.p2}</p>
             </div>
           </div>
         </ContentContainer>
 
-        <ContentContainer title="Currículo">
+        <ContentContainer title={dictionary.homepage.resume.title}>
           <div className="flex gap-4">
 
             <div className="space-y-4 flex flex-col">
               <p>
-                Com mais de 5 anos de experiência de desenvolvimento de software, carrego um diploma de bacharelado em  Ciência da Computação e multiplus certificados de cursos tech. Atualmente, estou cursando uma pós graduação com especialização em algoritmos.
+                {dictionary.homepage.resume.p1}
               </p>
 
-              <p className="font-medium">Idiomas: Inglês e Português</p>
-              <Link href="/resume" className="btn-primary">Ver currículo completo</Link>
+              <p className="font-medium">{dictionary.homepage.resume.p2}</p>
+              <Link href="/resume" className="btn-primary">{dictionary.homepage.resume.link}</Link>
             </div>
 
             <div className="rounded-sm bg-[#fff] p-4">
@@ -89,7 +89,7 @@ export default async function HomePage({ params: { lang } }: RootLayoutType) {
           </div>
         </ContentContainer>
 
-        <ContentContainer title="Serviços">
+        <ContentContainer title={dictionary.services.title}>
           <div className="grid grid-cols-4 gap-4">
             {/* TODO: Make dialog here for description */}
             {
@@ -132,7 +132,7 @@ export default async function HomePage({ params: { lang } }: RootLayoutType) {
           </div>
         </ContentContainer>
 
-        <ContentContainer title="Softskills">
+        <ContentContainer title={dictionary['soft-skills'].title}>
           <div className="flex flex-wrap justify-center gap-8 text-sm">
             {
               SOFT_SKILLS_DATA.map(soft => (
@@ -155,7 +155,7 @@ export default async function HomePage({ params: { lang } }: RootLayoutType) {
           </div>
         </ContentContainer>
 
-        <ContentContainer title="Toolbox">
+        <ContentContainer title={dictionary.toolkit.title}>
           <div className="flex flex-wrap justify-center gap-8">
             {
               TOOLKIT_DATA.map(tool => (
@@ -189,7 +189,7 @@ export default async function HomePage({ params: { lang } }: RootLayoutType) {
           </div>
         </ContentContainer>
 
-        <ContentContainer title="Projetos">
+        <ContentContainer title={dictionary.projects.title}>
           <ProjectsShow params={{ lang: lang }} />
         </ContentContainer>
       </div>

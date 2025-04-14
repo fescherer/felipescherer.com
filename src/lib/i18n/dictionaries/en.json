@@ -20,19 +20,14 @@
     },
     "aboutme": {
       "title": "About me",
-      "hello": "Hello! My name is Felipe Scherer",
-      "yearsOld": "years old",
-      "description": "and a developer 🤓. Currently working with web development (ReactJS - NextJS - NodeJS) and game development (Unreal Engine). Sometimes creating content for internet 😊. You can find mostly of my projects on my",
-      "githubPage": "Github's page",
-      "findMore": "Find more about me",
-      "here": "here",
-      "resume": {
-        "title": "Resume",
-        "p1": "If you looking for my resume",
-        "p2": "go the this page",
-        "p3": ", but if you want to download just choose the prefered language and click download",
-        "btn": "Download"
-      }
+      "p1": "My name is Felipe Scherer, creator of Fennec Tales Studio and a software developer with over 5 years of experience delivering innovative solutions across various platforms. My expertise ranges from web to mobile development, with a strong emphasis on user experience and performance.",
+      "p2": "Currently, I'm expanding my skills in game development. Committed to continuous learning, I stay up to date with industry trends to ensure the highest quality results."
+    },
+    "resume": {
+      "title": "Resume",
+      "p1": "With over 5 years of experience in software development, I hold a degree in Computer Science and several certifications from tech courses. Currently, I am pursuing a postgraduate specialization in algorithms.",
+      "p2": "Languages: English and Portuguese",
+      "link": "See the full resume"
     },
     "blog": {
       "title": "Blog",
@@ -138,7 +133,7 @@
         "projects"
       ]
     },
-    "title-header": "Projects",
+    "title": "Projects",
     "placeholder": {
       "search": "Search",
       "type": "Select a type filter..."
@@ -368,6 +363,7 @@
   },
 
   "services": {
+    "title": "Services",
     "web": {
       "title": "Web development",
       "text": "I build custom websites like restaurant menus, online stores, and more using WordPress or React & Next.js. Fast, responsive and tailored to your needs."
@@ -387,6 +383,7 @@
   },
 
   "soft-skills": {
+    "title": "Softskills",
     "organized": {
       "title": "Organized",
       "text": "Being organized allows me to manage multiple projects efficiently, prioritize tasks and meet deadlines. It helps me maintain careful and ensure quality in every detail of my work."
@@ -430,6 +427,7 @@
   },
 
   "toolkit": {
+    "title": "Toolkit",
     "nextJS": {
       "text": "React's framework for web. Create high-quality web applications."
     },

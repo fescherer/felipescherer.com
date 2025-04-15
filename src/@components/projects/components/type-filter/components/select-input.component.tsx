@@ -1,6 +1,6 @@
 'use client'
 
-import { AVAILABLE_TYPE_PROJECTS } from '@/@data/project-type.data'
+import { AVAILABLE_TYPE_PROJECTS_CONTENT } from '@/@data/project-type.data'
 import { TProjectType } from '@/@types'
 import * as Select from '@radix-ui/react-select'
 import { ChevronDown, LucideCheck } from 'lucide-react'
@@ -39,10 +39,10 @@ export function SelectInput({ projectType, placeholder }: SelectInputProps) {
           </Select.Item>
 
           {
-          AVAILABLE_TYPE_PROJECTS.map(type => (
-            <Select.Viewport key={type}>
-              <Select.Item className="flex select-none items-center justify-between rounded-xs p-2 text-sm text-base-content transition-colors data-highlighted:bg-primary data-[state='checked']:bg-primary data-highlighted:text-primary-content data-[state='checked']:text-primary-content data-highlighted:outline-hidden" value={type}>
-                <Select.ItemText>{type}</Select.ItemText>
+          AVAILABLE_TYPE_PROJECTS_CONTENT.map(type => (
+            <Select.Viewport key={type.id}>
+              <Select.Item className="flex select-none items-center justify-between rounded-xs p-2 text-sm text-base-content transition-colors data-highlighted:bg-primary data-[state='checked']:bg-primary data-highlighted:text-primary-content data-[state='checked']:text-primary-content data-highlighted:outline-hidden" value={type.id}>
+                <Select.ItemText>{type.title}</Select.ItemText>
 
                 <Select.ItemIndicator>
                   <LucideCheck size={14} />

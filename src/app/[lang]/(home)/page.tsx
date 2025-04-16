@@ -59,7 +59,7 @@ export default async function HomePage({ params: { lang } }: RootLayoutType) {
       <div className="space-y-10">
         <ContentContainer title={dictionary.homepage.aboutme.title}>
           <div className="flex gap-4">
-            <Image src="/perfil.jpg" width={2128} height={2128} alt="Felipe Scherer Photo" className="size-80" />
+            <Image src="/felipe-scherer.webp" width={1722} height={2330} alt="Felipe Scherer Photo" className="size-96" />
 
             <div className="space-y-4">
               <p>

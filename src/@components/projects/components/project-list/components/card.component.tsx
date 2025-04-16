@@ -25,7 +25,6 @@ export async function Card({ project }: CardProps) {
         <p className="vertical-ellipsis mt-2 text-sm text-on-layer-1-l2">{project.description}</p>
         <span className="text-sm">Read more...</span>
       </div>
-
     </Link>
   )
 }

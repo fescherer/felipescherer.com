@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { LucideChevronLeft, LucideChevronRight } from 'lucide-react'
 import { PropsWithLocale } from '@/@types/language'
 import { useSearchContext } from '../../context/search.context'
@@ -28,6 +28,10 @@ function getProjectsSortedByDate(ProjectA: IProject, ProjectB: IProject) {
 export function ProjectList({ projects }: PropsWithLocale<ProjectListProps>) {
   const { search } = useSearchContext()
   const [currentPage, setCurrentPage] = useState(0)
+
+  useEffect(() => {
+    setCurrentPage(0)
+  }, [search])
 
   const safeFilter = search.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')
   const rg = new RegExp(`^(?=.*\\b${safeFilter}).*$`, 'gmi')

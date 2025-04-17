@@ -65,6 +65,7 @@ export const PROJECT_TYPE: TProjectTypeObj = {
 }
 
 export const AVAILABLE_TYPE_PROJECTS: TProjectType[] = Object.keys(PROJECT_TYPE) as TProjectType[]
+export const AVAILABLE_TYPE_PROJECTS_CONTENT = Object.values(PROJECT_TYPE)
 
 export const TYPE_CODING_LESSON: IProjectType = PROJECT_TYPE['coding-lesson']
 export const TYPE_CODING_WEEK: IProjectType = PROJECT_TYPE['coding-week']

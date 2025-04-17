@@ -1,4 +1,5 @@
 import { IProject } from '@/@data/projects.data'
+import { Tooltip } from '@/lib/primitives'
 import Link from 'next/link'
 
 type CardProps = {
@@ -10,19 +11,21 @@ export async function Card({ project }: CardProps) {
   const imagePath = `/projects/${project.type.id}/${project.id}`
 
   return (
-    <Link href={linkPath} title={project.title} className="relative flex h-80 w-70 flex-col rounded-sm transition-all hover:scale-105 shadow-md bg-base-100 z-0">
-
-      <div className="relative h-full overflow-hidden">
+    <Tooltip tooltip={project.title}>
+      <Link href={linkPath} className="bg-base-200 h-fit overflow-hidden hover:scale-105 transition-all relative rounded border-primary/30 border shadow-md">
         <div className="absolute size-full scale-110 bg-cover bg-center blur-xs" style={{ backgroundImage: `url(${imagePath}/thumb.webp)` }} />
-        <div className="absolute top-4 size-full bg-contain bg-top bg-no-repeat" style={{ backgroundImage: `url(${imagePath}/thumb.webp)` }} />
-        <div className="w-full h-full absolute top-0 left-0 bg-black/50" />
-      </div>
 
-      <div className="absolute bottom-0 p-4 text-white backdrop-blur-lg">
-        <h2 className="font-medium text-lg font-title pb-2">{project.title}</h2>
-        <p className="vertical-ellipsis mt-2 text-sm text-on-layer-1-l2">{project.description}</p>
-        <span className="text-sm">Read more...</span>
-      </div>
-    </Link>
+        <div className="h-50 relative">
+          <div className="absolute top-0 w-full h-full bg-contain bg-center bg-no-repeat" style={{ backgroundImage: `url(${imagePath}/thumb.webp)` }} />
+        </div>
+
+        <div className="p-4 text-primary-content bg-primary/70 relative">
+          <h2 className="font-medium text-lg text-ellipsis whitespace-nowrap overflow-hidden font-title pb-2">{project.title}</h2>
+          <p className="vertical-ellipsis mt-2 text-sm mb-4">{project.description}</p>
+          <span className="text-sm">Read more...</span>
+        </div>
+
+      </Link>
+    </Tooltip>
   )
 }

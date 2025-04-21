@@ -27,7 +27,7 @@ export function CCHeaderMenu({ dictionary, isMobile }: PropsWithLocale<TCCHeader
     },
     {
       name: dictionary.header.menu.about,
-      link: '#about',
+      link: '/#about',
     },
     {
       name: dictionary.header.menu.projects,

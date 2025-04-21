@@ -15,6 +15,7 @@ import { getSoftSkillsData } from '@/@data/soft-skills.data'
 import { getToolkitData } from '@/@data/toolkit.data'
 import { ProjectsShow } from './components/projects-show.component'
 import { OWNER_CONFIGS } from '@/@data/owener-config'
+import { OpacityMotion } from '@/@components/motion/opacity-motion.component'
 
 export default async function HomePage({ params: { lang } }: RootLayoutType) {
   const dictionary = await getDictionary(lang)
@@ -25,7 +26,9 @@ export default async function HomePage({ params: { lang } }: RootLayoutType) {
   const TOOLKIT_DATA = await getToolkitData(lang)
 
   return (
-    <div className="m-auto pt-8 max-w-4xl">
+    <OpacityMotion
+      className="m-auto pt-8 max-w-4xl"
+    >
       <div className="flex flex-col items-center gap-4">
         <Image src="/perfil.jpg" width={2128} height={2128} alt="Felipe Scherer Photo" className="rounded-full size-80 border-primary border-4" />
         <h1 className="font-title text-5xl">Felipe Scherer</h1>
@@ -194,6 +197,6 @@ export default async function HomePage({ params: { lang } }: RootLayoutType) {
         </ContentContainer>
       </div>
 
-    </div>
+    </OpacityMotion>
   )
 }

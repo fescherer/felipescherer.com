@@ -10,6 +10,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { cn } from '@/lib/clsx-tailwind-merge/cn.function'
 import { ArrowLeft } from 'lucide-react'
+import { OpacityMotion } from '@/@components/motion/opacity-motion.component'
 
 type ProjectPageProps = {
   params: { projectId: string, projectType: string, lang: Locale }
@@ -63,7 +64,7 @@ export default async function Project({ params: { projectId, lang } }: ProjectPa
   const prevNext = getPrevNext(PROJECTS, project)
 
   return (
-    <div className="m-auto p-4 mt-12">
+    <OpacityMotion className="m-auto p-4 mt-12">
       <Link href="/projects" className="p-1 primary-link-effect">
         <ArrowLeft className="float-left" />
         {' '}
@@ -86,6 +87,6 @@ export default async function Project({ params: { projectId, lang } }: ProjectPa
         <ProjectPage project={project} lang={lang} />
       </div>
 
-    </div>
+    </OpacityMotion>
   )
 }

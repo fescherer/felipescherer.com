@@ -25,6 +25,7 @@
     "cookies-next": "^4.3.0",
     "framer-motion": "^12.4.11",
     "lucide-react": "^0.303.0",
+    "motion": "^12.7.4",
     "negotiator": "^0.6.4",
     "next": "14.0.2",
     "react": "^18.3.1",

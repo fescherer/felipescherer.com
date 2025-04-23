@@ -8,7 +8,7 @@ export function YMotion({ children, ...props }: any) {
       whileInView={{ y: 0, opacity: 100 }}
       transition={{
         duration: 0.2,
-        delay: 0.5,
+        delay: 0.1,
         type: 'spring',
         stiffness: 100,
       }}

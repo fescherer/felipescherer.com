@@ -42,9 +42,20 @@ export function ProjectList({ projects }: PropsWithLocale<ProjectListProps>) {
 
   const pages = Array.from(Array(Math.ceil(filteredProjects.length / PAGES_NUMBER)).keys())
 
+  const handleChange = (value: number, specificPage: boolean = false) => {
+    if (specificPage) setCurrentPage(value)
+    else
+      setCurrentPage(prev => prev + value)
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: 'smooth',
+    })
+  }
+
   return (
     <>
-      <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 md:min-h-[680px] lg:grid-cols-3">
+      <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 md:min-h-[680px] lg:grid-cols-3 p-4">
         {
         filteredProjects.slice(currentPage * PAGES_NUMBER, currentPage * PAGES_NUMBER + PAGES_NUMBER).map(project => (
           <Card key={project.id} project={project} />
@@ -54,13 +65,13 @@ export function ProjectList({ projects }: PropsWithLocale<ProjectListProps>) {
 
       { filteredProjects.length > PAGES_NUMBER && (
         <div className="mt-8 flex items-center justify-end gap-2">
-          <button onClick={() => setCurrentPage(prev => prev - 1)} disabled={currentPage === 0} type="button" className="rounded-full transition-all hover:enabled:text-accent hover:enabled:cursor-pointer disabled:cursor-not-allowed disabled:opacity-30">
+          <button onClick={() => handleChange(-1)} disabled={currentPage === 0} type="button" className="rounded-full transition-all hover:enabled:text-accent hover:enabled:cursor-pointer disabled:cursor-not-allowed disabled:opacity-30">
             <LucideChevronLeft />
           </button>
 
-          {pages.map(page => <button onClick={() => setCurrentPage(page)} type="button" className={`flex size-8 cursor-pointer items-center justify-center rounded-full transition-all hover:bg-accent hover:text-accent-content ${currentPage === page ? 'bg-primary text-primary-content' : ''}`} key={page}>{page + 1}</button>)}
+          {pages.map(page => <button onClick={() => handleChange(page, true)} type="button" className={`flex size-8 cursor-pointer items-center justify-center rounded-full transition-all hover:bg-accent hover:text-accent-content ${currentPage === page ? 'bg-primary text-primary-content' : ''}`} key={page}>{page + 1}</button>)}
 
-          <button onClick={() => setCurrentPage(prev => prev + 1)} disabled={currentPage === pages.length - 1} type="button" className="rounded-full transition-all hover:enabled:text-accent hover:enabled:cursor-pointer disabled:cursor-not-allowed disabled:opacity-30">
+          <button onClick={() => handleChange(1)} disabled={currentPage === pages.length - 1} type="button" className="rounded-full transition-all hover:enabled:text-accent hover:enabled:cursor-pointer disabled:cursor-not-allowed disabled:opacity-30">
             <LucideChevronRight />
           </button>
         </div>

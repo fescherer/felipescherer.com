@@ -21,9 +21,9 @@ export function ProjectCarrousel({ project }: ProjectCarrouselProps) {
     <div className="relative flex w-full overflow-hidden rounded-sm bg-layer-1 min-w-80 p-2 md:min-w-150">
       {/* <Image alt={project.images[photoSelected]} height={40} width={40} src=  /> */}
 
-      <div className="h-[28rem] w-full bg-contain bg-center bg-no-repeat" style={{ backgroundImage: `url(${imagePath}/${project.images[photoSelected]})` }} />
+      <div className="h-[14rem] md:h-[20rem] lg:h-[28rem] w-full bg-contain bg-center bg-no-repeat" style={{ backgroundImage: `url(${imagePath}/${project.images[photoSelected]})` }} />
 
-      <div className="absolute bottom-5 left-1/2 flex -translate-x-1/2 gap-2">
+      <div className="absolute bottom-5 left-1/2 flex -translate-x-1/2 gap-2 flex-wrap justify-center">
         {
           project.images.map((photo, index) => (
             <button key={photo} onClick={() => setPhotoSelected(index)} type="button" className={`size-5 cursor-pointer rounded-full border border-primary hover:bg-brand-hover-primary ${photoSelected === index ? 'bg-primary' : 'bg-base-200'}`} />

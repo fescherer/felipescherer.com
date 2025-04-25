@@ -61,8 +61,8 @@ export default async function HomePage({ params: { lang } }: RootLayoutType) {
 
       <div className="space-y-10">
         <ContentContainer title={dictionary.homepage.aboutme.title}>
-          <div className="flex gap-4">
-            <Image src="/felipe-scherer.webp" width={1722} height={2330} alt="Felipe Scherer Photo" className="size-96" />
+          <div className="flex gap-4 items-center flex-col text-center md:items-start md:flex-row md:text-start">
+            <Image src="/felipe-scherer.webp" width={1722} height={2330} alt="Felipe Scherer Photo" className="h-96 w-auto" />
 
             <div className="space-y-4">
               <p>
@@ -75,7 +75,7 @@ export default async function HomePage({ params: { lang } }: RootLayoutType) {
         </ContentContainer>
 
         <ContentContainer title={dictionary.homepage.resume.title}>
-          <div className="flex gap-4">
+          <div className="flex gap-4 flex-col items-center text-center md:flex-row md:items-start md:text-start">
 
             <div className="space-y-4 flex flex-col">
               <p>
@@ -83,17 +83,19 @@ export default async function HomePage({ params: { lang } }: RootLayoutType) {
               </p>
 
               <p className="font-medium">{dictionary.homepage.resume.p2}</p>
-              <Link href="/resume" className="btn-primary">{dictionary.homepage.resume.link}</Link>
+              <Link href="/resume" className="btn-primary hidden md:block">{dictionary.homepage.resume.link}</Link>
             </div>
 
             <div className="rounded-sm bg-[#fff] p-4">
               <QRCode value={`https://www.felipescherer.com/${lang}/resume`} />
             </div>
+
+            <Link href="/resume" className="btn-primary block md:hidden">{dictionary.homepage.resume.link}</Link>
           </div>
         </ContentContainer>
 
         <ContentContainer title={dictionary.services.title}>
-          <div className="grid grid-cols-4 gap-4">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             {/* TODO: Make dialog here for description */}
             {
               SERVICES_DATA.map(card => (
@@ -116,7 +118,7 @@ export default async function HomePage({ params: { lang } }: RootLayoutType) {
             }
           </div>
 
-          <div className="mt-12 text-2xl flex flex-col items-center space-y-2">
+          <div className="mt-12 text-2xl flex flex-col items-center space-y-2 text-center md:text-start">
             <p>{t.services['project-idea'].callout}</p>
 
             <p>

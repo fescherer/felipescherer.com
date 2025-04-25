@@ -143,6 +143,10 @@
     }
   },
   "project": {
+    "navigation": {
+      "next": "Next",
+      "previous": "Previous"
+    },
     "data": {
       "alura-courses": {
         "title": "Alura Courses",

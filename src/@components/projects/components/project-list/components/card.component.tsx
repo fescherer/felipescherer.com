@@ -6,7 +6,7 @@ type CardProps = {
   project: IProject
 }
 
-export async function Card({ project }: CardProps) {
+export function Card({ project }: CardProps) {
   const linkPath = `/projects/${project.type.id}/${project.id}`
   const imagePath = `/projects/${project.type.id}/${project.id}`
 

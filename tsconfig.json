@@ -22,6 +22,6 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/features/Homepage/components/StarryNight"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/features/Homepage/components/StarryNight", "src/@components/motion/opacity-motion.component.jsx"],
   "exclude": ["node_modules"]
 }

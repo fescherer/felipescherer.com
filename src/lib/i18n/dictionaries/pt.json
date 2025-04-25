@@ -142,6 +142,10 @@
     }
   },
   "project": {
+    "navigation": {
+      "next": "Próximo",
+      "previous": "Anterior"
+    },
     "data": {
       "alura-courses": {
         "title": "Cursos da Alura",

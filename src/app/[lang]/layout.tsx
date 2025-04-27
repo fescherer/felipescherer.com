@@ -4,13 +4,13 @@ import '../globals.css'
 import React, { PropsWithChildren } from 'react'
 import { ProgressBarProvider } from '@/lib/progress-bar/progress-bar.provider'
 import 'react-multi-carousel/lib/styles.css'
-import { METADATA } from './metadata'
 import { Locale, i18n } from '@/lib/i18n/i18n-config'
 import { Header } from '@/@components/header/header.component'
 import { ToastContainer } from 'react-toastify'
 import { Footer } from '@/@components/footer/footer.component'
 import 'react-toastify/dist/ReactToastify.css'
 import { MainComponent } from '@/@components/main.component'
+import { METADATA } from './metadata'
 
 const heptaSlab = Hepta_Slab({
   subsets: ['latin'],

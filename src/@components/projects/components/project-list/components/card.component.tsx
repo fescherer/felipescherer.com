@@ -12,9 +12,9 @@ export function Card({ project }: CardProps) {
   const imagePath = `/projects/${project.type.id}/${project.id}`
 
   return (
-    <YMotion className='bg-base-200 overflow-hidden hover:scale-105  h-fit relative rounded transition-[scale] border-primary/30 border shadow-md'>
+    <YMotion className="bg-base-200 overflow-hidden hover:scale-105  h-fit relative rounded transition-[scale] border-primary/30 border shadow-md">
       <Tooltip tooltip={project.title}>
-        <Link href={linkPath} className="" >
+        <Link href={linkPath} className="">
           <div className="absolute size-full scale-110 bg-cover bg-center blur-xs" style={{ backgroundImage: `url(${imagePath}/thumb.webp)` }} />
 
           <div className="h-50 relative">
@@ -27,7 +27,7 @@ export function Card({ project }: CardProps) {
             <span className="text-sm">Read more...</span>
           </div>
 
-        </Link >
+        </Link>
       </Tooltip>
     </YMotion>
   )

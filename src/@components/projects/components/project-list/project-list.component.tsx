@@ -4,7 +4,6 @@ import { PropsWithLocale } from '@/@types/language'
 import { useSearchContext } from '../../context/search.context'
 import { Card } from './components/card.component'
 import { IProject } from '@/@data/projects.data'
-import { YMotion } from '@/@components/motion/y-motion.component'
 
 type ProjectListProps = {
   projects: IProject[]

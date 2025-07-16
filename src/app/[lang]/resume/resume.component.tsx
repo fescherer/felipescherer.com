@@ -18,17 +18,17 @@ export function ResumeComponent({ lang, translations }: ResumeProps) {
 
   return (
     <div className="m-auto my-4 flex max-w-5xl flex-col gap-2">
-      <h2 className="font-title text-3xl text-on-layer-0-l1">{translations.title}</h2>
+      <h2 className="font-title text-3xl text-base-content">{translations.title}</h2>
       <p>{translations.text}</p>
 
-      <div className="flex flex-col justify-between gap-2 md:flex-row">
-        <strong className="font-medium">
+      <div className="flex flex-col justify-between gap-2 md:flex-row items-center">
+        <span className="font-medium text-primary">
           {selectedLanguage === 'en' ? translations['en-version'] : translations['pt-version']}
-        </strong>
+        </span>
 
         <div className="flex gap-1 rounded-sm border border-layer-2">
           {i18nWithName.locales.map(language => (
-            <button onClick={() => setSelectedLanguage(language.id)} key={language.id} type="button" className={`px-4 py-2 capitalize ${language.id === selectedLanguage ? 'bg-brand-primary text-brand-on-primary' : 'bg-transparent'}`}>{language.name}</button>
+            <button onClick={() => setSelectedLanguage(language.id)} key={language.id} type="button" className={`px-4 py-2 capitalize cursor-pointer ${language.id === selectedLanguage ? 'bg-primary text-primary-content' : 'bg-transparent'}`}>{language.name}</button>
           ))}
         </div>
       </div>

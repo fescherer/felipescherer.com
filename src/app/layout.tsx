@@ -16,7 +16,7 @@ const archivo = Archivo({
 
 export default function RootLayout({ children }: PropsWithChildren) {
   return (
-    <html className="scroll-smooth">
+    <html className="scroll-smooth overflow-x-hidden">
       <body className={`${archivo.variable} ${heptaSlab.variable} font-text h-screen bg-layer-0 text-text bg-base-100 w-screen`}>
         {children}
       </body>

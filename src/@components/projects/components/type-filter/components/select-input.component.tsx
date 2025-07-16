@@ -39,20 +39,20 @@ export function SelectInput({ projectType, placeholder }: SelectInputProps) {
           </Select.Item>
 
           {
-          AVAILABLE_TYPE_PROJECTS_CONTENT.map(type => (
-            <Select.Viewport key={type.id}>
-              <Select.Item className="flex select-none items-center justify-between rounded-xs p-2 text-sm text-base-content transition-colors data-highlighted:bg-primary data-[state='checked']:bg-primary data-highlighted:text-primary-content data-[state='checked']:text-primary-content data-highlighted:outline-hidden" value={type.id}>
-                <Select.ItemText>{type.title}</Select.ItemText>
+            AVAILABLE_TYPE_PROJECTS_CONTENT.map(type => (
+              <Select.Viewport key={type.id}>
+                <Select.Item className="flex select-none items-center justify-between rounded-xs p-2 text-sm text-base-content transition-colors data-highlighted:bg-primary data-[state='checked']:bg-primary data-highlighted:text-primary-content data-[state='checked']:text-primary-content data-highlighted:outline-hidden" value={type.id}>
+                  <Select.ItemText>{type.title}</Select.ItemText>
 
-                <Select.ItemIndicator>
-                  <LucideCheck size={14} />
-                </Select.ItemIndicator>
-              </Select.Item>
+                  <Select.ItemIndicator>
+                    <LucideCheck size={14} />
+                  </Select.ItemIndicator>
+                </Select.Item>
 
-              <Select.Separator />
-            </Select.Viewport>
-          ))
-            }
+                <Select.Separator />
+              </Select.Viewport>
+            ))
+          }
 
           <Select.ScrollDownButton />
           <Select.Arrow />

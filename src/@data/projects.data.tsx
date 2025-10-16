@@ -58,8 +58,8 @@ export async function getProjectsData(lang: Locale): Promise<IProject[]> {
       date: '2023-06-02T10:00:00.000Z',
       links: {
         github: `${OWNER_CONFIGS.github_profile}/rocket-seat-challenges/tree/main/01-to-do-list`,
-        figma: 'https://www.figma.com/file/0n0zDN7zbzhRbaEO74Xesx/ToDo-List/duplicate',
-        site: 'https://challenge-01.felipescherer.com     ',
+        figma: '/layouts/rocketseat-challenge-01-todo-list.pdf',
+        site: 'https://challenge-01.felipescherer.com',
       },
       images: [`thumb.webp`],
       title: t['rocketseat-challenge-01-todo-list'].title,
@@ -72,7 +72,7 @@ export async function getProjectsData(lang: Locale): Promise<IProject[]> {
       date: '2023-06-24T10:00:00.000Z',
       links: {
         github: `${OWNER_CONFIGS.github_profile}/rocket-seat-challenges/tree/main/02-coffee-delivery`,
-        figma: 'https://www.figma.com/file/5yT9ZzZmRQRS4yivGGB3pl/Coffee-Delivery/duplicate',
+        figma: '/layouts/rocketseat-challenge-02-coffee-delivery.pdf',
         site: 'https://challenge-02.felipescherer.com',
       },
       images: ['overview.gif', 'overview-mobile.gif'],
@@ -324,7 +324,7 @@ export async function getProjectsData(lang: Locale): Promise<IProject[]> {
       date: '2022-11-01T10:00:00.000Z',
       links: {
         github: `${OWNER_CONFIGS.github_profile}/college-projects/tree/main/tcc`,
-        figma: 'https://www.figma.com/file/iKllJp1aDboNXpVOg5EaSc/Javi?t=L0Crz5jFiKMfRxix-1',
+        figma: '/layouts/college-computer-science-final-paper.jpg',
         site: 'http://javi.app.br',
       },
       images: ['overview.gif', 'homepage.webp', 'acounts.webp', 'dashboard.webp', 'saved.webp', 'movie-details.webp', 'dark-mode.webp'],
@@ -408,7 +408,7 @@ export async function getProjectsData(lang: Locale): Promise<IProject[]> {
       date: '2023-01-29T10:00:00.000Z',
       links: {
         github: `${OWNER_CONFIGS.github_profile}/pokedex`,
-        figma: 'https://www.figma.com/file/JtsrGKsMNAnLKqVKBqnBad/Pokedex-APP?node-id=0-1&t=FUvofI6UnU3Pep3a-0',
+        figma: '',
         site: 'https://pokedex-felipescherer.vercel.app',
       },
       images: ['overview-opt.gif', 'homepage.webp', 'pokelist.webp', 'pokedetail.webp', 'pokedetail-2.webp', 'pokedetail-3.webp'],
@@ -422,7 +422,7 @@ export async function getProjectsData(lang: Locale): Promise<IProject[]> {
       date: '2023-02-25T10:00:00.000Z',
       links: {
         github: `${OWNER_CONFIGS.github_profile}/portifolio`,
-        figma: 'https://www.figma.com/file/9LKjRjHQrDtWNbydqZygxf/Project?t=zyrOwueQfx7S4WIN-1',
+        figma: '',
         site: 'https://www.felipescherer.com/pt',
       },
       images: ['overview-home-opt.gif', 'overview-2-opt.gif', 'image.webp'],
